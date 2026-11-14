@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book an inspection · Step 2 · Car · SDCertified</title>
-<meta name="description" content="Tell us about the car — registration number, brand, model and whose car it is.">
+<meta name="description" content="Tell us about the car — registration, brand and model. The price follows the car's segment.">
 <meta name="theme-color" content="#F6F7F9">
 <link rel="icon" href="../assets/logo-sdcertified-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,85 +19,97 @@
   <div class="layout-aside">
     <div class="flow-body">
       <header class="flow-head stagger">
-        <span class="eyebrow">Used Car Pre-Purchase Inspection</span>
-        <h1>Which car are we inspecting?</h1>
+        <span class="eyebrow" data-bk="service">Used Car Pre-Purchase Inspection</span>
+        <h1><span data-bk-show="used">Which car are we inspecting?</span><span data-bk-show="pdi" hidden>Your new car</span></h1>
       </header>
 
       <div class="guide">
-        <span class="meera" aria-hidden="true">M</span>
+        <span class="tip-ico" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
         <div class="guide-bubble">
-          <div class="guide-name"><b>Meera</b> · your Suresh Drives guide · <span class="online">online</span></div>
-          <p>Just the registration number is enough — I'll fill in the rest. The price depends on the car's segment, so you'll see it update right here before you pay anything.</p>
+          <div class="guide-name"><b>Good to know</b> · from Suresh Drives</div>
+          <p data-bk-show="used">The registration number is enough — we'll fill in the rest. The price depends on the car's segment, so you'll see it update right here before you pay anything.</p>
+          <p data-bk-show="pdi" hidden>New cars usually aren't registered yet — that's fine. Choose the brand, model and variant you're taking delivery of. PDI is one flat price for every car.</p>
         </div>
       </div>
 
       <!-- Registration -->
       <section class="card card-pad stack" aria-labelledby="reg-h">
-        <h2 id="reg-h" class="h3">Registration number</h2>
-        <label class="sr-only" for="reg">Registration number</label>
-        <div class="plate">
-          <span class="plate-ind" aria-hidden="true">IND</span>
-          <input id="reg" data-plate value="KL 11 BH 7272" autocomplete="off" spellcheck="false" aria-describedby="reg-hint" maxlength="13">
-        </div>
-        <p id="reg-hint" class="hint"><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>We'll fetch the make, model and registration date for you. Format: KL 11 BH 7272.</p>
-        <div class="card-green row start" style="--gap:12px; padding:14px 16px; border-radius:var(--r-md)" role="status">
-          <span class="seal-ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
-          <div class="grow">
-            <b class="strong">Found it: 2021 Mercedes-Benz GLE 300d 4MATIC</b>
-            <p class="small muted">Diesel · Automatic · registered 14 Mar 2021 · Kozhikode RTO</p>
+        <h2 id="reg-h" class="h3">Registration</h2>
+        <label class="row between card-sunk" style="padding:14px 16px; cursor:pointer; --gap:14px" data-bk-show="pdi" hidden>
+          <span><b class="strong">Not registered yet</b><span class="small muted" style="display:block">Most new cars are registered after delivery.</span></span>
+          <span class="switch"><input type="checkbox" checked data-bk-set="notReg" aria-label="Not registered yet"><span></span></span>
+        </label>
+        <div class="stack" data-reg-wrap style="--gap:12px">
+          <label class="label" for="reg">Registration number</label>
+          <div class="plate">
+            <span class="plate-ind" aria-hidden="true">IND</span>
+            <input id="reg" data-plate data-bk-set="reg" value="KL 11 BH 7272" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="reg-hint" maxlength="13">
           </div>
-          <a class="link small" href="#brand-h">Not right?</a>
+          <p id="reg-hint" class="hint"><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>We'll fetch the make, model and registration date for you. Format: KL 11 BH 7272.</p>
+          <div class="card-green row start" style="--gap:12px; padding:14px 16px; border-radius:var(--r-md)" role="status" data-bk-show="used">
+            <span class="seal-ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <div class="grow"><b class="strong">Found it: <span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span></b><p class="small muted">Check the brand and model below — change anything that isn't right.</p></div>
+          </div>
+        </div>
+        <div class="field" data-vin-wrap hidden>
+          <label class="label" for="vin">VIN or dealer booking number <small>(optional)</small></label>
+          <input class="input" id="vin" autocapitalize="characters" placeholder="e.g. booking no. on your dealer receipt">
+          <p class="hint"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Helps the technician match the exact car at the showroom.</p>
         </div>
       </section>
 
       <!-- Brand & model -->
-      <section class="card card-pad stack" aria-labelledby="brand-h">
-        <div class="row between"><h2 id="brand-h" class="h3">Brand &amp; model</h2><span class="tiny muted">Pre-filled from the registration</span></div>
+      <section class="card card-pad stack" aria-labelledby="brand-h" id="brand">
+        <h2 id="brand-h" class="h3">Brand &amp; model</h2>
         <fieldset style="border:0; padding:0; margin:0">
-          <legend class="sr-only">Brand</legend>
+          <legend class="label" style="margin-bottom:10px">Brand</legend>
           <div class="grid" style="grid-template-columns:repeat(auto-fill, minmax(96px, 1fr)); --gap:10px">
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Maruti Suzuki" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">MS</span><span class="tiny strong">Maruti Suzuki</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Hyundai" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">Hy</span><span class="tiny strong">Hyundai</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Tata" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">Ta</span><span class="tiny strong">Tata</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Honda" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">Ho</span><span class="tiny strong">Honda</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Kia" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">Ki</span><span class="tiny strong">Kia</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Toyota" data-tier="Premium" data-price="4999"><span class="choice-card"><span class="brand-mono">To</span><span class="tiny strong">Toyota</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Mahindra" data-tier="Premium" data-price="4999"><span class="choice-card"><span class="brand-mono">Ma</span><span class="tiny strong">Mahindra</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Jeep" data-tier="Premium" data-price="4999"><span class="choice-card"><span class="brand-mono">Je</span><span class="tiny strong">Jeep</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Mercedes-Benz" data-tier="Luxury" data-price="5999" checked><span class="choice-card"><span class="brand-mono">MB</span><span class="tiny strong">Mercedes-Benz</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="BMW" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">BMW</span><span class="tiny strong">BMW</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Audi" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">Au</span><span class="tiny strong">Audi</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Volvo" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">Vo</span><span class="tiny strong">Volvo</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Lexus" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">Lx</span><span class="tiny strong">Lexus</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Land Rover" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">LR</span><span class="tiny strong">Land Rover</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Skoda" data-tier="Standard" data-price="3999"><span class="choice-card"><span class="brand-mono">Sk</span><span class="tiny strong">Skoda</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
-            <label class="choice choice-tile"><input type="radio" name="brand" value="Porsche" data-tier="Luxury" data-price="5999"><span class="choice-card"><span class="brand-mono">Po</span><span class="tiny strong">Porsche</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Maruti Suzuki" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">MS</span><span class="tiny strong">Maruti Suzuki</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Hyundai" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Hy</span><span class="tiny strong">Hyundai</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Tata" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Ta</span><span class="tiny strong">Tata</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Mahindra" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Ma</span><span class="tiny strong">Mahindra</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Kia" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Ki</span><span class="tiny strong">Kia</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Toyota" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">To</span><span class="tiny strong">Toyota</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Honda" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Ho</span><span class="tiny strong">Honda</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Skoda" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Sk</span><span class="tiny strong">Skoda</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Volkswagen" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">VW</span><span class="tiny strong">Volkswagen</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="MG" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">MG</span><span class="tiny strong">MG</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Jeep" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Je</span><span class="tiny strong">Jeep</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Mercedes-Benz" data-bk-set="brand" checked><span class="choice-card"><span class="brand-mono">MB</span><span class="tiny strong">Mercedes-Benz</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="BMW" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">BMW</span><span class="tiny strong">BMW</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Audi" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Au</span><span class="tiny strong">Audi</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Volvo" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Vo</span><span class="tiny strong">Volvo</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Lexus" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Lx</span><span class="tiny strong">Lexus</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Land Rover" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">LR</span><span class="tiny strong">Land Rover</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Porsche" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Po</span><span class="tiny strong">Porsche</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Jaguar" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Ja</span><span class="tiny strong">Jaguar</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+            <label class="choice choice-tile"><input type="radio" name="brand" value="Mini" data-bk-set="brand"><span class="choice-card"><span class="brand-mono">Mi</span><span class="tiny strong">Mini</span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
           </div>
         </fieldset>
         <div class="form-grid">
           <div class="field">
-            <label class="label" for="model">Model &amp; variant</label>
+            <label class="label" for="model">Model</label>
             <select class="select" id="model">
-              <option value="GLE 300d 4MATIC" data-tier="Luxury" data-price="5999" selected>GLE 300d 4MATIC</option>
-              <option value="GLE 450 4MATIC" data-tier="Luxury" data-price="5999">GLE 450 4MATIC</option>
-              <option value="GLC 300" data-tier="Luxury" data-price="5999">GLC 300</option>
-              <option value="C 220d" data-tier="Luxury" data-price="5999">C 220d</option>
-              <option value="E 350d" data-tier="Luxury" data-price="5999">E 350d</option>
-              <option value="GLA 220d" data-tier="Luxury" data-price="5999">GLA 220d</option>
-              <option value="S 350d" data-tier="Luxury" data-price="5999">S 350d</option>
+              <option value="GLE 300d 4MATIC" selected>GLE 300d 4MATIC · Luxury</option>
+              <option value="GLC 300">GLC 300 · Luxury</option>
+              <option value="C 220d">C 220d · Luxury</option>
+              <option value="E 350d">E 350d · Luxury</option>
+              <option value="GLA 220d">GLA 220d · Luxury</option>
+              <option value="S 350d">S 350d · Luxury</option>
             </select>
           </div>
           <div class="field">
-            <label class="label" for="regdate">Date of registration</label>
-            <input class="input" type="date" id="regdate" value="2021-03-14">
+            <label class="label" for="year">Model year</label>
+            <select class="select" id="year" data-bk-set="year">
+              <option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option selected>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option>
+            </select>
           </div>
-          <div class="field">
+          <div class="field" data-bk-show="pdi" hidden><label class="label" for="variant">Variant</label><input class="input" id="variant" placeholder="e.g. M Sport, ZX, Signature"></div>
+          <div class="field" data-bk-show="pdi" hidden><label class="label" for="colour">Colour</label><input class="input" id="colour" placeholder="e.g. Mineral White"></div>
+          <div class="field" data-bk-show="used"><label class="label" for="regdate">Date of registration</label><input class="input" type="date" id="regdate" value="2021-03-14" max="2026-12-31"></div>
+          <div class="field" data-bk-show="used">
             <label class="label" for="km">Odometer <small>(as told by the seller)</small></label>
             <div class="input-wrap"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg><input class="input" id="km" inputmode="numeric" value="38,600"><span class="suffix tiny muted">km</span></div>
-          </div>
-          <div class="field">
-            <label class="label" for="fuel">Fuel</label>
-            <select class="select" id="fuel"><option selected>Diesel</option><option>Petrol</option><option>Hybrid</option><option>Electric</option></select>
           </div>
         </div>
       </section>
@@ -107,64 +119,70 @@
         <div class="row between start row-wrap" style="--gap:12px">
           <div>
             <span class="eyebrow">Your price</span>
-            <h2 id="price-h" class="h3 mt-1"><span data-tier-name>Luxury</span> segment</h2>
+            <h2 id="price-h" class="h3 mt-1" data-bk="tier-name">Luxury segment</h2>
           </div>
-          <div class="price-big" aria-live="polite"><span data-tier-price>₹5,999</span> <small>+ GST</small></div>
+          <div class="price-big" aria-live="polite"><span data-bk="base-short" data-bk-tick>₹5,999</span> <small>+ GST</small></div>
         </div>
-        <div class="tier-meter mt-2" aria-hidden="true">
+        <div class="tier-meter mt-2" aria-hidden="true" data-bk-show="used">
           <div data-tier-opt="Standard"><span>Standard</span><b>₹3,999</b></div>
           <div data-tier-opt="Premium"><span>Premium</span><b>₹4,999</b></div>
           <div data-tier-opt="Luxury" class="on"><span>Luxury</span><b>₹5,999</b></div>
         </div>
-        <p class="hint mt-2"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Luxury brands need extra time and specialist diagnostics, so they sit in the Luxury tier. Total with 18% GST: <b class="strong" data-tier-total>₹7,079</b>. No other charges inside Kozhikode.</span></p>
+        <p class="hint mt-2"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span><span data-bk-show="used">The segment comes from the model you pick.</span><span data-bk-show="pdi" hidden>New Car PDI is one flat price for every brand and model.</span> GST 18%: <b class="strong" data-bk="gst">₹1,079.82</b> · total to pay <b class="strong" data-bk="total">₹7,079</b>. No other charges inside our service areas.</span></p>
       </section>
 
-      <!-- Whose car -->
-      <section class="card card-pad stack" aria-labelledby="who-h">
+      <!-- Whose car (used only) -->
+      <section class="card card-pad stack" aria-labelledby="who-h" data-bk-show="used">
         <h2 id="who-h" class="h3">Whose car is it?</h2>
         <div class="seg seg-block" role="radiogroup" aria-labelledby="who-h">
-          <label><input type="radio" name="owner" value="mine">Mine</label>
-          <label><input type="radio" name="owner" value="seller" checked data-show="#seller-fields">A seller's</label>
-          <label><input type="radio" name="owner" value="dealer" data-show="#dealer-fields">A dealer's</label>
+          <label><input type="radio" name="owner" value="mine" data-bk-set="owner">Mine</label>
+          <label><input type="radio" name="owner" value="seller" checked data-bk-set="owner" data-show="#seller-fields">A seller's</label>
+          <label><input type="radio" name="owner" value="dealer" data-bk-set="owner" data-show="#dealer-fields">A dealer's (used-car dealer)</label>
         </div>
         <div id="seller-fields" class="form-grid">
           <div class="field"><label class="label" for="s-name">Seller's name</label><input class="input" id="s-name" value="Faisal" autocomplete="off"></div>
-          <div class="field"><label class="label" for="s-phone">Seller's mobile</label><input class="input" id="s-phone" inputmode="tel" value="+91 99460 55120"></div>
-          <label class="full row between card-sunk" style="padding:14px 16px; cursor:pointer">
-            <span class="row" style="--gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-wa"/></svg><span><b class="strong small">Let Meera message Faisal on WhatsApp</b><span class="tiny muted" style="display:block">Date, time and what to keep ready (RC, keys, service book)</span></span></span>
-            <span class="switch"><input type="checkbox" checked aria-label="Message the seller on WhatsApp"><span></span></span>
+          <div class="field"><label class="label" for="s-phone">Seller's mobile</label>
+            <div class="phone-field"><select class="select" id="s-phone-cc" aria-label="Seller's country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="s-phone" inputmode="tel" autocomplete="off" value="99460 55120"></div>
+            <label class="wa-check"><input type="checkbox" checked>Reachable on WhatsApp</label>
+          </div>
+          <label class="full row between card-sunk" style="padding:14px 16px; cursor:pointer; --gap:14px">
+            <span class="row" style="--gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-wa"/></svg><span><b class="strong small">Send Faisal an automated WhatsApp</b><span class="tiny muted" style="display:block">Date, arrival window and what to keep ready (RC, keys, service book). He sees milestones only — never your payment details or the report.</span></span></span>
+            <span class="switch"><input type="checkbox" checked aria-label="Send the seller an automated WhatsApp"><span></span></span>
           </label>
         </div>
         <div id="dealer-fields" class="form-grid" hidden>
-          <div class="field"><label class="label" for="d-name">Dealership</label><input class="input" id="d-name" placeholder="e.g. a pre-owned showroom in Kozhikode"></div>
-          <div class="field"><label class="label" for="d-phone">Sales contact mobile</label><input class="input" id="d-phone" inputmode="tel" placeholder="+91"></div>
+          <div class="field"><label class="label" for="d-name">Dealership</label><input class="input" id="d-name" placeholder="Name of the used-car dealer"></div>
+          <div class="field"><label class="label" for="d-phone">Sales contact mobile</label>
+            <div class="phone-field"><select class="select" id="d-phone-cc" aria-label="Dealer's country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="d-phone" inputmode="tel" placeholder="Mobile number"></div>
+            <label class="wa-check"><input type="checkbox" checked>Reachable on WhatsApp</label>
+          </div>
         </div>
       </section>
 
       <div class="cta-bar">
-        <div class="cta-sum"><strong><span data-tier-price>₹5,999</span> + GST</strong><span><span data-tier-name>Luxury</span> · Mercedes-Benz GLE</span></div>
+        <div class="cta-sum"><strong><span data-bk="price-line">₹5,999 + GST</span></strong><span data-bk="car-short">Mercedes-Benz GLE 300d 4MATIC</span></div>
         <a class="btn btn-ghost m-hide" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-arrow-l"/></svg>Back</a>
         <a class="btn btn-primary btn-lg" href="book-location.html">Continue<svg class="i" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
       </div>
     </div>
 
-    <aside class="stack sticky-aside" style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Your booking">
+    <aside class="stack sticky-aside" data-summary style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Your booking">
       <section class="card card-pad" aria-labelledby="sum-h">
         <div class="card-title" style="margin-bottom:4px"><h2 id="sum-h" class="h4">Your booking</h2><span class="badge">Step 2 of 5</span></div>
         <ul>
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Service</span><b>Used Car Pre-Purchase</b></div><a href="book.html">Edit</a></li>
-          <li class="sum-row"><span class="icon-tile sm red"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><div><span class="tiny muted">Car</span><b data-sum="car">Mercedes-Benz GLE 300d 4MATIC</b></div><span></span></li>
-          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Location</span><b class="muted">Next</b></div><span></span></li>
-          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">Date &amp; session</span><b class="muted">—</b></div><span></span></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Service</span><b data-bk="service-short">Used Car Pre-Purchase</b></div><a href="book.html">Edit service</a></li>
+          <li class="sum-row"><span class="icon-tile sm red"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><div><span class="tiny muted">Car</span><b data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</b><span class="tiny muted" data-bk="reg">KL 11 BH 7272</span></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Where</span><b class="muted">Next</b></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">Date &amp; session</span><b class="muted">Step 4</b></div><span></span></li>
         </ul>
-        <div class="card-sunk mt-2" style="padding:14px"><div class="row between"><span class="small muted"><span data-tier-name>Luxury</span> tier</span><b class="strong num"><span data-tier-price>₹5,999</span> + GST</b></div></div>
+        <div class="card-sunk mt-2" style="padding:14px"><div class="row between"><span class="small muted" data-bk="tier">Luxury tier</span><b class="strong num" data-bk="price-line">₹5,999 + GST</b></div><div class="row between tiny muted mt-1"><span>Total with GST</span><span data-bk="total">₹7,079</span></div></div>
       </section>
       <section class="card next" aria-labelledby="next-h">
         <div class="next-head"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><h2 id="next-h">What happens next</h2></div>
         <ol>
-          <li><div><b>Where's the car?</b><span>We check it's inside our service area.</span></div></li>
+          <li><div><b data-bk-show="used">Where's the car?</b><b data-bk-show="pdi" hidden>Which showroom?</b><span>We check it's inside our service area.</span></div></li>
           <li><div><b>Pick a morning or afternoon</b><span>Your slot is held for 10 minutes.</span></div></li>
-          <li><div><b>Faisal gets a heads-up</b><span>Only if you leave the WhatsApp switch on.</span></div></li>
+          <li><div><b>Everyone gets a heads-up</b><span>Automated WhatsApp to the seller or dealer.</span></div></li>
         </ol>
       </section>
     </aside>

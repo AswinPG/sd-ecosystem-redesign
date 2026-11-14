@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profile · SDCertified</title>
+<meta name="description" content="Your SDCertified account: garage, reports, invoices, saved cars, addresses, language and privacy.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="profile" data-shell="app">
+<main id="main" class="mist">
+  <div class="wrap">
+    <!-- Identity -->
+    <header class="profile-head carbon card-cut-lg enter">
+      <span class="avatar avatar-lg" aria-hidden="true" style="background:#fff;color:var(--carbon)">AM</span>
+      <div class="stack" style="--gap:4px;min-width:0">
+        <p class="eyebrow mb-0" style="color:var(--on-dark-2)">Member since 2024</p>
+        <h1 class="h1 mb-0" style="color:#fff">Arjun Menon</h1>
+        <p class="small mb-0" style="color:var(--on-dark-2)">+91 98470 12345 · arjun.menon@example.in · Kozhikode, Kerala</p>
+      </div>
+      <button class="btn btn-light btn-sm" type="button" data-open="#edit-profile"><svg class="i" aria-hidden="true"><use href="#i-edit"/></svg>Edit profile</button>
+    </header>
+
+    <div class="profile-grid">
+      <div class="stack" style="--gap:28px">
+        <!-- My garage -->
+        <section aria-labelledby="gar-h">
+          <div class="sec-head" style="margin-bottom:12px"><div><p class="eyebrow g">Inspected by Suresh Drives</p><h2 id="gar-h" class="h2 mb-0">My garage</h2></div><a class="link" href="inspections.html">All inspections<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          <div class="stack" style="--gap:10px">
+            <a class="garage-row card card-cut" href="track.html">
+              <img src="../assets/mercedes-gle-showroom.jpg" alt="" width="1336" height="1177">
+              <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">2021 Mercedes-Benz GLE 300d 4MATIC</span><span class="small muted">KL 11 BH 7272 · SDB-24817 · inspection today</span></span>
+              <span class="tag tag-g"><span class="live-dot" aria-hidden="true"></span>In progress · Track</span>
+            </a>
+            <a class="garage-row card card-cut" href="report.html">
+              <img src="../assets/bmw-x4m-green.jpg" alt="" width="1600" height="1067">
+              <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">2022 BMW X4 M Competition</span><span class="small muted">KL 07 CU 9090 · report SDR-18842 · Gold</span></span>
+              <span class="rn">92</span>
+            </a>
+            <a class="garage-row card card-cut" href="report-pdi.html">
+              <img src="../assets/bmw-i7-white.jpg" alt="" width="1200" height="675">
+              <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">2026 BMW i7 xDrive60</span><span class="small muted">New Car PDI · 129 of 132 checks passed · 28 Aug 2026</span></span>
+              <span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Safe to sign</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Payments & invoices -->
+        <section aria-labelledby="pay-h">
+          <h2 id="pay-h" class="h2">Payments &amp; invoices</h2>
+          <div class="card" style="padding:0">
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead><tr><th scope="col">Invoice</th><th scope="col">For</th><th scope="col" class="r">Amount</th><th scope="col"><span class="sr-only">Download</span></th></tr></thead>
+                <tbody>
+                  <tr><td><b>INV-2026-11-0417</b><br><span class="small muted">14 Nov 2026 · UPI (Google Pay)</span></td><td>SDB-24817 · Used Car Pre-Purchase · Luxury</td><td class="r">₹7,079</td><td><button class="icon-btn" type="button" data-download="INV-2026-11-0417.pdf" aria-label="Download invoice INV-2026-11-0417"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+                  <tr><td><b>INV-2026-09-0288</b><br><span class="small muted">29 Sep 2026 · Card</span></td><td>SDR-18842 · Used Car Pre-Purchase · Luxury</td><td class="r">₹7,079</td><td><button class="icon-btn" type="button" data-download="INV-2026-09-0288.pdf" aria-label="Download invoice INV-2026-09-0288"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+                  <tr><td><b>INV-2026-08-0193</b><br><span class="small muted">22 Aug 2026 · UPI</span></td><td>BMW i7 · New Car PDI</td><td class="r">₹4,719</td><td><button class="icon-btn" type="button" data-download="INV-2026-08-0193.pdf" aria-label="Download invoice INV-2026-08-0193"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Saved cars -->
+        <section aria-labelledby="sv-h">
+          <div class="sec-head" style="margin-bottom:12px"><h2 id="sv-h" class="h2 mb-0">Saved cars</h2><a class="link" href="browse.html">Browse<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          <div class="grid g-2">
+            <a class="garage-row card card-cut" href="vehicle.html">
+              <img src="../assets/bmw-x4m-green.jpg" alt="" width="1600" height="1067">
+              <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">BMW X4 M Competition</span><span class="small muted">SD-2481 · 2022 · Kozhikode · ₹1.12 Cr</span></span>
+              <span class="rn">92</span>
+            </a>
+            <a class="garage-row card card-cut" href="browse.html">
+              <img src="../assets/range-rover-velar.jpg" alt="" width="1067" height="1600" style="object-position:50% 60%">
+              <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">Range Rover Velar R-Dynamic</span><span class="small muted">SD-2409 · 2022 · Kochi · ₹82 L</span></span>
+              <span class="rn">91</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Addresses -->
+        <section aria-labelledby="ad-h">
+          <h2 id="ad-h" class="h2">Addresses</h2>
+          <ul class="menu">
+            <li><a href="book-location.html"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span>Home<small>Kozhikode, Kerala</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></a></li>
+            <li><a href="book-location.html"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>Seller · used for SDB-24817<small>Near Hilite Mall, Thondayad Bypass, Kozhikode 673014 · Opp. Hilite City gate 2</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="stack" style="--gap:28px">
+        <!-- Language -->
+        <section class="card card-cut" aria-labelledby="lg-h">
+          <h2 id="lg-h" class="h3">Language</h2>
+          <div class="seg" role="group" aria-labelledby="lg-h">
+            <button type="button" data-lang="en" aria-pressed="true">English</button>
+            <button type="button" data-lang="ml" lang="ml" aria-pressed="false">മലയാളം</button>
+            <button type="button" lang="hi" data-toast="हिन्दी is coming soon." data-toast-title="हिन्दी" data-toast-icon="globe">हिन्दी</button>
+          </div>
+          <p class="small muted mt-3 mb-0">Also in the top bar on every screen: EN · മലയാളം.</p>
+        </section>
+
+        <!-- Notifications & time -->
+        <section class="card card-cut" aria-labelledby="nt-h">
+          <h2 id="nt-h" class="h3">Updates &amp; time</h2>
+          <div class="switch-row"><label for="p-lt">Also show my local time</label><input class="switch" id="p-lt" type="checkbox" data-pref="Local time" data-reveal="#p-lt-ex"></div>
+          <p id="p-lt-ex" class="small mt-2" hidden><b>Example:</b> 9:00–9:30 AM IST · 7:30–8:00 AM Dubai</p>
+          <ul class="menu mt-3" style="--card:transparent">
+            <li><a href="notifications.html"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg><span>Notification preferences<small>WhatsApp, push, SMS fallback, email · quiet hours</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></a></li>
+          </ul>
+        </section>
+
+        <!-- Privacy & security -->
+        <section aria-labelledby="pv-h">
+          <h2 id="pv-h" class="h3">Privacy &amp; security</h2>
+          <ul class="menu">
+            <li><button type="button" data-toast="This phone · Kozhikode · active now. No other devices are signed in." data-toast-title="Signed-in devices" data-toast-icon="smartphone"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg><span>Signed-in devices<small>1 device</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></button></li>
+            <li><button type="button" data-toast="We’ll email a copy of your data to arjun.menon@example.in within 48 hours." data-toast-title="Data download requested" data-toast-icon="download"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg><span>Download my data<small>Bookings, reports and invoices</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></button></li>
+            <li><button type="button" data-open="#delete-acc"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg><span>Delete account<small>You’ll confirm first</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></button></li>
+          </ul>
+        </section>
+
+        <!-- Help & log out -->
+        <section aria-label="Help and sign out">
+          <ul class="menu">
+            <li><a href="support.html"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg><span>Help &amp; guides<small>Call, WhatsApp, callback, FAQs</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></a></li>
+            <li><a href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call us<small>+91 8330 881 213</small></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-right"/></svg></a></li>
+            <li><a href="index.html"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg><span>Log out</span></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div style="height:32px"></div>
+  </div>
+
+  <!-- Sheet: edit profile -->
+  <div class="sheet" id="edit-profile" aria-hidden="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="ep-h">
+      <div class="sheet-head"><h2 id="ep-h" class="h3">Edit profile</h2><button class="icon-btn" type="button" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form class="stack" data-toast-form="Your details are updated." data-toast-title="Saved">
+        <div class="field"><label for="ep-name">Full name</label><input class="input" id="ep-name" value="Arjun Menon" autocomplete="name" required data-err="Add your name."></div>
+        <div class="field"><label for="ep-phone">Mobile</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="ep-phone" type="tel" inputmode="tel" autocomplete="tel-national" value="98470 12345" required data-err="Enter your mobile number."></div></div>
+        <label class="check"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label>
+        <div class="field"><label for="ep-email">Email</label><input class="input" id="ep-email" type="email" autocomplete="email" value="arjun.menon@example.in" required data-err="Add an email for reports and invoices."></div>
+        <div class="field"><label for="ep-city">City</label><input class="input" id="ep-city" autocomplete="address-level2" value="Kozhikode, Kerala"></div>
+        <button class="btn btn-red btn-lg btn-block" type="submit">Save changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sheet: delete account -->
+  <div class="sheet" id="delete-acc" aria-hidden="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="da-h">
+      <div class="sheet-head"><h2 id="da-h" class="h3">Delete account</h2><button class="icon-btn" type="button" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <div id="da-1" data-panel>
+        <p>Deleting removes your saved cars, addresses and preferences. Reports and invoices for past bookings are kept as required for tax records. Your active booking SDB-24817 must finish first.</p>
+        <div class="btn-row">
+          <button class="btn btn-dark" type="button" data-step-to="#da-2">Continue</button>
+          <button class="btn btn-ghost" type="button" data-close>Keep my account</button>
+        </div>
+      </div>
+      <div id="da-2" data-panel hidden>
+        <div class="note a"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><div><b>This can’t be undone.</b>We’ll schedule deletion after SDB-24817 is complete and confirm on WhatsApp.</div></div>
+        <div class="btn-row mt-5">
+          <button class="btn btn-red" type="button" data-toast="We’ll delete your account after SDB-24817 is complete and confirm on WhatsApp." data-toast-title="Deletion scheduled" data-toast-kind="warn" data-close-after>Yes, delete my account</button>
+          <button class="btn btn-ghost" type="button" data-close>Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

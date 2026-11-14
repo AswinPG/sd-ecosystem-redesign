@@ -50,7 +50,6 @@
     nav: '<path d="M4 11 20 4l-7 16-2-7z"/>',
     phone: '<path d="M5 4h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/>',
     wa: '<path d="M4 20l1.2-3.9A8.3 8.3 0 1 1 8.1 19z"/><path d="M9.2 8.4c.4-.3 1-.3 1.2.1l.8 1.7c.1.3 0 .5-.2.7l-.5.5a6 6 0 0 0 2.9 2.9l.5-.5c.2-.2.4-.3.7-.2l1.7.8c.4.2.4.8.1 1.2-.7.8-1.8 1-2.9.5a8 8 0 0 1-4.1-4.1c-.5-1.1-.3-2.2.5-2.9z"/>',
-    chat: '<path d="M20 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.2A8 8 0 1 1 20 12z"/><path d="M8.5 11h7M8.5 14h4.5"/>',
     sms: '<rect x="3.5" y="4.5" width="17" height="12.5" rx="3"/><path d="M8 17v3.5l4-3.5M8 10.8h.1M12 10.8h.1M16 10.8h.1"/>',
     heart: '<path d="M12 20s-7.5-4.5-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.5-7.5 10-7.5 10z"/>',
     share: '<path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/>',
@@ -240,7 +239,7 @@
       '<div class="fnav-help">' +
       langSwitch('m-hide') + CALL +
       '<a class="call-pill m-hide" href="' + WA + '">' + ic('wa') + '<span class="wa-label">WhatsApp</span></a>' +
-      '<a class="btn btn-soft btn-sm" href="support.html" style="padding-left:6px"><span class="meera meera-sm" aria-hidden="true">M</span><span><span class="m-hide">Ask </span>Meera</span></a>' +
+      '<button class="btn btn-soft btn-sm" type="button" data-sheet="help-sheet">' + ic('help', 'i-sm') + 'Help</button>' +
       '</div></div><div class="fnav-progress" aria-hidden="true"><span style="--w:' + pct + '%"></span></div></header>';
   }
 
@@ -281,9 +280,28 @@
   }
   if ($('.cta-bar')) b.classList.add('has-ctabar');
   if (!fabOff && shell !== 'flow' && page !== 'support') {
-    b.insertAdjacentHTML('beforeend', '<a class="guide-fab" href="support.html" aria-label="Talk to Meera, your Suresh Drives guide"><span class="meera" aria-hidden="true">M</span><span class="gf-text">Talk to Meera<small>Online · replies in ~2 min</small></span></a>');
+    b.insertAdjacentHTML('beforeend', '<button class="guide-fab" type="button" data-sheet="help-sheet" aria-label="Help: call, WhatsApp or request a callback"><span class="tip-ico" aria-hidden="true">' + ic('help') + '</span><span class="gf-text">Help<small>Call · WhatsApp · Callback</small></span></button>');
   }
-  b.insertAdjacentHTML('beforeend', '<div class="toasts" id="toasts" role="status" aria-live="polite"></div><div class="scrim" data-close-sheet></div>');
+  var CC_OPTS = [['+91', 'India'], ['+971', 'UAE'], ['+966', 'Saudi'], ['+974', 'Qatar'], ['+965', 'Kuwait'], ['+968', 'Oman'], ['+973', 'Bahrain'], ['+1', 'US/Canada'], ['+44', 'UK']].map(function (c, i) { return '<option value="' + c[0] + '"' + (i ? '' : ' selected') + '>' + c[1] + ' ' + c[0] + '</option>'; }).join('');
+  b.insertAdjacentHTML('beforeend',
+    '<div class="sheet" id="help-sheet" role="dialog" aria-modal="true" aria-labelledby="help-h"><div class="sheet-grab"></div>' +
+    '<div class="sheet-head"><h2 id="help-h" class="h3">How can we help?</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close">' + ic('x') + '</button></div>' +
+    '<p class="small muted">Talk to the Suresh Drives team in Kozhikode — real people, no bots.</p>' +
+    '<div class="stack mt-2" style="--gap:10px">' +
+    '<a class="help-opt" href="' + TEL + '"><span class="icon-tile red sm">' + ic('phone') + '</span><span class="grow"><b>Call us</b><small>+91 8330 881 213 · 8 AM–9 PM IST, all days</small></span>' + ic('chev-r', 'chev') + '</a>' +
+    '<a class="help-opt" href="' + WA + '"><span class="icon-tile green sm">' + ic('wa') + '</span><span class="grow"><b>WhatsApp us</b><small>+91 98954 41213</small></span>' + ic('chev-r', 'chev') + '</a>' +
+    '<button class="help-opt" type="button" data-sheet="callback-sheet"><span class="icon-tile sm">' + ic('clock') + '</span><span class="grow"><b>Request a callback</b><small>Pick a time window — we call you</small></span>' + ic('chev-r', 'chev') + '</button>' +
+    '<a class="help-opt" href="support.html"><span class="icon-tile sm">' + ic('help') + '</span><span class="grow"><b>Help centre</b><small>Reschedule, refunds, invoices and FAQs</small></span>' + ic('chev-r', 'chev') + '</a>' +
+    '</div></div>' +
+    '<div class="sheet" id="callback-sheet" role="dialog" aria-modal="true" aria-labelledby="cbk-h"><div class="sheet-grab"></div>' +
+    '<div class="sheet-head"><h2 id="cbk-h" class="h3">Request a callback</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close">' + ic('x') + '</button></div>' +
+    '<form class="stack" data-demo="Callback requested|We\'ll call you in the window you chose (IST).|phone" novalidate>' +
+    '<div class="field"><label class="label" for="cbk-ph">Your number</label><div class="phone-field"><select class="select" id="cbk-ph-cc" data-cc-user aria-label="Country code">' + CC_OPTS + '</select><input class="input" id="cbk-ph" inputmode="tel" autocomplete="tel-national" value="98470 12345" required data-min-digits="6" data-err="Add a number we can call."></div></div>' +
+    '<div class="field"><label class="label" for="cbk-when">When should we call? (IST)</label><select class="select" id="cbk-when"><option>9–11 AM</option><option selected>11 AM–1 PM</option><option>2–4 PM</option><option>4–6 PM</option><option>6–8 PM</option></select><p class="hint">' + ic('clock') + 'We take calls 8 AM–9 PM IST, all days.</p></div>' +
+    '<div class="field"><label class="label" for="cbk-about">About</label><input class="input" id="cbk-about" value="General question"></div>' +
+    '<button class="btn btn-primary btn-block btn-lg" type="submit">Call me back</button>' +
+    '</form></div>' +
+    '<div class="toasts" id="toasts" role="status" aria-live="polite"></div><div class="scrim" data-close-sheet></div>');
 
   /* ------------------------------------------------------------------
      3. INTERACTIONS
@@ -329,7 +347,8 @@
   var lastFocus = null;
   function openSheet(id) {
     var s = d.getElementById(id); if (!s) return;
-    lastFocus = d.activeElement;
+    $$('.sheet.open').forEach(function (x) { if (x !== s) x.classList.remove('open'); });
+    if (!d.activeElement || !d.activeElement.closest || !d.activeElement.closest('.sheet')) lastFocus = d.activeElement;
     s.classList.add('open'); if (scrim) scrim.classList.add('open');
     var f = s.querySelector('button, a, input, select'); if (f) setTimeout(function () { f.focus(); }, 60);
   }
@@ -341,7 +360,12 @@
   d.addEventListener('click', function (e) {
     if (!e.target.closest) return;
     var o = e.target.closest('[data-sheet]');
-    if (o) { e.preventDefault(); openSheet(o.getAttribute('data-sheet')); return; }
+    if (o) {
+      e.preventDefault();
+      var ref = o.getAttribute('data-callback-ref'); var about = d.getElementById('cbk-about');
+      if (about) about.value = ref || about.value;
+      openSheet(o.getAttribute('data-sheet')); return;
+    }
     if (e.target.closest('[data-close-sheet]')) { closeSheets(); }
   });
   d.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheets(); });
@@ -460,7 +484,8 @@
   var BK_DEFAULT = {
     service: 'used', brand: 'Mercedes-Benz', model: 'GLE 300d 4MATIC', year: '2021', reg: 'KL 11 BH 7272', notReg: false,
     owner: 'seller', location: 'Near Hilite Mall, Thondayad Bypass, Kozhikode', dealer: 'BMW EVM Autokraft, Kochi',
-    handover: 'Tue 17 Nov, 4:00 PM IST', date: 'Sat 21 Nov', session: 'Morning', abroad: false
+    handover: 'Tue 17 Nov, 4:00 PM IST', date: 'Sat 21 Nov', session: 'Morning', abroad: false,
+    advisor: '', advisorPhone: '', repName: '', repRel: 'Brother', repPhone: '', ccUser: '+91'
   };
   var BK_PRESET = {
     used: { brand: 'Mercedes-Benz', model: 'GLE 300d 4MATIC', year: '2021', notReg: false, owner: 'seller', date: 'Sat 21 Nov', session: 'Morning' },
@@ -515,6 +540,7 @@
 
   function renderBk() {
     var pr = priceOf(bk), t = tierOf(bk), pdi = bk.service === 'pdi';
+    var dubai = !!bk.abroad || bk.ccUser === '+971';
     var svc = pdi ? 'New Car PDI' : 'Used Car Pre-Purchase Inspection';
     var map = {
       'service': svc,
@@ -523,16 +549,24 @@
       'car': (bk.year ? bk.year + ' ' : '') + bk.brand + ' ' + bk.model,
       'car-short': bk.brand + ' ' + bk.model,
       'reg': bk.notReg ? 'Not registered yet' : (bk.reg || 'Registration to be confirmed'),
-      'tier': pdi ? 'Flat PDI price' : t + ' tier',
+      'tier': pdi ? 'Flat PDI price' : t + ' segment',
       'tier-name': pdi ? 'New Car PDI · flat price' : t + ' segment',
       'base': inr(pr.base, 2), 'base-short': inr(pr.base), 'gst': inr(pr.gst, 2), 'round': (pr.round >= 0 ? '+' : '−') + inr(Math.abs(pr.round), 2),
       'exact': inr(pr.exact, 2), 'total': inr(pr.total), 'price-line': inr(pr.base) + ' + GST',
       'pay': 'Pay ' + inr(pr.total) + ' securely',
       'where': pdi ? bk.dealer : bk.location,
-      'when': bk.date + ', ' + bk.session + (bk.session === 'Afternoon' ? ' · 2:00–6:00 PM IST' : ' · 9:00 AM–1:00 PM IST'),
+      'when': bk.date + ', ' + bk.session + (bk.session === 'Afternoon' ? ' · 2:00–6:00 PM IST' + (dubai ? ' · 12:30–4:30 PM Dubai' : '') : ' · 9:00 AM–1:00 PM IST' + (dubai ? ' · 7:30–11:30 AM Dubai' : '')),
+      'arrival': bk.session === 'Afternoon' ? '2:00–2:30 PM IST' + (dubai ? ' · 12:30–1:00 PM Dubai' : '') : '9:00–9:30 AM IST' + (dubai ? ' · 7:30–8:00 AM Dubai' : ''),
+      'date': bk.date,
+      'date-long': longDate(bk.date),
+      'who-short': pdi ? (bk.advisor || 'the sales advisor') : 'Faisal',
+      'rep': bk.repName ? bk.repName + ' (' + (bk.repRel || 'representative').toLowerCase() + ')' + (bk.repPhone ? ' · ' + bk.repPhone : '') : '',
+      'half': inr(pr.total / 2, 2),
+      'report-h': pdi ? '~2 h' : '3–4 h',
+      'report-eta': pdi ? 'about 2 hours after the technician starts' : 'about 3–4 hours after Nikhil starts',
       'when-short': bk.date + ', ' + bk.session,
       'duration': pdi ? 'about 2 hours' : 'about 3–4 hours',
-      'who': pdi ? 'Sales advisor at ' + bk.dealer : 'Faisal (seller) · +91 99460 55120',
+      'who': pdi ? (bk.advisor ? bk.advisor + ' (sales advisor)' + (bk.advisorPhone ? ' · ' + bk.advisorPhone : '') : 'Sales advisor at ' + bk.dealer) : 'Faisal (seller) · +91 99460 55120',
       'handover': bk.handover
     };
     $$('[data-bk]').forEach(function (el) {
@@ -543,10 +577,45 @@
       if (el.hasAttribute('data-bk-tick') && !reduce) { el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
     });
     $$('[data-bk-show]').forEach(function (el) { el.hidden = el.getAttribute('data-bk-show') !== bk.service; });
+    $$('[data-bk-if]').forEach(function (el) { el.hidden = !bk[el.getAttribute('data-bk-if')]; });
+    $$('[data-dual]').forEach(function (el) { el.textContent = el.getAttribute('data-ist') + (dubai ? ' · ' + el.getAttribute('data-dubai') : ''); });
+    pdiAdvice();
     $$('[data-tier-opt]').forEach(function (x) { x.classList.toggle('on', !pdi && x.getAttribute('data-tier-opt') === t); });
     $$('[data-bk-open="abroad"]').forEach(function (x) { if (bk.abroad) x.open = true; });
     $$('[data-reg-wrap]').forEach(function (x) { x.hidden = !!bk.notReg; });
     $$('[data-vin-wrap]').forEach(function (x) { x.hidden = !bk.notReg; });
+  }
+
+  function longDate(lbl) {
+    var D = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday', Sat: 'Saturday', Sun: 'Sunday' };
+    var M = { Nov: 'November', Dec: 'December' };
+    var p = String(lbl || '').split(' ');
+    return p.length === 3 ? (D[p[0]] || p[0]) + ', ' + p[1] + ' ' + (M[p[2]] || p[2]) : lbl;
+  }
+  // PDI: recommend a session that ends at least 1 hour before the handover
+  function handoverParts() {
+    var m = /^(\w{3} \d{1,2} \w{3}),\s*(\d{1,2}):(\d{2})\s*(AM|PM)/.exec(bk.handover || '');
+    if (!m) return null;
+    var h = parseInt(m[2], 10) % 12 + (m[4] === 'PM' ? 12 : 0);
+    return { day: m[1], hour: h + parseInt(m[3], 10) / 60, time: m[2] + ':' + m[3] + ' ' + m[4] };
+  }
+  function pdiAdvice() {
+    var hp = handoverParts();
+    var title = $('[data-pdi-rec-title]'), body = $('[data-pdi-rec]');
+    if (!hp) return;
+    var morningOk = hp.hour >= 14, afternoonOk = hp.hour >= 19;
+    if (title) title.textContent = morningOk ? 'Suggested: ' + hp.day + ', Morning' : 'Suggested: the day before ' + hp.day;
+    if (body) body.textContent = morningOk
+      ? 'The morning session (9:00 AM–1:00 PM IST) ends at least an hour before your ' + hp.time + ' IST handover — we\'ll finish before you sign.'
+      : 'Your handover is at ' + hp.time + ' IST, so a session on the same day would end too close to it. Pick the day before — we\'ll finish before you sign.';
+    var picked = bk.date;
+    $$('input[name="session"]').forEach(function (inp) {
+      var note = d.querySelector('[data-session-note="' + inp.value + '"]');
+      var ok = inp.value === 'afternoon' ? afternoonOk : morningOk;
+      var clash = bk.service === 'pdi' && picked === hp.day && !ok;
+      inp.disabled = clash;
+      if (note) { note.hidden = !(bk.service === 'pdi' && picked === hp.day); note.textContent = ok ? 'Ends 1 h+ before your handover' : 'Ends too close to your handover'; }
+    });
   }
 
   function syncControls() {
@@ -558,7 +627,7 @@
       else if (inp.tagName === 'INPUT' && bk[k] && typeof bk[k] === 'string') inp.value = bk[k];
     });
     fillModels();
-    if (bk.abroad) $$('select[data-cc-user]').forEach(function (s) { s.value = '+971'; });
+    if (bk.abroad || bk.ccUser === '+971') $$('select[data-cc-user]').forEach(function (s) { s.value = '+971'; });
     syncShow();
   }
   function fillModels() {
@@ -604,9 +673,9 @@
   $$('[data-guide]').forEach(function (chip) {
     chip.addEventListener('click', function () {
       var a = chip.getAttribute('data-guide'), msg = '';
-      if (a === 'pdi') { setService('pdi'); msg = 'Lovely — a new car! I\'ve switched you to New Car PDI: a flat ₹3,999 + GST, about 2 hours at the showroom, and we finish before you sign.'; }
-      if (a === 'dealer') { setService('used'); bk.owner = 'dealer'; saveBk(bk); syncControls(); renderBk(); msg = 'Got it — buying from a used-car dealer. On the next step I\'ll ask for the dealership and a sales contact instead of a private seller.'; }
-      if (a === 'abroad') { bk.abroad = true; saveBk(bk); syncControls(); renderBk(); msg = 'No problem. I\'ve switched on "My representative" so family can meet the technician, set your number to +971, and you can pay by link from any country.'; }
+      if (a === 'pdi') { setService('pdi'); msg = 'Switched to New Car PDI: a flat ₹3,999 + GST (₹4,719), about 2 hours at the showroom, finished before you sign.'; }
+      if (a === 'dealer') { setService('used'); bk.owner = 'dealer'; saveBk(bk); syncControls(); renderBk(); msg = 'Buying from a used-car dealer — on the next step we\'ll ask for the dealership and a sales contact instead of a private seller.'; }
+      if (a === 'abroad') { bk.abroad = true; bk.ccUser = '+971'; saveBk(bk); syncControls(); renderBk(); msg = 'Buying from abroad — we\'ve switched on "My representative" so family can meet the technician, set your number to +971, and you can pay by link from any country.'; }
       $$('[data-guide]').forEach(function (c) { if (c.getAttribute('data-guide') === a) c.setAttribute('aria-pressed', 'true'); });
       var host = chip.closest ? chip.closest('.guide-bubble') : null;
       var out = (host && $('[data-guide-reply]', host)) || $('[data-guide-reply]');
@@ -652,6 +721,10 @@
         days.forEach(function (x) { x.setAttribute('aria-pressed', x === dy ? 'true' : 'false'); });
         picked.day = dy.getAttribute('data-label') || dy.textContent.trim();
         var sl = $('[data-sessions-for]', root); if (sl) sl.textContent = picked.day;
+        $$('[data-avail]', root).forEach(function (a) {
+          var v = dy.getAttribute(a.getAttribute('data-avail') === 'morning' ? 'data-am' : 'data-pm') || 'Open';
+          a.textContent = (a.getAttribute('data-avail') === 'morning' ? 'Morning · ' : 'Afternoon · ') + v;
+        });
         update(true);
       });
     });
@@ -740,7 +813,12 @@
     renderHold();
     holdTimer = setInterval(renderHold, 1000);
   }
-  if ($('[data-hold][data-hold-auto]')) startHold(store('sdc_hold_label') || (bk.date + ', ' + bk.session), false);
+  if ($('[data-hold][data-hold-auto]')) {
+    var linkOn = !!$('input[name="pay"][value="link"]:checked');
+    var wasLink = parseInt(store('sdc_hold_ms') || '0', 10) === LINK_MS;
+    if (wasLink && !linkOn) { store('sdc_hold_ms', null); startHold(store('sdc_hold_label') || (bk.date + ', ' + bk.session), true, HOLD_MS); }
+    else startHold(store('sdc_hold_label') || (bk.date + ', ' + bk.session), false);
+  }
 
   // Pay by link switches the hold to 2 hours (and back)
   $$('input[name="pay"]').forEach(function (r) {
@@ -824,7 +902,7 @@
     b.appendChild(sh);
     var btn = d.createElement('button');
     btn.type = 'button'; btn.className = 'cta-sum-btn'; btn.setAttribute('data-sheet', 'sum-sheet');
-    btn.innerHTML = cs.innerHTML + '<span class="more">See booking details ' + ic('chev-u', 'i-sm') + '</span>';
+    btn.innerHTML = cs.innerHTML + '<span class="more">Details ' + ic('chev-u', 'i-sm') + '</span>';
     cs.parentNode.replaceChild(btn, cs);
   })();
 
@@ -875,6 +953,58 @@
     });
   });
 
+  // Browse filters: brand, tier, budget, city, body, fuel, score, km — honest count
+  (function browseFilters() {
+    var res = $('.results'); if (!res) return;
+    var cars = $$('.car[data-brand]', res); if (!cars.length) return;
+    var head = $('#res-h'), note = $('[data-filter-note]'), empty = $('[data-empty]');
+    var controls = $$('[data-f-key]');
+    function sel(key) {
+      return controls.filter(function (x) { return x.getAttribute('data-f-key') === key && (x.type === 'checkbox' ? x.checked : x.getAttribute('aria-pressed') === 'true'); })
+        .map(function (x) { return x.getAttribute('data-f-val'); });
+    }
+    function apply() {
+      var f = { brand: sel('brand'), tier: sel('tier'), city: sel('city'), body: sel('body'), fuel: sel('fuel') };
+      if (f.tier.length === 3) f.tier = [];
+      var budget = sel('budget')[0], score = parseFloat(sel('score')[0]) || 0, km = parseFloat(sel('km')[0]) || Infinity;
+      var bmin = parseFloat(($('#bmin') || {}).value) || 0, bmax = parseFloat(($('#bmax') || {}).value) || Infinity;
+      var selNarrow = bmin > 0 || bmax < Infinity;
+      if (budget) { var bb = budget.split('-'); bmin = Math.max(bmin, +bb[0]); bmax = Math.min(bmax, +bb[1]); }
+      var active = ['brand', 'tier', 'city', 'body', 'fuel'].filter(function (k) { return f[k].length; }).length + (budget ? 1 : 0) + (score ? 1 : 0) + (km < Infinity ? 1 : 0) + (selNarrow ? 1 : 0);
+      var n = 0;
+      cars.forEach(function (c) {
+        var price = parseFloat(c.getAttribute('data-price'));
+        var ok = ['brand', 'tier', 'city', 'body', 'fuel'].every(function (k) { return !f[k].length || f[k].indexOf(c.getAttribute('data-' + k)) > -1; }) &&
+          price >= bmin && price <= bmax && parseFloat(c.getAttribute('data-score')) >= score && parseFloat(c.getAttribute('data-km')) <= km;
+        c.hidden = !ok; if (ok) n++;
+      });
+      if (head) head.innerHTML = active ? n + (n === 1 ? ' car matches' : ' cars match') + ' <span class="muted small" style="font-weight:500">· in the 16 shown here</span>' : 'All cars · 1,248 <span class="muted small" style="font-weight:500">· showing the first 16</span>';
+      if (note) note.innerHTML = active ? '<span class="small">' + active + (active === 1 ? ' filter' : ' filters') + ' applied</span> <button class="chip" type="button" data-clear-filters>Clear all' + ic('x', 'i-sm x') + '</button>' : '<span class="small muted">No filters applied — choose some to narrow the list.</span>';
+      if (empty) empty.hidden = n > 0;
+      $$('[data-show-count]').forEach(function (x) { x.textContent = active ? 'Show ' + n + (n === 1 ? ' car' : ' cars') : 'Show all cars'; });
+      $$('[data-filter-count]').forEach(function (x) { x.textContent = active ? ' · ' + active : ''; });
+    }
+    function clearAll() {
+      controls.forEach(function (x) {
+        if (x.type === 'checkbox') x.checked = x.getAttribute('data-f-key') === 'tier';
+        else x.setAttribute('aria-pressed', 'false');
+      });
+      ['bmin', 'bmax'].forEach(function (id) { var e = d.getElementById(id); if (e) e.value = ''; });
+      apply();
+    }
+    controls.forEach(function (x) {
+      if (x.type === 'checkbox') { x.addEventListener('change', apply); return; }
+      x.addEventListener('click', function () {
+        var single = ['budget', 'score', 'km'].indexOf(x.getAttribute('data-f-key')) > -1;
+        if (single && x.getAttribute('aria-pressed') === 'true') controls.forEach(function (y) { if (y !== x && y.getAttribute('data-f-key') === x.getAttribute('data-f-key')) y.setAttribute('aria-pressed', 'false'); });
+        apply();
+      });
+    });
+    ['bmin', 'bmax'].forEach(function (id) { var e = d.getElementById(id); if (e) e.addEventListener('change', apply); });
+    d.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('[data-clear-filters]')) { e.preventDefault(); clearAll(); } });
+    apply();
+  })();
+
   // Wallet: tap a card to bring it to the front
   $$('.wallet .pass').forEach(function (p) {
     p.addEventListener('click', function (e) {
@@ -911,46 +1041,12 @@
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!validateRequired(f)) return;
+      if (f.closest && f.closest('.sheet')) closeSheets();
       var go = f.getAttribute('data-go');
       var parts = (f.getAttribute('data-demo') || 'Sent|').split('|');
       toast(parts[0], parts[1], parts[2] || 'check');
       if (go) setTimeout(function () { window.location.href = go; }, 900);
     });
-  });
-
-  // Concierge chat
-  $$('[data-chat]').forEach(function (root) {
-    var log = $('[data-chat-log]', root);
-    if (!log) return;
-    function now() { var t = new Date(); var h = t.getHours(), m = t.getMinutes(); var ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + (m < 10 ? '0' : '') + m + ' ' + ap; }
-    function add(text, me) {
-      var el = d.createElement('div');
-      el.className = 'msg' + (me ? ' me' : '');
-      el.innerHTML = (me ? '<span class="avatar avatar-sm" aria-hidden="true">AM</span>' : '<span class="meera meera-sm" aria-hidden="true">M</span>') +
-        '<div><div class="msg-b">' + esc(text) + '</div><time>' + now() + '</time></div>';
-      log.appendChild(el);
-      el.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
-    }
-    function reply(text) {
-      var ty = d.createElement('div');
-      ty.className = 'msg';
-      ty.innerHTML = '<span class="meera meera-sm" aria-hidden="true">M</span><div class="msg-b typing" aria-label="Meera is typing"><i></i><i></i><i></i></div>';
-      log.appendChild(ty);
-      setTimeout(function () { if (ty.parentNode) ty.parentNode.removeChild(ty); add(text, false); }, 1200);
-    }
-    $$('[data-reply]', root).forEach(function (c) {
-      c.addEventListener('click', function () { add(c.textContent.trim(), true); reply(c.getAttribute('data-reply')); });
-    });
-    var form = $('[data-chat-form]', root);
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var inp = $('input', form);
-        if (!inp || !inp.value.trim()) return;
-        add(inp.value.trim(), true); inp.value = '';
-        reply('Thanks, Arjun — I\'m on it. I\'ll reply right here within about 2 minutes, and on WhatsApp if you step away.');
-      });
-    }
   });
 
   // Reveal on scroll

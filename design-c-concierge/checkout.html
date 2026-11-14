@@ -19,7 +19,7 @@
   <div class="layout-aside">
     <div class="flow-body">
       <header class="flow-head stagger">
-        <span class="eyebrow">Last step</span>
+        <span class="eyebrow">Last step · review and pay</span>
         <h1>Everything look right?</h1>
       </header>
 
@@ -30,10 +30,10 @@
       </div>
 
       <div class="guide">
-        <span class="meera" aria-hidden="true">M</span>
+        <span class="tip-ico" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
         <div class="guide-bubble">
-          <div class="guide-name"><b>Meera</b> · your Suresh Drives guide · <span class="online">online</span></div>
-          <p>You can still change anything below. Once you pay, I'll message you and Faisal on WhatsApp straight away, and let you know who your technician is by tomorrow evening.</p>
+          <div class="guide-name"><b>Good to know</b> · from Suresh Drives</div>
+          <p>You can still change anything below. Once you pay, a WhatsApp confirmation goes to you straight away, and an automated message goes to the person at the car. You'll know your technician by the next evening.</p>
         </div>
       </div>
 
@@ -41,11 +41,13 @@
       <section class="card card-pad" aria-labelledby="rev-h">
         <h2 id="rev-h" class="h3">Your inspection</h2>
         <ul class="mt-1">
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><div><span class="tiny muted">Service</span><b>Used Car Pre-Purchase Inspection · 300+ points</b></div><a href="book.html" aria-label="Edit service">Edit</a></li>
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><div><span class="tiny muted">Car</span><b>2021 Mercedes-Benz GLE 300d 4MATIC</b><span class="tiny muted">KL 11 BH 7272 · reg. 14 Mar 2021 · ~38,600 km (seller-declared)</span></div><a href="book-car.html" aria-label="Edit car">Edit</a></li>
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Where</span><b>Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</b><span class="tiny muted">Landmark: Opp. Hilite City gate 2</span></div><a href="book-location.html" aria-label="Edit location">Edit</a></li>
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span><div><span class="tiny muted">At the car</span><b>Faisal (seller) · +91 99460 55120</b><span class="tiny muted">Alternate: Arjun Menon · +91 98470 12345</span></div><a href="book-location.html" aria-label="Edit contacts">Edit</a></li>
-          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">When</span><b><span data-hold-label>Sat 21 Nov, Morning</span> · 9:00 AM – 1:00 PM</b></div><a href="book-slot.html" aria-label="Edit date and session">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><div><span class="tiny muted">Service</span><b data-bk="service">Used Car Pre-Purchase Inspection</b><span class="tiny muted">Takes <span data-bk="duration">about 3–4 hours</span></span></div><a href="book.html">Edit service</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><div><span class="tiny muted">Car</span><b data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</b><span class="tiny muted" data-bk="reg">KL 11 BH 7272</span></div><a href="book-car.html">Edit car</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Where</span><b data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode</b></div><a href="book-location.html">Edit place</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span><div><span class="tiny muted"><span data-bk-show="used">At the car</span><span data-bk-show="pdi" hidden>Sales advisor</span></span><b data-bk="who">Faisal (seller) · +91 99460 55120</b><span class="tiny muted">Your number: +91 98470 12345</span></div><a href="book-location.html">Edit contacts</a></li>
+          <li class="sum-row" data-bk-if="repName"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><div><span class="tiny muted">Your representative</span><b data-bk="rep">—</b></div><a href="book-location.html">Edit representative</a></li>
+          <li class="sum-row" data-bk-show="pdi" hidden><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><div><span class="tiny muted">Handover</span><b data-bk="handover">Tue 17 Nov, 4:00 PM IST</b><span class="tiny muted">We finish before you sign</span></div><a href="book-location.html">Edit handover</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">When</span><b data-bk="when">Sat 21 Nov, Morning · 9:00 AM–1:00 PM IST</b></div><a href="book-slot.html">Edit time</a></li>
         </ul>
       </section>
 
@@ -62,23 +64,27 @@
               <label><input type="radio" name="upiapp">Paytm</label>
               <label><input type="radio" name="upiapp">UPI ID</label>
             </div>
-            <p class="tiny muted mt-1">You'll approve ₹7,079 in the app. Nothing is charged until you do.</p>
+            <p class="tiny muted mt-1">You'll approve <span data-bk="total">₹7,079</span> in the app. Nothing is charged until you do.</p>
           </div>
-          <label class="choice choice-compact"><input type="radio" name="pay" value="card" data-show="#pay-card"><span class="choice-card"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg></span><span class="grow"><b class="strong" style="display:block">Credit or debit card</b><span class="tiny muted">Visa, Mastercard, RuPay</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+          <label class="choice choice-compact"><input type="radio" name="pay" value="card" data-show="#pay-card"><span class="choice-card"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg></span><span class="grow"><b class="strong" style="display:block">Credit or debit card</b><span class="tiny muted">Indian &amp; international cards (Visa, Mastercard, Amex, RuPay) · charged in INR · your bank may add a forex fee</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
           <div id="pay-card" class="card-sunk form-grid" style="padding:16px" hidden>
-            <div class="field full"><label class="label" for="cn">Card number</label><input class="input" id="cn" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456"></div>
-            <div class="field"><label class="label" for="ce">Expiry</label><input class="input" id="ce" autocomplete="cc-exp" placeholder="MM / YY"></div>
-            <div class="field"><label class="label" for="cv">CVV</label><input class="input" id="cv" inputmode="numeric" autocomplete="cc-csc" placeholder="3 digits"></div>
+            <div class="field full"><label class="label" for="cn">Card number</label><input class="input" id="cn" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" maxlength="23"></div>
+            <div class="field"><label class="label" for="ce">Expiry</label><input class="input" id="ce" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" maxlength="7"></div>
+            <div class="field"><label class="label" for="cv">CVV</label><input class="input" id="cv" inputmode="numeric" autocomplete="cc-csc" placeholder="3 or 4 digits" maxlength="4"></div>
+            <div class="field full"><label class="label" for="cname">Name on card</label><input class="input" id="cname" autocomplete="cc-name" placeholder="As printed on the card"></div>
           </div>
           <label class="choice choice-compact"><input type="radio" name="pay" value="nb" data-show="#pay-nb"><span class="choice-card"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-bank"/></svg></span><span class="grow"><b class="strong" style="display:block">Netbanking</b><span class="tiny muted">All major Indian banks</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
           <div id="pay-nb" class="card-sunk" style="padding:16px" hidden>
             <label class="label" for="bank">Your bank</label>
             <select class="select mt-1" id="bank"><option>Federal Bank</option><option>South Indian Bank</option><option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option><option>Axis Bank</option></select>
           </div>
-          <label class="choice choice-compact"><input type="radio" name="pay" value="link" data-show="#pay-link"><span class="choice-card"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="grow"><b class="strong" style="display:block">Pay later via WhatsApp link</b><span class="tiny muted">For NRIs and family paying on someone's behalf</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+          <label class="choice choice-compact"><input type="radio" name="pay" value="link" data-show="#pay-link"><span class="choice-card"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="grow"><b class="strong" style="display:block">Pay by link</b><span class="tiny muted">Send it to anyone, in any country — family included</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
           <div id="pay-link" class="card-sunk stack" style="padding:16px; --gap:10px" hidden>
-            <div class="field"><label class="label" for="payer">Send the payment link to</label><input class="input" id="payer" inputmode="tel" placeholder="+91 or international number"></div>
-            <p class="tiny muted">The link is valid for 24 hours. Your slot is confirmed the moment it's paid — Meera will tell you both on WhatsApp.</p>
+            <div class="field"><label class="label" for="payer">Send the payment link to</label>
+              <div class="phone-field"><select class="select" id="payer-cc" data-cc-user aria-label="Payer's country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="payer" inputmode="tel" autocomplete="off" placeholder="Mobile number"></div>
+              <label class="wa-check"><input type="checkbox" checked>Reachable on WhatsApp</label>
+            </div>
+            <p class="small"><b class="strong">Pay by link — send it to anyone (any country).</b> While the link is open we hold your slot for <b class="strong">2 hours</b>; the link expires with the hold.</p>
           </div>
         </fieldset>
       </section>
@@ -88,43 +94,40 @@
         <h2 id="pol-h" class="h3">If plans change</h2>
         <div class="grid g-2" style="--gap:10px">
           <div class="card-sunk row start" style="padding:14px; --gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-refresh"/></svg><p class="small"><b class="strong">Reschedule free</b> up to 12 hours before your session.</p></div>
-          <div class="card-sunk row start" style="padding:14px; --gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-check-circle"/></svg><p class="small"><b class="strong">Full refund</b> if you cancel 24 hours or more before.</p></div>
+          <div class="card-sunk row start" style="padding:14px; --gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-check-circle"/></svg><p class="small"><b class="strong">Full refund</b> (<span data-bk="total">₹7,079</span>) if you cancel 24 hours or more before.</p></div>
           <div class="card-sunk row start" style="padding:14px; --gap:12px"><svg class="i txt-amber" aria-hidden="true"><use href="#i-clock"/></svg><p class="small"><b class="strong">50% refund</b> if you cancel within 24 hours.</p></div>
           <div class="card-sunk row start" style="padding:14px; --gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-shield"/></svg><p class="small"><b class="strong">100% refund</b> if we can't complete it for reasons on our side.</p></div>
         </div>
-        <label class="row start" style="--gap:12px; cursor:pointer"><input type="checkbox" checked style="width:20px;height:20px;accent-color:var(--ink);margin-top:2px"><span class="small">Send me and the seller updates on <b class="strong">WhatsApp</b> (SMS if WhatsApp fails). You can change this anytime.</span></label>
-        <label class="row start" style="--gap:12px; cursor:pointer"><input type="checkbox" id="consent-terms" checked style="width:20px;height:20px;accent-color:var(--ink);margin-top:2px"><span class="small">I've read the cancellation policy above and agree to the inspection terms.</span></label>
+        <label class="consent-row"><input type="checkbox" checked><span class="small">Send me updates on <b class="strong">WhatsApp</b> (SMS if WhatsApp fails, push in parallel). You can change this anytime.</span></label>
+        <label class="consent-row"><input type="checkbox" id="consent-terms" required><span class="small">I've read the cancellation policy above and agree to the inspection terms. <span class="muted">(required)</span></span></label>
       </section>
 
       <div class="cta-bar">
-        <div class="cta-sum"><strong>₹7,079</strong><span>incl. GST · held <span data-hold-inline>09:42</span></span></div>
-        <a class="btn btn-primary btn-lg" href="booking-confirmed.html" data-pay><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Pay ₹7,079 securely</a>
+        <div class="cta-sum"><strong data-bk="total">₹7,079</strong><span>incl. GST · held <span data-hold-inline>09:42</span></span></div>
+        <a class="btn btn-primary btn-lg" href="booking-confirmed.html" data-pay><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span data-bk="pay">Pay ₹7,079 securely</span></a>
       </div>
     </div>
 
-    <aside class="stack sticky-aside" style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Price breakdown">
+    <aside class="stack sticky-aside" data-summary style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Price breakdown">
       <section class="card card-pad" aria-labelledby="pb-h">
-        <div class="row" style="--gap:12px"><span class="thumb"><img src="../assets/mercedes-gle-showroom.jpg" alt=""></span><div><b class="strong small">Mercedes-Benz GLE 300d</b><p class="tiny muted">Luxury tier · Sat 21 Nov, Morning</p></div></div>
+        <div class="row" style="--gap:12px"><span class="thumb"><img src="../assets/mercedes-gle-showroom.jpg" alt=""></span><div><b class="strong small" data-bk="car-short">Mercedes-Benz GLE 300d 4MATIC</b><p class="tiny muted"><span data-bk="tier">Luxury tier</span> · <span data-bk="when-short">Sat 21 Nov, Morning</span></p></div></div>
         <h2 id="pb-h" class="h4 mt-3">Price breakdown</h2>
         <dl class="price-lines mt-2">
-          <div><dt>Inspection · Luxury tier</dt><dd>₹5,999.00</dd></div>
-          <div><dt>GST (18%)</dt><dd>₹1,079.82</dd></div>
+          <div><dt><span data-bk="service-short">Used Car Pre-Purchase</span> · <span data-bk="tier">Luxury tier</span></dt><dd data-bk="base">₹5,999.00</dd></div>
+          <div><dt>GST (18%)</dt><dd data-bk="gst">₹1,079.82</dd></div>
+          <div><dt>Subtotal</dt><dd data-bk="exact">₹7,078.82</dd></div>
           <div><dt>Travel</dt><dd class="txt-green">₹0 · in service area</dd></div>
-          <div><dt>Rounding</dt><dd>−₹0.82</dd></div>
-          <div class="price-total"><dt>Total</dt><dd>₹7,079</dd></div>
+          <div><dt>Rounding</dt><dd data-bk="round">+₹0.18</dd></div>
+          <div class="price-total"><dt>Total</dt><dd data-bk="total">₹7,079</dd></div>
         </dl>
         <p class="tiny muted mt-2">GST invoice sent to arjun.menon@example.in after payment. No other charges.</p>
-        <div class="card-sunk mt-2 row start" style="padding:14px; --gap:12px">
-          <svg class="i txt-green" aria-hidden="true"><use href="#i-shield"/></svg>
-          <p class="tiny"><b class="strong">SD Assure warranty</b> can be added from your report if you buy this car — up to 7 yrs / 1,00,000 km. Nothing added today.</p>
-        </div>
       </section>
       <section class="card next" aria-labelledby="next-h">
         <div class="next-head"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><h2 id="next-h">After you pay</h2></div>
         <ol>
-          <li><div><b>Confirmation on WhatsApp</b><span>Within a minute — for you and Faisal.</span></div></li>
-          <li><div><b>Technician assigned</b><span>By Sun 15 Nov, evening.</span></div></li>
-          <li><div><b>Inspection day</b><span>Arrival window at 8 AM; report the same afternoon.</span></div></li>
+          <li><div><b>Confirmation on WhatsApp</b><span>Within a minute.</span></div></li>
+          <li><div><b>Technician assigned</b><span>By Sun 15 Nov, the day after you book.</span></div></li>
+          <li><div><b>Inspection day</b><span>Arrival window on the morning; report the same day.</span></div></li>
         </ol>
       </section>
     </aside>

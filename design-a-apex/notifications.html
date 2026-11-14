@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notifications · SDCertified</title>
+<meta name="description" content="Every WhatsApp, push and SMS update about your inspections, payments and cars — plus channel preferences and quiet hours.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="notifications" data-shell="app" data-back="home.html">
+<main id="main" class="mist">
+  <div class="wrap">
+    <header class="phead">
+      <p class="eyebrow">3 unread · WhatsApp, push &amp; SMS mirrored here</p>
+      <h1 class="d-2">Notifications</h1>
+      <p class="muted mb-0">Every message we send also lands here — so nothing is lost if WhatsApp or SMS is missed. All times IST.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Notification views">
+      <button class="tab" role="tab" id="t-feed" aria-controls="p-feed" aria-selected="true">Updates <span class="count">3</span></button>
+      <button class="tab" role="tab" id="t-prefs" aria-controls="p-prefs" aria-selected="false">Channel preferences</button>
+    </div>
+
+    <!-- Feed -->
+    <section id="p-feed" role="tabpanel" aria-labelledby="t-feed" class="nf-panel">
+      <div class="chips-scroll mt-4" data-filter-group="#nf-list" role="group" aria-label="Filter notifications">
+        <button class="chip" type="button" data-filter="all" data-group="nf" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="insp" data-group="nf" aria-pressed="false">Inspections</button>
+        <button class="chip" type="button" data-filter="pay" data-group="nf" aria-pressed="false">Payments</button>
+        <button class="chip" type="button" data-filter="cars" data-group="nf" aria-pressed="false">Cars</button>
+        <button class="chip" type="button" data-filter="offers" data-group="nf" aria-pressed="false">Offers</button>
+      </div>
+
+      <div class="nf-layout">
+        <div id="nf-list" class="stack" style="--gap:22px">
+          <section data-day-group aria-labelledby="d1">
+            <h2 id="d1" class="rule-label">Today · Sat 21 Nov</h2>
+            <div class="nitem unread" data-cat="insp">
+              <span class="ic g"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg></span>
+              <div><p class="t mb-0">Inspection started · SDB-24817</p><p class="d">Nikhil started at 9:31 AM. A full inspection takes about 3–4 hours. We’ll message you the moment the report is ready.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-a"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>WhatsApp · Failed</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>SMS fallback sent 9:32 AM</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div>
+                <a class="link" href="track.html">Track inspection<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              <span class="when">9:31 AM</span>
+            </div>
+            <div class="nitem unread" data-cat="insp">
+              <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span>
+              <div><p class="t mb-0">Nikhil arrived at the car</p><p class="d">Arrived 9:24 AM. Number plate &amp; odometer photographed at arrival.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div>
+              <span class="when">9:24 AM</span>
+            </div>
+            <div class="nitem unread" data-cat="insp">
+              <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div><p class="t mb-0">Arriving today · 9:00–9:30 AM IST</p><p class="d">Nikhil will reach Near Hilite Mall, Thondayad Bypass, Kozhikode between 9:00 and 9:30 AM.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg>WhatsApp · Read</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div>
+              <span class="when">8:10 AM</span>
+            </div>
+          </section>
+
+          <section data-day-group aria-labelledby="d2">
+            <h2 id="d2" class="rule-label">Wed 18 Nov</h2>
+            <div class="nitem" data-cat="cars">
+              <span class="ic r"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></span>
+              <div><p class="t mb-0">Saved car updated · BMW X4 M Competition</p><p class="d">SD-2481 · new photos added by the owner. Price unchanged at ₹1.12 Cr; report SDR-18842 still applies.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div>
+                <a class="link" href="vehicle.html">View car<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              <span class="when">7:40 PM</span>
+            </div>
+          </section>
+
+          <section data-day-group aria-labelledby="d3">
+            <h2 id="d3" class="rule-label">Sun 15 Nov</h2>
+            <div class="nitem" data-cat="insp">
+              <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span>
+              <div><p class="t mb-0">Technician assigned · Nikhil Raj</p><p class="d">Senior Inspection Engineer, Gulf-experienced. He’ll inspect your GLE on Sat 21 Nov, Morning session.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>WhatsApp · Delivered</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div>
+              <span class="when">6:05 PM</span>
+            </div>
+          </section>
+
+          <section data-day-group aria-labelledby="d4">
+            <h2 id="d4" class="rule-label">Sat 14 Nov</h2>
+            <div class="nitem" data-cat="pay">
+              <span class="ic g"><svg class="i" aria-hidden="true"><use href="#i-receipt"/></svg></span>
+              <div><p class="t mb-0">Payment received · ₹7,079</p><p class="d">UPI (Google Pay) · Invoice INV-2026-11-0417 for SDB-24817 (₹5,999 + GST ₹1,079.82, rounding +₹0.18).</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email · Delivered</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div>
+                <button class="link" type="button" data-download="INV-2026-11-0417.pdf">Download invoice<svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></div>
+              <span class="when">10:42 AM</span>
+            </div>
+            <div class="nitem" data-cat="insp">
+              <span class="ic g"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+              <div><p class="t mb-0">Booking confirmed · SDB-24817</p><p class="d">Used Car Pre-Purchase Inspection · 2021 Mercedes-Benz GLE 300d · Sat 21 Nov, Morning (9:00 AM – 1:00 PM IST).</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg>WhatsApp · Read</span><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div>
+              <span class="when">10:42 AM</span>
+            </div>
+          </section>
+
+          <section data-day-group aria-labelledby="d5">
+            <h2 id="d5" class="rule-label">Earlier</h2>
+            <div class="nitem" data-cat="insp">
+              <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <div><p class="t mb-0">Wayanad visiting team · 2 of 3 requests gathered</p><p class="d">2018 Jeep Wrangler Rubicon, Kalpetta. We’ll confirm your date by Thu 19 Nov at the latest.</p>
+                <div class="row" style="--gap:6px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>WhatsApp · Delivered</span></div>
+                <a class="link" href="inspections.html">See batch status<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              <span class="when">12 Nov</span>
+            </div>
+            <div class="nitem" data-cat="offers">
+              <span class="ic r"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
+              <div><p class="t mb-0">New Car PDI — book before your delivery date</p><p class="d">Taking delivery soon? We inspect at the showroom and finish before you sign. ₹3,999 + GST = ₹4,719.</p>
+                <a class="link" href="book.html?service=pdi">Book a New Car PDI<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              <span class="when">10 Nov</span>
+            </div>
+          </section>
+        </div>
+
+        <aside class="stack nf-side" style="--gap:16px" aria-label="How a WhatsApp update looks">
+          <div class="card card-cut">
+            <h2 class="h4">How updates look on WhatsApp</h2>
+            <div class="wa">
+              <div class="wa-from"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Suresh Drives · verified business</div>
+              <div class="wa-b"><p><b>Arriving today</b></p><p>Nikhil will reach between 9:00 and 9:30 AM IST for booking SDB-24817 (Mercedes-Benz GLE 300d).</p><span class="wa-meta">8:10 AM<svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg></span></div>
+            </div>
+            <p class="small muted mt-3 mb-0">WhatsApp first. If it can’t be delivered, we send an SMS. Push goes out in parallel.</p>
+          </div>
+          <div class="note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><div><b>Missed something?</b>Every milestone also stays on the tracking page for the booking.</div></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Preferences -->
+    <section id="p-prefs" role="tabpanel" aria-labelledby="t-prefs" class="nf-panel" hidden>
+      <div class="grid g-4 keep-2 mt-5" style="--gap:10px">
+        <div class="card card-cut ch-card"><svg class="i i-lg" aria-hidden="true"><use href="#i-whatsapp"/></svg><p class="h4 mb-0">WhatsApp</p><p class="small muted mb-0">Primary · +91 98470 12345</p></div>
+        <div class="card card-cut ch-card"><svg class="i i-lg" aria-hidden="true"><use href="#i-smartphone"/></svg><p class="h4 mb-0">Push</p><p class="small muted mb-0">This phone</p></div>
+        <div class="card card-cut ch-card"><svg class="i i-lg" aria-hidden="true"><use href="#i-sms"/></svg><p class="h4 mb-0">SMS</p><p class="small muted mb-0">Fallback · +91 98470 12345</p></div>
+        <div class="card card-cut ch-card"><svg class="i i-lg" aria-hidden="true"><use href="#i-mail"/></svg><p class="h4 mb-0">Email</p><p class="small muted mb-0">arjun.menon@example.in</p></div>
+      </div>
+
+      <h2 class="h3 mt-6">Per event</h2>
+      <p class="small muted">Turn channels on or off for each update. SMS is only used if WhatsApp can’t be delivered.</p>
+      <div class="pref-list">
+        <fieldset class="pref"><legend class="h4">Booked</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for Booked"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for Booked"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for Booked"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" checked data-pref="Email for Booked"></label>
+          </div></fieldset>
+        <fieldset class="pref"><legend class="h4">Technician assigned</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for Assigned"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for Assigned"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for Assigned"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" data-pref="Email for Assigned"></label>
+          </div></fieldset>
+        <fieldset class="pref"><legend class="h4">Arriving today</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for Arriving today"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for Arriving today"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for Arriving today"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" data-pref="Email for Arriving today"></label>
+          </div></fieldset>
+        <fieldset class="pref"><legend class="h4">In progress</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for In progress"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for In progress"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for In progress"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" data-pref="Email for In progress"></label>
+          </div></fieldset>
+        <fieldset class="pref"><legend class="h4">Completed · report ready</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for Report ready"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for Report ready"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for Report ready"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" checked data-pref="Email for Report ready"></label>
+          </div></fieldset>
+        <fieldset class="pref"><legend class="h4">Reassigned</legend>
+          <div class="pref-ch">
+            <label><span>WhatsApp</span><input class="switch" type="checkbox" checked data-pref="WhatsApp for Reassigned"></label>
+            <label><span>Push</span><input class="switch" type="checkbox" checked data-pref="Push for Reassigned"></label>
+            <label><span>SMS fallback</span><input class="switch" type="checkbox" checked data-pref="SMS fallback for Reassigned"></label>
+            <label><span>Email</span><input class="switch" type="checkbox" data-pref="Email for Reassigned"></label>
+          </div></fieldset>
+      </div>
+
+      <div class="grid g-2 mt-6">
+        <div class="card card-cut">
+          <h2 class="h3">Quiet hours</h2>
+          <div class="switch-row"><label for="qh">Hold non-urgent updates overnight</label><input class="switch" id="qh" type="checkbox" checked data-pref="Quiet hours" data-reveal="#qh-times"></div>
+          <div id="qh-times" class="form-grid mt-3">
+            <div class="field"><label for="qh-from">From</label><select class="select" id="qh-from"><option>9 PM</option><option selected>10 PM</option><option>11 PM</option></select></div>
+            <div class="field"><label for="qh-to">Until</label><select class="select" id="qh-to"><option>6 AM</option><option selected>7 AM</option><option>8 AM</option></select></div>
+          </div>
+          <p class="small muted mt-3 mb-0">Quiet hours follow your own time zone. Milestones on inspection day are never held.</p>
+        </div>
+        <div class="card card-cut">
+          <h2 class="h3">Time zone</h2>
+          <div class="switch-row"><label for="lt">Also show my local time</label><input class="switch" id="lt" type="checkbox" data-pref="Local time" data-reveal="#lt-ex"></div>
+          <div class="field mt-3"><label for="tz">My time zone</label><select class="select" id="tz"><option selected>India (IST)</option><option>Dubai (GST, UTC+4)</option><option>Doha (UTC+3)</option><option>London (UK)</option><option>New York (US Eastern)</option></select></div>
+          <p id="lt-ex" class="note mt-3 mb-0" hidden><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span><b>Example</b>9:00–9:30 AM IST · 7:30–8:00 AM Dubai</span></p>
+          <p class="small muted mt-3 mb-0">Booking times are always shown in IST, the time at the car.</p>
+        </div>
+      </div>
+      <div style="height:40px"></div>
+    </section>
+    <div style="height:32px"></div>
+  </div>
+</main>
+</body>
+</html>

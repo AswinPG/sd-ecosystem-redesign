@@ -35,7 +35,7 @@
 
     <div class="browse-grid mt-6">
       <!-- Filters: bottom sheet on mobile, sidebar on desktop -->
-      <div class="sheet filter-sheet" id="filters">
+      <div class="sheet filter-sheet" id="filters" aria-hidden="false">
         <div class="scrim" data-close-sheet></div>
         <div class="sheet-panel filter-side" role="region" aria-labelledby="flt-h">
           <div class="sheet-head"><h2 id="flt-h" class="h4">Filters</h2><span class="row" style="--gap:4px"><button class="btn btn-ghost btn-sm" type="button" data-clear>Clear all</button><button class="icon-btn sheet-close" type="button" data-close-sheet aria-label="Close filters"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></span></div>
@@ -53,7 +53,7 @@
 
       <section style="min-width:0" aria-labelledby="res-h">
         <div class="row between mb-4" style="--gap:12px">
-          <h2 id="res-h" class="small tx2" style="font-weight:600"><b class="mono" data-result-count style="color:var(--tx)">16</b> cars match · Automatic</h2>
+          <h2 id="res-h" class="small tx2" style="font-weight:600"><span data-count-label style="color:var(--tx)">All cars · 1,248</span> · <span class="muted">showing 16 · all automatic</span></h2>
           <div class="row" style="--gap:8px">
             <label class="row" style="--gap:8px"><span class="sr-only">Sort by</span><svg class="i" aria-hidden="true"><use href="#i-sort"/></svg><select class="select" data-sort style="min-height:40px;width:auto"><option value="score-desc">Best score</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="km-asc">Lowest km</option><option value="year-desc">Newest</option></select></label>
             <div class="seg d-only" role="group" aria-label="View"><button type="button" data-view="grid" aria-pressed="true" aria-label="Grid view"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg></button><button type="button" data-view="list" aria-pressed="false" aria-label="List view"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg></button></div>
@@ -63,54 +63,54 @@
         <div class="cars-grid c3" data-cars>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Petrol" data-body="Sedan" data-city="Bengaluru" data-price="490" data-score="97" data-km="8450" data-year="2021">
             <a href="vehicle.html" class="ph"><img src="../assets/rr-phantom-black.jpg" alt="2021 Rolls-Royce Phantom VIII" loading="lazy" style="object-position:50% 55%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>97</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Phantom VIII" data-car="SD-2403"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Phantom VIII" data-car="SD-2401"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Rolls-Royce Phantom VIII<small>SD-2403 · Owner: Vikram S. · Verified</small></a>
+              <a href="vehicle.html" class="name">Rolls-Royce Phantom VIII<small>SD-2401 · Owner: Vikram S. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2021</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>8,450 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Bengaluru</span></div>
               <div class="price"><b>₹4.90 Cr</b><span>EMI from<br>₹8,15,500/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Petrol" data-body="Sedan" data-city="Mumbai" data-price="325" data-score="96" data-km="12300" data-year="2022">
             <a href="vehicle.html" class="ph"><img src="../assets/rr-ghost-purple.jpg" alt="2022 Rolls-Royce Ghost" loading="lazy" style="object-position:50% 55%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>96</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Ghost" data-car="SD-2411"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Ghost" data-car="SD-2402"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Rolls-Royce Ghost<small>SD-2411 · Owner: Aditya M. · Verified</small></a>
+              <a href="vehicle.html" class="name">Rolls-Royce Ghost<small>SD-2402 · Owner: Aditya M. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>12,300 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Mumbai</span></div>
               <div class="price"><b>₹3.25 Cr</b><span>EMI from<br>₹5,40,900/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Electric" data-body="Coupe" data-city="Delhi NCR" data-price="560" data-score="98" data-km="3150" data-year="2024">
             <a href="vehicle.html" class="ph"><img src="../assets/rr-spectre-black.jpg" alt="2024 Rolls-Royce Spectre" loading="lazy" style="object-position:50% 55%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>98</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Spectre" data-car="SD-2419"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Rolls-Royce Spectre" data-car="SD-2403"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Rolls-Royce Spectre<small>SD-2419 · Owner: Karan B. · Verified</small></a>
+              <a href="vehicle.html" class="name">Rolls-Royce Spectre<small>SD-2403 · Owner: Karan B. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2024</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>3,150 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Electric</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Delhi NCR</span></div>
               <div class="price"><b>₹5.60 Cr</b><span>EMI from<br>₹9,32,000/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Petrol" data-body="Sedan" data-city="Chennai" data-price="340" data-score="94" data-km="15800" data-year="2021">
             <a href="vehicle.html" class="ph"><img src="../assets/bentley-spur-blue.jpg" alt="2021 Bentley Flying Spur V8" loading="lazy" style="object-position:50% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>94</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Bentley Flying Spur V8" data-car="SD-2426"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Bentley Flying Spur V8" data-car="SD-2404"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Bentley Flying Spur V8<small>SD-2426 · Owner: Suresh R. · Verified</small></a>
+              <a href="vehicle.html" class="name">Bentley Flying Spur V8<small>SD-2404 · Owner: Rajesh R. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2021</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>15,800 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Chennai</span></div>
               <div class="price"><b>₹3.40 Cr</b><span>EMI from<br>₹5,65,900/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Petrol" data-body="SUV" data-city="Bengaluru" data-price="245" data-score="95" data-km="11200" data-year="2022">
             <a href="vehicle.html" class="ph"><img src="../assets/maybach-gls-black.jpg" alt="2022 Mercedes-Maybach GLS 600" loading="lazy" style="object-position:50% 60%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>95</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Maybach GLS 600" data-car="SD-2432"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Maybach GLS 600" data-car="SD-2405"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Mercedes-Maybach GLS 600<small>SD-2432 · Owner: Nandini P. · Verified</small></a>
+              <a href="vehicle.html" class="name">Mercedes-Maybach GLS 600<small>SD-2405 · Owner: Nandini P. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>11,200 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Bengaluru</span></div>
               <div class="price"><b>₹2.45 Cr</b><span>EMI from<br>₹4,07,800/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Petrol" data-body="Sedan" data-city="Mumbai" data-price="315" data-score="96" data-km="9750" data-year="2022">
             <a href="vehicle.html" class="ph"><img src="../assets/maybach-s-class.jpg" alt="2022 Mercedes-Maybach S 580" loading="lazy" style="object-position:50% 55%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>96</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Maybach S 580" data-car="SD-2438"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Maybach S 580" data-car="SD-2406"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Mercedes-Maybach S 580<small>SD-2438 · Owner: Farhan Q. · Verified</small></a>
+              <a href="vehicle.html" class="name">Mercedes-Maybach S 580<small>SD-2406 · Owner: Farhan Q. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>9,750 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Mumbai</span></div>
               <div class="price"><b>₹3.15 Cr</b><span>EMI from<br>₹5,24,300/mo</span></div>
             </div>
@@ -122,9 +122,9 @@
           </aside>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Petrol" data-body="SUV" data-city="Pune" data-price="195" data-score="93" data-km="18900" data-year="2023">
             <a href="vehicle.html" class="ph"><img src="../assets/bmw-x7-white.jpg" alt="2023 BMW X7 xDrive40i M Sport" loading="lazy" style="object-position:50% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>93</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save BMW X7 xDrive40i M Sport" data-car="SD-2445"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save BMW X7 xDrive40i M Sport" data-car="SD-2407"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">BMW X7 xDrive40i M Sport<small>SD-2445 · Owner: Rohit D. · Verified</small></a>
+              <a href="vehicle.html" class="name">BMW X7 xDrive40i M Sport<small>SD-2407 · Owner: Rohit D. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2023</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>18,900 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Pune</span></div>
               <div class="price"><b>₹1.95 Cr</b><span>EMI from<br>₹3,24,500/mo</span></div>
             </div>
@@ -133,86 +133,86 @@
             <a href="vehicle.html" class="ph"><img src="../assets/bmw-x4m-green.jpg" alt="2022 BMW X4 M Competition" loading="lazy" style="object-position:45% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>92</b></span></a>
             <button class="heart" type="button" aria-pressed="false" aria-label="Save BMW X4 M Competition" data-car="SD-2481"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">BMW X4 M Competition<small>SD-2481 · Owner: Rahul V. · Verified</small></a>
+              <a href="vehicle.html" class="name">BMW X4 M Competition<small>SD-2481 · Owner: Rahul V. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>21,500 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kozhikode</span></div>
               <div class="price"><b>₹1.12 Cr</b><span>EMI from<br>₹1,86,400/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Diesel" data-body="SUV" data-city="Kochi" data-price="82" data-score="91" data-km="24100" data-year="2022">
             <a href="vehicle.html" class="ph"><img src="../assets/range-rover-velar.jpg" alt="2022 Range Rover Velar R-Dynamic" loading="lazy" style="object-position:50% 62%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>91</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Range Rover Velar R-Dynamic" data-car="SD-2452"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Range Rover Velar R-Dynamic" data-car="SD-2409"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Range Rover Velar R-Dynamic<small>SD-2452 · Owner: Anoop J. · Verified</small></a>
+              <a href="vehicle.html" class="name">Range Rover Velar R-Dynamic<small>SD-2409 · Owner: Anoop J. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>24,100 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Diesel</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kochi</span></div>
               <div class="price"><b>₹82 L</b><span>EMI from<br>₹1,36,500/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Platinum" data-fuel="Hybrid" data-body="SUV" data-city="Kochi" data-price="98" data-score="95" data-km="12800" data-year="2023">
             <a href="vehicle.html" class="ph"><img src="../assets/lexus-rx-gold.jpg" alt="2023 Lexus RX 500h" loading="lazy" style="object-position:50% 55%"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>95</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Lexus RX 500h" data-car="SD-2457"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Lexus RX 500h" data-car="SD-2410"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Lexus RX 500h<small>SD-2457 · Owner: Meera T. · Verified</small></a>
+              <a href="vehicle.html" class="name">Lexus RX 500h<small>SD-2410 · Owner: Divya T. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2023</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>12,800 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Hybrid</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kochi</span></div>
               <div class="price"><b>₹98 L</b><span>EMI from<br>₹1,63,100/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Silver" data-fuel="Petrol" data-body="Sedan" data-city="Delhi NCR" data-price="168" data-score="86" data-km="41200" data-year="2020">
             <a href="vehicle.html" class="ph"><img src="../assets/mercedes-s500-night.jpg" alt="2020 Mercedes-Benz S 500" loading="lazy" style="object-position:50% 55%"><span class="tier tier-silver"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Silver</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>86</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Benz S 500" data-car="SD-2460"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Mercedes-Benz S 500" data-car="SD-2411"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Mercedes-Benz S 500<small>SD-2460 · Owner: Gaurav K. · Verified</small></a>
+              <a href="vehicle.html" class="name">Mercedes-Benz S 500<small>SD-2411 · Owner: Gaurav K. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2020</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>41,200 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Delhi NCR</span></div>
               <div class="price"><b>₹1.68 Cr</b><span>EMI from<br>₹2,79,600/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Silver" data-fuel="Diesel" data-body="SUV" data-city="Chennai" data-price="68" data-score="87" data-km="26900" data-year="2021">
             <a href="vehicle.html" class="ph"><img src="../assets/audi-q7-black.jpg" alt="2021 Audi Q7 45 TDI" loading="lazy" style="object-position:50% 55%"><span class="tier tier-silver"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Silver</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>87</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Audi Q7 45 TDI" data-car="SD-2464"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Audi Q7 45 TDI" data-car="SD-2412"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Audi Q7 45 TDI<small>SD-2464 · Owner: Prakash N. · Verified</small></a>
+              <a href="vehicle.html" class="name">Audi Q7 45 TDI<small>SD-2412 · Owner: Prakash N. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2021</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>26,900 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Diesel</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Chennai</span></div>
               <div class="price"><b>₹68 L</b><span>EMI from<br>₹1,13,200/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Petrol" data-body="Coupe" data-city="Bengaluru" data-price="72" data-score="93" data-km="9300" data-year="2023">
             <a href="vehicle.html" class="ph"><img src="../assets/mustang-yellow.jpg" alt="2023 Ford Mustang GT 5.0" loading="lazy" style="object-position:50% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>93</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Ford Mustang GT 5.0" data-car="SD-2468"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Ford Mustang GT 5.0" data-car="SD-2413"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Ford Mustang GT 5.0<small>SD-2468 · Owner: Arvind C. · Verified</small></a>
+              <a href="vehicle.html" class="name">Ford Mustang GT 5.0<small>SD-2413 · Owner: Arvind C. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2023</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>9,300 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Bengaluru</span></div>
               <div class="price"><b>₹72 L</b><span>EMI from<br>₹1,19,800/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Petrol" data-body="SUV" data-city="Kozhikode" data-price="64" data-score="90" data-km="14600" data-year="2022">
             <a href="vehicle.html" class="ph"><img src="../assets/jeep-rubicon.jpg" alt="2022 Jeep Wrangler Rubicon" loading="lazy" style="object-position:50% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>90</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Jeep Wrangler Rubicon" data-car="SD-2472"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Jeep Wrangler Rubicon" data-car="SD-2414"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Jeep Wrangler Rubicon<small>SD-2472 · Owner: Ramesh K. · Verified</small></a>
+              <a href="vehicle.html" class="name">Jeep Wrangler Rubicon<small>SD-2414 · Owner: Ramesh K. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2022</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>14,600 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kozhikode</span></div>
               <div class="price"><b>₹64 L</b><span>EMI from<br>₹1,06,500/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Silver" data-fuel="Petrol" data-body="Sedan" data-city="Kozhikode" data-price="42" data-score="85" data-km="35400" data-year="2020">
             <a href="vehicle.html" class="ph"><img src="../assets/volvo-s60-red.jpg" alt="2020 Volvo S60 B5 Inscription" loading="lazy" style="object-position:50% 55%"><span class="tier tier-silver"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Silver</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>85</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save Volvo S60 B5 Inscription" data-car="SD-2475"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save Volvo S60 B5 Inscription" data-car="SD-2415"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">Volvo S60 B5 Inscription<small>SD-2475 · Owner: Jithin A. · Verified</small></a>
+              <a href="vehicle.html" class="name">Volvo S60 B5 Inscription<small>SD-2415 · Owner: Jithin A. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2020</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>35,400 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Petrol</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kozhikode</span></div>
               <div class="price"><b>₹42 L</b><span>EMI from<br>₹69,900/mo</span></div>
             </div>
           </article>
           <article class="car-card" data-car-card data-tier="Gold" data-fuel="Diesel" data-body="SUV" data-city="Thrissur" data-price="74" data-score="91" data-km="29700" data-year="2021">
             <a href="vehicle.html" class="ph"><img src="../assets/bmw-x5-showroom.jpg" alt="2021 BMW X5 xDrive30d" loading="lazy" style="object-position:50% 62%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>91</b></span></a>
-            <button class="heart" type="button" aria-pressed="true" aria-label="Save BMW X5 xDrive30d" data-car="SD-2479"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save BMW X5 xDrive30d" data-car="SD-2416"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
             <div class="body">
-              <a href="vehicle.html" class="name">BMW X5 xDrive30d<small>SD-2479 · Owner: Sanjay M. · Verified</small></a>
+              <a href="vehicle.html" class="name">BMW X5 xDrive30d<small>SD-2416 · Owner: Sanjay M. · ID &amp; RC verified</small></a>
               <div class="meta"><span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>2021</span><span><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>29,700 km</span><span><svg class="i" aria-hidden="true"><use href="#i-droplet"/></svg>Diesel</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Thrissur</span></div>
               <div class="price"><b>₹74 L</b><span>EMI from<br>₹1,23,200/mo</span></div>
             </div>
           </article>
         </div>
         <div class="card card-pad center mt-6" data-empty hidden><h3 class="h4">No cars match those filters</h3><p class="small muted mt-2">Try widening the budget — or get any car you’ve found elsewhere inspected.</p><div class="row mt-4" style="justify-content:center"><button class="btn btn-line" type="button" data-clear>Clear filters</button><a class="btn btn-red" href="book.html">Book inspection</a></div></div>
-        <p class="tiny muted center mt-8">Showing 16 of 1,248 · prices include no brokerage · EMI at 9.5%, 60 months, 20% down</p>
+        <p class="tiny muted center mt-8">Showing 16 of 1,248 certified cars · <button class="link small" type="button" data-toast="Loading the next 16 cars…">Load more</button> · 0% brokerage · EMI at 9.5%, 60 months, 20% down</p>
       </section>
     </div>
   </div>

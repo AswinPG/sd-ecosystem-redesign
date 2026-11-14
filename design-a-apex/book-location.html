@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Location · Step 3 of 5 · SDCertified</title>
+<meta name="description" content="Tell us where the car is — or which dealership — and who’ll be there. We check the service area instantly.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="book-location" data-shell="flow" data-step="3">
+<main id="main" class="mist">
+  <div class="wrap flow-grid">
+    <section class="flow-main" aria-labelledby="pg-h">
+      <header>
+        <p class="eyebrow">Step 3 of 5 · Location</p>
+        <h1 id="pg-h" class="d-2"><span data-bk="whereTitle">Where is the car?</span></h1>
+        <p class="lead mb-0">Our technician comes to the car. Tell us where it is and who’ll be there to hand over the keys.</p>
+      </header>
+
+      <form id="loc-form" class="stack" style="--gap:clamp(20px,2.5vw,32px)" onsubmit="return false">
+
+        <!-- USED: address + map -->
+        <section class="card card-cut flow-sec" data-bk-show="used" aria-labelledby="addr-h">
+          <div class="card-head" style="margin-bottom:0"><h2 id="addr-h" class="h3">Address</h2><button class="btn btn-line btn-sm" type="button" data-locate><svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>Use current location</button></div>
+          <div class="map" style="aspect-ratio:16/8">
+            <svg class="map-art" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="200" fill="#E9ECEF"/>
+              <path class="water" d="M0 0h70c-10 40 6 100-18 200H0z"/>
+              <path class="zone" d="M96 14h290v172H120c-20-40-30-110-24-172z"/>
+              <rect class="park" x="250" y="22" width="70" height="40"/>
+              <rect class="block" x="110" y="22" width="60" height="38"/><rect class="block" x="110" y="112" width="70" height="56"/><rect class="block" x="300" y="112" width="70" height="56"/>
+              <path class="road-m" d="M90 200C140 136 200 104 260 92s110-34 150-56"/>
+              <path class="road" d="M70 80h330M200 0v200"/>
+              <path class="road-s" d="M240 200V108M120 80v120M330 80V0"/>
+            </svg>
+            <span class="map-pin" data-drag-pin tabindex="0" role="img" aria-label="Car location pin — drag, or use arrow keys to move" style="--x:62%;--y:58%"><span class="head"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><span class="stem"></span><span class="foot"></span></span>
+            <span class="map-lbl" style="left:8%;bottom:10px">Thondayad Bypass</span>
+            <span class="map-lbl" style="right:10px;top:10px">Kozhikode service area</span>
+          </div>
+          <p class="small muted mb-0">Drag the pin to the exact spot — gate, parking bay or showroom entrance.</p>
+
+          <fieldset>
+            <legend>Saved addresses</legend>
+            <div class="tiles grid g-2" style="--gap:10px">
+              <label class="tile"><input type="radio" name="addr" value="seller" checked data-street="Thondayad Bypass" data-building="Near Hilite Mall" data-landmark="Opp. Hilite City gate 2" data-district="Kozhikode" data-short="Near Hilite Mall, Thondayad Bypass, Kozhikode 673014"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Seller · Faisal</span><span class="small muted">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span></label>
+              <label class="tile"><input type="radio" name="addr" value="home" data-street="Mavoor Road" data-building="Arjun’s home, Nadakkavu" data-landmark="Near Nadakkavu junction" data-district="Kozhikode" data-short="Nadakkavu, Mavoor Road, Kozhikode 673011"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Home</span><span class="small muted">Nadakkavu, Mavoor Road, Kozhikode 673011</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <div class="field"><label for="street">Street</label><input class="input" id="street" type="text" value="Thondayad Bypass" autocomplete="address-line2" required data-err="Add the street."></div>
+            <div class="field"><label for="building">Building / house</label><input class="input" id="building" type="text" value="Near Hilite Mall" autocomplete="address-line1"></div>
+            <div class="field"><label for="landmark">Landmark</label><input class="input" id="landmark" type="text" value="Opp. Hilite City gate 2" autocomplete="off"><span class="hint">Helps the technician find the car fast.</span></div>
+            <div class="field"><label for="district">District</label>
+              <select class="select" id="district" required data-err="Pick the district.">
+                <option>Thiruvananthapuram</option><option>Kollam</option><option>Pathanamthitta</option><option>Alappuzha</option><option>Kottayam</option><option>Idukki</option><option>Ernakulam</option><option>Thrissur</option><option>Palakkad</option><option>Malappuram</option><option selected>Kozhikode</option><option>Wayanad</option><option>Kannur</option><option>Kasaragod</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="note g" role="status">
+            <svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>
+            <div><b>Inside the Kozhikode service area · no travel charge</b>A technician can reach this address in any open session.</div>
+          </div>
+
+          <div class="card card-line" style="--card:var(--white)">
+            <p class="tag mb-0">Example: outside the core area</p>
+            <p class="h4 mt-3 mb-2">Kalpetta, Wayanad — served by a visiting team</p>
+            <p class="ink-2 small">Your area is served by a visiting team. 2 of 3 requests gathered — we’ll confirm your date by Thu 19 Nov at the latest.</p>
+            <div class="speedbar" style="--v:66.6" role="img" aria-label="2 of 3 requests gathered"><i></i></div>
+            <p class="small muted mt-2 mb-0">The team leaves once 3 requests are gathered, or 7 days after the first — whichever comes first. You pay only once your date is confirmed.</p>
+          </div>
+        </section>
+
+        <!-- PDI: dealership -->
+        <section class="card card-cut flow-sec" data-bk-show="pdi" hidden aria-labelledby="dl-h">
+          <h2 id="dl-h" class="h3">Which dealership?</h2>
+          <fieldset>
+            <legend class="sr-only">Dealership</legend>
+            <div class="tiles grid g-2" style="--gap:10px">
+              <label class="tile"><input type="radio" name="dealer" value="BMW EVM Autokraft, Kochi" required data-err="Pick the dealership."><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">BMW EVM Autokraft</span><span class="small muted">Kochi</span></label>
+              <label class="tile"><input type="radio" name="dealer" value="Hyundai Popular, Kozhikode"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Hyundai Popular</span><span class="small muted">Kozhikode</span></label>
+              <label class="tile"><input type="radio" name="dealer" value="Maruti Indus Motors, Kozhikode"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Maruti Indus Motors</span><span class="small muted">Kozhikode</span></label>
+              <label class="tile"><input type="radio" name="dealer" value="Toyota Nippon, Kochi"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Toyota Nippon</span><span class="small muted">Kochi</span></label>
+              <label class="tile"><input type="radio" name="dealer" value="Mercedes-Benz Rajasree, Kozhikode"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Mercedes-Benz Rajasree</span><span class="small muted">Kozhikode</span></label>
+            </div>
+          </fieldset>
+          <div class="form-grid">
+            <div class="field"><label for="advisor">Sales advisor’s name</label><input class="input" id="advisor" type="text" autocomplete="off" placeholder="So we can coordinate access"></div>
+            <div class="field"><label for="advphone">Sales advisor’s mobile</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="advphone" type="tel" inputmode="tel" autocomplete="off"></div></div>
+            <label class="check span-2"><input type="checkbox" checked> <span>Advisor is reachable on WhatsApp</span></label>
+            <div class="field"><label for="hdate">Handover date</label>
+              <select class="select" id="hdate"><option>Sat 21 Nov</option><option>Mon 23 Nov</option><option>Tue 24 Nov</option><option>Wed 25 Nov</option><option>Thu 26 Nov</option><option>Fri 27 Nov</option><option>Sat 28 Nov</option></select>
+            </div>
+            <div class="field"><label for="htime">Handover time (IST)</label>
+              <select class="select" id="htime"><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option selected>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option></select>
+            </div>
+          </div>
+          <div class="note">
+            <svg class="i" aria-hidden="true"><use href="#i-flag"/></svg>
+            <div><b>We’ll finish before you sign</b>A PDI takes about 2 hours. In the next step we suggest a session that ends at least 1 hour before your handover.</div>
+          </div>
+        </section>
+
+        <!-- Who'll be at the car? -->
+        <section class="card card-cut flow-sec" aria-labelledby="who-h">
+          <h2 id="who-h" class="h3">Who’ll be at the car?</h2>
+          <div class="form-grid">
+            <div class="field"><label for="myphone">Your number (for updates)</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="myphone" type="tel" inputmode="tel" autocomplete="tel-national" value="98470 12345" required data-err="Enter your mobile number."></div></div>
+            <p class="note small span-2" data-dual hidden><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span>We’ll show times as IST · Dubai, e.g. <b data-bk="slotDual">9:00 AM – 1:00 PM IST · 7:30–11:30 AM Dubai</b>.</span></p>
+          </div>
+          <div class="form-grid" data-bk-show="used">
+            <div class="field"><label for="cname">Seller / dealer contact</label><input class="input" id="cname" type="text" value="Faisal (seller)" autocomplete="off" required data-err="Add the name of the person at the car."></div>
+            <div class="field"><label for="cphone">Their mobile</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="cphone" type="tel" inputmode="tel" value="99460 55120" autocomplete="off" required data-err="Enter their mobile number."></div></div>
+            <label class="check span-2"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label>
+          </div>
+          <p class="small muted mb-0" data-bk-show="pdi" hidden>At the dealership we coordinate with your sales advisor. You can also send someone on your behalf.</p>
+
+          <label class="check"><input type="checkbox" id="rep-on" data-reveal="#rep-block"> <span><b>Add my representative (optional)</b> — family or a friend who’ll be there for you. Useful if you live abroad.</span></label>
+          <div id="rep-block" class="stack" style="--gap:14px" hidden>
+            <div class="form-grid">
+              <div class="field"><label for="rep">Their name</label><input class="input" id="rep" type="text" autocomplete="off" placeholder="e.g. Anil Menon"></div>
+              <div class="field"><label for="repphone">Their mobile</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="repphone" type="tel" inputmode="tel" autocomplete="off"></div></div>
+            </div>
+            <label class="check"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label>
+            <div>
+              <p class="label mb-2" id="rel-l">Relation</p>
+              <div class="chips" role="group" aria-labelledby="rel-l">
+                <button class="chip" type="button" data-rel="Brother" data-group="rel" aria-pressed="false">Brother</button>
+                <button class="chip" type="button" data-rel="Father" data-group="rel" aria-pressed="false">Father</button>
+                <button class="chip" type="button" data-rel="Friend" data-group="rel" aria-pressed="false">Friend</button>
+                <button class="chip" type="button" data-rel="Other" data-group="rel" aria-pressed="false">Other</button>
+              </div>
+            </div>
+            <fieldset>
+              <legend>Send them</legend>
+              <label class="check"><input type="checkbox" checked> <span>Arrival window</span></label>
+              <label class="check"><input type="checkbox" checked> <span>Milestones</span></label>
+              <label class="check"><input type="checkbox"> <span>The report</span></label>
+            </fieldset>
+          </div>
+          <p class="small muted mb-0">The seller sees the arrival window and milestones — never your payment details or the report.</p>
+        </section>
+      </form>
+
+      <div class="note">
+        <svg class="i" aria-hidden="true"><use href="#i-info"/></svg>
+        <div><b>Good to know</b>If the seller isn’t at the car when we arrive, you rebook free of charge. Travel charges only apply outside our service locations, and you’ll always see them before you pay.</div>
+      </div>
+
+      <section class="next-card carbon" aria-labelledby="nx-h">
+        <h2 id="nx-h">What happens next</h2>
+        <ol class="next-list">
+          <li><span><b>Pick a date and session</b> — Morning 9–1 or afternoon 2–6, IST.</span></li>
+          <li><span><b>We hold your slot for 10 minutes</b> while you review and pay.</span></li>
+          <li><span><b>WhatsApp confirmation</b> straight away — to you, and milestones to anyone you added.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Booking summary: desktop sticky column, mobile bottom sheet -->
+    <aside class="race-sheet msheet carbon" id="race-sheet" aria-labelledby="rs-h">
+      <div class="rs-head"><h2 id="rs-h">Booking summary</h2><button class="icon-btn msheet-close" type="button" data-msheet-close aria-label="Close summary"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <ul class="rs-rows">
+        <li class="rs-row" data-rs="1"><span class="rs-n">01</span><span class="rs-k">Service</span><span class="rs-v"><span data-bk="serviceShort">Used Car Pre-Purchase</span><small data-bk="tier">Luxury segment</small></span><span class="rs-pend">Step 1</span><a class="rs-edit" href="book.html">Edit service</a></li>
+        <li class="rs-row" data-rs="2"><span class="rs-n">02</span><span class="rs-k">Car</span><span class="rs-v"><span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span><small data-bk="reg">KL 11 BH 7272</small></span><span class="rs-pend">Step 2 · up next</span><a class="rs-edit" href="book-car.html">Edit car details</a></li>
+        <li class="rs-row" data-rs="3"><span class="rs-n">03</span><span class="rs-k">Location</span><span class="rs-v"><span data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span><small data-bk="contact">Faisal (seller) · +91 99460 55120</small></span><span class="rs-pend">Step 3</span><a class="rs-edit" href="book-location.html">Edit location</a></li>
+        <li class="rs-row" data-rs="4"><span class="rs-n">04</span><span class="rs-k">Date &amp; session</span><span class="rs-v"><span data-bk="slot">Sat 21 Nov · Morning</span><small data-bk="slotTime">9:00 AM – 1:00 PM IST</small></span><span class="rs-pend">Step 4</span><a class="rs-edit" href="book-slot.html">Edit date &amp; session</a></li>
+      </ul>
+      <div class="rs-total"><span class="lbl">Total incl. GST 18%</span><span class="big" data-bk="total">₹7,079</span><small><span data-bk="base">₹5,999.00</span> + GST <span data-bk="gst">₹1,079.82</span> · rounding <span data-bk="round">+₹0.18</span> · travel ₹0 · no hidden charges</small></div>
+      <a class="btn btn-red btn-lg btn-block" href="book-slot.html" data-cta-main data-check="#loc-form">Continue to date &amp; slot<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      <a class="rs-call" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Questions? Call us · +91 8330 881 213</a>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

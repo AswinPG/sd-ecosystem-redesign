@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Track SDB-24817 · SDCertified</title>
+<meta name="description" content="Milestone tracking for inspection SDB-24817 — Mercedes-Benz GLE 300d 4MATIC.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="track" data-shell="app" data-back="inspections.html">
+<main id="main" class="mist">
+  <div class="wrap">
+    <header class="phead">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="inspections.html">My inspections</a><span aria-hidden="true">/</span><span>SDB-24817</span></nav>
+      <p class="eyebrow">Used Car Pre-Purchase · Luxury · SDB-24817</p>
+      <h1 class="d-2">2021 Mercedes-Benz GLE 300d 4MATIC</h1>
+      <p class="muted mb-0">KL 11 BH 7272 · Sat 21 Nov 2026 · Morning session, 9:00 AM – 1:00 PM IST</p>
+    </header>
+
+    <!-- Prototype state switch -->
+    <div class="statebar row between card card-line" style="--gap:12px;padding:12px 16px;margin-bottom:20px">
+      <span class="row" style="--gap:8px"><span class="tag tag-k">Prototype</span><span class="small strong" id="ps-l">Preview state</span></span>
+      <div class="seg" role="group" aria-labelledby="ps-l">
+        <button type="button" data-state="progress" aria-pressed="true">In progress</button>
+        <button type="button" data-state="ready" aria-pressed="false">Report ready</button>
+      </div>
+    </div>
+
+    <!-- IN PROGRESS: calm, static — no live sync -->
+    <section class="card carbon card-cut-lg" data-when="progress" aria-labelledby="ip-h" style="padding:clamp(20px,3vw,40px)">
+      <div class="split split-top">
+        <div class="stack" style="--gap:14px">
+          <span class="tag tag-g" style="align-self:flex-start"><span class="live-dot" aria-hidden="true"></span>In progress</span>
+          <h2 id="ip-h" class="d-2 mb-0">Nikhil started at <span class="hl-g">9:31 AM.</span></h2>
+          <p class="lead mb-0">A full inspection takes about 3–4 hours. We’ll message you on WhatsApp the moment your report is ready.</p>
+          <div class="next-card" style="background:var(--carbon-2);margin-top:8px">
+            <h3>What happens next</h3>
+            <ol class="next-list">
+              <li><span><b>Nikhil finishes the six zones</b> — paint, engine room, OBD scan, underbody, interior, road test.</span></li>
+              <li><span><b>One WhatsApp + push</b> the moment the report is ready, with the score and the verdict.</span></li>
+              <li><span><b>You read every finding</b> with photos — then share it, ask an expert or negotiate.</span></li>
+            </ol>
+          </div>
+        </div>
+        <figure class="orbit" aria-labelledby="wwc-h">
+          <h3 id="wwc-h" class="h4" style="color:#fff">What we check</h3>
+          <p class="small" style="color:var(--on-dark-2)">An overview of the inspection — not live progress. Findings are revealed together, in the report.</p>
+          <div class="orbit-stage orbit-draw">
+            <svg viewBox="0 0 600 340" aria-hidden="true">
+              <ellipse class="orbit-ring-2" cx="300" cy="170" rx="250" ry="120" transform="rotate(-10 300 170)"/>
+              <ellipse class="orbit-ring" cx="300" cy="170" rx="280" ry="150" pathLength="100"/>
+              <use href="#car-top" x="170" y="105" width="260" height="130" style="color:#fff;--car-body:#202227"/>
+            </svg>
+            <span class="zm" style="--x:50%;--y:5.9%"><b>01</b></span>
+            <span class="zm" style="--x:90.4%;--y:27.9%"><b>02</b></span>
+            <span class="zm" style="--x:90.4%;--y:72.1%"><b>03</b></span>
+            <span class="zm" style="--x:50%;--y:94.1%"><b>04</b></span>
+            <span class="zm" style="--x:9.6%;--y:72.1%"><b>05</b></span>
+            <span class="zm" style="--x:9.6%;--y:27.9%"><b>06</b></span>
+          </div>
+          <ol class="zones" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+            <li><span class="zn">01</span><span class="zl">Exterior &amp; paint depth</span></li>
+            <li><span class="zn">02</span><span class="zl">Engine room</span></li>
+            <li><span class="zn">03</span><span class="zl">OBD diagnostics</span></li>
+            <li><span class="zn">04</span><span class="zl">Under the car</span></li>
+            <li><span class="zn">05</span><span class="zl">Interior &amp; electricals</span></li>
+            <li><span class="zn">06</span><span class="zl">Road test</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REPORT READY: the chequered-finish reveal -->
+    <section class="card carbon card-cut-lg finish" data-when="ready" hidden aria-labelledby="rr-h" style="padding:0">
+      <div class="chequer-band" aria-hidden="true"></div>
+      <div class="split split-top" style="padding:clamp(20px,3vw,40px)">
+        <div class="stack" style="--gap:16px">
+          <span class="tag tag-g" style="align-self:flex-start"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg>Report ready · 1:18 PM IST</span>
+          <h2 id="rr-h" class="d-2 mb-0">Report ready. <span class="hl-g">Here’s your GLE.</span></h2>
+          <div class="row" style="--gap:22px">
+            <div class="race" style="--rs:220px" role="img" aria-label="Overall score 89 out of 100">
+              <svg class="race-orbit" viewBox="0 0 330 220" aria-hidden="true"><g transform="rotate(-12 165 110)"><ellipse class="trk" cx="165" cy="110" rx="158" ry="98" pathLength="100"/><ellipse class="arc" cx="165" cy="110" rx="158" ry="98" pathLength="100" style="stroke-dasharray:89 100"/></g></svg>
+              <div class="race-plate"><span class="race-n">89</span><span class="race-of">/100</span></div>
+            </div>
+            <div class="stack" style="--gap:10px">
+              <span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold recommended</span>
+              <span class="seal"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives Verified · SDR-24817</span>
+            </div>
+          </div>
+          <p class="lead mb-0" style="color:#fff">Mechanically strong. Front bumper repainted — cosmetic only. Tyres due for replacement in ~8,000 km.</p>
+          <ul class="row" style="--gap:8px;list-style:none">
+            <li class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>0 active OBD codes</li>
+            <li class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-battery"/></svg>Battery 88%</li>
+            <li class="tag tag-a"><svg class="i" aria-hidden="true"><use href="#i-paint"/></svg>Front bumper repainted</li>
+            <li class="tag tag-a"><svg class="i" aria-hidden="true"><use href="#i-tyre"/></svg>Tyres ~8,000 km left</li>
+          </ul>
+          <div class="card" style="--card:var(--carbon-2);padding:18px">
+            <p class="label mb-0">AI fair-price band</p>
+            <p class="fair-range mb-0">₹54 L – ₹58 L</p>
+            <div class="fair" aria-hidden="true" style="--a:28.6%;--b:57.1%;--m:67.9%">
+              <span class="fair-mark-l">Asking ₹59.5 L</span>
+              <div class="fair-track"><span class="fair-band"></span><span class="fair-mark"></span></div>
+              <div class="fair-scale"><span>₹50 L</span><span>₹64 L</span></div>
+            </div>
+            <p class="small mt-3 mb-0" style="color:var(--on-dark-2)">Seller asks ₹59.5 L → room to negotiate ~₹2 L. Tyre replacement is your strongest lever.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-red btn-lg" href="report-gle.html">View full report<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <button class="btn btn-line" type="button" data-download="SDR-24817.pdf"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</button>
+            <button class="btn btn-ghost" type="button" data-callback><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Ask an expert</button>
+          </div>
+        </div>
+        <figure class="orbit" aria-labelledby="zs-h">
+          <h3 id="zs-h" class="h4" style="color:#fff">Section scores</h3>
+          <p class="tag tag-a" style="margin-bottom:8px"><svg class="i" aria-hidden="true"><use href="#i-tyre"/></svg>Lowest: Tyres &amp; glass 78 · needs attention</p>
+          <div class="orbit-stage orbit-draw">
+            <svg viewBox="0 0 600 340" aria-hidden="true">
+              <ellipse class="orbit-ring-2" cx="300" cy="170" rx="250" ry="120" transform="rotate(-10 300 170)"/>
+              <ellipse class="orbit-ring" cx="300" cy="170" rx="280" ry="150" pathLength="100"/>
+              <use href="#car-top" x="170" y="105" width="260" height="130" style="color:#fff;--car-body:#202227"/>
+            </svg>
+            <span class="zm warn" style="--x:50%;--y:5.9%"><b>84</b></span>
+            <span class="zm scored" style="--x:90.4%;--y:27.9%"><b>93</b></span>
+            <span class="zm scored" style="--x:90.4%;--y:72.1%"><b>OK</b></span>
+            <span class="zm scored" style="--x:50%;--y:94.1%"><b>90</b></span>
+            <span class="zm scored" style="--x:9.6%;--y:72.1%"><b>92</b></span>
+            <span class="zm scored" style="--x:9.6%;--y:27.9%"><b>92</b></span>
+          </div>
+          <ol class="zones" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+            <li><span class="zn">01</span><span class="zl">Exterior &amp; paint · bumper repainted</span><span class="zs warn">84</span></li>
+            <li><span class="zn">02</span><span class="zl">Engine room</span><span class="zs">93</span></li>
+            <li><span class="zn">03</span><span class="zl">OBD · 0 active, 0 stored codes</span><span class="zs">OK</span></li>
+            <li><span class="zn">04</span><span class="zl">Under the car</span><span class="zs">90</span></li>
+            <li><span class="zn">05</span><span class="zl">Interior 92 · Electricals 91</span><span class="zs">92</span></li>
+            <li><span class="zn">06</span><span class="zl">Road test · air suspension OK</span><span class="zs">92</span></li>
+            <li style="grid-column:1/-1"><span class="zn">07</span><span class="zl">Tyres &amp; glass · needs attention — replace within ~8,000 km</span><span class="zs warn">78</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Lap timeline -->
+    <section class="sec-sm" aria-labelledby="laps-h">
+      <div class="sec-head" style="margin-bottom:22px">
+        <div><p class="eyebrow">Inspection progress</p><h2 id="laps-h" class="h2 mb-0">Milestones</h2></div>
+        <p class="small muted">Each milestone sends one WhatsApp and one push message. There’s no live tracking — just these updates. All times IST.</p>
+      </div>
+      <div class="card" style="padding:clamp(18px,3vw,32px)">
+        <ol class="laps">
+          <li class="laps-fill" role="presentation" aria-hidden="true" style="--p:.7" data-p-progress=".7" data-p-ready="1"></li>
+          <li class="lap done">
+            <span class="lap-flag" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <span class="lap-t">14 Nov · 10:42 AM IST</span>
+            <h3>Booked</h3>
+            <p>₹7,079 paid via UPI (Google Pay). Invoice INV-2026-11-0417.</p>
+            <div class="wa wa-sm"><div class="wa-b"><span class="wa-tag"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>Suresh Drives</span><p>Booking confirmed — SDB-24817. Sat 21 Nov, Morning (9 AM–1 PM IST).</p><span class="wa-meta">10:42 AM<svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg></span></div></div>
+          </li>
+          <li class="lap done">
+            <span class="lap-flag" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span>
+            <span class="lap-t">15 Nov · 6:05 PM IST</span>
+            <h3>Technician assigned</h3>
+            <p>Nikhil Raj, Senior Inspection Engineer, will inspect your GLE.</p>
+            <div class="wa wa-sm"><div class="wa-b"><span class="wa-tag"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>Suresh Drives</span><p>Nikhil Raj is your technician for Sat 21 Nov.</p><span class="wa-meta">6:05 PM<svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg></span></div></div>
+          </li>
+          <li class="lap done">
+            <span class="lap-flag" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <span class="lap-t">21 Nov · 8:10 AM IST</span>
+            <h3>Arriving today → arrived 9:24 AM</h3>
+            <p>“Nikhil will reach between 9:00 and 9:30 AM.”</p>
+            <div class="card card-line" style="--card:var(--white);padding:12px 14px">
+              <p class="small strong mb-0 row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg>Arrived 9:24 AM IST</p>
+              <p class="tiny muted mb-0 mt-1">Number plate &amp; odometer photographed at arrival — the photos are in your report.</p>
+            </div>
+          </li>
+          <li class="lap now" data-cls-progress="now" data-cls-ready="done">
+            <span class="lap-flag" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg></span>
+            <span class="lap-t">21 Nov · 9:31 AM IST</span>
+            <h3>In progress</h3>
+            <p>Started 9:31 AM. A full inspection takes about 3–4 hours.</p>
+            <div class="push"><span class="push-ic"><img src="../assets/logo-sdcertified-mark.png" alt="" width="20" height="23"></span><div><div class="push-top"><span>SDCertified</span><span>9:31 AM</span></div><b>Inspection started</b>Nikhil is inspecting your GLE now.</div></div>
+          </li>
+          <li class="lap next" data-cls-progress="next" data-cls-ready="done finish">
+            <span class="lap-flag" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></span>
+            <span class="lap-t" data-when="progress">Next · usually about 3–4 hours after the start</span>
+            <span class="lap-t" data-when="ready" hidden>21 Nov · 1:18 PM IST</span>
+            <h3>Report ready</h3>
+            <p data-when="progress">We’ll message you on WhatsApp and push the moment it’s in.</p>
+            <div data-when="ready" hidden>
+              <p>SDR-24817 · 89/100 · Gold recommended.</p>
+              <div class="wa wa-sm"><div class="wa-b"><span class="wa-tag"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>Suresh Drives</span><p>Your GLE report is ready: 89/100, Gold. Tap to read every finding.</p><span class="wa-meta">1:18 PM<svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg></span></div></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Technician + appointment -->
+    <section class="grid g-2" style="padding-bottom:clamp(28px,4vw,48px)" aria-label="Technician and appointment">
+      <div class="card card-cut">
+        <div class="card-head"><h2 class="h3">Your technician</h2><span class="seal seal-chip"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives</span></div>
+        <div class="row" style="--gap:14px">
+          <span class="avatar avatar-lg" aria-hidden="true">NR</span>
+          <div><p class="h4 mb-0">Nikhil Raj</p><p class="small muted mb-0">Senior Inspection Engineer · Gulf-experienced (7 yrs, Dubai)</p><p class="small mb-0">1,240 inspections · 4.9★</p></div>
+        </div>
+        <div class="btn-row mt-5">
+          <a class="btn btn-dark" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call Suresh Drives (connects you to Nikhil)</a>
+          <a class="btn btn-line" href="https://wa.me/919895441213" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+        </div>
+      </div>
+      <div class="card card-cut">
+        <div class="card-head"><h2 class="h3">Appointment</h2><span class="tag">Static map · no live tracking</span></div>
+        <dl class="kv">
+          <div><dt>Date</dt><dd>Sat 21 Nov 2026</dd></div>
+          <div><dt>Session</dt><dd>Morning · 9:00 AM – 1:00 PM IST</dd></div>
+          <div><dt>Where</dt><dd>Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</dd></div>
+          <div><dt>Landmark</dt><dd>Opp. Hilite City gate 2</dd></div>
+          <div><dt>At the car</dt><dd>Faisal (seller) · +91 99460 55120</dd></div>
+        </dl>
+        <div class="map mt-4" style="aspect-ratio:16/7">
+          <svg class="map-art" viewBox="0 0 400 175" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="175" fill="#E9ECEF"/>
+            <path class="water" d="M0 0h70c-10 40 6 90-18 175H0z"/>
+            <rect class="park" x="250" y="18" width="70" height="40"/>
+            <rect class="block" x="110" y="20" width="60" height="38"/><rect class="block" x="110" y="100" width="70" height="50"/><rect class="block" x="300" y="100" width="70" height="50"/>
+            <path class="road-m" d="M90 175C140 120 200 92 260 80s110-30 150-50"/>
+            <path class="road" d="M70 70h330M200 0v175"/>
+            <path class="road-s" d="M240 175V96M120 70v105M330 70V0"/>
+          </svg>
+          <span class="map-pin" style="--x:64%;--y:62%" aria-hidden="true"><span class="head"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><span class="stem"></span><span class="foot"></span></span>
+          <span class="map-lbl" style="left:8%;bottom:10px">Thondayad Bypass</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manage booking -->
+    <section class="card card-cut-lg" aria-labelledby="mg-h" style="margin-bottom:clamp(28px,4vw,48px)">
+      <div class="card-head"><div><h2 id="mg-h" class="h3">Manage this booking</h2><p class="small muted mb-0">The seller sees the arrival window and milestones — never your payment details or the report.</p></div></div>
+      <div class="grid g-auto" style="--min:220px;--gap:10px">
+        <button class="tile" type="button" data-open="#share-family"><svg class="i i-lg" aria-hidden="true"><use href="#i-users"/></svg><span class="tile-t">Share with family</span><span class="small muted">Milestones only, or milestones + report</span></button>
+        <button class="tile" type="button" data-share="Tracking link copied. The seller sees the arrival window and milestones — never your payment details or the report." data-share-title="Link for the seller" data-share-text="https://sdcertifiedcars.com/t/SDB-24817"><svg class="i i-lg" aria-hidden="true"><use href="#i-share"/></svg><span class="tile-t">Share link with seller</span><span class="small muted">Arrival window &amp; milestones only</span></button>
+        <button class="tile" type="button" data-open="#change-contact"><svg class="i i-lg" aria-hidden="true"><use href="#i-edit"/></svg><span class="tile-t">Change contact at the car</span><span class="small muted">Now: Faisal (seller)</span></button>
+        <div class="tile" aria-disabled="true" style="opacity:.75;cursor:default"><svg class="i i-lg" aria-hidden="true"><use href="#i-calendar"/></svg><span class="tile-t">Reschedule</span><span class="small muted">Not available while the inspection is underway</span></div>
+        <div class="tile" aria-disabled="true" style="opacity:.75;cursor:default"><svg class="i i-lg" aria-hidden="true"><use href="#i-x"/></svg><span class="tile-t">Cancel</span><span class="small muted">Not available while Nikhil is at the car. If we can’t finish for reasons on our side, you get a 100% refund.</span></div>
+      </div>
+    </section>
+
+    <!-- Notification log -->
+    <section class="card" aria-labelledby="log-h" style="margin-bottom:clamp(28px,4vw,48px)">
+      <div class="card-head"><div><h2 id="log-h" class="h3">Notification log</h2><p class="small muted mb-0">WhatsApp first, SMS if WhatsApp fails; push goes out in parallel. To +91 98470 12345.</p></div><a class="link" href="notifications.html">Preferences<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th scope="col">Event</th><th scope="col">Channel</th><th scope="col">Sent (IST)</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr data-when="ready" hidden><td>Report ready</td><td>WhatsApp · Push</td><td>21 Nov, 1:18 PM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg>Delivered</span></td></tr>
+            <tr><td>In progress</td><td>WhatsApp</td><td>21 Nov, 9:31 AM</td><td><span class="tag tag-a"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>Failed</span></td></tr>
+            <tr><td>In progress</td><td>SMS fallback</td><td>21 Nov, 9:32 AM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Fallback sent</span></td></tr>
+            <tr><td>In progress</td><td>Push</td><td>21 Nov, 9:31 AM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Delivered</span></td></tr>
+            <tr><td>Arrived</td><td>Push</td><td>21 Nov, 9:24 AM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Delivered</span></td></tr>
+            <tr><td>Arriving today</td><td>WhatsApp · Push</td><td>21 Nov, 8:10 AM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg>Read</span></td></tr>
+            <tr><td>Assigned</td><td>WhatsApp · Push</td><td>15 Nov, 6:05 PM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Delivered</span></td></tr>
+            <tr><td>Booked</td><td>WhatsApp · Push</td><td>14 Nov, 10:42 AM</td><td><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-double-check"/></svg>Read</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- If something goes wrong + help -->
+    <section class="grid g-2" style="padding-bottom:clamp(36px,5vw,64px)" aria-label="Help">
+      <div class="card card-cut">
+        <h2 class="h3">If something goes wrong</h2>
+        <ul class="list-dot">
+          <li><b>Seller not at the car?</b> We mark it “Unable to complete” and you rebook free of charge.</li>
+          <li><b>Couldn’t test something?</b> It’s listed in the report under “What we couldn’t test”, with the reason.</li>
+          <li><b>We can’t finish for reasons on our side?</b> 100% refund to your Google Pay UPI in 3–5 working days.</li>
+        </ul>
+      </div>
+      <div class="helpline card-cut" style="align-content:center">
+        <div class="t"><b>Need help? Talk to a person.</b><span class="small muted">Call, WhatsApp, or we’ll call you back — usually within 15 minutes.</span></div>
+        <a class="btn btn-dark btn-sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us · +91 8330 881 213</a>
+        <a class="btn btn-line btn-sm" href="https://wa.me/919895441213" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+        <button class="btn btn-ghost btn-sm" type="button" data-callback><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Request a callback</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sheet: share with family -->
+  <div class="sheet" id="share-family" aria-hidden="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sf-h">
+      <div class="sheet-head"><h2 id="sf-h" class="h3">Share with family</h2><button class="icon-btn" type="button" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form class="stack" data-toast-form="Invite sent on WhatsApp. You can revoke it any time in Manage this booking; the link expires after 30 days." data-toast-title="Invite sent">
+        <div class="field"><label for="sf-name">Their name</label><input class="input" id="sf-name" autocomplete="off" placeholder="e.g. Anil Menon" required data-err="Add a name so we can greet them."></div>
+        <div class="field"><label for="sf-phone">Their WhatsApp number</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="sf-phone" type="tel" inputmode="tel" autocomplete="off" required data-err="Enter their WhatsApp number."></div></div>
+        <fieldset><legend>What can they see?</legend>
+          <div class="tiles g-2 grid" style="--gap:10px">
+            <label class="tile"><input type="radio" name="sf-role" value="m" checked><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Milestones only</span><span class="small muted">Arrival window &amp; status updates</span></label>
+            <label class="tile"><input type="radio" name="sf-role" value="mr"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="tile-t">Milestones + report</span><span class="small muted">Also the full report when it’s ready</span></label>
+          </div>
+        </fieldset>
+        <p class="small muted mb-0">Never your payment details. Revocable any time · the link expires after 30 days.</p>
+        <button class="btn btn-red btn-lg btn-block" type="submit"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>Send invite on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sheet: change contact -->
+  <div class="sheet" id="change-contact" aria-hidden="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="cc-h">
+      <div class="sheet-head"><h2 id="cc-h" class="h3">Change contact at the car</h2><button class="icon-btn" type="button" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form class="stack" data-toast-form="Nikhil will call the new contact if he needs anything at the car." data-toast-title="Contact updated">
+        <div class="field"><label for="cc-name">Name</label><input class="input" id="cc-name" value="Faisal" autocomplete="off" required data-err="Add a name."></div>
+        <div class="field"><label for="cc-phone">Mobile</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="cc-phone" type="tel" inputmode="tel" value="99460 55120" autocomplete="off" required data-err="Enter a mobile number."></div></div>
+        <label class="check"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label>
+        <button class="btn btn-red btn-lg btn-block" type="submit">Save contact</button>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My inspections · SDCertified</title>
+<meta name="description" content="All your Suresh Drives inspections: in progress, completed and needing attention — with the next step for each.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="inspections" data-shell="app">
+<main id="main" class="mist">
+  <div class="wrap">
+    <header class="phead row between" style="--gap:16px;align-items:flex-end">
+      <div>
+        <p class="eyebrow">5 bookings · 1 in progress</p>
+        <h1 class="d-2 mb-0">My inspections</h1>
+      </div>
+      <a class="btn btn-red" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Book a new inspection</a>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Inspection status">
+      <button class="tab" type="button" role="tab" id="t-up" aria-controls="p-up" aria-selected="true">Upcoming &amp; in progress<span class="count">2</span></button>
+      <button class="tab" type="button" role="tab" id="t-done" aria-controls="p-done" aria-selected="false">Completed<span class="count">2</span></button>
+      <button class="tab" type="button" role="tab" id="t-attn" aria-controls="p-attn" aria-selected="false">Needs attention<span class="count">1</span></button>
+    </div>
+
+    <!-- Upcoming & in progress -->
+    <section class="bk-list" id="p-up" role="tabpanel" aria-labelledby="t-up" style="padding-block:20px 8px">
+      <article class="bk-card now">
+        <div class="bk-media"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE" width="1336" height="1177"></div>
+        <div class="bk-body">
+          <div class="row" style="--gap:10px"><span class="tag tag-g"><span class="live-dot" aria-hidden="true"></span>In progress</span><span class="serial small muted">SDB-24817</span></div>
+          <h2 class="h3">2021 Mercedes-Benz GLE 300d 4MATIC</h2>
+          <div class="bk-meta">
+            <span><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Used Car Pre-Purchase · Luxury</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>Sat 21 Nov · Morning, 9:00 AM – 1:00 PM IST</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Thondayad Bypass, Kozhikode</span>
+          </div>
+          <p class="mb-0">In progress since 9:31 AM IST with <b>Nikhil Raj</b>. A full inspection takes about 3–4 hours — we’ll message you on WhatsApp the moment the report is ready.</p>
+          <div class="row" style="--gap:12px">
+            <span class="bk-progress" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="cur"></i><i></i></span>
+            <span class="small muted">Milestone 4 of 5 · report next</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-red" href="track.html">Track inspection<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="link" href="report-gle.html">Report SDR-24817 opens here when ready<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bk-card">
+        <div class="bk-media"><img src="../assets/jeep-rubicon.jpg" alt="Jeep Wrangler Rubicon" width="1600" height="1066" loading="lazy"></div>
+        <div class="bk-body">
+          <div class="row" style="--gap:10px"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg>Visiting team · gathering requests</span><span class="small muted">Requested 12 Nov</span></div>
+          <h2 class="h3">2018 Jeep Wrangler Rubicon</h2>
+          <div class="bk-meta">
+            <span><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Used Car Pre-Purchase · Premium</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Kalpetta, Wayanad</span>
+          </div>
+          <p class="mb-0">Your area is served by a visiting team. <b>2 of 3 requests gathered in Wayanad</b> — we’ll confirm your date by Thu 19 Nov at the latest.</p>
+          <div style="max-width:360px">
+            <div class="speedbar g" style="--v:66.7" role="img" aria-label="2 of 3 requests gathered"><i></i></div>
+            <div class="row between tiny muted mt-1"><span>2 of 3 requests</span><span>Date confirmed by Thu 19 Nov</span></div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-dark" type="button" data-open="#batch-sheet">See batch status</button>
+            <a class="btn btn-ghost" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Completed -->
+    <section class="bk-list" id="p-done" role="tabpanel" aria-labelledby="t-done" style="padding-block:20px 8px" hidden>
+      <article class="bk-card ok">
+        <div class="bk-media"><img src="../assets/bmw-x4m-green.jpg" alt="Green BMW X4 M Competition" width="1600" height="1067" loading="lazy"></div>
+        <div class="bk-body">
+          <div class="row" style="--gap:10px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Report ready</span><span class="serial small muted">SDR-18842</span></div>
+          <h2 class="h3">2022 BMW X4 M Competition</h2>
+          <div class="bk-meta">
+            <span><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Used Car Pre-Purchase · Luxury</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>3 Oct 2026</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-car"/></svg>KL 07 CU 9090</span>
+          </div>
+          <div class="row" style="--gap:14px">
+            <span class="rn">92<small>/100</small></span>
+            <span class="tier tier-gold">Gold</span>
+            <span class="small ink-2">Mechanically excellent. Two panels repainted — cosmetic, no structural damage.</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-red" href="report.html">View report<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <button class="btn btn-line" type="button" data-download="SDR-18842.pdf"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="bk-card ok">
+        <div class="bk-media"><img src="../assets/bmw-i7-white.jpg" alt="White BMW i7" width="1200" height="675" loading="lazy"></div>
+        <div class="bk-body">
+          <div class="row" style="--gap:10px"><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>PDI complete · safe to sign</span><span class="small muted">New Car PDI</span></div>
+          <h2 class="h3">2026 BMW i7 xDrive60</h2>
+          <div class="bk-meta">
+            <span><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>BMW EVM Autokraft, Kochi</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>28 Aug 2026</span>
+          </div>
+          <p class="mb-0"><b>129 of 132 checks passed</b> · 0 fails · 3 advisories — all resolved or scheduled before handover.</p>
+          <div class="btn-row">
+            <a class="btn btn-red" href="report-pdi.html">View PDI report<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <button class="btn btn-line" type="button" data-download="PDI-BMW-i7.pdf"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Needs attention -->
+    <section class="bk-list" id="p-attn" role="tabpanel" aria-labelledby="t-attn" style="padding-block:20px 8px" hidden>
+      <article class="bk-card attn">
+        <div class="bk-media"><img src="../assets/audi-q7-black.jpg" alt="Black Audi Q7" width="900" height="563" loading="lazy"></div>
+        <div class="bk-body">
+          <div class="row" style="--gap:10px"><span class="tag tag-a"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>Unable to complete</span><span class="small muted">9 Sep 2026</span></div>
+          <h2 class="h3">2017 Audi Q7 45 TDI</h2>
+          <div class="bk-meta">
+            <span><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg>Used Car Pre-Purchase</span>
+            <span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Calicut Beach Rd, Kozhikode</span>
+          </div>
+          <p class="mb-0">Reason: “Seller was unavailable at the location.” This wasn’t your fault — <b>rebooking is free</b>. Pick a new date and we’ll send a technician again.</p>
+          <div class="btn-row">
+            <a class="btn btn-red" href="book.html">Rebook free<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn-ghost" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+          </div>
+        </div>
+      </article>
+      <div class="note">
+        <svg class="i" aria-hidden="true"><use href="#i-info"/></svg>
+        <div><b>Good to know</b>If we can’t complete an inspection for reasons on our side, you get a 100% refund. If the car or seller isn’t available, you rebook free.</div>
+      </div>
+    </section>
+
+    <section class="helpline card-cut" style="margin-block:24px 40px" aria-label="Help">
+      <div class="t"><b>Questions about a booking?</b><span class="small muted">Talk to a person — call, WhatsApp, or we’ll call you back.</span></div>
+      <a class="btn btn-dark btn-sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us · +91 8330 881 213</a>
+      <a class="btn btn-line btn-sm" href="https://wa.me/919895441213" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+      <button class="btn btn-ghost btn-sm" type="button" data-callback><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Request a callback</button>
+    </section>
+  </div>
+
+  <!-- Sheet: batch status (remote area) -->
+  <div class="sheet" id="batch-sheet" aria-hidden="true">
+    <div class="scrim" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="bs-h">
+      <div class="sheet-head"><h2 id="bs-h" class="h3">Wayanad visiting team</h2><button class="icon-btn" type="button" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <p class="ink-2">Kalpetta is outside our core service area, so a visiting team travels out for several cars in one trip. Your request is in — nothing else to do.</p>
+      <div class="card card-line" style="--card:var(--mist)">
+        <p class="label mb-2">Requests gathered in Wayanad</p>
+        <p class="num-l mb-2">2 of 3</p>
+        <div class="speedbar g" style="--v:66.7" aria-hidden="true"><i></i></div>
+      </div>
+      <ul class="list-check mt-4">
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>We dispatch as soon as <b>3 requests</b> are gathered in the area…</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>…or at most <b>7 days after the oldest request</b>, whichever comes first.</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Your date is confirmed by <b>Thu 19 Nov at the latest</b> — on WhatsApp and push.</span></li>
+      </ul>
+      <div class="btn-row mt-5">
+        <a class="btn btn-dark" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <button class="btn btn-ghost" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

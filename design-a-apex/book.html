@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book an inspection · Step 1 of 5 · SDCertified</title>
+<meta name="description" content="Choose a Used Car Pre-Purchase Inspection or a New Car PDI. 5 short steps, about 3 minutes.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="book" data-shell="flow" data-step="1">
+<main id="main" class="mist">
+  <div class="wrap flow-grid">
+    <section class="flow-main" aria-labelledby="pg-h">
+      <header>
+        <p class="eyebrow">Step 1 of 5 · Service</p>
+        <h1 id="pg-h" class="d-2">What should we inspect?</h1>
+        <p class="lead mb-0">5 short steps · about 3 minutes. Nothing is charged until step 5, and you can edit anything before you pay.</p>
+      </header>
+
+      <form id="step-form" class="stack" style="--gap:14px" onsubmit="return false">
+        <fieldset>
+          <legend class="sr-only">Inspection type</legend>
+          <div class="tiles grid g-2" style="--gap:14px">
+            <label class="tile" style="padding:22px 22px 24px">
+              <input type="radio" name="service" value="used" checked required data-err="Pick an inspection type.">
+              <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>
+              <span class="row" style="--gap:10px"><span class="rn" aria-hidden="true">300+</span><span class="tag">About 3–4 hours</span></span>
+              <span class="h3 mt-3" style="display:block">Used Car Pre-Purchase Inspection</span>
+              <span class="ink-2">Buying a used car? Know its exact condition before you decide — at the seller’s place, a dealer’s yard or yours.</span>
+              <span class="mt-2"><span class="num-l" style="font-size:1.5rem">₹3,999 – ₹5,999</span> <span class="small muted">+ GST · set by the car’s segment</span></span>
+            </label>
+            <label class="tile" style="padding:22px 22px 24px">
+              <input type="radio" name="service" value="pdi">
+              <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>
+              <span class="row" style="--gap:10px"><span class="rn" aria-hidden="true">125+</span><span class="tag">About 2 hours</span></span>
+              <span class="h3 mt-3" style="display:block">New Car PDI</span>
+              <span class="ink-2">Taking delivery of a new car? We inspect it at the showroom and finish before you sign. Avoid factory defects &amp; dealership manipulations.</span>
+              <span class="mt-2"><span class="num-l" style="font-size:1.5rem">₹3,999</span> <span class="small muted">+ GST = ₹4,719 · all cars</span></span>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Price logic, honest and up front -->
+      <section class="card card-cut" data-bk-show="used" aria-labelledby="seg-h">
+        <div class="card-head"><h2 id="seg-h" class="h3">How the used-car price is set</h2><span class="tag">GST 18% shown before you pay</span></div>
+        <p class="ink-2">The price follows the car’s segment in our pricing matrix. Pick the model in the next step and the right tier appears automatically.</p>
+        <dl class="kv">
+          <div><dt>Standard · hatchbacks, sedans, compact SUVs</dt><dd>₹3,999 + GST = ₹4,719</dd></div>
+          <div><dt>Premium · premium SUVs &amp; sedans</dt><dd>₹4,999 + GST = ₹5,899</dd></div>
+          <div><dt>Luxury · luxury brands</dt><dd>₹5,999 + GST = ₹7,079</dd></div>
+        </dl>
+        <p class="small muted mb-0 mt-3">e.g. 2019 Hyundai Creta → Standard · ₹3,999 + GST = ₹4,719. Travel charges may apply outside our service locations — always shown before you pay.</p>
+      </section>
+      <section class="card card-cut" data-bk-show="pdi" hidden aria-labelledby="pdi-h">
+        <div class="card-head"><h2 id="pdi-h" class="h3">One flat price for every new car</h2><span class="tag">GST 18% shown</span></div>
+        <dl class="kv">
+          <div><dt>New Car PDI</dt><dd>₹3,999.00</dd></div>
+          <div><dt>GST 18%</dt><dd>₹719.82</dd></div>
+          <div><dt>Rounding</dt><dd>+₹0.18</dd></div>
+          <div class="tot"><dt>You pay</dt><dd>₹4,719</dd></div>
+        </dl>
+      </section>
+
+      <!-- What's included -->
+      <section aria-labelledby="inc-h">
+        <h2 id="inc-h" class="h3">What’s included</h2>
+        <div class="accs">
+          <details class="acc" open>
+            <summary><svg class="i" aria-hidden="true"><use href="#i-orbit"/></svg>Used Car Pre-Purchase · the six zones<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+            <div class="acc-body">
+              <ul class="list-check">
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Exterior &amp; paint depth</b> — panel-by-panel readings with an Elcometer gauge to find hidden accident repairs.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Engine room</b> — fluids, leaks, belts, mountings, turbo, rat bites, exhaust smoke; Autel videoscope where needed.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>OBD diagnostics</b> — active and stored fault codes, explained in plain words.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Under the car</b> — driveline, differential, underbody, exhaust, suspension, brakes.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Interior &amp; electricals</b> — gauges, audio &amp; navigation, upholstery, trunk, battery health.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Road test</b> — starting, idle, acceleration, steering, gear shifts, CV joints, brakes.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>AI-powered report</b> with photos, VIN check and a fair-price band — on WhatsApp and email.</span></li>
+              </ul>
+            </div>
+          </details>
+          <details class="acc">
+            <summary><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>New Car PDI · before you sign<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+            <div class="acc-body">
+              <ul class="list-check">
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>VIN &amp; build date</b> — fresh stock, not old inventory.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Paint depth &amp; panel gaps</b> — any repaint before delivery shows up.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Tyres, pressures, fluids</b> and under-body check.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Electricals &amp; software</b> — infotainment, lights, sensors, pending updates.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Keys, manuals, warranty booklet</b> and accessories present.</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>“Don’t sign yet” summary</b> on WhatsApp if anything needs fixing before handover.</span></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- If something goes wrong (PDI) -->
+      <section class="card card-cut card-stripe a" data-bk-show="pdi" hidden aria-labelledby="wrong-h">
+        <h2 id="wrong-h" class="h3">If something goes wrong at the dealership</h2>
+        <ul class="list-dot">
+          <li><b>Dealer refuses access?</b> We call the dealer and escalate. You get a free reschedule or a 100% refund — plus a short “Your right to a pre-delivery inspection” note you can show the dealer.</li>
+          <li><b>Car fails?</b> You get a “Don’t sign yet” WhatsApp summary before handover, a defect list to share with the dealer, and a free re-check after the fix.</li>
+        </ul>
+      </section>
+
+      <div class="grid g-2">
+        <div class="note">
+          <svg class="i" aria-hidden="true"><use href="#i-info"/></svg>
+          <div><b>Good to know</b>Free reschedule up to 12 hours before the session. Full refund if you cancel 24 hours or more before.</div>
+        </div>
+        <div class="helpline">
+          <div class="t"><b>Not sure which one?</b><span class="small muted">Talk to a person — we’ll tell you in a minute.</span></div>
+          <a class="btn btn-dark btn-sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+          <a class="btn btn-line btn-sm" href="https://wa.me/919895441213" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+        </div>
+      </div>
+
+      <section class="next-card carbon" aria-labelledby="nx-h">
+        <h2 id="nx-h">What happens next</h2>
+        <ol class="next-list">
+          <li><span><b>Tell us about the car</b> — brand, model and registration. The price tier updates on its own.</span></li>
+          <li><span><b>Pick the place and a slot</b> — we hold it for 10 minutes while you pay.</span></li>
+          <li><span><b>Pay securely</b> — your WhatsApp confirmation arrives straight away.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Booking summary: desktop sticky column, mobile bottom sheet -->
+    <aside class="race-sheet msheet carbon" id="race-sheet" aria-labelledby="rs-h">
+      <div class="rs-head"><h2 id="rs-h">Booking summary</h2><button class="icon-btn msheet-close" type="button" data-msheet-close aria-label="Close summary"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <ul class="rs-rows">
+        <li class="rs-row" data-rs="1"><span class="rs-n">01</span><span class="rs-k">Service</span><span class="rs-v"><span data-bk="serviceShort">Used Car Pre-Purchase</span><small data-bk="tier">Luxury segment</small></span><span class="rs-pend">Step 1</span><a class="rs-edit" href="book.html">Edit service</a></li>
+        <li class="rs-row" data-rs="2"><span class="rs-n">02</span><span class="rs-k">Car</span><span class="rs-v"><span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span><small data-bk="reg">KL 11 BH 7272</small></span><span class="rs-pend">Step 2 · up next</span><a class="rs-edit" href="book-car.html">Edit car details</a></li>
+        <li class="rs-row" data-rs="3"><span class="rs-n">03</span><span class="rs-k">Location</span><span class="rs-v"><span data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span><small data-bk="contact">Faisal (seller) · +91 99460 55120</small></span><span class="rs-pend">Step 3</span><a class="rs-edit" href="book-location.html">Edit location</a></li>
+        <li class="rs-row" data-rs="4"><span class="rs-n">04</span><span class="rs-k">Date &amp; session</span><span class="rs-v"><span data-bk="slot">Sat 21 Nov · Morning</span><small data-bk="slotTime">9:00 AM – 1:00 PM IST</small></span><span class="rs-pend">Step 4</span><a class="rs-edit" href="book-slot.html">Edit date &amp; session</a></li>
+      </ul>
+      <div class="rs-total"><span class="lbl">Total incl. GST 18%</span><span class="big" data-bk="total">₹7,079</span><small><span data-bk="base">₹5,999.00</span> + GST <span data-bk="gst">₹1,079.82</span> · rounding <span data-bk="round">+₹0.18</span> · travel ₹0 · no hidden charges</small></div>
+      <a class="btn btn-red btn-lg btn-block" href="book-car.html" data-cta-main>Continue to car details<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      <a class="rs-call" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Questions? Call us · +91 8330 881 213</a>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

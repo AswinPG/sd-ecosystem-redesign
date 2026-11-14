@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Review &amp; pay · Step 5 of 5 · SDCertified</title>
+<meta name="description" content="Review your inspection booking, see the full price with GST, and pay securely.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="checkout" data-shell="flow" data-step="5">
+<main id="main" class="mist">
+  <div class="wrap flow-grid">
+    <section class="flow-main" aria-labelledby="pg-h">
+      <header>
+        <p class="eyebrow">Step 5 of 5 · Pay</p>
+        <h1 id="pg-h" class="d-2">Review &amp; pay</h1>
+        <p class="lead mb-0">One last look. Everything is still editable, and the price below is the price you pay.</p>
+      </header>
+
+      <div class="hold" data-hold-panel>
+        <span class="hold-time" data-hold-time aria-hidden="true">09:42</span>
+        <span class="hold-t">We’re holding <b data-hold-label>Sat 21 Nov, Morning</b> for you</span>
+        <span class="hold-msg" data-hold-msg>Free reschedule up to 12 h before the session.</span>
+        <span class="hold-bar" aria-hidden="true"><i data-hold-bar></i></span>
+        <button class="btn btn-light btn-sm" type="button" data-hold-again hidden>Hold again</button>
+        <span class="sr-only" aria-live="polite" data-hold-sr></span>
+      </div>
+
+      <!-- Review -->
+      <section class="card card-cut" aria-labelledby="rv-h">
+        <h2 id="rv-h" class="h3">Your booking</h2>
+        <div class="review-row"><span class="n">01</span><div><span class="k">Service</span><div class="v"><span data-bk="service">Used Car Pre-Purchase Inspection · 300+ points</span><small><span data-bk="tier">Luxury segment</span> · <span data-bk="duration">about 3–4 hours</span></small></div></div><a class="link" href="book.html">Edit service</a></div>
+        <div class="review-row"><span class="n">02</span><div><span class="k">Car</span><div class="v"><span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span><small data-bk="reg">KL 11 BH 7272</small></div></div><a class="link" href="book-car.html">Edit car details</a></div>
+        <div class="review-row"><span class="n">03</span><div><span class="k">Location &amp; who’s at the car</span><div class="v"><span data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span><small><span data-bk="whereKind">At the seller’s place</span> · <span data-bk="contact">Faisal (seller) · +91 99460 55120</span></small><small>Representative: <span data-bk="rep">None added</span></small></div></div><a class="link" href="book-location.html">Edit location</a></div>
+        <div class="review-row"><span class="n">04</span><div><span class="k">Date &amp; session</span><div class="v"><span data-bk="slot">Sat 21 Nov · Morning</span><small data-bk="slotTime">9:00 AM – 1:00 PM IST</small><small data-dual hidden data-bk="slotDual">9:00 AM – 1:00 PM IST · 7:30–11:30 AM Dubai</small></div></div><a class="link" href="book-slot.html">Edit date &amp; session</a></div>
+        <div class="review-row" data-bk-show="pdi" hidden><span class="n">04</span><div><span class="k">Handover</span><div class="v"><span data-bk="handover">Sat 21 Nov, 4:00 PM IST</span><small>We finish at least 1 hour before you sign.</small></div></div><a class="link" href="book-location.html">Edit handover time</a></div>
+      </section>
+
+      <!-- Price -->
+      <section class="card card-cut" aria-labelledby="pr-h">
+        <div class="card-head"><h2 id="pr-h" class="h3">Price</h2><span class="tag">No hidden charges</span></div>
+        <dl class="kv">
+          <div><dt>Inspection · <span data-bk="tierName">Luxury</span></dt><dd data-bk="base">₹5,999.00</dd></div>
+          <div><dt>GST 18%</dt><dd data-bk="gst">₹1,079.82</dd></div>
+          <div><dt>Travel</dt><dd>₹0.00</dd></div>
+          <div><dt>Rounding</dt><dd data-bk="round">+₹0.18</dd></div>
+          <div class="tot"><dt>You pay</dt><dd data-bk="total">₹7,079</dd></div>
+        </dl>
+      </section>
+
+      <!-- Payment -->
+      <form id="checkout-form" class="card card-cut flow-sec" onsubmit="return false" aria-labelledby="pm-h">
+        <h2 id="pm-h" class="h3">How would you like to pay?</h2>
+        <fieldset>
+          <legend class="sr-only">Payment method</legend>
+          <div class="tiles grid g-2" style="--gap:10px">
+            <label class="tile"><input type="radio" name="pay" value="upi" checked><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg><span class="tile-t">UPI</span></span><span class="small muted">Google Pay, PhonePe, Paytm or any UPI ID</span></label>
+            <label class="tile"><input type="radio" name="pay" value="card"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg><span class="tile-t">Card</span></span><span class="small muted">Indian &amp; international cards</span></label>
+            <label class="tile"><input type="radio" name="pay" value="netbanking"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-bank"/></svg><span class="tile-t">Netbanking</span></span><span class="small muted">All major Indian banks</span></label>
+            <label class="tile"><input type="radio" name="pay" value="later"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="tile-t">Pay by link</span></span><span class="small muted">Send it to anyone, in any country</span></label>
+          </div>
+        </fieldset>
+
+        <div class="pay-panel stack" data-pay-panel="upi">
+          <p class="label mb-0" id="upi-l">Pay with</p>
+          <div class="chips" role="group" aria-labelledby="upi-l">
+            <button class="chip" type="button" data-group="upi" aria-pressed="true">Google Pay</button>
+            <button class="chip" type="button" data-group="upi" aria-pressed="false">PhonePe</button>
+            <button class="chip" type="button" data-group="upi" aria-pressed="false">Paytm</button>
+          </div>
+          <div class="field"><label for="upi-id">Or enter any UPI ID (optional)</label><input class="input" id="upi-id" type="text" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="name@bank"></div>
+          <p class="small muted mb-0">You’ll approve the request in your UPI app.</p>
+        </div>
+
+        <div class="pay-panel stack" data-pay-panel="card" hidden>
+          <p class="small ink-2 mb-0">Indian &amp; international cards (Visa, Mastercard, Amex, RuPay) · charged in INR · your bank may add a forex fee.</p>
+          <div class="form-grid">
+            <div class="field span-2"><label for="cc-num">Card number</label><input class="input" id="cc-num" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" required data-pattern="^[0-9 ]{14,23}$" data-err="Enter the card number."></div>
+            <div class="field"><label for="cc-exp">Expiry (MM/YY)</label><input class="input" id="cc-exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required data-pattern="^(0[1-9]|1[0-2]) ?/ ?[0-9]{2}$" data-err="Enter the expiry as MM/YY."></div>
+            <div class="field"><label for="cc-cvv">CVV</label><input class="input" id="cc-cvv" type="password" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required data-pattern="^\d{3,4}$" data-err="CVV is 3 or 4 digits."></div>
+            <div class="field span-2"><label for="cc-name">Name on card</label><input class="input" id="cc-name" type="text" autocomplete="cc-name" required data-err="Enter the name on the card."></div>
+          </div>
+        </div>
+
+        <div class="pay-panel stack" data-pay-panel="netbanking" hidden>
+          <div class="field"><label for="nb-bank">Your bank</label>
+            <select class="select" id="nb-bank" required data-err="Pick your bank."><option value="">Choose a bank</option><option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option><option>Axis Bank</option><option>Federal Bank</option><option>South Indian Bank</option><option>Kotak Mahindra Bank</option><option>Canara Bank</option></select>
+          </div>
+          <p class="small muted mb-0">You’ll be taken to your bank’s secure page to approve.</p>
+        </div>
+
+        <div class="pay-panel stack" data-pay-panel="later" hidden>
+          <p class="mb-0"><b>Pay by link — send it to anyone (any country).</b> While the link is open we hold your slot for 2 hours; the link expires with the hold.</p>
+          <div class="field"><label for="later-phone">Send the link on WhatsApp to</label><div class="tel"><select class="select" aria-label="Country code"><option value="+91">India +91</option><option value="+971" selected>UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="later-phone" type="tel" inputmode="tel" autocomplete="off" required data-err="Enter the number to send the link to."></div></div>
+          <label class="check"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label>
+        </div>
+
+        <section aria-labelledby="pol-h">
+          <h3 id="pol-h" class="h4">Cancellation, in plain words</h3>
+          <ul class="list-dot small ink-2">
+            <li>Reschedule free, up to 12 hours before the session.</li>
+            <li>Cancel 24 hours or more before: full refund (<span data-bk="refundFull">₹7,079</span>).</li>
+            <li>Cancel within 24 hours: 50% refund (<span data-bk="half">₹3,539.50</span>).</li>
+            <li>If we can’t complete the inspection for reasons on our side: 100% refund.</li>
+          </ul>
+        </section>
+
+        <label class="check"><input type="checkbox" id="consent" required data-err="Tick this so we can send your updates on WhatsApp."> <span>Send booking updates on WhatsApp to +91 98470 12345 (SMS if WhatsApp fails).</span></label>
+        <p class="secure-line mb-0"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>256-bit secure payment · we never store your card details</p>
+      </form>
+
+      <div class="note">
+        <svg class="i" aria-hidden="true"><use href="#i-info"/></svg>
+        <div><b>Good to know</b>Paying for family back home? Choose “Pay by link” and send it to anyone — the slot stays held for 2 hours while the link is open.</div>
+      </div>
+
+      <section class="next-card carbon" aria-labelledby="nx-h">
+        <h2 id="nx-h">What happens next</h2>
+        <ol class="next-list">
+          <li><span><b>Instant confirmation</b> — booking SDB-24817 on WhatsApp, push and email, with your invoice.</span></li>
+          <li><span><b>Technician assigned by Sun 15 Nov</b> — you’ll get his name on WhatsApp.</span></li>
+          <li><span><b>On the day</b> — an arrival window in the morning, then one update per milestone. All times IST.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Booking summary: desktop sticky column, mobile bottom sheet -->
+    <aside class="race-sheet msheet carbon" id="race-sheet" aria-labelledby="rs-h">
+      <div class="rs-head"><h2 id="rs-h">Booking summary</h2><button class="icon-btn msheet-close" type="button" data-msheet-close aria-label="Close summary"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <ul class="rs-rows">
+        <li class="rs-row" data-rs="1"><span class="rs-n">01</span><span class="rs-k">Service</span><span class="rs-v"><span data-bk="serviceShort">Used Car Pre-Purchase</span><small data-bk="tier">Luxury segment</small></span><span class="rs-pend">Step 1</span><a class="rs-edit" href="book.html">Edit service</a></li>
+        <li class="rs-row" data-rs="2"><span class="rs-n">02</span><span class="rs-k">Car</span><span class="rs-v"><span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span><small data-bk="reg">KL 11 BH 7272</small></span><span class="rs-pend">Step 2 · up next</span><a class="rs-edit" href="book-car.html">Edit car details</a></li>
+        <li class="rs-row" data-rs="3"><span class="rs-n">03</span><span class="rs-k">Location</span><span class="rs-v"><span data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span><small data-bk="contact">Faisal (seller) · +91 99460 55120</small></span><span class="rs-pend">Step 3</span><a class="rs-edit" href="book-location.html">Edit location</a></li>
+        <li class="rs-row" data-rs="4"><span class="rs-n">04</span><span class="rs-k">Date &amp; session</span><span class="rs-v"><span data-bk="slot">Sat 21 Nov · Morning</span><small data-bk="slotTime">9:00 AM – 1:00 PM IST</small></span><span class="rs-pend">Step 4</span><a class="rs-edit" href="book-slot.html">Edit date &amp; session</a></li>
+      </ul>
+      <div class="rs-total"><span class="lbl">Total incl. GST 18%</span><span class="big" data-bk="total">₹7,079</span><small><span data-bk="base">₹5,999.00</span> + GST <span data-bk="gst">₹1,079.82</span> · rounding <span data-bk="round">+₹0.18</span> · travel ₹0 · no hidden charges</small></div>
+      <a class="btn btn-red btn-lg btn-block" href="booking-confirmed.html" data-cta-main data-pay><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span data-pay-label>Pay ₹7,079 securely</span></a>
+      <a class="rs-call" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Questions? Call us · +91 8330 881 213</a>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

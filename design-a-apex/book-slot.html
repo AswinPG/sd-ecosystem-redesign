@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Date &amp; session · Step 4 of 5 · SDCertified</title>
+<meta name="description" content="Pick a date and a Morning or Afternoon session. We hold your slot for 10 minutes while you pay.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="book-slot" data-shell="flow" data-step="4">
+<main id="main" class="mist">
+  <div class="wrap flow-grid">
+    <section class="flow-main" aria-labelledby="pg-h">
+      <header>
+        <p class="eyebrow">Step 4 of 5 · Slot</p>
+        <h1 id="pg-h" class="d-2">Pick a date &amp; session</h1>
+        <p class="lead mb-0">Slots open 30 days ahead. The inspection takes <span data-bk="duration">about 3–4 hours</span>, inside the session you pick.</p>
+      </header>
+
+      <!-- Calendar -->
+      <section class="card card-cut flow-sec" aria-labelledby="cal-h">
+        <div class="cal-head">
+          <h2 id="cal-h" class="h3 mb-0">November – December 2026</h2>
+          <span class="tag"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Times in IST</span>
+        </div>
+        <div class="cal" data-cal role="group" aria-labelledby="cal-h">
+          <span class="dow" aria-hidden="true">Mon</span><span class="dow" aria-hidden="true">Tue</span><span class="dow" aria-hidden="true">Wed</span><span class="dow" aria-hidden="true">Thu</span><span class="dow" aria-hidden="true">Fri</span><span class="dow" aria-hidden="true">Sat</span><span class="dow" aria-hidden="true">Sun</span>
+          <span class="day blank" aria-hidden="true"></span><span class="day blank" aria-hidden="true"></span><span class="day blank" aria-hidden="true"></span><span class="day blank" aria-hidden="true"></span><span class="day blank" aria-hidden="true"></span><span class="day blank" aria-hidden="true"></span>
+          <button class="day few" type="button" data-label="Sun 15 Nov" data-m="few" data-a="full" aria-label="Sunday 15 November — morning 2 left, afternoon full"><b>15</b><small>2 left</small></button>
+          <button class="day" type="button" data-label="Mon 16 Nov" data-m="open" data-a="open" aria-label="Monday 16 November — morning open, afternoon open"><b>16</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Tue 17 Nov" data-m="open" data-a="few" aria-label="Tuesday 17 November — morning open, afternoon 2 left"><b>17</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Wed 18 Nov" data-m="full" data-a="full" disabled aria-label="Wednesday 18 November — full"><b>18</b><small>Full</small></button>
+          <button class="day" type="button" data-label="Thu 19 Nov" data-m="few" data-a="open" aria-label="Thursday 19 November — morning 2 left, afternoon open"><b>19</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Fri 20 Nov" data-m="open" data-a="open" aria-label="Friday 20 November — morning open, afternoon open"><b>20</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sat 21 Nov" data-m="open" data-a="few" aria-pressed="true" aria-label="Saturday 21 November — morning open, afternoon 2 left"><b>21</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sun 22 Nov" data-m="full" data-a="full" disabled aria-label="Sunday 22 November — full"><b>22</b><small>Full</small></button>
+          <button class="day" type="button" data-label="Mon 23 Nov" data-m="open" data-a="open" aria-label="Monday 23 November — morning open, afternoon open"><b>23</b><small>Open</small></button>
+          <button class="day few" type="button" data-label="Tue 24 Nov" data-m="few" data-a="few" aria-label="Tuesday 24 November — morning 2 left, afternoon 2 left"><b>24</b><small>2 left</small></button>
+          <button class="day" type="button" data-label="Wed 25 Nov" data-m="open" data-a="open" aria-label="Wednesday 25 November — morning open, afternoon open"><b>25</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Thu 26 Nov" data-m="open" data-a="full" aria-label="Thursday 26 November — morning open, afternoon full"><b>26</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Fri 27 Nov" data-m="few" data-a="open" aria-label="Friday 27 November — morning 2 left, afternoon open"><b>27</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sat 28 Nov" data-m="open" data-a="few" aria-label="Saturday 28 November — morning open, afternoon 2 left"><b>28</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sun 29 Nov" data-m="full" data-a="full" disabled aria-label="Sunday 29 November — full"><b>29</b><small>Full</small></button>
+          <button class="day" type="button" data-label="Mon 30 Nov" data-m="open" data-a="open" aria-label="Monday 30 November — morning open, afternoon open"><b>30</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Tue 1 Dec" data-m="open" data-a="open" aria-label="Tuesday 1 December — morning open, afternoon open"><b>1</b><small>Dec · Open</small></button>
+          <button class="day" type="button" data-label="Wed 2 Dec" data-m="open" data-a="few" aria-label="Wednesday 2 December — morning open, afternoon 2 left"><b>2</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Thu 3 Dec" data-m="full" data-a="full" disabled aria-label="Thursday 3 December — full"><b>3</b><small>Full</small></button>
+          <button class="day" type="button" data-label="Fri 4 Dec" data-m="open" data-a="open" aria-label="Friday 4 December — morning open, afternoon open"><b>4</b><small>Open</small></button>
+          <button class="day few" type="button" data-label="Sat 5 Dec" data-m="few" data-a="few" aria-label="Saturday 5 December — morning 2 left, afternoon 2 left"><b>5</b><small>2 left</small></button>
+          <button class="day" type="button" data-label="Sun 6 Dec" data-m="open" data-a="full" aria-label="Sunday 6 December — morning open, afternoon full"><b>6</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Mon 7 Dec" data-m="open" data-a="open" aria-label="Monday 7 December — morning open, afternoon open"><b>7</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Tue 8 Dec" data-m="open" data-a="open" aria-label="Tuesday 8 December — morning open, afternoon open"><b>8</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Wed 9 Dec" data-m="few" data-a="open" aria-label="Wednesday 9 December — morning 2 left, afternoon open"><b>9</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Thu 10 Dec" data-m="open" data-a="open" aria-label="Thursday 10 December — morning open, afternoon open"><b>10</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Fri 11 Dec" data-m="open" data-a="open" aria-label="Friday 11 December — morning open, afternoon open"><b>11</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sat 12 Dec" data-m="few" data-a="open" aria-label="Saturday 12 December — morning 2 left, afternoon open"><b>12</b><small>Open</small></button>
+          <button class="day" type="button" data-label="Sun 13 Dec" data-m="full" data-a="full" disabled aria-label="Sunday 13 December — full"><b>13</b><small>Full</small></button>
+          <button class="day" type="button" data-label="Mon 14 Dec" data-m="open" data-a="open" aria-label="Monday 14 December — morning open, afternoon open"><b>14</b><small>Open</small></button>
+        </div>
+        <div class="cal-legend" aria-hidden="true">
+          <span><i></i>Open</span><span><i class="few"></i>2 left</span><span><i class="full"></i>Full</span>
+        </div>
+      </section>
+
+      <!-- Sessions -->
+      <fieldset class="card card-cut flow-sec">
+        <legend class="h3" style="float:left;width:100%;margin-bottom:6px">Session on <span data-picked-day>Sat 21 Nov</span></legend>
+        <p class="small muted" data-dual hidden style="clear:both"><span data-bk="slotDual">9:00 AM – 1:00 PM IST · 7:30 – 11:30 AM Dubai</span></p>
+        <div class="tiles grid g-2" style="--gap:12px">
+          <label class="tile">
+            <input type="radio" name="session" value="Morning">
+            <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>
+            <span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg><span class="tile-t">Morning</span><span class="tag" data-sess-state="Morning">Open</span></span>
+            <span class="num-l" style="font-size:1.375rem">9:00 AM – 1:00 PM IST</span>
+            <span class="small muted">Best light for paint and body checks.</span>
+            <span data-fit="Morning" hidden></span>
+          </label>
+          <label class="tile">
+            <input type="radio" name="session" value="Afternoon">
+            <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>
+            <span class="row" style="--gap:8px"><svg class="i" aria-hidden="true"><use href="#i-sunset"/></svg><span class="tile-t">Afternoon</span><span class="tag tag-a" data-sess-state="Afternoon">2 left</span></span>
+            <span class="num-l" style="font-size:1.375rem">2:00 – 6:00 PM IST</span>
+            <span class="small muted">Handy if the seller works mornings.</span>
+            <span data-fit="Afternoon" hidden></span>
+          </label>
+        </div>
+
+        <div class="hold" data-hold-panel hidden>
+          <span class="hold-time" data-hold-time aria-hidden="true">10:00</span>
+          <span class="hold-t">We’re holding <b data-hold-label>Sat 21 Nov, Morning</b> for you</span>
+          <span class="hold-msg" data-hold-msg>Free reschedule up to 12 h before the session.</span>
+          <span class="hold-bar" aria-hidden="true"><i data-hold-bar></i></span>
+          <button class="btn btn-light btn-sm" type="button" data-hold-again hidden>Hold again</button>
+          <span class="sr-only" aria-live="polite" data-hold-sr></span>
+        </div>
+      </fieldset>
+
+      <div class="note" data-bk-show="pdi" hidden>
+        <svg class="i" aria-hidden="true"><use href="#i-flag"/></svg>
+        <div><b>We’ll finish before you sign</b>We suggest a session that ends at least 1 hour before your handover (<span data-bk="handover">Sat 21 Nov, 4:00 PM IST</span>).</div>
+      </div>
+
+      <div class="card card-line switch-row" style="padding:12px 18px">
+        <label for="notify-earlier" class="stack" style="--gap:2px"><span class="strong">Notify me on WhatsApp if an earlier slot opens</span><span class="small muted">To +91 98470 12345 · we never move your booking without asking.</span></label>
+        <input class="switch" type="checkbox" id="notify-earlier" data-pref="Earlier-slot alerts">
+      </div>
+
+      <div class="note">
+        <svg class="i" aria-hidden="true"><use href="#i-info"/></svg>
+        <div><b>Good to know</b>Free reschedule up to 12 hours before the session. Full refund if you cancel 24 hours or more before; 50% within 24 hours.</div>
+      </div>
+
+      <section class="next-card carbon" aria-labelledby="nx-h">
+        <h2 id="nx-h">What happens next</h2>
+        <ol class="next-list">
+          <li><span><b>Review everything once</b> — edit any detail before you pay.</span></li>
+          <li><span><b>Pay securely</b> by UPI, card, netbanking — or send a pay-by-link to family (we then hold the slot for 2 hours).</span></li>
+          <li><span><b>Technician assigned by Sun 15 Nov</b> — you’ll get his name on WhatsApp.</span></li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Booking summary: desktop sticky column, mobile bottom sheet -->
+    <aside class="race-sheet msheet carbon" id="race-sheet" aria-labelledby="rs-h">
+      <div class="rs-head"><h2 id="rs-h">Booking summary</h2><button class="icon-btn msheet-close" type="button" data-msheet-close aria-label="Close summary"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <ul class="rs-rows">
+        <li class="rs-row" data-rs="1"><span class="rs-n">01</span><span class="rs-k">Service</span><span class="rs-v"><span data-bk="serviceShort">Used Car Pre-Purchase</span><small data-bk="tier">Luxury segment</small></span><span class="rs-pend">Step 1</span><a class="rs-edit" href="book.html">Edit service</a></li>
+        <li class="rs-row" data-rs="2"><span class="rs-n">02</span><span class="rs-k">Car</span><span class="rs-v"><span data-bk="car">2021 Mercedes-Benz GLE 300d 4MATIC</span><small data-bk="reg">KL 11 BH 7272</small></span><span class="rs-pend">Step 2 · up next</span><a class="rs-edit" href="book-car.html">Edit car details</a></li>
+        <li class="rs-row" data-rs="3"><span class="rs-n">03</span><span class="rs-k">Location</span><span class="rs-v"><span data-bk="where">Near Hilite Mall, Thondayad Bypass, Kozhikode 673014</span><small data-bk="contact">Faisal (seller) · +91 99460 55120</small></span><span class="rs-pend">Step 3</span><a class="rs-edit" href="book-location.html">Edit location</a></li>
+        <li class="rs-row" data-rs="4"><span class="rs-n">04</span><span class="rs-k">Date &amp; session</span><span class="rs-v"><span data-bk="slot">Sat 21 Nov · Morning</span><small data-bk="slotTime">9:00 AM – 1:00 PM IST</small></span><span class="rs-pend">Step 4</span><a class="rs-edit" href="book-slot.html">Edit date &amp; session</a></li>
+      </ul>
+      <div class="rs-total"><span class="lbl">Total incl. GST 18%</span><span class="big" data-bk="total">₹7,079</span><small><span data-bk="base">₹5,999.00</span> + GST <span data-bk="gst">₹1,079.82</span> · rounding <span data-bk="round">+₹0.18</span> · travel ₹0 · no hidden charges</small></div>
+      <a class="btn btn-red btn-lg btn-block" href="checkout.html" data-cta-main data-continue>Continue to review &amp; pay<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      <a class="rs-call" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Questions? Call us · +91 8330 881 213</a>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

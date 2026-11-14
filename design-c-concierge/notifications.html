@@ -11,12 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
-<style>
-  .pref-table td, .pref-table th { text-align: center; }
-  .pref-table td:first-child, .pref-table th:first-child { text-align: left; }
-  .pref-table .switch { margin: 0 auto; }
-  .day-h { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding: 18px 0 4px; }
-</style>
 <script>document.documentElement.classList.add('js')</script>
 <script src="app.js" defer></script>
 </head>
@@ -24,7 +18,7 @@
 <main id="main" class="wrap">
   <section class="page-head">
     <h1>Updates</h1>
-    <p class="lead">Everything we've sent you on WhatsApp, push and SMS — mirrored here, so nothing gets lost in a chat.</p>
+    <p class="lead">Everything we've sent you on WhatsApp, push and SMS — mirrored here, so nothing gets lost.</p>
   </section>
 
   <div class="layout-aside" style="--aside:440px">
@@ -43,17 +37,17 @@
           <div class="notif unread" data-cat="ins">
             <span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span>
             <div class="notif-body"><p class="notif-title">Inspection started</p><p class="notif-text">Nikhil started on your GLE (KL 11 BH 7272) at 9:31 AM. A full inspection takes about 3–4 hours — we'll message you the moment the report is ready.</p>
-              <div class="notif-meta"><span>9:31 AM</span><span>Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link link-red small" style="min-height:0" href="track.html">Track inspection</a></div></div>
+              <div class="notif-meta"><span>9:31 AM IST</span><span>Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link link-red small" style="min-height:0" href="track.html">Track inspection</a></div></div>
           </div>
           <div class="notif unread" data-cat="ins">
             <span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span>
             <div class="notif-body"><p class="notif-title">Arriving today</p><p class="notif-text">Nikhil will reach near Hilite Mall between 9:00 and 9:30 AM. Faisal has been told too.</p>
-              <div class="notif-meta"><span>8:10 AM</span><span>WhatsApp + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></div></div>
+              <div class="notif-meta"><span>8:10 AM IST</span><span>WhatsApp + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></div></div>
           </div>
           <div class="notif unread" data-cat="cars">
             <span class="thumb" style="width:48px; height:48px"><img src="../assets/rr-spectre-black.jpg" alt=""></span>
             <div class="notif-body"><p class="notif-title">New Platinum listing</p><p class="notif-text">Rolls-Royce Spectre 2024 · 3,150 km · Delhi NCR · score 98 · ₹5.60 Cr.</p>
-              <div class="notif-meta"><span>7:45 AM</span><span>Push</span><a class="link small" style="min-height:0" href="vehicle.html">View car</a></div></div>
+              <div class="notif-meta"><span>7:45 AM IST</span><span>Push</span><a class="link small" style="min-height:0" href="vehicle.html">View car</a></div></div>
           </div>
         </div>
 
@@ -62,7 +56,7 @@
           <div class="notif" data-cat="ins">
             <span class="icon-tile amber sm"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg></span>
             <div class="notif-body"><p class="notif-title">Technician assigned · Nikhil Raj</p><p class="notif-text">Senior Inspection Engineer · 7 yrs in Dubai · 4.9★ · 1,240 inspections.</p>
-              <div class="notif-meta"><span>6:05 PM</span><span>WhatsApp → SMS</span><span class="dstate warn"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>WhatsApp failed · SMS fallback delivered</span></div></div>
+              <div class="notif-meta"><span>6:05 PM IST</span><span>WhatsApp → SMS</span><span class="dstate warn"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>WhatsApp failed · SMS fallback delivered</span></div></div>
           </div>
         </div>
 
@@ -71,12 +65,12 @@
           <div class="notif" data-cat="pay">
             <span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-receipt"/></svg></span>
             <div class="notif-body"><p class="notif-title">Payment received · ₹7,079</p><p class="notif-text">UPI (Google Pay) for SDB-24817. GST invoice INV-2026-11-0417 sent to arjun.menon@example.in.</p>
-              <div class="notif-meta"><span>10:42 AM</span><span>Email + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="profile.html">Invoice</a></div></div>
+              <div class="notif-meta"><span>10:42 AM IST</span><span>Email + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="profile.html">Invoice</a></div></div>
           </div>
           <div class="notif" data-cat="ins">
             <span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span>
             <div class="notif-body"><p class="notif-title">Booking confirmed · SDB-24817</p><p class="notif-text">Mercedes-Benz GLE 300d · Sat 21 Nov, 9 AM – 1 PM · near Hilite Mall.</p>
-              <div class="notif-meta"><span>10:43 AM</span><span>WhatsApp + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></div></div>
+              <div class="notif-meta"><span>10:42 AM IST</span><span>WhatsApp + Push</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></div></div>
           </div>
         </div>
 
@@ -85,12 +79,12 @@
           <div class="notif" data-cat="ins">
             <span class="icon-tile amber sm"><svg class="i" aria-hidden="true"><use href="#i-hourglass"/></svg></span>
             <div class="notif-body"><p class="notif-title">Wayanad visit · 2 of 3 requests gathered</p><p class="notif-text">Jeep Wrangler Rubicon, Kalpetta. We'll confirm your date by Thu 19 Nov at the latest.</p>
-              <div class="notif-meta"><span>4:20 PM</span><span>WhatsApp</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="inspections.html">Batch status</a></div></div>
+              <div class="notif-meta"><span>4:20 PM IST</span><span>WhatsApp</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="inspections.html">Batch status</a></div></div>
           </div>
           <div class="notif" data-cat="offers">
-            <span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
-            <div class="notif-body"><p class="notif-title">SD Assure for your next car</p><p class="notif-text">Extended warranty up to 7 years / 1,00,000 km on Suresh Drives-inspected cars.</p>
-              <div class="notif-meta"><span>11:00 AM</span><span>Push</span><a class="link small" style="min-height:0" href="suresh-drives.html#assure">See plans</a></div></div>
+            <span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+            <div class="notif-body"><p class="notif-title">Taking delivery of a new car?</p><p class="notif-text">New Car PDI — ₹3,999 + GST = ₹4,719, about 2 hours at the showroom, finished before you sign.</p>
+              <div class="notif-meta"><span>11:00 AM IST</span><span>Push</span><a class="link small" style="min-height:0" href="book.html?service=pdi">Book a PDI</a></div></div>
           </div>
         </div>
 
@@ -99,7 +93,7 @@
           <div class="notif" data-cat="ins">
             <span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span>
             <div class="notif-body"><p class="notif-title">Report ready · SDR-18842</p><p class="notif-text">BMW X4 M Competition scored 92/100 — recommended Gold.</p>
-              <div class="notif-meta"><span>4:30 PM</span><span>WhatsApp + Email</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="report.html">Open report</a></div></div>
+              <div class="notif-meta"><span>4:30 PM IST</span><span>WhatsApp + Email</span><span class="dstate ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span><a class="link small" style="min-height:0" href="report.html">Open report</a></div></div>
           </div>
         </div>
       </div>
@@ -111,17 +105,22 @@
         <p class="small muted mt-1">WhatsApp is primary. If a WhatsApp message fails, we send an SMS instead.</p>
         <div class="table-wrap mt-2">
           <table class="table pref-table">
-            <thead><tr><th scope="col">Update</th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-wa"/></svg><span class="tiny" style="display:block">WhatsApp</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-bell"/></svg><span class="tiny" style="display:block">Push</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-sms"/></svg><span class="tiny" style="display:block">SMS</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-mail"/></svg><span class="tiny" style="display:block">Email</span></th></tr></thead>
+            <thead><tr><th scope="col">Update</th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-wa"/></svg><span class="tiny" style="display:block">WhatsApp</span><span class="rcpt">+91 98470 12345</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-bell"/></svg><span class="tiny" style="display:block">Push</span><span class="rcpt">This phone</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-sms"/></svg><span class="tiny" style="display:block">SMS fallback</span><span class="rcpt">+91 98470 12345</span></th><th scope="col"><svg class="i i-sm" style="margin:auto" aria-hidden="true"><use href="#i-mail"/></svg><span class="tiny" style="display:block">Email</span><span class="rcpt">arjun.menon@example.in</span></th></tr></thead>
             <tbody>
-              <tr><th scope="row" style="text-transform:none; letter-spacing:0; font-size:.88rem; color:var(--ink)">Booked</th><td><label class="switch"><input type="checkbox" checked aria-label="Booked on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked by email"><span></span></label></td></tr>
-              <tr><th scope="row" style="text-transform:none; letter-spacing:0; font-size:.88rem; color:var(--ink)">Assigned</th><td><label class="switch"><input type="checkbox" checked aria-label="Assigned on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Assigned by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Assigned SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Assigned by email"><span></span></label></td></tr>
-              <tr><th scope="row" style="text-transform:none; letter-spacing:0; font-size:.88rem; color:var(--ink)">Arriving today</th><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Arriving today by email"><span></span></label></td></tr>
-              <tr><th scope="row" style="text-transform:none; letter-spacing:0; font-size:.88rem; color:var(--ink)">Completed</th><td><label class="switch"><input type="checkbox" checked aria-label="Completed on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed by email"><span></span></label></td></tr>
-              <tr><th scope="row" style="text-transform:none; letter-spacing:0; font-size:.88rem; color:var(--ink)">Reassigned</th><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Reassigned by email"><span></span></label></td></tr>
+              <tr><th scope="row">Booked</th><td><label class="switch"><input type="checkbox" checked aria-label="Booked on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Booked by email"><span></span></label></td></tr>
+              <tr><th scope="row">Assigned</th><td><label class="switch"><input type="checkbox" checked aria-label="Assigned on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Assigned by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Assigned SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Assigned by email"><span></span></label></td></tr>
+              <tr><th scope="row">In progress</th><td><label class="switch"><input type="checkbox" checked aria-label="In progress on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="In progress by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="In progress SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="In progress by email"><span></span></label></td></tr>
+              <tr><th scope="row">Arriving today</th><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Arriving today SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Arriving today by email"><span></span></label></td></tr>
+              <tr><th scope="row">Completed</th><td><label class="switch"><input type="checkbox" checked aria-label="Completed on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Completed by email"><span></span></label></td></tr>
+              <tr><th scope="row">Reassigned</th><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned on WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned by push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked aria-label="Reassigned SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" aria-label="Reassigned by email"><span></span></label></td></tr>
             </tbody>
           </table>
         </div>
         <div class="card-sunk row mt-2" style="padding:12px 14px; --gap:10px"><svg class="i txt-green" aria-hidden="true"><use href="#i-wa"/></svg><p class="small grow">WhatsApp to <b class="strong">+91 98470 12345</b></p><a class="link small" style="min-height:0" href="profile.html">Change</a></div>
+        <div class="stack mt-3" style="--gap:12px">
+          <label class="row between" style="--gap:12px; cursor:pointer"><span><b class="strong small">Quiet hours</b><span class="tiny muted" style="display:block">10:00 PM – 7:00 AM in your own time zone · urgent updates still come through</span></span><span class="switch"><input type="checkbox" checked aria-label="Quiet hours"><span></span></span></label>
+          <label class="row between" style="--gap:12px; cursor:pointer"><span><b class="strong small">Also show my local time</b><span class="tiny muted" style="display:block">e.g. 9:00–9:30 AM IST · 7:30–8:00 AM Dubai</span></span><span class="switch"><input type="checkbox" aria-label="Also show my local time"><span></span></span></label>
+        </div>
       </section>
 
       <section class="wa" aria-label="Example WhatsApp update">

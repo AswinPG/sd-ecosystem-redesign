@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My inspections · SDCertified</title>
+<meta name="description" content="All your Suresh Drives inspections — in progress, upcoming, completed and those needing attention.">
+<meta name="theme-color" content="#0A0C0E">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.SDReady)document.documentElement.classList.remove('js')},2500)</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="inspections" data-shell="app" data-title="My inspections">
+<main id="main" class="app-main">
+  <div class="wrap">
+    <header class="row between load" style="--gap:16px;align-items:flex-end">
+      <div>
+        <span class="eyebrow">Arjun Menon · 5 inspections</span>
+        <h1 class="h1 mt-2">My inspections</h1>
+      </div>
+      <a class="btn btn-red" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Book inspection</a>
+    </header>
+
+    <!-- Summary instruments -->
+    <section class="spec c4 mt-6 load" aria-label="Summary">
+      <div><div class="k">In progress</div><div class="v mono g-text">1</div></div>
+      <div><div class="k">Upcoming</div><div class="v mono">1</div></div>
+      <div><div class="k">Reports</div><div class="v mono">2</div></div>
+      <div><div class="k">Needs attention</div><div class="v mono a-text">1</div></div>
+    </section>
+
+    <div class="mt-6" style="overflow-x:auto">
+      <div class="seg" role="tablist" aria-label="Filter inspections">
+        <button role="tab" id="t-up" aria-controls="p-up" aria-selected="true" tabindex="0">Upcoming &amp; in progress <span class="count">2</span></button>
+        <button role="tab" id="t-done" aria-controls="p-done" aria-selected="false" tabindex="-1">Completed <span class="count">2</span></button>
+        <button role="tab" id="t-att" aria-controls="p-att" aria-selected="false" tabindex="-1">Needs attention <span class="count">1</span></button>
+      </div>
+    </div>
+
+    <!-- UPCOMING & LIVE -->
+    <section id="p-up" role="tabpanel" aria-labelledby="t-up" class="stack mt-6" style="--gap:16px">
+      <article class="card card-live insp">
+        <div class="ph"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE in a showroom"></div>
+        <div class="bd">
+          <div class="row between"><span class="status done"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>In progress · started 9:31 AM</span><span class="mono tiny muted">SDB-24817</span></div>
+          <div>
+            <h2 class="h3">2021 Mercedes-Benz GLE 300d 4MATIC</h2>
+            <p class="small muted mb-0 mt-1">Used Car Pre-Purchase · Luxury · KL 11 BH 7272 · Sat 21 Nov, Morning · Near Hilite Mall</p>
+          </div>
+          <ol class="tl-h" aria-label="Milestones: Booked, Assigned, Arriving today done; In progress now; Report ready next">
+            <li class="st done"><b>Booked</b><span class="mono">14 NOV</span></li>
+            <li class="st done"><b>Assigned</b><span class="mono">15 NOV</span></li>
+            <li class="st done"><b>Arriving</b><span class="mono">9:00–9:30</span></li>
+            <li class="st now" aria-current="step"><b>In progress</b><span class="mono">9:31 AM</span></li>
+            <li class="st"><b>Report</b><span class="mono">NEXT</span></li>
+          </ol>
+          <p class="small tx2 mb-0"><b>Nikhil Raj</b> started at 9:31 AM. A full inspection takes about 3–4 hours — we’ll message you on WhatsApp when the report is ready.</p>
+          <div class="acts"><a class="btn btn-red" href="track.html"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Track inspection</a><a class="btn btn-line" href="report-gle.html"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>Report preview</a></div>
+        </div>
+      </article>
+
+      <article class="card insp">
+        <div class="ph"><img src="../assets/jeep-rubicon.jpg" alt="Jeep Wrangler Rubicon"></div>
+        <div class="bd">
+          <div class="row between"><span class="status info"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Visiting team · date pending</span><span class="mono tiny muted">SDB-24803</span></div>
+          <div>
+            <h2 class="h3">2018 Jeep Wrangler Rubicon</h2>
+            <p class="small muted mb-0 mt-1">Used Car Pre-Purchase · Premium · Kalpetta, Wayanad · requested 12 Nov</p>
+          </div>
+          <div style="padding:14px 16px;border-radius:var(--r-md);background:var(--bg-2);border:1px solid var(--line)">
+            <div class="row between small"><b>2 of 3 requests gathered in Wayanad</b><span class="tiny muted">Batch WYD-11</span></div>
+            <div class="batch mt-3" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
+            <p class="small tx2 mt-3 mb-0">A senior technician will travel to Kalpetta with the full toolkit. We’ll confirm your date by <b>Thu 19 Nov at the latest</b> — even if the third request doesn’t come in. Not charged until confirmed.</p>
+          </div>
+          <div class="acts"><a class="btn btn-line" href="support.html"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>See batch status</a><button class="btn btn-ghost" type="button" data-callback data-topic="Wayanad visiting team · SDB-24803"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Request a callback</button></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- COMPLETED -->
+    <section id="p-done" role="tabpanel" aria-labelledby="t-done" class="stack mt-6" style="--gap:16px" hidden>
+      <article class="card insp">
+        <div class="ph"><img src="../assets/bmw-x4m-green.jpg" alt="BMW X4 M Competition in green" style="object-position:40% 55%"></div>
+        <div class="bd">
+          <div class="row between"><span class="status done"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Completed · 3 Oct 2026</span><span class="mono tiny muted">Report SDR-18842</span></div>
+          <div class="row row-nw" style="--gap:18px">
+            <div class="gauge gauge-sm" style="--v:92" role="img" aria-label="Score 92 of 100">
+              <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#g-ticks"/><circle class="g-track" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/><circle class="g-fill" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="69 200"/></svg>
+              <div class="g-read"><span class="v">92</span></div>
+            </div>
+            <div>
+              <h2 class="h3">2022 BMW X4 M Competition</h2>
+              <p class="small muted mb-2 mt-1">KL 07 CU 9090 · 21,500 km · inspected by Nikhil Raj</p>
+              <span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold recommended</span>
+            </div>
+          </div>
+          <p class="small tx2 mb-0">Mechanically excellent. Two panels repainted — cosmetic, no structural damage.</p>
+          <div class="acts"><a class="btn btn-red" href="report.html"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>View report</a><button class="btn btn-line" type="button" data-toast="SDR-18842.pdf is downloading (4.2 MB)"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>PDF</button></div>
+        </div>
+      </article>
+
+      <article class="card insp">
+        <div class="ph"><img src="../assets/bmw-i7-white.jpg" alt="White BMW i7"></div>
+        <div class="bd">
+          <div class="row between"><span class="status done"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Completed · New Car PDI · 28 Aug 2026</span><span class="tiny muted">Report <span class="mono">SDR-22914</span></span></div>
+          <div>
+            <h2 class="h3">2026 BMW i7 xDrive60</h2>
+            <p class="small muted mb-0 mt-1">At BMW EVM Autokraft, Kochi · before delivery</p>
+          </div>
+          <div class="row" style="--gap:16px">
+            <span class="mono" style="font-size:1.6rem;font-weight:700">129<span class="muted" style="font-size:.9rem">/132</span></span>
+            <span class="small tx2">checks passed · <span class="a-text">3 advisories</span></span>
+          </div>
+          <ul class="check-rows">
+            <li><svg class="i a-text" aria-hidden="true"><use href="#i-alert"/></svg><span>Minor swirl marks, rear bumper</span><span class="r a-text">Advisory</span></li>
+            <li><svg class="i a-text" aria-hidden="true"><use href="#i-alert"/></svg><span>Front-right tyre pressure low</span><span class="r a-text">Advisory</span></li>
+            <li><svg class="i a-text" aria-hidden="true"><use href="#i-alert"/></svg><span>Infotainment software update pending</span><span class="r a-text">Advisory</span></li>
+          </ul>
+          <div class="acts"><a class="btn btn-line" href="report-pdi.html"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>View PDI report</a><button class="btn btn-ghost" type="button" data-callback data-topic="PDI report · BMW i7 xDrive60">Ask an expert</button></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NEEDS ATTENTION -->
+    <section id="p-att" role="tabpanel" aria-labelledby="t-att" class="stack mt-6" style="--gap:16px" hidden>
+      <article class="card insp" style="border-color:rgba(242,179,61,.35)">
+        <div class="ph"><img src="../assets/audi-q7-black.jpg" alt="Black Audi Q7"></div>
+        <div class="bd">
+          <div class="row between"><span class="status warn"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>Couldn’t complete · 9 Sep 2026</span><span class="mono tiny muted">SDB-23312</span></div>
+          <div>
+            <h2 class="h3">2017 Audi Q7 45 TDI</h2>
+            <p class="small muted mb-0 mt-1">Used Car Pre-Purchase · Luxury · Calicut Beach Rd</p>
+          </div>
+          <div style="padding:14px 16px;border-radius:var(--r-md);background:var(--amber-dim);border:1px solid rgba(242,179,61,.3)">
+            <p class="small mb-0"><b>Reason:</b> Seller was unavailable at the location. Our technician waited 40 minutes and tried both numbers.</p>
+            <p class="small tx2 mb-0 mt-2"><svg class="i i-sm g-text" aria-hidden="true" style="display:inline;vertical-align:-3px"><use href="#i-check-circle"/></svg> Not your fault — your rebooking is <b>free</b>. Your payment stays on this booking.</p>
+          </div>
+          <div class="acts"><a class="btn btn-red" href="book-slot.html"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Rebook free</a><a class="btn btn-line" href="support.html">Request refund instead</a></div>
+        </div>
+      </article>
+      <div class="card card-pad row" style="--gap:14px">
+        <svg class="i g-text" aria-hidden="true"><use href="#i-info"/></svg>
+        <p class="small tx2 mb-0 grow">Tip: share the tracking link with the seller when you book — they get an “Arriving today” message too, so nobody misses the visit.</p>
+      </div>
+    </section>
+
+    <!-- Get a new one -->
+    <section class="banner mt-12 reveal" aria-labelledby="new-h">
+      <span class="nl-ic g d-only" style="width:56px;height:56px"><svg class="i i-lg" aria-hidden="true"><use href="#i-scan"/></svg></span>
+      <div><h2 id="new-h" class="h3">Looking at another car?</h2><p class="small muted mb-0 mt-1">Book a 300+ point Suresh Drives inspection anywhere in Kerala — from ₹3,999 + GST.</p></div>
+      <a class="btn btn-red" href="book.html">Book inspection</a>
+    </section>
+  </div>
+</main>
+</body>
+</html>

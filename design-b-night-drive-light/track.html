@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Track inspection · SDB-24817 · SDCertified</title>
+<meta name="description" content="Milestone tracking for your Suresh Drives inspection SDB-24817 — every status change arrives on WhatsApp and push.">
+<meta name="theme-color" content="#0A0C0E">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.SDReady)document.documentElement.classList.remove('js')},2500)</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="track" data-shell="app" data-title="Track inspection" data-back="inspections.html">
+<main id="main" class="app-main">
+  <div class="wrap">
+
+    <!-- PROTOTYPE STATE SWITCH -->
+    <div class="proto load" role="group" aria-label="Prototype preview state">
+      <span class="panel-label">Preview state</span>
+      <div class="seg">
+        <button type="button" data-state-btn="progress" aria-pressed="true">In progress</button>
+        <button type="button" data-state-btn="ready" aria-pressed="false">Report ready</button>
+      </div>
+      <span class="tiny muted">Prototype control · tracking is milestone-based, no live sync</span>
+    </div>
+
+    <!-- SYSTEM STATUS HEADER -->
+    <section class="sys mt-4 load" aria-label="Booking status">
+      <div><div class="k">Booking</div><div class="v">SDB-24817</div></div>
+      <div><div class="k">Car</div><div class="v">KL 11 BH 7272</div></div>
+      <div><div class="k">Session</div><div class="v">Sat 21 Nov · Morning</div></div>
+      <div><div class="k">Technician</div><div class="v">Nikhil Raj</div></div>
+      <div><div class="k">Started</div><div class="v">9:31 AM IST</div></div>
+      <div data-state="progress"><div class="k">Status</div><div class="v g-text"><svg class="i i-sm" aria-hidden="true"><use href="#i-clock"/></svg>In progress</div></div>
+      <div data-state="ready" hidden><div class="k">Status</div><div class="v g-text"><svg class="i i-sm" aria-hidden="true"><use href="#i-check-circle"/></svg>Report ready 1:18 PM</div></div>
+    </section>
+
+    <!-- ============ STATE: IN PROGRESS ============ -->
+    <section data-state="progress" class="mt-6" aria-labelledby="ip-h">
+      <div class="calm load">
+        <div class="row" style="--gap:20px;align-items:flex-start">
+          <div class="grow" style="min-width:260px">
+            <span class="status done"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>In progress · started 9:31 AM</span>
+            <h1 id="ip-h" class="h1 mt-4">Nikhil is inspecting your GLE.</h1>
+            <p class="lead mt-3">Nikhil started at 9:31 AM. A full inspection takes about 3–4 hours. We’ll message you on WhatsApp the moment your report is ready.</p>
+            <p class="small muted mb-0">2021 Mercedes-Benz GLE 300d 4MATIC · Near Hilite Mall, Thondayad Bypass · Morning session</p>
+          </div>
+          <div class="stack" style="--gap:8px;min-width:220px">
+            <button class="btn btn-line" type="button" data-copy="https://sdcertifiedcars.com/t/SDB-24817"><svg class="i" aria-hidden="true"><use href="#i-share"/></svg>Share milestones with the seller</button>
+            <button class="btn btn-line" type="button" data-open-sheet="family"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg>Share with family</button>
+            <a class="btn btn-wa" href="https://wa.me/919895441213"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- What we check (static explainer, not progress) -->
+      <section class="card mc mt-6 corner-ticks" aria-labelledby="wwc-h">
+        <div class="mc-grid" aria-hidden="true"></div>
+        <div class="card-pad" style="position:relative">
+          <div class="card-h"><div><span class="panel-label">Explainer · not live progress</span><h2 id="wwc-h" class="h3 mt-1">What we check</h2></div><span class="tag">300+ points · 6 zones</span></div>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px;align-items:center">
+            <svg class="car-wire" viewBox="0 0 300 520" role="img" aria-label="Car diagram showing the six inspection zones" style="max-width:260px">
+              <path class="body-ol" d="M100 22Q150 8 200 22Q262 32 264 80L266 440Q264 490 200 498Q150 508 100 498Q36 490 34 440L36 80Q38 32 100 22Z"/>
+              <rect class="whl" x="16" y="92" width="18" height="64" rx="6"/><rect class="whl" x="266" y="92" width="18" height="64" rx="6"/><rect class="whl" x="16" y="372" width="18" height="64" rx="6"/><rect class="whl" x="266" y="372" width="18" height="64" rx="6"/>
+              <path class="pnl" d="M98 30Q150 18 202 30Q240 36 246 56H54Q60 36 98 30Z"/>
+              <rect class="pnl" x="78" y="62" width="144" height="106" rx="12"/>
+              <path class="glass" d="M84 176h132l-10 40H94z"/>
+              <rect class="pnl" x="94" y="222" width="112" height="122" rx="10"/>
+              <path class="glass" d="M94 350h112l8 28H86z"/>
+              <rect class="pnl" x="78" y="384" width="144" height="70" rx="12"/>
+              <path class="pnl" d="M54 462H246Q240 484 202 490Q150 500 98 490Q60 484 54 462Z"/>
+              <rect class="pnl" x="40" y="62" width="32" height="106" rx="8"/><rect class="pnl" x="40" y="174" width="32" height="96" rx="6"/><rect class="pnl" x="40" y="276" width="32" height="96" rx="6"/><rect class="pnl" x="40" y="378" width="32" height="76" rx="8"/>
+              <rect class="pnl" x="228" y="62" width="32" height="106" rx="8"/><rect class="pnl" x="228" y="174" width="32" height="96" rx="6"/><rect class="pnl" x="228" y="276" width="32" height="96" rx="6"/><rect class="pnl" x="228" y="378" width="32" height="76" rx="8"/>
+              <g class="mk"><circle cx="56" cy="226" r="11"/><text x="56" y="230" text-anchor="middle">1</text></g>
+              <g class="mk"><circle cx="150" cy="115" r="11"/><text x="150" y="119" text-anchor="middle">2</text></g>
+              <g class="mk"><circle cx="150" cy="196" r="11"/><text x="150" y="200" text-anchor="middle">3</text></g>
+              <g class="mk"><circle cx="25" cy="404" r="11"/><text x="25" y="408" text-anchor="middle">4</text></g>
+              <g class="mk"><circle cx="150" cy="283" r="11"/><text x="150" y="287" text-anchor="middle">5</text></g>
+              <g class="mk"><circle cx="150" cy="420" r="11"/><text x="150" y="424" text-anchor="middle">6</text></g>
+            </svg>
+            <ol class="zone-list">
+              <li><span class="n">1</span><span><b>Exterior &amp; paint depth</b><span>Paint thickness measured on every panel — hidden repairs show up.</span></span></li>
+              <li><span class="n">2</span><span><b>Engine room</b><span>Fluids, leaks, belts, mountings, turbo, rat bites — and a camera look inside the engine.</span></span></li>
+              <li><span class="n">3</span><span><b>Computer scan</b><span>Every module checked for current and past fault codes; chassis number matched to the RC.</span></span></li>
+              <li><span class="n">4</span><span><b>Under the car</b><span>Driveline, differential, underbody, exhaust, suspension, flood markers.</span></span></li>
+              <li><span class="n">5</span><span><b>Interior &amp; electricals</b><span>Cluster, lights, audio &amp; navigation, upholstery, trunk, battery health.</span></span></li>
+              <li><span class="n">6</span><span><b>Road test</b><span>Starting, idle, acceleration, steering, shift quality, CV joints, brakes.</span></span></li>
+            </ol>
+          </div>
+          <p class="tiny muted mt-4 mb-0"><svg class="i i-sm" aria-hidden="true" style="display:inline;vertical-align:-3px"><use href="#i-info"/></svg> Findings aren’t streamed while Nikhil works — you get the full, photo-backed picture at once when the report is ready.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- ============ STATE: REPORT READY (end reveal) ============ -->
+    <section data-state="ready" hidden class="mt-6" aria-labelledby="rr-h">
+      <div class="card mc corner-ticks" style="border-color:var(--green-line)">
+        <div class="mc-grid" aria-hidden="true"></div>
+        <div class="card-pad" style="position:relative">
+          <div class="row between" style="--gap:12px">
+            <span class="status done"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Report ready · 1:18 PM · SDR-24817</span>
+            <span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>Suresh Drives Verified<b>89</b></span>
+          </div>
+          <h2 id="rr-h" class="h1 mt-4">Your report is ready.</h2>
+          <div class="grid mt-6" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;align-items:center">
+            <div class="row row-nw" style="--gap:20px">
+              <div class="gauge gauge-lg has-needle" style="--v:89" role="img" aria-label="Overall score 89 out of 100">
+                <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#g-ticks"/><circle class="g-track" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/><circle class="g-fill" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="66.75 200"/><g class="g-needle"><line x1="100" y1="100" x2="100" y2="40"/><circle cx="100" cy="100" r="6"/></g></svg>
+                <div class="g-read"><span class="v">89</span><span class="u">/ 100</span></div>
+              </div>
+              <div class="stack" style="--gap:10px">
+                <span class="panel-label">Recommendation</span>
+                <span class="tier tier-gold" style="height:32px;font-size:12.5px"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span>
+                <span class="tiny tx2">“Smart Premium” — original chassis, mechanically top-tier.</span>
+              </div>
+            </div>
+            <div>
+              <span class="panel-label">Verdict, in plain language</span>
+              <p class="verdict mt-2">Mechanically strong. Front bumper repainted — cosmetic only. Tyres due for replacement in ~8,000 km.</p>
+              <div class="row" style="--gap:8px">
+                <a class="btn btn-red" href="report-gle.html"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>View full report</a>
+                <button class="btn btn-line" type="button" data-toast="SDR-24817.pdf is downloading (4.6 MB)"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download PDF</button>
+                <button class="btn btn-ghost" type="button" data-callback data-topic="Report SDR-24817"><svg class="i" aria-hidden="true"><use href="#i-headset"/></svg>Ask an expert</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key readouts -->
+          <div class="grid mt-8" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px 10px;justify-items:center">
+            <div><div class="gauge gauge-sm" style="--v:100" role="img" aria-label="OBD: 0 active codes"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#g-ticks"/><circle class="g-track" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/><circle class="g-fill" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/></svg><div class="g-read"><span class="v">0</span><span class="u">codes</span></div></div><div class="gauge-cap"><b>OBD</b><span>0 active codes</span></div></div>
+            <div><div class="gauge gauge-sm" style="--v:88" role="img" aria-label="Battery health 88 percent"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#g-ticks"/><circle class="g-track" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/><circle class="g-fill" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="66 200"/></svg><div class="g-read"><span class="v">88</span><span class="u">%</span></div></div><div class="gauge-cap"><b>Battery</b><span>Healthy</span></div></div>
+            <div><div class="gauge gauge-sm amber" style="--v:35" role="img" aria-label="Tyres: replacement due in about 8,000 kilometres"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#g-ticks"/><circle class="g-track" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="75 200"/><circle class="g-fill" cx="100" cy="100" r="84" transform="rotate(135 100 100)" pathLength="100" stroke-dasharray="26.25 200"/></svg><div class="g-read"><span class="v" style="font-size:18px">~8k</span><span class="u">km left</span></div></div><div class="gauge-cap"><b>Tyres</b><span class="a-text">Replace soon</span></div></div>
+            <div class="center"><div style="width:96px;height:96px;display:grid;place-items:center;border-radius:50%;border:2px dashed rgba(242,179,61,.5);margin:auto"><svg class="i i-xl a-text" aria-hidden="true"><use href="#i-paint"/></svg></div><div class="gauge-cap"><b>Body</b><span>Front bumper repaint</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fair price -->
+      <section class="card card-pad mt-6" aria-labelledby="fp-h">
+        <div class="row between" style="--gap:12px"><span class="eyebrow g"><svg class="i i-sm" aria-hidden="true"><use href="#i-sparkle"/></svg>AI fair-price band</span><span class="tag a">Room to negotiate ~₹2 L</span></div>
+        <h2 id="fp-h" class="h3 mt-2">₹54 L – ₹58 L</h2>
+        <div class="band" role="img" aria-label="Seller asks 59.5 lakh, above the fair band of 54 to 58 lakh">
+          <span class="lo">₹54 L</span><span class="hi">₹58 L</span>
+          <span class="mk" style="left:85%;background:var(--amber)"><span style="background:var(--amber);color:#fff">Seller asks ₹59.5 L</span></span>
+        </div>
+        <p class="small tx2 mb-0">The seller’s price is ₹1.5 L above the top of the band. Based on the repaint and the tyres due soon, there’s room to negotiate about ₹2 L — the tyre replacement is your strongest lever. Want help? <button class="link small" type="button" data-callback data-topic="Report SDR-24817">Ask an expert</button></p>
+      </section>
+    </section>
+
+    <div class="split mt-6">
+      <div class="stack" style="--gap:20px;min-width:0">
+        <!-- MILESTONE TIMELINE -->
+        <section class="card card-pad" aria-labelledby="tl-h">
+          <div class="card-h"><h2 id="tl-h" class="h4">Milestones</h2><span class="tiny muted">Each update goes out on WhatsApp + push</span></div>
+          <ol class="tl">
+            <li class="tl-step done"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div class="tl-body"><b>Booked</b><span class="t">14 Nov · 10:42 AM IST</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Booking confirmed — SDB-24817 for KL 11 BH 7272, Sat 21 Nov, 9 AM–1 PM. Paid ₹7,079.<div class="via"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div></div></li>
+            <li class="tl-step done"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div class="tl-body"><b>Technician assigned</b><span class="t">15 Nov · 6:05 PM IST</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Nikhil Raj (4.9★ · 1,240 inspections · Gulf-experienced) will inspect your GLE 300d on Sat 21 Nov.<div class="via"><span class="tag a"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>WhatsApp failed · SMS fallback sent</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div></div></li>
+            <li class="tl-step done"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div class="tl-body"><b>Arriving today</b><span class="t">21 Nov · 8:10 AM IST · window 9:00–9:30 AM</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Good morning Arjun — Nikhil will reach between 9:00 and 9:30 AM, near Hilite Mall. We’ve let Faisal know.<div class="via"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div>
+              <div class="photo-note"><span class="ph-box"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span><div><b>Arrived 9:24 AM IST</b><span>Number plate &amp; odometer photographed at arrival · in your report</span></div></div></div></li>
+            <li class="tl-step done" data-state="progress"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span><div class="tl-body"><b>In progress</b><span class="t">21 Nov · 9:31 AM IST</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Nikhil has started the inspection. A full inspection takes about 3–4 hours — we’ll message you when your report is ready.<div class="via"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div></div></li>
+            <li class="tl-step done" data-state="ready" hidden><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div class="tl-body"><b>In progress</b><span class="t">21 Nov · 9:31 AM – 1:05 PM IST</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Nikhil has started the inspection. A full inspection takes about 3–4 hours.<div class="via"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div></div></div></li>
+            <li class="tl-step" data-state="progress"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><div class="tl-body"><b>Report ready</b><span class="t">Next · usually 3–4 hours after the start</span><p>You’ll get a WhatsApp message and a push notification with the report link and PDF.</p></div></li>
+            <li class="tl-step done" data-state="ready" hidden><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div class="tl-body"><b>Report ready</b><span class="t">21 Nov · 1:18 PM IST</span>
+              <div class="msg-sent"><b>Suresh Drives ✓</b> Your report SDR-24817 is ready: 89/100 · Gold recommended. Tap to view the full report and photos.<div class="via"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email · Sent</span></div></div></div></li>
+          </ol>
+        </section>
+
+        <!-- NOTIFICATION LOG -->
+        <section class="card card-pad" aria-labelledby="log-h">
+          <div class="card-h"><h2 id="log-h" class="h4">Notification log</h2><a class="small link" href="notifications.html">Preferences</a></div>
+          <div class="table-scroll">
+            <table class="pref" style="min-width:560px">
+              <thead><tr><th scope="col">Event</th><th scope="col" style="text-align:left">Channel</th><th scope="col" style="text-align:left">Sent (IST)</th><th scope="col" style="text-align:left">Delivery</th></tr></thead>
+              <tbody><tr><td><b>Booked</b><span>Confirmation + invoice</span></td><td style="text-align:left">WhatsApp · Push</td><td style="text-align:left" class="mono tiny">14 Nov, 10:42 AM</td><td style="text-align:left"><span class="dlv ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></td></tr><tr><td><b>Assigned</b><span>Nikhil Raj</span></td><td style="text-align:left">WhatsApp → SMS fallback · Push</td><td style="text-align:left" class="mono tiny">15 Nov, 6:05 PM</td><td style="text-align:left"><span class="dlv fb"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>WhatsApp failed (phone off) · SMS fallback sent · push delivered</span></td></tr><tr><td><b>Arriving today</b><span>Window 9:00–9:30 AM</span></td><td style="text-align:left">WhatsApp · Push</td><td style="text-align:left" class="mono tiny">21 Nov, 8:10 AM</td><td style="text-align:left"><span class="dlv ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></td></tr><tr><td><b>In progress</b><span>Started 9:31 AM</span></td><td style="text-align:left">WhatsApp · Push</td><td style="text-align:left" class="mono tiny">21 Nov, 9:31 AM</td><td style="text-align:left"><span class="dlv ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></td></tr><tr data-state="progress"><td><b>Completed</b><span>Report link + PDF</span></td><td style="text-align:left">WhatsApp · Push · Email</td><td style="text-align:left" class="mono tiny">—</td><td style="text-align:left"><span class="dlv q"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Queued · sends when ready</span></td></tr><tr data-state="ready" hidden><td><b>Completed</b><span>Report SDR-24817</span></td><td style="text-align:left">WhatsApp · Push · Email</td><td style="text-align:left" class="mono tiny">21 Nov, 1:18 PM</td><td style="text-align:left"><span class="dlv ok"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Delivered</span></td></tr></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ASIDE -->
+      <aside class="stack sticky" style="--gap:16px" aria-label="Technician, appointment and controls">
+        <section class="card card-pad" aria-labelledby="tech-h">
+          <span class="panel-label">Your technician</span>
+          <div class="row row-nw mt-3" style="--gap:14px">
+            <span class="avatar lg g">NR</span>
+            <div><h2 id="tech-h" class="h4">Nikhil Raj</h2><span class="tiny muted">Senior Inspection Engineer</span></div>
+          </div>
+          <dl class="kv mt-4">
+            <dt>Experience</dt><dd>Gulf · 7 yrs, Dubai</dd>
+            <dt>Inspections</dt><dd class="mono">1,240</dd>
+            <dt>Rating</dt><dd class="mono">4.9 ★</dd>
+          </dl>
+          <div class="stack mt-4" style="--gap:8px">
+            <a class="btn btn-line btn-block" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call Suresh Drives (connects you to Nikhil)</a>
+            <a class="btn btn-wa btn-block" href="https://wa.me/919895441213"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a>
+            <button class="btn btn-ghost btn-block" type="button" data-callback data-topic="Booking SDB-24817"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Request a callback</button>
+          </div>
+        </section>
+
+        <section class="card card-pad" aria-labelledby="ap-h">
+          <span class="panel-label">Appointment</span>
+          <h2 id="ap-h" class="h4 mt-2">Sat 21 Nov · Morning</h2>
+          <p class="small tx2 mt-1 mb-3">9:00 AM – 1:00 PM · Near Hilite Mall, Thondayad Bypass, Kozhikode 673014 · Opp. Hilite City gate 2</p>
+          <div class="map" role="img" aria-label="Static map of the inspection location near Hilite Mall">
+            <svg class="base" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#map-kzd"/></svg>
+            <div class="map-pin" style="left:73.5%;top:56%"><span class="head"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><span class="shadow"></span></div>
+          </div>
+          <p class="tiny muted mt-2 mb-0">At the car: Faisal (seller) · +91 99460 55120</p>
+        </section>
+
+        <section class="card card-pad" aria-labelledby="ctl-h">
+          <h2 id="ctl-h" class="h4 mb-2">Manage booking</h2>
+          <div class="divide">
+            <button class="lrow" type="button" style="width:100%;text-align:left" data-copy="https://sdcertifiedcars.com/t/SDB-24817"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-share"/></svg></span><span><b>Share link with seller</b><span class="sub">The seller sees the arrival window and milestones — never your payment details or the report.</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></button>
+            <button class="lrow" type="button" style="width:100%;text-align:left" data-open-sheet="contact-sheet"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span><b>Change contact</b><span class="sub">+91 98470 12345 · Faisal +91 99460 55120</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></button>
+            <div class="lrow" aria-disabled="true" style="opacity:.62"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><span><b>Reschedule</b><span class="sub">Not available once the inspection has started</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span></div>
+            <div class="lrow" aria-disabled="true" style="opacity:.62"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></span><span><b>Cancel</b><span class="sub">Locked once work starts. If we can’t finish for reasons on our side, you get a 100% refund.</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span></div>
+          </div>
+        </section>
+
+        <details class="acc">
+          <summary><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>If something goes wrong</span><svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+          <div class="acc-body"><ul class="ticks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Seller not at the car?</b> We try both numbers and wait. Rebooking is free, or take a full refund.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>We can’t finish for reasons on our side?</b> 100% refund.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><b>Something in the report worries you?</b> Request a callback and we’ll walk you through it.</span></li>
+          </ul></div>
+        </details>
+
+        <section class="card card-pad" aria-labelledby="help-h">
+          <h2 id="help-h" class="h4">Need help?</h2>
+          <p class="tiny muted mt-1 mb-3">Suresh Drives · 8 AM – 9 PM IST</p>
+          <div class="help-links"><a class="btn btn-line btn-sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call us · +91 8330 881 213</a><a class="btn btn-wa btn-sm" href="https://wa.me/919895441213"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp us</a><button class="btn btn-ghost btn-sm" type="button" data-callback data-topic="Booking SDB-24817"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Request a callback</button></div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <div class="sheet" id="family" aria-hidden="true">
+    <div class="scrim" data-close-sheet></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="fm-h">
+      <div class="sheet-head"><h2 id="fm-h" class="h3">Share with family</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form class="stack" style="--gap:12px" data-mock="Invite sent on WhatsApp. You can revoke it anytime; it expires after 30 days." data-mock-title="Invite sent" data-close-on-send>
+        <div class="field"><label for="fam-name">Name</label><input class="input" id="fam-name" required data-err="Add their name."></div>
+        <div class="field"><label for="fam-phone">Their WhatsApp number</label><div class="tel"><select class="select" aria-label="Country code for their whatsapp number"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi Arabia +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">USA / Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="fam-phone" type="tel" inputmode="tel" autocomplete="tel-national" value="" required data-err="Enter a mobile number."></div></div>
+        <fieldset style="border:0;padding:0;margin:0" class="stack"><legend class="small tx2 mb-2">What can they see?</legend>
+          <label class="tile tile-sm"><input type="radio" name="famrole"><div class="tile-in"><b>Milestones only</b><br><span class="tiny muted">Assigned, arriving, started, report ready</span></div></label>
+          <label class="tile tile-sm"><input type="radio" name="famrole" checked><div class="tile-in"><b>Milestones + report</b><br><span class="tiny muted">Includes report SDR-24817 and photos</span></div></label>
+        </fieldset>
+        <p class="tiny muted mb-0">Revocable anytime · the link expires after 30 days · they never see payment details.</p>
+        <button class="btn btn-red btn-block btn-lg" type="submit"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>Send invite on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+  <div class="sheet" id="contact-sheet" aria-hidden="true">
+    <div class="scrim" data-close-sheet></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="cs-h">
+      <div class="sheet-head"><h2 id="cs-h" class="h3">Change contact</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form class="stack" style="--gap:12px" data-mock="Updated. We’ve told Nikhil and will use these numbers from now on." data-mock-title="Contact updated" data-close-on-send>
+        <div class="field"><label for="cs-name">Person at the car</label><input class="input" id="cs-name" value="Faisal (seller)" required data-err="Add who we should meet."></div>
+        <div class="field"><label for="cs-phone">Their mobile</label><div class="tel"><select class="select" aria-label="Country code for their mobile"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi Arabia +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">USA / Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="cs-phone" type="tel" inputmode="tel" autocomplete="tel-national" value="99460 55120" required data-err="Enter a mobile number."></div></div>
+        <div class="field"><label for="cs-mine">Your mobile</label><div class="tel"><select class="select" aria-label="Country code for your mobile"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi Arabia +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">USA / Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="cs-mine" type="tel" inputmode="tel" autocomplete="tel-national" value="98470 12345" required data-err="Enter a mobile number."></div></div>
+        <button class="btn btn-red btn-block btn-lg" type="submit">Save contacts</button>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>

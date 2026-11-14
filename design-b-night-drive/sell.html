@@ -16,7 +16,6 @@
 </head>
 <body data-page="sell" data-shell="app" data-title="Sell / Certify">
 <main id="main">
-  <!-- Hero -->
   <section class="hero hero-sm" style="min-height:min(78vh,700px);padding-top:32px" aria-labelledby="sell-h">
     <div class="hero-bg"><img src="../assets/editorial-red-sedan.jpg" alt="A red sedan photographed at dusk" style="object-position:60% 50%"></div>
     <div class="wrap hero-in">
@@ -24,27 +23,27 @@
         <div class="load">
           <span class="eyebrow g">Quality Certification · ₹9,999 · no other charges</span>
           <h1 id="sell-h" class="display hero-title" style="font-size:clamp(2.2rem,1rem+4.6vw,4.6rem)">Sell with confidence. <span class="g-text ital">Certified.</span></h1>
-          <p class="lead">A Suresh Drives inspection, a Platinum, Gold or Silver badge, and a listing on SDCertified — with zero brokerage when it sells.</p>
-          <div class="hero-cta"><a class="btn btn-red btn-lg" href="#start">Start certification</a><a class="btn btn-line btn-lg" href="#preview">See what buyers see</a></div>
+          <p class="lead">A technician comes to your home, inspects the car and gives it a Platinum, Gold or Silver badge. Then you list it on SDCertified — with zero brokerage when it sells.</p>
+          <div class="hero-cta"><a class="btn btn-red btn-lg" href="#start">Start certification</a><a class="btn btn-line btn-lg" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Certify by phone</a></div>
         </div>
 
-        <!-- 3-step mini form -->
-        <form class="card card-glass card-pad load" id="start" data-steps data-mock="Anjana will call you within 2 hours to schedule the certification inspection." data-mock-title="Request received · SDC-1093" data-mock-lock aria-labelledby="mf-h">
+        <form class="card card-glass card-pad load" id="start" data-steps data-mock="We’ll call you within 2 hours to fix a visit. You pay ₹9,999 when the technician comes." data-mock-title="Request received" data-mock-lock aria-labelledby="mf-h">
           <div class="row between"><h2 id="mf-h" class="h4">Get your car certified</h2><div class="dots" aria-hidden="true"><i data-dot></i><i data-dot></i><i data-dot></i></div></div>
           <div data-pane class="stack mt-4" style="--gap:12px">
-            <div class="field"><label for="s-reg">Registration number</label><input class="input input-plate" id="s-reg" value="KL 07 CU 9090" autocomplete="off"></div>
+            <div class="field"><label for="s-reg">Your car’s registration number</label><input class="input input-plate" id="s-reg" placeholder="KL 07 AB 1234" autocomplete="off" autocapitalize="characters" spellcheck="false" required data-err="Enter your registration number, e.g. KL 07 AB 1234."><span class="hint"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>We fetch the model from the RC — no need to type it.</span></span></div>
             <button class="btn btn-red btn-block" type="button" data-next>Next<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
-            <p class="tiny muted mb-0 center">Step 1 of 3 · We fetch the model from the RC</p>
+            <p class="tiny muted mb-0 center">Step 1 of 3</p>
           </div>
           <div data-pane class="stack mt-4" style="--gap:12px" hidden>
-            <div class="field"><label for="s-km">Odometer reading (km)</label><input class="input mono" id="s-km" value="21,500" inputmode="numeric"></div>
+            <div class="field"><label for="s-km">Odometer reading (km)</label><input class="input mono" id="s-km" inputmode="numeric" placeholder="e.g. 45,000" required data-err="Enter the odometer reading in km."><span class="hint">An approximate figure is fine — we record the exact reading on the day.</span></div>
             <div class="row" style="--gap:8px"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-red grow" type="button" data-next>Next<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
             <p class="tiny muted mb-0 center">Step 2 of 3</p>
           </div>
           <div data-pane class="stack mt-4" style="--gap:12px" hidden>
-            <div class="field"><label for="s-city">City</label><select class="select" id="s-city"><option selected>Kozhikode</option><option>Kochi</option><option>Thrissur</option><option>Kannur</option><option>Malappuram</option><option>Thiruvananthapuram</option></select></div>
-            <div class="row" style="--gap:8px"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-red grow" type="submit">Request certification</button></div>
-            <p class="tiny muted mb-0 center">Step 3 of 3 · ₹9,999 payable after scheduling</p>
+            <div class="field"><label for="s-city">City</label><select class="select" id="s-city" required data-err="Choose your city."><option value="">Choose your city</option><option>Kozhikode</option><option>Kochi</option><option>Thrissur</option><option>Kannur</option><option>Malappuram</option><option>Kottayam</option><option>Thiruvananthapuram</option></select></div>
+            <div class="field"><label for="s-phone">Your mobile</label><div class="tel"><select class="select" aria-label="Country code for your mobile"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi Arabia +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">USA / Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="s-phone" type="tel" inputmode="tel" autocomplete="tel-national" value="" required data-err="Enter a mobile number."></div><label class="check wa-check"><input type="checkbox" checked> <span>Reachable on WhatsApp</span></label></div>
+            <div class="row" style="--gap:8px"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-red grow" type="submit">Request a visit</button></div>
+            <p class="tiny muted mb-0 center">Step 3 of 3 · pay ₹9,999 when the technician visits</p>
           </div>
         </form>
       </div>
@@ -52,70 +51,68 @@
   </section>
 
   <div class="wrap">
-    <!-- Why certify -->
-    <section class="section-sm" aria-labelledby="why-h">
-      <div class="sec-head"><div><span class="eyebrow">Why certify</span><h2 id="why-h" class="h2">Buyers trust the badge.</h2></div></div>
-      <div class="g-4">
-        <div class="card card-pad reveal"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><h3 class="h4 mt-4">Sells faster</h3><p class="small tx2 mt-2 mb-0">A Suresh Drives report answers buyers’ questions before they ask.</p></div>
-        <div class="card card-pad reveal" style="--d:60ms"><span class="nl-ic r"><svg class="i" aria-hidden="true"><use href="#i-percent"/></svg></span><h3 class="h4 mt-4">0% brokerage</h3><p class="small tx2 mt-2 mb-0">You keep the full sale price. One flat fee of ₹9,999.</p></div>
-        <div class="card card-pad reveal" style="--d:120ms"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg></span><h3 class="h4 mt-4">Tier badge</h3><p class="small tx2 mt-2 mb-0">Platinum, Gold or Silver — earned on the car’s real condition.</p></div>
-        <div class="card card-pad reveal" style="--d:180ms"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg></span><h3 class="h4 mt-4">SD Assure ready</h3><p class="small tx2 mt-2 mb-0">Eligible cars can carry an extended warranty — up to 7 yrs / 1,00,000 km.</p></div>
+    <section class="section-sm" aria-labelledby="wh-h">
+      <div class="sec-head"><div><span class="eyebrow g">Plain and simple</span><h2 id="wh-h" class="h2">What happens to my car?</h2></div></div>
+      <div class="g-3">
+        <div class="card card-pad reveal"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><h3 class="h4 mt-4">The car stays with you</h3><p class="small tx2 mt-2 mb-0">Nothing is towed or taken away. A Suresh Drives technician comes to your home — it takes about 3–4 hours.</p></div>
+        <div class="card card-pad reveal" style="--d:60ms"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg></span><h3 class="h4 mt-4">You approve the listing</h3><p class="small tx2 mt-2 mb-0">You see the report, the tier and the photos first. Nothing goes live until you say yes.</p></div>
+        <div class="card card-pad reveal" style="--d:120ms"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><h3 class="h4 mt-4">Your number stays private</h3><p class="small tx2 mt-2 mb-0">Buyer requests — questions, offers, test drives — are relayed to you through the app. Buyers never see your number unless you choose to share it.</p></div>
+        <div class="card card-pad reveal"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-rupee"/></svg></span><h3 class="h4 mt-4">The buyer pays you directly</h3><p class="small tx2 mt-2 mb-0">We never hold your money. You agree the price and get paid by the buyer.</p></div>
+        <div class="card card-pad reveal" style="--d:60ms"><span class="nl-ic r"><svg class="i" aria-hidden="true"><use href="#i-percent"/></svg></span><h3 class="h4 mt-4">0% brokerage</h3><p class="small tx2 mt-2 mb-0">₹9,999 is all you pay. No commission when the car sells.</p></div>
+        <div class="card card-pad reveal" style="--d:120ms"><span class="nl-ic"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><h3 class="h4 mt-4">Certify by phone</h3><p class="small tx2 mt-2">Prefer to talk? We’ll book the visit for you — pay when the technician comes.</p><a class="btn btn-line btn-sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call +91 8330 881 213</a></div>
       </div>
     </section>
 
-    <!-- How it works -->
     <section class="section-sm" aria-labelledby="how-h">
       <div class="sec-head"><div><span class="eyebrow g">How it works</span><h2 id="how-h" class="h2">From your driveway to the storefront.</h2></div></div>
       <ol class="steps3">
-        <li class="card step3 reveal corner-ticks"><span class="n">01 / INSPECT</span><h3 class="h3">300+ point inspection at your place</h3><p>A Suresh Drives technician inspects the car at home — paint depth, OBD, videoscope, road test.</p></li>
-        <li class="card step3 reveal corner-ticks" style="--d:80ms"><span class="n">02 / CERTIFY</span><h3 class="h3">Get your tier and fair price</h3><p>Your report sets the tier and an AI fair-price band, so you list at a price buyers believe.</p></li>
-        <li class="card step3 reveal corner-ticks" style="--d:160ms"><span class="n">03 / SELL</span><h3 class="h3">Go live on SDCertified</h3><p>Pro photos from the inspection, a verified-owner badge and enquiries routed to you privately.</p></li>
+        <li class="card step3 reveal corner-ticks"><span class="n">1 · Inspect</span><h3 class="h3">300+ point inspection at your home</h3><p>Paint thickness on every panel, a computer scan, a camera look inside the engine and a road test.</p></li>
+        <li class="card step3 reveal corner-ticks" style="--d:80ms"><span class="n">2 · Certify</span><h3 class="h3">Get your tier and a fair price</h3><p>The report sets the tier and a fair-price band, so you list at a price buyers believe.</p></li>
+        <li class="card step3 reveal corner-ticks" style="--d:160ms"><span class="n">3 · Sell</span><h3 class="h3">Go live on SDCertified</h3><p>With your approval, photos from the inspection and an “ID &amp; RC verified” badge.</p></li>
       </ol>
     </section>
 
-    <!-- Tiers -->
     <section class="section-sm" aria-labelledby="tiers-h">
-      <div class="sec-head"><div><span class="eyebrow">Certification tiers</span><h2 id="tiers-h" class="h2">Earned, never bought.</h2></div></div>
+      <div class="sec-head"><div><span class="eyebrow">Certification tiers</span><h2 id="tiers-h" class="h2">Earned on the car’s real condition.</h2></div></div>
       <div class="g-3">
-        <article class="card tier-card p reveal"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><p class="q mb-0">The Collector’s Standard.</p><p class="small tx2 mb-0">100% original factory body panels, flawless mechanicals, OEM or premium extended warranty eligible.</p></article>
-        <article class="card tier-card g reveal" style="--d:80ms"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><p class="q mb-0">Smart Premium.</p><p class="small tx2 mb-0">Original chassis; minor bolt-on parts may have been replaced; mechanically top-tier; warranty eligible.</p></article>
+        <article class="card tier-card p reveal"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><p class="q mb-0">The Collector’s Standard.</p><p class="small tx2 mb-0">100% original factory body panels, flawless mechanicals, OEM warranty if still valid.</p></article>
+        <article class="card tier-card g reveal" style="--d:80ms"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><p class="q mb-0">Smart Premium.</p><p class="small tx2 mb-0">Original chassis; minor bolt-on parts may have been replaced; mechanically top-tier.</p></article>
         <article class="card tier-card s reveal" style="--d:160ms"><span class="tier tier-silver"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Silver</span><p class="q mb-0">True Value.</p><p class="small tx2 mb-0">Structurally safe, no major accidents, age-consistent wear; may need minor maintenance soon; priced lower.</p></article>
       </div>
     </section>
 
-    <!-- What buyers see -->
     <section class="section-sm" id="preview" aria-labelledby="pv-h">
       <div class="split split-wide">
         <div class="reveal">
           <span class="eyebrow">What buyers see</span>
           <h2 id="pv-h" class="h2 mt-3">Your car, with the proof attached.</h2>
-          <p class="lead mt-4">Every listing carries the Suresh Drives Verified seal, the score, the tier and a one-tap link to the full report — including honest notes. That transparency is why certified cars move.</p>
+          <p class="lead mt-4">Every listing carries the Suresh Drives Verified seal, the score, the tier and a link to the full report — honest notes included.</p>
           <ul class="ticks mt-4">
-            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Verified owner badge — buyers know who they’re dealing with</li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Your number stays private until you choose to share it</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>“ID &amp; RC verified by Suresh Drives” on your listing</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Buyer requests are relayed through the app — your number stays hidden until you share it</li>
             <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Offers and test-drive requests arrive on WhatsApp</li>
           </ul>
         </div>
         <div class="reveal" style="--d:120ms;max-width:380px;justify-self:center;width:100%">
           <article class="car-card">
-            <a href="vehicle.html" class="ph"><img src="../assets/bmw-x4m-green.jpg" alt="Example listing: BMW X4 M Competition" style="object-position:45% 55%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>92</b></span></a>
-            <button class="heart" type="button" aria-pressed="false" aria-label="Save example listing" data-car="SD-2481"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
-            <div class="body"><a href="vehicle.html" class="name">BMW X4 M Competition<small>SD-2481 · Owner: Rahul V. · Verified</small></a><div class="meta"><span>2022</span><span>21,500 km</span><span>Petrol</span><span>Kozhikode</span></div><div class="price"><b>₹1.12 Cr</b><span>EMI from<br>₹1,86,400/mo</span></div></div>
+            <a href="browse.html" class="ph"><img src="../assets/volvo-s60-red.jpg" alt="Example listing: 2020 Volvo S60 in red"><span class="tier tier-silver"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Silver</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>85</b></span></a>
+            <button class="heart" type="button" aria-pressed="false" aria-label="Save example listing" data-car="SD-2415"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+            <div class="body"><a href="browse.html" class="name">Volvo S60 B5 Inscription<small>SD-2415 · Owner: Jithin A. · ID &amp; RC verified</small></a><div class="meta"><span>2020</span><span>35,400 km</span><span>Petrol</span><span>Kozhikode</span></div><div class="price"><b>₹42 L</b><span>EMI from<br>₹69,900/mo</span></div></div>
           </article>
-          <p class="tiny muted center mt-3">Example listing · report SDR-18842 linked</p>
+          <p class="tiny muted center mt-3">Example listing</p>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="section-sm" aria-labelledby="faq-h">
       <h2 id="faq-h" class="h2 mb-6">Questions sellers ask</h2>
       <div class="wrap-narrow" style="margin:0">
-        <details class="acc acc-plain" open><summary>What does ₹9,999 include?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">The 300+ point on-site inspection, your certification tier, the full AI-powered report, inspection photos for the listing and the SDCertified listing itself. No other charges, and 0% brokerage when it sells.</p></div></details>
-        <details class="acc acc-plain"><summary>What if my car doesn’t qualify for a tier?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">You still receive the full report so you know exactly what to fix. Once repaired, a re-check can upgrade the result.</p></div></details>
-        <details class="acc acc-plain"><summary>Can I show the report to buyers outside SDCertified?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">Yes — share the verifiable report link anywhere. It’s yours.</p></div></details>
-        <details class="acc acc-plain"><summary>I’m a dealer with many cars.<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">We certify inventory in batches with a partner dashboard. <a class="link small" href="partners.html">See dealer partnerships</a></p></div></details>
+        <details class="acc acc-plain" open><summary>What does ₹9,999 include?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">The 300+ point inspection at your home, your certification tier, the full report, inspection photos for the listing and the SDCertified listing itself. No other charges and 0% brokerage when it sells.</p></div></details>
+        <details class="acc acc-plain"><summary>What if my car doesn’t qualify for a tier?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">You still receive the full report, so you know exactly what to fix.</p></div></details>
+        <details class="acc acc-plain"><summary>Can I show the report to buyers outside SDCertified?<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">Yes — share the report link anywhere. It’s yours.</p></div></details>
+        <details class="acc acc-plain"><summary>I’m a dealer with many cars.<svg class="i chev" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="acc-body"><p class="mb-0">We certify inventory in batches. <a class="link small" href="partners.html">See dealer partnerships</a></p></div></details>
       </div>
+      <div class="card card-pad mt-6 row between" style="--gap:12px"><span><b>Rather talk it through?</b><br><span class="small tx2">Call us and we’ll book the visit — you pay when the technician comes.</span></span><a class="btn btn-red" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call +91 8330 881 213</a></div>
     </section>
   </div>
 </main>

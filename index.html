@@ -41,7 +41,8 @@ h1 .g{color:var(--green)} h1 .r{color:#FF4650}
 section{padding:56px 0}
 h2{font-family:Archivo,Inter,sans-serif;font-stretch:110%;font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.015em;margin:0 0 6px}
 .lede{color:var(--ink-2);margin:0 0 28px;max-width:70ch}
-.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.designs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:1240px){.designs{grid-template-columns:repeat(2,1fr)}}
 .dcard{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
 @media (hover:hover){.dcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(0,0,0,.25)}}
 .dcard .swatch{height:150px;position:relative;display:flex;align-items:flex-end;padding:18px}
@@ -83,7 +84,8 @@ label.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 
 .desk .vp{position:relative;width:100%;overflow:hidden}
 .desk iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
 .open-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-.pages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pages{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:1240px){.pages{grid-template-columns:repeat(2,1fr)}}
 .pcol{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}
 .pcol h3{margin:0 0 10px;font-size:15px}
 .pcol ol{margin:0;padding-left:20px;font-size:14px;columns:2;column-gap:20px}
@@ -118,7 +120,7 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
       <img src="assets/logo-sdcertified-mark.png" width="30" height="35" alt="">
       <span class="sdw">SDCertified</span>
     </div>
-    <div class="meta">Unified ecosystem redesign · 3 concepts · 21 screens each · Nov 2026</div>
+    <div class="meta">Unified ecosystem redesign · 4 concepts · 21 screens each · Nov 2026</div>
   </div>
 </header>
 
@@ -126,7 +128,7 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
   <div class="wrap">
     <div class="eyebrow">Design review</div>
     <h1>Inspected by <span class="g">Suresh&nbsp;Drives</span>. Sold on <span class="r">SDCertified</span>.</h1>
-    <p>Three complete UI/UX directions that bring sureshdrives.com, the Suresh Drives inspection product and the SDCertified marketplace into one premium ecosystem. Booking, paying for and tracking an inspection now happens inside the SDCertified app — powered and guaranteed by Suresh Drives. Every concept covers the full journey with mock data, on mobile and desktop.</p>
+    <p>Four complete UI/UX directions that bring sureshdrives.com, the Suresh Drives inspection product and the SDCertified marketplace into one premium ecosystem. Booking, paying for and tracking an inspection now happens inside the SDCertified app — powered and guaranteed by Suresh Drives. Every concept covers the full journey with mock data, on mobile and desktop.</p>
     <div class="arch">
       <div><b><span class="dot" style="background:var(--green)"></span>Suresh Drives — the trust</b><span>India's first on-site inspection company. Green marks anything verified or inspected.</span></div>
       <div><b><span class="dot" style="background:var(--red)"></span>SDCertified — the action</b><span>The app & storefront. Red drives buy, book, pay and sell. Booking happens only here.</span></div>
@@ -138,17 +140,17 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
 <main>
 <section aria-labelledby="concepts">
   <div class="wrap">
-    <h2 id="concepts">Three directions</h2>
-    <p class="lede">Same information architecture, same mock data, same brand logic — three different personalities. Pick one, or mix: the token sets are documented in each concept's README for the Blazor and Flutter teams.</p>
+    <h2 id="concepts">Four directions</h2>
+    <p class="lede">Same information architecture, same mock data, same brand logic — four different personalities. Pick one, or mix: the token sets are documented in each concept's README for the Blazor and Flutter teams.</p>
     <div class="designs">
       <article class="dcard">
-        <div class="swatch" style="background:linear-gradient(135deg,#FAF8F4 0%,#EFE9DE 100%);color:#141414"><span class="nm">A · Heritage<br>Ivory</span></div>
+        <div class="swatch" style="background:linear-gradient(102deg,#FFFFFF 0 54%,#0B0B0C 54% 100%);color:#0B0B0C"><span class="nm" style="font-style:italic">A · Apex</span></div>
         <div class="body">
-          <div class="tag">The Assurance Ledger</div>
-          <p>Quiet luxury and editorial calm. Ivory paper, ink, hairlines and a serif voice. Every booking and report reads like a certificate, sealed by Suresh Drives.</p>
-          <div class="pal"><i style="background:#FAF8F4"></i><i style="background:#141414"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#3E6B1F"></i></div>
-          <div class="chips"><span>Newsreader + Manrope</span><span>Light</span><span>Certificate seals</span><span>Booking ledger</span></div>
-          <div class="acts"><a class="btn red" href="design-a-heritage/index.html">Open concept</a><button class="btn ghost" data-pick="a">Preview</button></div>
+          <div class="tag">Motorsport Precision</div>
+          <p>Built from the Suresh Drives logo itself: italic, extended type, diagonal cuts and the green orbit swoosh. The inspection is a 360° orbit around the car, scores read like race numbers, and the report lands with a chequered finish.</p>
+          <div class="pal"><i style="background:#FFFFFF"></i><i style="background:#0B0B0C"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#F2F3F5"></i></div>
+          <div class="chips"><span>Saira Expanded + Inter</span><span>Light + carbon</span><span>Orbit diagram</span><span>Race-number scores</span></div>
+          <div class="acts"><a class="btn red" href="design-a-apex/index.html">Open concept</a><button class="btn ghost" data-pick="a">Preview</button></div>
         </div>
       </article>
       <article class="dcard">
@@ -162,12 +164,22 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
         </div>
       </article>
       <article class="dcard">
+        <div class="swatch" style="background:radial-gradient(120% 120% at 80% 100%,rgba(140,198,63,.28),transparent 50%),linear-gradient(180deg,#FFFFFF,#E9ECEF);color:#0E1114"><span class="nm">B · Night Drive<br>Light</span></div>
+        <div class="body">
+          <div class="tag">Daylight Cockpit</div>
+          <p>The same Night Drive layouts, gauges and flows, tuned for daylight. Silver-white surfaces, graphite type and precise shadows. A Dark · Light switch flips between the two on any page.</p>
+          <div class="pal"><i style="background:#F3F5F7"></i><i style="background:#FFFFFF"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#0E1114"></i></div>
+          <div class="chips"><span>Archivo Expanded + JetBrains Mono</span><span>Light</span><span>Gauges</span><span>Dark · Light switch</span></div>
+          <div class="acts"><a class="btn red" href="design-b-night-drive-light/index.html">Open concept</a><button class="btn ghost" data-pick="l">Preview</button></div>
+        </div>
+      </article>
+      <article class="dcard">
         <div class="swatch" style="background:radial-gradient(90% 120% at 0% 0%,rgba(230,30,42,.16),transparent 55%),radial-gradient(90% 120% at 100% 100%,rgba(140,198,63,.22),transparent 55%),#F6F7F9;color:#121417"><span class="nm">C · Concierge</span></div>
         <div class="body">
           <div class="tag">Guided by Suresh Drives</div>
-          <p>Warm, airy and hand-holding. Meera, a named Suresh Drives guide, walks users through every step; lock-screen status updates, wallet-style cards and conversational booking.</p>
+          <p>Warm, airy and hand-holding. Every step asks one clear question and says what happens next. Lock-screen status updates, wallet-style cards, and Call, WhatsApp or a callback always one tap away.</p>
           <div class="pal"><i style="background:#F6F7F9"></i><i style="background:#FFFFFF"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#121417"></i></div>
-          <div class="chips"><span>Plus Jakarta Sans</span><span>Light</span><span>Human guide</span><span>Live Activity</span></div>
+          <div class="chips"><span>Plus Jakarta Sans</span><span>Light</span><span>Question-led booking</span><span>Lock-screen updates</span></div>
           <div class="acts"><a class="btn red" href="design-c-concierge/index.html">Open concept</a><button class="btn ghost" data-pick="c">Preview</button></div>
         </div>
       </article>
@@ -181,8 +193,9 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
     <p class="lede">The same page, live, on a phone and on a desktop. Everything is clickable inside the frames.</p>
     <div class="vbar">
       <div class="seg" role="group" aria-label="Concept">
-        <button data-d="a" aria-pressed="true">A · Heritage Ivory</button>
+        <button data-d="a" aria-pressed="true">A · Apex</button>
         <button data-d="b" aria-pressed="false">B · Night Drive</button>
+        <button data-d="l" aria-pressed="false">B · Light</button>
         <button data-d="c" aria-pressed="false">C · Concierge</button>
       </div>
       <label class="sr" for="pg">Page</label>
@@ -212,20 +225,20 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
 <section aria-labelledby="val" style="padding-top:0">
   <div class="wrap">
     <h2 id="val">Validated with five kinds of users</h2>
-    <p class="lede">Each concept was walked end-to-end by five user personas, and every issue they raised was fixed in a second round. Each score is the persona's average across clarity, guidance, control, trust and premium feel, out of 10, before the fixes.</p>
+    <p class="lede">Five user personas walked each concept end to end across three review rounds, and every issue they raised was fixed. Each score is the persona's average out of 10 across clarity, guidance, control, trust and premium feel (accessibility for Thomas), measured on the final concepts before the last polish round.</p>
     <div class="vtable" role="region" aria-label="Persona validation scores" tabindex="0">
       <table>
-        <thead><tr><th scope="col">Persona</th><th scope="col">Their journey</th><th scope="col">A · Heritage</th><th scope="col">B · Night Drive</th><th scope="col">C · Concierge</th><th scope="col">Picked</th></tr></thead>
+        <thead><tr><th scope="col">Persona</th><th scope="col">Their journey</th><th scope="col">A · Apex</th><th scope="col">B · Night Drive</th><th scope="col">B · Light</th><th scope="col">C · Concierge</th><th scope="col">Picked</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Rahul, 34 · first-time buyer, Kozhikode</th><td>Inspect a private seller's car, track, read report</td><td>7.8</td><td>6.6</td><td>8.0</td><td><b>C</b></td></tr>
-          <tr><th scope="row">Jayaram, 52 · NRI in Dubai</th><td>Book remotely for parents, pay from abroad, family on site</td><td>7.8</td><td>6.8</td><td>7.4</td><td><b>A</b></td></tr>
-          <tr><th scope="row">Priya, 29 · new-car buyer, Kochi</th><td>New Car PDI at the dealer; judges visual craft</td><td>7.0</td><td>5.8</td><td>7.2</td><td><b>C</b></td></tr>
-          <tr><th scope="row">Thomas, 63 · selling his car, Kottayam</th><td>Certify &amp; sell, reach a human, readability at 130% zoom</td><td>7.4</td><td>5.4</td><td>6.6</td><td><b>A</b></td></tr>
-          <tr><th scope="row">Fahad, 41 · luxury dealer, prospective partner</th><td>Brand, partner programme, listings, report credibility</td><td>7.2</td><td>6.6</td><td>6.2</td><td><b>A</b></td></tr>
+          <tr><th scope="row">Rahul, 34 · first-time buyer, Kozhikode</th><td>Inspect a private seller's car, track, read report</td><td>8.2</td><td>8.0</td><td>8.0</td><td>8.4</td><td><b>C</b></td></tr>
+          <tr><th scope="row">Jayaram, 52 · NRI in Dubai</th><td>Book remotely for parents, pay from abroad, family on site</td><td>7.2</td><td>8.2</td><td>8.4</td><td>7.6</td><td><b>B · Light</b></td></tr>
+          <tr><th scope="row">Priya, 29 · new-car buyer, Kochi</th><td>New Car PDI at the dealer; judges visual craft</td><td>7.8</td><td>8.0</td><td>7.4</td><td>7.6</td><td><b>B</b></td></tr>
+          <tr><th scope="row">Thomas, 63 · selling his car, Kottayam</th><td>Certify &amp; sell, reach a human, readability at 130% zoom</td><td>7.2</td><td>6.8</td><td>6.8</td><td>7.4</td><td><b>C</b></td></tr>
+          <tr><th scope="row">Fahad, 41 · luxury dealer, prospective partner</th><td>Brand, partner programme, listings, report credibility</td><td>8.0</td><td>7.2</td><td>7.2</td><td>6.6</td><td><b>A</b></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="lede" style="margin-top:16px">Round 2 added the fixes: <b>New Car PDI as a full branch</b> (dealer picker, "not registered yet", handover time), booking details that carry through every step, international phone numbers and cards, family sharing, IST labels, self-serve cancel with the exact refund, buyer-focused report endings with a "What we couldn't test" list, a readability floor (no text under 12px, AA contrast), a labelled call button on every mobile screen, and removal of all unverified claims.</p>
+    <p class="lede" style="margin-top:16px">Every concept now includes the fixes: <b>New Car PDI as a full branch</b> (dealer picker, "not registered yet", handover time), booking details that carry through every step, international phone numbers and cards, family sharing, IST labels, self-serve cancel with the exact refund, buyer-focused report endings with a "What we couldn't test" list, a readability floor (no text under 12px, AA contrast), a labelled call button on every mobile screen, and removal of all unverified claims.</p>
   </div>
 </section>
 
@@ -234,10 +247,10 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
     <h2 id="ux">What changed, and why</h2>
     <p class="lede">The UX principles every concept was built and validated against.</p>
     <div class="notes">
-      <div class="note"><h3>Someone is guiding me</h3><ul><li>Every step says where you are, what happens next and who is helping.</li><li>A human guide and call/WhatsApp are one tap away on every screen.</li><li>Tracking follows clear milestones, each sent on WhatsApp and push: Booked → Assigned → Arriving today → In progress → Report ready. The findings are revealed when the inspection is complete, so no real-time syncing is needed.</li></ul></div>
+      <div class="note"><h3>Someone is guiding me</h3><ul><li>Every step says where you are, what happens next and who is helping.</li><li>Call, WhatsApp or a callback request is one tap away on every screen, with no chatbot in the way.</li><li>Tracking follows clear milestones, each sent on WhatsApp and push: Booked → Assigned → Arriving today → In progress → Report ready. The findings are revealed when the inspection is complete, so no real-time syncing is needed.</li></ul></div>
       <div class="note"><h3>I'm in control</h3><ul><li>Edit any detail before paying; reschedule, cancel, change contact or share tracking yourself.</li><li>The 10-minute slot hold is visible, so nobody loses a slot by surprise.</li><li>Choose how you hear from us: WhatsApp, push, SMS fallback or email, for each event.</li></ul></div>
       <div class="note"><h3>I feel safe</h3><ul><li>Prices are shown up front with GST included. There are no hidden charges.</li><li>The Suresh Drives seal appears wherever you make a decision. Reports show honest flaws.</li><li>The refund policy is written in plain words, and remote areas get a clear promised date.</li></ul></div>
-      <div class="note"><h3>Brand-led growth</h3><ul><li>The Suresh Drives heritage funnels customers into the SDCertified app, the only place to book.</li><li>Each finished report offers next steps: list this car, add SD Assure, or buy certified.</li><li>A partner programme for dealers, banks, NBFCs and insurers supports the scale-up.</li></ul></div>
+      <div class="note"><h3>Brand-led growth</h3><ul><li>The Suresh Drives heritage funnels customers into the SDCertified app, the only place to book.</li><li>Each finished report offers next steps: share it with family, list the car, or buy a certified one.</li><li>A partner programme for dealers, banks, NBFCs and insurers supports the scale-up.</li></ul></div>
     </div>
   </div>
 </section>
@@ -247,7 +260,8 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
 
 <script>
 (function(){
-  var DESIGNS={a:'design-a-heritage',b:'design-b-night-drive',c:'design-c-concierge'};
+  var DESIGNS={a:'design-a-apex',b:'design-b-night-drive',l:'design-b-night-drive-light',c:'design-c-concierge'};
+  var BAR={a:['#FFFFFF','#111'],b:['#0A0C0E','#fff'],l:['#F3F5F7','#111'],c:['#F6F7F9','#111']};
   var GROUPS=[
     ['Public & brand',[['index','Welcome / landing'],['suresh-drives','Suresh Drives (parent brand)'],['partners','Partner with us']]],
     ['App',[['home','Home (signed in)'],['browse','Buy — browse cars'],['vehicle','Vehicle detail'],['sell','Sell / get certified']]],
@@ -261,13 +275,13 @@ code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
   function scale(){var w=vp.clientWidth||900;var s=w/1440;fd.style.transform='scale('+s+')';vp.style.height=Math.round(900*s)+'px';}
   function load(){var src=DESIGNS[d]+'/'+p+'.html';fm.src=src;fd.src=src;openFull.href=src;url.textContent='sdcertified.com/'+(p==='index'?'':p);
     document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.d===d));});sel.value=p;
-    var sb=document.getElementById('sbar');if(sb){sb.style.background=d==='b'?'#0A0C0E':(d==='a'?'#FAF8F4':'#F6F7F9');sb.style.color=d==='b'?'#fff':'#111';}}
+    var sb=document.getElementById('sbar');if(sb){sb.style.background=BAR[d][0];sb.style.color=BAR[d][1];}}
   document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){d=b.dataset.d;load();});});
   document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){d=b.dataset.pick;load();document.getElementById('viewer').scrollIntoView({behavior:'smooth'});});});
   sel.addEventListener('change',function(){p=sel.value;load();});
   window.addEventListener('resize',scale);
   var pages=document.getElementById('pages');
-  Object.keys(DESIGNS).forEach(function(k){var col=document.createElement('div');col.className='pcol';var names={a:'A · Heritage Ivory',b:'B · Night Drive',c:'C · Concierge'};
+  Object.keys(DESIGNS).forEach(function(k){var col=document.createElement('div');col.className='pcol';var names={a:'A · Apex',b:'B · Night Drive',l:'B · Night Drive Light',c:'C · Concierge'};
     var h='<h3>'+names[k]+'</h3>';GROUPS.forEach(function(g){h+='<div class="grp">'+g[0]+'</div><ol>';g[1].forEach(function(it){h+='<li><a href="'+DESIGNS[k]+'/'+it[0]+'.html">'+it[1]+'</a></li>';});h+='</ol>';});col.innerHTML=h;pages.appendChild(col);});
   scale();load();
 })();

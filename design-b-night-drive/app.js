@@ -34,7 +34,6 @@
     pin: '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
     phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
     whatsapp: '<path d="M3.5 20.5 5 16.3A8.5 8.5 0 1 1 8 19.2z"/><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.1-1.5-2-1-1 .9a4.6 4.6 0 0 1-2.4-2.4l.9-1-1-2z"/>',
-    chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/>',
     check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     'check-circle': '<circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/>',
     x: '<path d="M6 6l12 12M18 6 6 18"/>',
@@ -146,10 +145,6 @@
       '<g stroke="#252E36" stroke-width="7" fill="none" stroke-linecap="round"><path d="M110 200c120 10 230-30 340-10s230 40 350 20"/><path d="M250 0c10 120-20 230 20 330s20 120 10 170"/><path d="M600 0c-20 90 10 160-10 240s30 180 20 260"/></g>' +
       '<path d="M330 0c40 90 90 140 150 200s110 120 140 300" fill="none" stroke="#323C46" stroke-width="12" stroke-linecap="round"/>' +
       '<path d="M330 0c40 90 90 140 150 200s110 120 140 300" fill="none" stroke="#4A5560" stroke-width="1.2" stroke-dasharray="8 10"/>' +
-      '<g font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="2" fill="#6E7881">' +
-      '<text x="18" y="250" transform="rotate(-90 30 250)">ARABIAN SEA</text>' +
-      '<text x="402" y="128" transform="rotate(48 402 128)">THONDAYAD BYPASS · NH 66</text>' +
-      '<text x="120" y="192">MAVOOR ROAD</text><text x="612" y="292">HILITE MALL</text><text x="652" y="470">POOVANGAL</text><text x="128" y="60">KOZHIKODE BEACH</text><text x="270" y="300" transform="rotate(-80 270 300)">KANNUR ROAD</text></g>' +
       '</symbol>';
     /* Top-down car outline (mini) */
     s += '<symbol id="car-top" viewBox="0 0 300 520"><path d="M100 22Q150 8 200 22Q262 32 264 80L266 440Q264 490 200 498Q150 508 100 498Q36 490 34 440L36 80Q38 32 100 22Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M84 176h132l-10 40H94z M94 350h112l8 28H86z" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><rect x="94" y="222" width="112" height="122" rx="10" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/></symbol>';
@@ -168,6 +163,16 @@
   var back = B.getAttribute('data-back') || '';
   var step = parseInt(B.getAttribute('data-step') || '0', 10);
   var TEL = 'tel:+918330881213', WA = 'https://wa.me/919895441213';
+  /* Theme switch: Night Drive (dark) and Night Drive Light live in sibling folders */
+  var THEME = 'dark';
+  function themeHref(t) {
+    var here = (page || 'index') + '.html' + (window.location.search || '');
+    return t === THEME ? here : (t === 'light' ? '../design-b-night-drive-light/' : '../design-b-night-drive/') + here;
+  }
+  function themeSw(extra) {
+    var it = function (t, label) { return t === THEME ? '<span aria-current="true">' + label + '</span>' : '<a href="' + themeHref(t) + '" hreflang="en">' + label + '</a>'; };
+    return '<div class="theme-sw' + (extra ? ' ' + extra : '') + '" role="group" aria-label="Theme: Dark or Light">' + it('dark', 'Dark') + it('light', 'Light') + '</div>';
+  }
 
   var navMap = { browse: 'browse', vehicle: 'browse', book: 'book', 'book-car': 'book', 'book-location': 'book', 'book-slot': 'book', checkout: 'book', 'booking-confirmed': 'book', sell: 'sell', inspections: 'inspections', track: 'inspections', report: 'inspections', 'report-gle': 'inspections', 'report-pdi': 'inspections', 'suresh-drives': 'suresh-drives', partners: 'partners' };
   var tabMap = { home: 'home', browse: 'browse', vehicle: 'browse', book: 'book', inspections: 'inspections', track: 'inspections', report: 'inspections', 'report-gle': 'inspections', 'report-pdi': 'inspections', profile: 'profile', sell: 'browse' };
@@ -193,7 +198,7 @@
     return '<header class="hdr" role="banner"><div class="wrap hdr-in">' + backBtn +
       brand('home.html') + (title ? '<span class="hdr-title">' + title + '</span>' : '') +
       '<nav class="nav" aria-label="Primary">' + nav + '</nav>' +
-      '<div class="hdr-actions">' + lang() + callBtn('d-only') +
+      '<div class="hdr-actions">' + themeSw('lg-only') + lang() + callBtn('d-only') +
       '<a class="icon-btn" href="notifications.html" aria-label="Notifications, 3 unread"' + (page === 'notifications' ? ' aria-current="page"' : '') + '>' + ic('bell') + '<span class="badge-dot">3</span></a>' +
       '<a class="hdr-avatar" href="profile.html" aria-label="Account: Arjun Menon"><span class="avatar">AM</span></a>' +
       '</div></div></header>';
@@ -202,15 +207,15 @@
   function siteHeader() {
     var links = [['browse.html', 'Buy cars', 'browse'], ['book.html', 'Book inspection', 'book'], ['sell.html', 'Sell', 'sell'], ['suresh-drives.html', 'Suresh Drives', 'suresh-drives'], ['partners.html', 'Partners', 'partners']];
     var nav = links.map(function (l) { return '<a href="' + l[0] + '"' + cur(l[2], navMap) + '>' + l[1] + '</a>'; }).join('');
-    var dl = [['index.html', 'Welcome', 'home'], ['browse.html', 'Buy certified cars', 'car'], ['book.html', 'Book an inspection', 'calendar'], ['sell.html', 'Sell / Get certified', 'tag'], ['suresh-drives.html', 'About Suresh Drives', 'shield-check'], ['partners.html', 'Partner with us', 'users'], ['support.html', 'Help & guide', 'headset'], ['home.html', 'Open my account', 'user']];
+    var dl = [['index.html', 'Welcome', 'home'], ['browse.html', 'Buy certified cars', 'car'], ['book.html', 'Book an inspection', 'calendar'], ['sell.html', 'Sell / Get certified', 'tag'], ['suresh-drives.html', 'About Suresh Drives', 'shield-check'], ['partners.html', 'Partner with us', 'users'], ['support.html', 'Help & contact', 'headset'], ['home.html', 'Open my account', 'user']];
     var drawer = '<div class="drawer" id="drawer" aria-hidden="true"><div class="scrim" data-close-drawer></div><div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">' +
       '<div class="row between mb-4"><span class="eyebrow">Menu</span><button class="icon-btn" data-close-drawer aria-label="Close menu">' + ic('x') + '</button></div>' +
       dl.map(function (l) { return '<a class="dl" href="' + l[0] + '"' + (l[0] === page + '.html' ? ' aria-current="page"' : '') + '>' + ic(l[2]) + l[1] + '</a>'; }).join('') +
       '<a class="btn btn-red btn-block mt-4" href="book.html">' + ic('calendar') + 'Book an inspection</a>' +
-      '<a class="btn btn-line btn-block mt-2" href="' + TEL + '">' + ic('phone') + 'Call us · +91 8330 881 213</a></div></div>';
+      '<a class="btn btn-line btn-block mt-2" href="' + TEL + '">' + ic('phone') + 'Call us · +91 8330 881 213</a>' + '<div class="row between mt-4"><span class="small tx2">Theme</span>' + themeSw() + '</div></div></div>';
     return '<header class="hdr" role="banner"><div class="wrap hdr-in">' + brand('index.html') +
       '<nav class="nav" aria-label="Primary">' + nav + '</nav>' +
-      '<div class="hdr-actions">' + lang() + callBtn('d-only') + '<a class="btn btn-ghost btn-sm lg-only" href="home.html">' + ic('user', 'i-sm') + 'Sign in</a>' +
+      '<div class="hdr-actions">' + themeSw('lg-only') + lang() + callBtn('d-only') + '<a class="btn btn-ghost btn-sm lg-only" href="home.html">' + ic('user', 'i-sm') + 'Sign in</a>' +
       '<a class="btn btn-red btn-sm site-cta" href="book.html">Book inspection</a>' +
       '<button class="icon-btn lg-hide" data-open-drawer aria-label="Open menu" aria-controls="drawer" aria-expanded="false">' + ic('menu') + '</button></div></div></header>' + drawer;
   }
@@ -221,7 +226,7 @@
       var k = i + 1, cls = k < step ? 'done' : (k === step ? 'now' : '');
       return '<li class="' + cls + '"' + (k === step ? ' aria-current="step"' : '') + '><span class="n">' + (k < step ? '<svg class="i" style="width:12px;height:12px;stroke-width:3" aria-hidden="true"><use href="#i-check"/></svg>' : k) + '</span>' + n + '</li>';
     }).join('');
-    var mt = step <= 5 ? ('Step ' + step + ' of 5 · ' + names[step - 1]) : 'Booking confirmed';
+    var mt = step <= 5 ? ('Step ' + step + ' of 5') : 'All done';
     var pct = step > 5 ? 1 : Math.min(step, 5) / 5;
     return '<header class="hdr hdr-flow" role="banner"><div class="wrap hdr-in">' +
       '<a class="flow-back" href="' + (back || 'home.html') + '" aria-label="' + (step > 5 ? 'Home' : 'Back to previous step') + '">' + ic('arrow-left') + '<span class="d-only">' + (step > 5 ? 'Home' : 'Back') + '</span></a>' +
@@ -249,28 +254,51 @@
     return '<footer class="ftr" role="contentinfo"><div class="wrap">' +
       '<div class="ftr-top"><div><a class="brand" href="index.html"><img class="brand-mark" src="' + A + 'logo-sdcertified-mark.png" alt="" width="30" height="35"><span class="brand-word">SDCertified</span></a>' +
       '<p class="muted small mt-3" style="max-width:36ch">Certified pre-owned cars, each one inspected on-site by Suresh Drives. Zero brokerage. Book any inspection in the app.</p>' +
-      '<div class="row mt-4"><a class="store" href="#" aria-label="Download SDCertified Cars on the App Store">' + ic('smartphone', 'i-lg') + '<span><small>Download on the</small><b>App Store</b></span></a><a class="store" href="#" aria-label="Get SDCertified Cars on Google Play">' + ic('play', 'i-lg') + '<span><small>Get it on</small><b>Google Play</b></span></a></div></div>' +
-      '<div><h4>Marketplace</h4><ul><li><a href="browse.html">Buy certified cars</a></li><li><a href="sell.html">Sell / Get certified</a></li><li><a href="suresh-drives.html#assure">SD Assure warranty</a></li><li><a href="vehicle.html">Featured: BMW X4 M</a></li></ul></div>' +
+      '<div class="row mt-4"><a class="store" href="index.html#app-title" aria-label="Download SDCertified Cars on the App Store">' + ic('smartphone', 'i-lg') + '<span><small>Download on the</small><b>App Store</b></span></a><a class="store" href="index.html#app-title" aria-label="Get SDCertified Cars on Google Play">' + ic('play', 'i-lg') + '<span><small>Get it on</small><b>Google Play</b></span></a></div></div>' +
+      '<div><h4>Marketplace</h4><ul><li><a href="browse.html">Buy certified cars</a></li><li><a href="sell.html">Sell / Get certified</a></li><li><a href="report-gle.html">How to read a report</a></li><li><a href="vehicle.html">Featured: BMW X4 M</a></li></ul></div>' +
       '<div><h4>Inspections</h4><ul><li><a href="book.html">Book an inspection</a></li><li><a href="book.html?service=pdi">Book a New Car PDI</a></li><li><a href="track.html">Track inspection</a></li><li><a href="report-gle.html">Sample report</a></li><li><a href="suresh-drives.html#prices">Prices</a></li></ul></div>' +
-      '<div><h4>Company</h4><ul><li><a href="suresh-drives.html">Suresh Drives</a></li><li><a href="partners.html">Partners</a></li><li><a href="support.html">Help &amp; guide</a></li><li><a href="' + TEL + '">Call +91 8330 881 213</a></li><li><a href="' + WA + '">WhatsApp +91 98954 41213</a></li><li><a href="mailto:sureshhdrives@gmail.com">sureshhdrives@gmail.com</a></li></ul></div></div>' +
+      '<div><h4>Company</h4><ul><li><a href="suresh-drives.html">Suresh Drives</a></li><li><a href="partners.html">Partners</a></li><li><a href="support.html">Help &amp; contact</a></li><li><a href="' + TEL + '">Call +91 8330 881 213</a></li><li><a href="' + WA + '">WhatsApp +91 98954 41213</a></li><li><a href="mailto:sureshhdrives@gmail.com">sureshhdrives@gmail.com</a></li></ul></div></div>' +
       endorse +
       '<div class="ftr-bottom"><span>© 2026 Suresh Drives LLP · The Workbook, HiLITE Business Park, Poovangal, Kozhikode, Kerala 673014</span><span>sdcertifiedcars.com</span></div>' +
       '</div></footer>';
   }
 
   function fab() {
-    if (shell === 'flow') return '';
-    var f = page === 'support' ? '' : '<a class="fab-help" href="support.html"><span class="avatar">AS</span><span>Talk to a guide<small>Online · replies in about 2 min</small></span></a>';
-    return f + '<a class="call-btn call-float" href="' + TEL + '">' + ic('phone') + 'Call us</a>';
+    var f = shell === 'flow' ? '' : '<button class="fab-help" type="button" data-open-sheet="help" aria-haspopup="dialog"><span class="ic">' + ic('headset') + '</span><span>Help<small>Call · WhatsApp · callback</small></span></button>';
+    return f + (shell === 'flow' ? '' : '<a class="call-btn call-float" href="' + TEL + '">' + ic('phone') + 'Call us</a>');
   }
+
+  function helpSheets() {
+    var CCN = [['+91', 'India'], ['+971', 'UAE'], ['+966', 'Saudi Arabia'], ['+974', 'Qatar'], ['+965', 'Kuwait'], ['+968', 'Oman'], ['+973', 'Bahrain'], ['+1', 'USA / Canada'], ['+44', 'UK']];
+    var cc = CCN.map(function (c) { return '<option value="' + c[0] + '"' + (c[0] === '+91' ? ' selected' : '') + '>' + c[1] + ' ' + c[0] + '</option>'; }).join('');
+    return '<div class="sheet" id="help" aria-hidden="true"><div class="scrim" data-close-sheet></div><div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="help-sheet-h">' +
+      '<div class="sheet-head"><h2 id="help-sheet-h" class="h3">How can we help?</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close">' + ic('x') + '</button></div>' +
+      '<p class="small tx2 mt-0">Suresh Drives, Kozhikode · 8 AM – 9 PM IST</p>' +
+      '<div class="stack" style="--gap:10px">' +
+      '<a class="btn btn-line btn-block btn-lg" href="' + TEL + '" style="justify-content:flex-start">' + ic('phone') + 'Call us · +91 8330 881 213</a>' +
+      '<a class="btn btn-wa btn-block btn-lg" href="' + WA + '" style="justify-content:flex-start">' + ic('whatsapp') + 'WhatsApp us · +91 98954 41213</a>' +
+      '<button class="btn btn-line btn-block btn-lg" type="button" data-callback data-topic="General question" style="justify-content:flex-start">' + ic('clock') + 'Request a callback</button>' +
+      '</div><a class="link small mt-4" href="support.html">Help centre &amp; FAQs' + ic('arrow-right') + '</a></div></div>' +
+      '<div class="sheet" id="callback" aria-hidden="true"><div class="scrim" data-close-sheet></div><div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="cb-sheet-h">' +
+      '<div class="sheet-head"><h2 id="cb-sheet-h" class="h3">Request a callback</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close">' + ic('x') + '</button></div>' +
+      '<p class="small tx2 mt-0">We’ll call you from +91 8330 881 213 in the window you choose.</p>' +
+      '<form class="stack" style="--gap:12px" data-callback-form>' +
+      '<div class="field"><label for="cbs-topic">About</label><input class="input" id="cbs-topic" value="General question" required data-err="Tell us what it’s about."></div>' +
+      '<div class="field"><label for="cbs-phone">Your number</label><div class="tel"><select class="select" aria-label="Country code">' + cc + '</select><input class="input" id="cbs-phone" type="tel" inputmode="tel" autocomplete="tel-national" value="98470 12345" required data-err="Enter a number we can call."></div></div>' +
+      '<div class="field"><label for="cbs-window">When should we call? (IST)</label><select class="select" id="cbs-window"><option>As soon as possible — usually within 15 minutes</option><option>9 AM – 12 PM</option><option>12 PM – 3 PM</option><option>3 PM – 6 PM</option><option>6 PM – 9 PM</option></select></div>' +
+      '<button class="btn btn-red btn-block btn-lg" type="submit">' + ic('phone') + 'Request callback</button></form></div></div>';
+  }
+
+  function initThemeSlots() { $$('[data-theme-slot]').forEach(function (el) { el.innerHTML = themeSw(); }); }
 
   function injectShell() {
     var main = $('main');
     var head = shell === 'flow' ? flowHeader() : (shell === 'site' ? siteHeader() : appHeader());
     B.insertAdjacentHTML('afterbegin', '<a class="skip" href="#main">Skip to content</a>' + head);
     if (title && shell === 'app') B.classList.add('has-title');
-    var after = footer() + (shell === 'app' ? tabbar() : '') + fab() + (shell === 'flow' && step <= 5 ? bkSheet() : '') + '<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>';
+    var after = footer() + (shell === 'app' ? tabbar() : '') + fab() + helpSheets() + (shell === 'flow' && step <= 5 ? bkSheet() : '') + '<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>';
     if (main) main.insertAdjacentHTML('afterend', after); else B.insertAdjacentHTML('beforeend', after);
+    initThemeSlots();
   }
 
   /* ---------------------------------------------------------------- Booking state (one object, sessionStorage)
@@ -309,7 +337,8 @@
   }
   function bkView(b) {
     var p = priceOf(b), pdi = b.service === 'pdi';
-    var sessTime = b.session === 'Afternoon' ? '2:00 PM – 6:00 PM IST' : '9:00 AM – 1:00 PM IST';
+    var abroad = isAbroad(b);
+    var sessTime = b.session === 'Afternoon' ? '2:00 PM – 6:00 PM IST' + (abroad ? ' · 12:30 – 4:30 PM Dubai' : '') : '9:00 AM – 1:00 PM IST' + (abroad ? ' · 7:30 – 11:30 AM Dubai' : '');
     return {
       service: pdi ? 'New Car PDI · 125+ points' : 'Used Car Pre-Purchase Inspection · 300+ points',
       serviceShort: pdi ? 'New Car PDI' : 'Used Car Pre-Purchase',
@@ -331,11 +360,13 @@
       duration: pdi ? 'about 2 hours' : 'about 3–4 hours'
     };
   }
+  function isAbroad(b) { return !!(b.rep && b.rep.trim()) || /\+971/.test([b.contactPhone, b.repPhone, b.advisorPhone].join(' ')); }
   function renderBk() {
     var b = bk(), v = bkView(b);
     $$('[data-bk]').forEach(function (el) { var k = el.getAttribute('data-bk'); if (v[k] !== undefined) el.textContent = v[k]; });
     $$('[data-bk-show]').forEach(function (el) { el.hidden = el.getAttribute('data-bk-show') !== b.service; });
     B.setAttribute('data-service', b.service);
+    $$('[data-dubai]').forEach(function (el) { el.hidden = !isAbroad(b); });
   }
   function bkSheet() {
     var row = function (k, label, icon, edit) { return '<div class="build-row ok"><span class="ic">' + ic(icon) + '</span><div><div class="k">' + label + '</div><div class="v" data-bk="' + k + '"></div></div>' + (edit ? '<a href="' + edit[0] + '">' + edit[1] + '</a>' : '') + '</div>'; };
@@ -690,7 +721,7 @@
         if (fit) {
           var ends = s.value === 'Morning' ? 13 : 18, ok = ends + 1 <= hh;
           fit.hidden = b.service !== 'pdi';
-          fit.className = 'tag ' + (ok ? 'g' : 'a');
+          fit.className = 'tag mt-3 ' + (ok ? 'g' : 'a');
           fit.textContent = ok ? 'Recommended · we’ll finish before you sign' : 'Ends too close to your handover';
         }
       });
@@ -984,30 +1015,32 @@
         dots.forEach(function (dd, k) { dd.classList.toggle('on', k <= i); });
         var f = $('input, select, button', panes[i]); if (f && n > 0) f.focus();
       }
-      $$('[data-next]', box).forEach(function (b) { b.addEventListener('click', function () { go(i + 1); }); });
+      $$('[data-next]', box).forEach(function (b) { b.addEventListener('click', function () { if (validate(panes[i])) go(i + 1); }); });
       $$('[data-prev]', box).forEach(function (b) { b.addEventListener('click', function () { go(i - 1); }); });
       go(0);
     });
   }
 
-  /* ---------------------------------------------------------------- Chat (support) */
-  function initChat() {
-    var form = $('[data-chat-form]'), thread = $('[data-chat]');
-    if (!form || !thread) return;
-    form.addEventListener('submit', function (e) {
+  /* ---------------------------------------------------------------- Callback requests (real channels only: call, WhatsApp, callback) */
+  function initCallback() {
+    d.addEventListener('click', function (e) {
+      var t = e.target.closest ? e.target.closest('[data-callback]') : null;
+      if (!t) return;
       e.preventDefault();
-      var inp = $('input', form), v = inp ? inp.value.trim() : '';
-      if (!v) return;
-      var m = d.createElement('div'); m.className = 'msg me'; m.innerHTML = '<span class="who">You · now</span>'; m.appendChild(d.createTextNode(v));
-      thread.appendChild(m); inp.value = '';
-      var ty = d.createElement('div'); ty.className = 'typing'; ty.innerHTML = '<i></i><i></i><i></i><span class="sr-only">Anjana is typing</span>';
-      thread.appendChild(ty); thread.scrollTop = thread.scrollHeight;
-      setTimeout(function () {
-        if (ty.parentNode) ty.parentNode.removeChild(ty);
-        var r = d.createElement('div'); r.className = 'msg';
-        r.innerHTML = '<span class="who">Anjana · Suresh Drives guide</span>Got it, Arjun. I’ve noted this on booking SDB-24817 and I’ll update you here within 10 minutes. You can also call me on +91 8330 881 213.';
-        thread.appendChild(r); thread.scrollTop = thread.scrollHeight;
-      }, reduce ? 200 : 1600);
+      $$('.sheet.open').forEach(function (x) { x.classList.remove('open'); x.setAttribute('aria-hidden', 'true'); });
+      var topic = $('#cbs-topic'); if (topic) topic.value = t.getAttribute('data-topic') || 'General question';
+      openLayer($('#callback'));
+    });
+    $$('[data-callback-form]').forEach(function (f) {
+      f.setAttribute('novalidate', '');
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validate(f)) return;
+        var tel = f.querySelector('.tel'), win = $('select[id$="window"]', f) || $('#cbs-window');
+        var when = win ? win.value : '';
+        toast('We’ll call ' + telValue(tel) + (/soon/i.test(when) ? ' — usually within 15 minutes.' : ' between ' + when + ' IST.'), { title: 'Callback requested', icon: 'phone' });
+        var sh = f.closest('.sheet'); if (sh) closeLayer(sh);
+      });
     });
   }
 
@@ -1059,7 +1092,7 @@
   function boot() {
     try { buildSprite(); } catch (e) { /* sprite optional */ }
     try { injectShell(); } catch (e) { /* shell optional */ }
-    var fns = [initGauges, initReveal, initValidation, renderBk, initServiceStep, initTabs, initToggles, initActions, initLayers, initHeader, initGallery, initHold, initSlots, initCarStep, initLocation, initPayment, initBrowse, initStateSwitch, initSteps, initChat, initQR, initAccTools, initListFilter];
+    var fns = [initGauges, initReveal, initValidation, renderBk, initServiceStep, initTabs, initToggles, initActions, initLayers, initHeader, initGallery, initHold, initSlots, initCarStep, initLocation, initPayment, initBrowse, initStateSwitch, initSteps, initCallback, initQR, initAccTools, initListFilter];
     fns.forEach(function (fn) { try { fn(); } catch (e) { if (window.console) console.warn('[SD]', fn.name, e); } });
     if (page === 'booking-confirmed') store.del('sdb_hold_until');
   }

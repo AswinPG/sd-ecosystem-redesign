@@ -38,7 +38,7 @@
         <div class="section-head" style="margin-bottom:14px"><h2 id="g-h" class="h3">My garage</h2><a class="link small" href="inspections.html">All inspections <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></div>
         <div class="grid g-3">
           <a class="car" href="report.html"><div class="car-media"><img src="../assets/bmw-x4m-green.jpg" alt="BMW X4 M Competition" loading="lazy"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-gem"/></svg>Gold</span></div><div class="car-body"><h3 class="car-title">BMW X4 M Competition</h3><p class="car-meta">Report SDR-18842 · 3 Oct 2026</p><div class="car-foot"><span class="seal"><span class="seal-ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>Score<span class="seal-score">92</span></span><span class="tiny txt-red" style="font-weight:700">View report</span></div></div></a>
-          <a class="car" href="report.html"><div class="car-media"><img src="../assets/bmw-i7-white.jpg" alt="BMW i7 xDrive60" loading="lazy"></div><div class="car-body"><h3 class="car-title">BMW i7 xDrive60</h3><p class="car-meta">New Car PDI · 28 Aug 2026</p><div class="car-foot"><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>129 / 132 passed</span><span class="tiny txt-red" style="font-weight:700">View PDI</span></div></div></a>
+          <a class="car" href="report-pdi.html"><div class="car-media"><img src="../assets/bmw-i7-white.jpg" alt="BMW i7 xDrive60" loading="lazy"></div><div class="car-body"><h3 class="car-title">BMW i7 xDrive60</h3><p class="car-meta">New Car PDI · 28 Aug 2026</p><div class="car-foot"><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>129 / 132 passed</span><span class="tiny txt-red" style="font-weight:700">View PDI</span></div></div></a>
           <a class="car" href="track.html"><div class="car-media"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE 300d" loading="lazy"></div><div class="car-body"><h3 class="car-title">Mercedes-Benz GLE 300d</h3><p class="car-meta">SDB-24817 · Sat 21 Nov</p><div class="car-foot"><span class="badge badge-green"><span class="live-dot"></span>In progress</span><span class="tiny txt-red" style="font-weight:700">Track inspection</span></div></div></a>
         </div>
       </section>
@@ -84,8 +84,9 @@
           <li><a href="notifications.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span><span>Notifications<span class="mi-sub">WhatsApp primary · push · SMS fallback</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
           <li><div class="mi" style="flex-wrap:wrap"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="grow">Language</span>
             <div class="seg" role="radiogroup" aria-label="Language"><label><input type="radio" name="lang" checked>English</label><label lang="ml"><input type="radio" name="lang">മലയാളം</label><label lang="hi"><input type="radio" name="lang">हिन्दी</label></div></div></li>
-          <li><a href="support.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><span>Privacy &amp; security<span class="mi-sub">OTP sign-in · download or delete your data</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
-          <li><a href="support.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg></span><span>Help &amp; guide<span class="mi-sub">Meera · ~2 min</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><label class="mi" style="cursor:pointer"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="grow">Also show my local time<span class="mi-sub">e.g. 9:00–9:30 AM IST · 7:30–8:00 AM Dubai</span></span><span class="switch"><input type="checkbox" aria-label="Also show my local time"><span></span></span></label></li>
+          <li><a href="#privacy-sheet" data-sheet="privacy-sheet"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><span>Privacy &amp; security<span class="mi-sub">OTP sign-in · download or delete your data</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><a href="support.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg></span><span>Help<span class="mi-sub">Call · WhatsApp · request a callback</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
           <li><a href="index.html" style="color:var(--error)"><span class="icon-tile sm" style="background:var(--error-bg); color:var(--error)"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg></span><span>Log out</span></a></li>
         </ul>
       </section>
@@ -97,10 +98,25 @@
     <div class="sheet-head"><h2 id="ed-h" class="h3">Edit profile</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
     <form class="stack" data-demo="Profile saved|Your details are up to date.|user">
       <div class="field"><label class="label" for="pn">Name</label><input class="input" id="pn" value="Arjun Menon" autocomplete="name"></div>
-      <div class="field"><label class="label" for="pp">Mobile (also WhatsApp)</label><input class="input" id="pp" value="+91 98470 12345" inputmode="tel" autocomplete="tel"></div>
+      <div class="field"><label class="label" for="pp">Mobile (also WhatsApp)</label><div class="phone-field"><select class="select" id="pp-cc" aria-label="Country code"><option value="+91" selected>India +91</option><option value="+971">UAE +971</option><option value="+966">Saudi +966</option><option value="+974">Qatar +974</option><option value="+965">Kuwait +965</option><option value="+968">Oman +968</option><option value="+973">Bahrain +973</option><option value="+1">US/Canada +1</option><option value="+44">UK +44</option></select><input class="input" id="pp" value="98470 12345" inputmode="tel" autocomplete="tel-national"></div><label class="wa-check"><input type="checkbox" checked>Reachable on WhatsApp</label></div>
       <div class="field"><label class="label" for="pe">Email</label><input class="input" id="pe" value="arjun.menon@example.in" type="email" autocomplete="email"></div>
-      <button class="btn btn-primary btn-block" type="submit" data-close-sheet>Save</button>
+      <button class="btn btn-primary btn-block" type="submit">Save</button>
     </form>
+  </div>
+
+  <div class="sheet" id="privacy-sheet" role="dialog" aria-modal="true" aria-labelledby="pv-h">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head"><h2 id="pv-h" class="h3">Privacy &amp; security</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+    <div data-step-panel class="stack" style="--gap:10px">
+      <div class="card-sunk row" style="padding:14px; --gap:12px"><svg class="i txt-green" aria-hidden="true"><use href="#i-lock"/></svg><p class="small grow"><b class="strong">Sign-in by OTP</b> to +91 98470 12345. No passwords stored.</p></div>
+      <button class="help-opt" type="button" data-toast="Data export requested|We'll email a copy of your data to arjun.menon@example.in.|download"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></span><span class="grow"><b>Download my data</b><small>Bookings, reports, invoices and preferences</small></span></button>
+      <button class="help-opt" type="button" data-step-next="#delete-confirm"><span class="icon-tile sm" style="background:var(--error-bg); color:var(--error)"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></span><span class="grow"><b>Delete my account</b><small>Removes your profile and saved cars</small></span></button>
+    </div>
+    <div id="delete-confirm" class="stack" style="--gap:12px" hidden>
+      <p class="small">Deleting your account removes your profile, saved cars and preferences. GST invoices are kept as the law requires. Bookings in progress (SDB-24817) must finish first.</p>
+      <button class="btn btn-danger btn-block btn-lg" type="button" data-close-sheet data-toast="Deletion requested|We'll confirm by email once SDB-24817 is complete.|x">Yes, delete my account</button>
+      <button class="btn btn-ghost btn-block" type="button" data-close-sheet>Keep my account</button>
+    </div>
   </div>
 </main>
 </body>

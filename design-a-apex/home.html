@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home · SDCertified</title>
+<meta name="description" content="Your SDCertified home: inspection status, quick actions, saved cars and updates.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:ital,wdth,wght@0,100..125,500..900;1,100..125,500..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="home" data-shell="app">
+<main id="main" class="mist">
+  <div class="wrap">
+    <header class="phead">
+      <p class="eyebrow">Sat 21 Nov · Kozhikode</p>
+      <h1 class="d-2">Good afternoon, <span class="hl">Arjun.</span></h1>
+    </header>
+
+    <!-- Inspection status card — always at the very top -->
+    <section class="status-card carbon enter" aria-labelledby="st-h">
+      <div class="stack" style="--gap:12px">
+        <div class="row" style="--gap:10px">
+          <span class="tag tag-g"><span class="live-dot" aria-hidden="true"></span>In progress</span>
+          <span class="serial small" style="color:var(--on-dark-2)">SDB-24817</span>
+        </div>
+        <h2 id="st-h" class="h2 mb-0">2021 Mercedes-Benz GLE 300d 4MATIC</h2>
+        <p class="mb-0" style="color:var(--on-dark-2)">In progress since 9:31 AM IST · report in about 3–4 hours. We’ll message you on WhatsApp the moment it’s ready.</p>
+        <ol class="gridwalk" aria-label="Milestones" style="list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;max-width:520px">
+          <li class="gw done"><span><span class="gw-n"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="sr-only">Booked — done</span></span></li>
+          <li class="gw done"><span><span class="gw-n"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span><span class="sr-only">Assigned — done</span></span></li>
+          <li class="gw done"><span><span class="gw-n"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><span class="sr-only">Arrived — done</span></span></li>
+          <li class="gw now" aria-current="step"><span><span class="gw-n"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg></span><span class="sr-only">In progress — now</span></span></li>
+          <li class="gw"><span style="--mist:#202227"><span class="gw-n"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="sr-only">Report ready — next</span></span></li>
+        </ol>
+        <div class="row" style="--gap:12px">
+          <span class="avatar avatar-g" aria-hidden="true">NR</span>
+          <span class="small"><b style="color:#fff">Nikhil Raj</b><br><span style="color:var(--on-dark-2)">Senior Inspection Engineer · Gulf-experienced</span></span>
+        </div>
+        <div class="btn-row mt-2">
+          <a class="btn btn-red" href="track.html">Track inspection<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn-line" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call Suresh Drives</a>
+        </div>
+        <a class="link" href="report-gle.html" style="color:#fff">Report SDR-24817 opens here when it’s ready<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="media"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE being inspected" width="1336" height="1177"></div>
+    </section>
+
+    <!-- Quick actions -->
+    <section class="sec-sm" aria-labelledby="qa-h">
+      <h2 id="qa-h" class="sr-only">Quick actions</h2>
+      <nav class="qa" aria-label="Quick actions">
+        <a class="primary" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Book inspection</a>
+        <a href="browse.html"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg>Buy a car</a>
+        <a href="sell.html"><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg>Sell / Certify</a>
+        <a href="inspections.html"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>My reports</a>
+        <a href="support.html"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg>Support</a>
+      </nav>
+    </section>
+
+    <a class="card card-cut row rv" href="book.html?service=pdi" style="--gap:16px;text-decoration:none;margin-bottom:28px;flex-wrap:nowrap">
+      <span class="rn" aria-hidden="true">PDI</span>
+      <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">Taking delivery of a new car?</span><span class="small muted">New Car PDI at the showroom · ₹3,999 + GST = ₹4,719 · we finish before you sign</span></span>
+      <svg class="i" aria-hidden="true" style="margin-left:auto"><use href="#i-chev-right"/></svg>
+    </a>
+
+    <!-- Continue where you left off -->
+    <section class="sec-sm" style="padding-top:0" aria-labelledby="cont-h">
+      <div class="sec-head" style="margin-bottom:16px"><h2 id="cont-h" class="h2 mb-0">Continue where you left off</h2></div>
+      <div class="grid g-2">
+        <a class="card card-cut row rv" href="report.html" style="--gap:16px;text-decoration:none;flex-wrap:nowrap">
+          <span class="rn">92</span>
+          <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">Report SDR-18842 · BMW X4 M Competition</span><span class="small muted">Gold · inspected 3 Oct 2026 · 2 panels repainted, cosmetic</span></span>
+          <svg class="i" aria-hidden="true" style="margin-left:auto"><use href="#i-chev-right"/></svg>
+        </a>
+        <a class="card card-cut row rv d1" href="vehicle.html" style="--gap:16px;text-decoration:none;flex-wrap:nowrap">
+          <img src="../assets/bmw-x4m-green.jpg" alt="" width="96" height="64" style="width:96px;height:64px;object-fit:cover;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)">
+          <span class="stack" style="--gap:2px;min-width:0"><span class="ui-h">You viewed BMW X4 M Competition</span><span class="small muted">SD-2481 · ₹1.12 Cr · Kozhikode · fair price ₹1.05–1.14 Cr</span></span>
+          <svg class="i" aria-hidden="true" style="margin-left:auto"><use href="#i-chev-right"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Recommended cars -->
+    <section class="sec-sm" style="padding-top:0" aria-labelledby="rec-h">
+      <div class="sec-head" style="margin-bottom:16px">
+        <div><p class="eyebrow">For you</p><h2 id="rec-h" class="h2 mb-0">Recommended certified cars</h2></div>
+        <a class="link" href="browse.html">See all 1,248<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="grid g-auto" style="--min:260px">
+        <article class="car-card rv">
+          <div class="media"><img src="../assets/bmw-x5-showroom.jpg" alt="BMW X5 in a showroom" width="1200" height="1600" loading="lazy" style="object-position:50% 62%"><span class="tier tier-gold">Gold</span></div>
+          <button class="icon-btn save" type="button" aria-pressed="false" aria-label="Save BMW X5 xDrive30d" data-save="BMW X5 xDrive30d"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+          <div class="body"><h3><a href="browse.html">BMW X5 xDrive30d</a></h3><p class="meta mb-0">2021 · 29,700 km · Thrissur · Diesel</p>
+            <div class="row between mt-2"><span class="price">₹74 L</span><span class="emi">EMI from ₹1,23,200/mo</span></div>
+            <div class="foot"><span class="seal"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives Verified</span><span class="rn">91</span></div></div>
+        </article>
+        <article class="car-card rv d1">
+          <div class="media"><img src="../assets/jeep-rubicon.jpg" alt="Jeep Wrangler Rubicon" width="1600" height="1066" loading="lazy"><span class="tier tier-gold">Gold</span></div>
+          <button class="icon-btn save" type="button" aria-pressed="false" aria-label="Save Jeep Wrangler Rubicon" data-save="Jeep Wrangler Rubicon"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+          <div class="body"><h3><a href="browse.html">Jeep Wrangler Rubicon</a></h3><p class="meta mb-0">2022 · 14,600 km · Kozhikode · Petrol</p>
+            <div class="row between mt-2"><span class="price">₹64 L</span><span class="emi">EMI from ₹1,06,500/mo</span></div>
+            <div class="foot"><span class="seal"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives Verified</span><span class="rn">90</span></div></div>
+        </article>
+        <article class="car-card rv d2">
+          <div class="media"><img src="../assets/range-rover-velar.jpg" alt="Range Rover on a lawn" width="1067" height="1600" loading="lazy" style="object-position:50% 60%"><span class="tier tier-gold">Gold</span></div>
+          <button class="icon-btn save" type="button" aria-pressed="false" aria-label="Save Range Rover Velar R-Dynamic" data-save="Range Rover Velar R-Dynamic"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+          <div class="body"><h3><a href="browse.html">Range Rover Velar R-Dynamic</a></h3><p class="meta mb-0">2022 · 24,100 km · Kochi · Diesel</p>
+            <div class="row between mt-2"><span class="price">₹82 L</span><span class="emi">EMI from ₹1,36,500/mo</span></div>
+            <div class="foot"><span class="seal"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives Verified</span><span class="rn">91</span></div></div>
+        </article>
+        <article class="car-card rv d3">
+          <div class="media"><img src="../assets/volvo-s60-red.jpg" alt="Red Volvo S60" width="1200" height="644" loading="lazy"><span class="tier tier-silver">Silver</span></div>
+          <button class="icon-btn save" type="button" aria-pressed="false" aria-label="Save Volvo S60 B5 Inscription" data-save="Volvo S60 B5 Inscription"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button>
+          <div class="body"><h3><a href="browse.html">Volvo S60 B5 Inscription</a></h3><p class="meta mb-0">2020 · 35,400 km · Kozhikode · Petrol</p>
+            <div class="row between mt-2"><span class="price">₹42 L</span><span class="emi">EMI from ₹69,900/mo</span></div>
+            <div class="foot"><span class="seal"><svg aria-hidden="true"><use href="#seal"/></svg>Suresh Drives Verified</span><span class="rn">85</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="card carbon card-cut-lg row rv" style="--gap:20px;margin-bottom:28px" aria-label="Suresh Drives promise">
+      <img src="../assets/logo-sureshdrives-light.png" alt="Suresh Drives" width="92" height="60" style="height:60px;width:auto">
+      <div style="flex:1 1 320px">
+        <p class="h4 mb-2" style="color:#fff">Every car here went round the Orbit first.</p>
+        <p class="small mb-0" style="color:var(--on-dark-2)">300+ point checks by Gulf-experienced technicians. Found a flaw, or couldn’t test something? You’ll see it in the report — not hear about it later.</p>
+      </div>
+      <a class="btn btn-light btn-sm" href="suresh-drives.html">About Suresh Drives</a>
+    </section>
+
+    <!-- Recent notifications -->
+    <section class="sec-sm" style="padding-top:0" aria-labelledby="nt-h">
+      <div class="sec-head" style="margin-bottom:12px"><h2 id="nt-h" class="h2 mb-0">Latest updates</h2><a class="link" href="notifications.html">All notifications<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+      <div>
+        <div class="nitem unread"><span class="ic g"><svg class="i" aria-hidden="true"><use href="#i-scan"/></svg></span><div><p class="t mb-0">Inspection started · SDB-24817</p><p class="d">Nikhil started at 9:31 AM. A full inspection takes about 3–4 hours.</p><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span></div><span class="when">9:31 AM</span></div>
+        <div class="nitem unread"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><p class="t mb-0">Nikhil arrived at the car</p><p class="d">Number plate &amp; odometer photographed at arrival, 9:24 AM.</p><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></div><span class="when">9:24 AM</span></div>
+        <div class="nitem unread"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span><div><p class="t mb-0">Arriving today, 9:00–9:30 AM IST</p><p class="d">Nikhil will reach Near Hilite Mall, Thondayad Bypass.</p><span class="tag tag-g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Read</span></div><span class="when">8:10 AM</span></div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
