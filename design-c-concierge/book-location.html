@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book an inspection · Step 3 · Location · SDCertified</title>
+<meta name="description" content="Tell us where the car will be. We check your service area and who to meet.">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="book-location" data-shell="flow" data-step="3" data-back="book-car.html" data-aura="green">
+<main id="main" class="wrap">
+  <div class="layout-aside">
+    <div class="flow-body">
+      <header class="flow-head stagger">
+        <span class="eyebrow">Mercedes-Benz GLE 300d · KL 11 BH 7272</span>
+        <h1>Where will the car be?</h1>
+      </header>
+
+      <div class="guide">
+        <span class="meera" aria-hidden="true">M</span>
+        <div class="guide-bubble">
+          <div class="guide-name"><b>Meera</b> · your Suresh Drives guide · <span class="online">online</span></div>
+          <p>Nikhil and the team come to the car — the seller's home, a dealer yard or a showroom. Add a landmark so they find it first time; they'll need about 3–4 hours and a little space around the car.</p>
+        </div>
+      </div>
+
+      <!-- Saved addresses -->
+      <fieldset class="stack" style="border:0; padding:0; margin:0; --gap:10px">
+        <legend class="label" style="margin-bottom:10px">Saved places</legend>
+        <div class="grid g-3" style="--gap:10px">
+          <label class="choice choice-compact"><input type="radio" name="place" value="seller" checked data-sum-key="location" data-sum-val="Near Hilite Mall, Thondayad Bypass"><span class="choice-card"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><span class="grow"><b class="strong small" style="display:block">Faisal (seller)</b><span class="tiny muted">Thondayad Bypass</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+          <label class="choice choice-compact"><input type="radio" name="place" value="home" data-sum-key="location" data-sum-val="Home · Nadakkavu, Kozhikode"><span class="choice-card"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span class="grow"><b class="strong small" style="display:block">Home</b><span class="tiny muted">Nadakkavu, Kozhikode</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+          <label class="choice choice-compact"><input type="radio" name="place" value="new" data-sum-key="location" data-sum-val="New address"><span class="choice-card"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></span><span class="grow"><b class="strong small" style="display:block">Somewhere else</b><span class="tiny muted">Add a new place</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+        </div>
+      </fieldset>
+
+      <!-- Map -->
+      <section class="card" style="padding:8px" aria-labelledby="map-h">
+        <h2 id="map-h" class="sr-only">Pin on the map</h2>
+        <div class="map" style="aspect-ratio: 16 / 9; position:relative">
+          <svg viewBox="0 0 640 360" role="img" aria-label="Map of Thondayad Bypass, Kozhikode, with a pin near Hilite Mall">
+            <rect width="640" height="360" fill="#EEF1E8"/>
+            <path d="M0 0h64c-10 60 18 116 0 180s10 124 0 180H0z" fill="#D9E9F1"/>
+            <path d="M64 292c90-20 160 30 250 12s150 6 326-6" stroke="#D9E9F1" stroke-width="14" fill="none" stroke-linecap="round"/>
+            <rect x="420" y="34" width="150" height="80" rx="22" fill="#DCEBC8"/>
+            <rect x="110" y="210" width="120" height="56" rx="16" fill="#DCEBC8"/>
+            <g fill="#E4E7DF"><rect x="96" y="28" width="96" height="58" rx="12"/><rect x="210" y="28" width="110" height="58" rx="12"/><rect x="96" y="112" width="96" height="70" rx="12"/><rect x="420" y="146" width="150" height="62" rx="12"/><rect x="290" y="214" width="84" height="46" rx="12"/><rect x="460" y="232" width="120" height="40" rx="12"/></g>
+            <g fill="none" stroke-linecap="round">
+              <path d="M80 360C170 290 240 236 330 192S520 116 640 92" stroke="#fff" stroke-width="20"/>
+              <path d="M205 0v360M80 100h560M392 0l-20 360" stroke="#fff" stroke-width="11"/>
+            </g>
+            <text x="480" y="132" font-size="12" font-weight="700" fill="#8B93A1" transform="rotate(-13 480 132)">THONDAYAD BYPASS</text>
+            <text x="440" y="66" font-size="12" font-weight="700" fill="#6B8F45">Hilite Mall</text>
+            <text x="440" y="84" font-size="10" font-weight="600" fill="#8B93A1">Gate 2</text>
+            <ellipse cx="340" cy="190" rx="18" ry="6" fill="rgba(15,18,23,.18)"/>
+            <g transform="translate(340 186)">
+              <path d="M0 0c-14-18-22-30-22-42a22 22 0 0 1 44 0c0 12-8 24-22 42z" fill="#E61E2A"/>
+              <circle cy="-42" r="8" fill="#fff"/>
+            </g>
+          </svg>
+          <div class="map-chip" style="left:50%; top:16px; transform:translateX(-50%); white-space:nowrap"><svg class="i i-sm" aria-hidden="true"><use href="#i-sparkle"/></svg>Drag the map to fine-tune the pin</div>
+          <button class="map-chip" type="button" style="right:12px; bottom:12px; min-height:44px" data-toast="Location found|Pinned near Hilite Mall, Thondayad Bypass|locate"><svg class="i i-sm" aria-hidden="true"><use href="#i-locate"/></svg>Use current location</button>
+        </div>
+      </section>
+
+      <!-- Service area check -->
+      <div class="card-green row start" style="--gap:14px; padding:18px" role="status">
+        <span class="seal-ico" style="width:40px;height:40px"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <div class="grow">
+          <b class="strong">You're inside our Kozhikode service area.</b>
+          <p class="small muted">No travel charges. Technicians start from HiLITE Business Park, 4.8 km away — so morning slots are easy.</p>
+        </div>
+        <span class="badge badge-green m-hide"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>In zone</span>
+      </div>
+
+      <!-- Address -->
+      <section class="card card-pad stack" aria-labelledby="addr-h">
+        <h2 id="addr-h" class="h3">Address details</h2>
+        <div class="form-grid">
+          <div class="field full"><label class="label" for="street">Street</label><input class="input" id="street" value="Near Hilite Mall, Thondayad Bypass" autocomplete="address-line1"></div>
+          <div class="field"><label class="label" for="building">Building / house</label><input class="input" id="building" value="Hilite City, Block C parking" autocomplete="address-line2"></div>
+          <div class="field"><label class="label" for="landmark">Landmark</label><input class="input" id="landmark" value="Opp. Hilite City gate 2"></div>
+          <div class="field"><label class="label" for="district">District</label><select class="select" id="district"><option selected>Kozhikode</option><option>Malappuram</option><option>Kannur</option><option>Thrissur</option><option>Ernakulam</option><option>Wayanad</option></select></div>
+          <div class="field"><label class="label" for="pin">PIN code</label><input class="input" id="pin" inputmode="numeric" value="673014" autocomplete="postal-code"></div>
+        </div>
+      </section>
+
+      <!-- Contacts -->
+      <section class="card card-pad stack" aria-labelledby="ct-h">
+        <h2 id="ct-h" class="h3">Who'll be with the car?</h2>
+        <div class="form-grid">
+          <div class="field"><label class="label" for="cp">Contact person</label><input class="input" id="cp" value="Faisal (seller)"></div>
+          <div class="field"><label class="label" for="cpn">Contact number</label><input class="input" id="cpn" inputmode="tel" value="+91 99460 55120"></div>
+          <div class="field"><label class="label" for="alt">Alternate contact <small>(if Faisal can't be reached)</small></label><input class="input" id="alt" inputmode="tel" value="+91 98470 12345"></div>
+          <div class="field"><label class="label" for="note">Note for the technician <small>(optional)</small></label><input class="input" id="note" placeholder="e.g. car is in the basement, level B1"></div>
+        </div>
+      </section>
+
+      <!-- Remote example -->
+      <details class="acc acc-card" name="remote">
+        <summary><span class="icon-tile amber sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><span>Car outside our core area? <span class="tiny muted" style="display:block; font-weight:500">Here's how our visiting team works</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-d"/></svg></summary>
+        <div class="acc-body stack">
+          <p>Some places — like Kalpetta in Wayanad — are served by a <b class="strong">visiting team</b>. We gather requests in the area and travel together, so you never pay for a solo trip.</p>
+          <div class="card-sunk" style="padding:16px">
+            <div class="row between small"><b class="strong">Wayanad visit</b><span class="badge badge-amber"><svg class="i" aria-hidden="true"><use href="#i-hourglass"/></svg>Gathering</span></div>
+            <div class="row mt-2" style="--gap:6px" aria-hidden="true">
+              <span class="bar grow"><span style="--v:100%"></span></span><span class="bar grow"><span style="--v:100%"></span></span><span class="bar grow"><span style="--v:0%"></span></span>
+            </div>
+            <p class="small mt-2"><b class="strong">2 of 3 requests gathered</b> — we'll confirm your date by <b class="strong">Thu 19 Nov at the latest</b>, even if the third doesn't come in.</p>
+          </div>
+          <p class="tiny muted">We dispatch as soon as 3 requests are in, or within 7 days of the first request — whichever comes first. You pay only when your date is confirmed.</p>
+        </div>
+      </details>
+
+      <div class="cta-bar">
+        <div class="cta-sum"><strong>₹5,999 + GST</strong><span>Inside service area · no travel charge</span></div>
+        <a class="btn btn-ghost m-hide" href="book-car.html"><svg class="i" aria-hidden="true"><use href="#i-arrow-l"/></svg>Back</a>
+        <a class="btn btn-primary btn-lg" href="book-slot.html">Continue<svg class="i" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+
+    <aside class="stack sticky-aside" style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Your booking">
+      <section class="card card-pad" aria-labelledby="sum-h">
+        <div class="card-title" style="margin-bottom:4px"><h2 id="sum-h" class="h4">Your booking</h2><span class="badge">Step 3 of 5</span></div>
+        <ul>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Service</span><b>Used Car Pre-Purchase</b></div><a href="book.html">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Car</span><b>2021 Mercedes-Benz GLE 300d · KL 11 BH 7272</b></div><a href="book-car.html">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile red sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Location</span><b data-sum="location">Near Hilite Mall, Thondayad Bypass</b></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">Date &amp; session</span><b class="muted">Next</b></div><span></span></li>
+        </ul>
+        <div class="card-sunk mt-2" style="padding:14px"><div class="row between"><span class="small muted">Luxury tier</span><b class="strong num">₹5,999 + GST</b></div></div>
+      </section>
+      <section class="card next" aria-labelledby="next-h">
+        <div class="next-head"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><h2 id="next-h">What happens next</h2></div>
+        <ol>
+          <li><div><b>Pick a date &amp; session</b><span>Morning 9–1 or afternoon 2–6.</span></div></li>
+          <li><div><b>We hold it for 10 minutes</b><span>So no one else can take it while you pay.</span></div></li>
+          <li><div><b>Faisal gets the details</b><span>On WhatsApp, the moment you've paid.</span></div></li>
+        </ol>
+      </section>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

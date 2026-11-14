@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book an inspection · Step 1 · SDCertified</title>
+<meta name="description" content="Book a Suresh Drives inspection in 5 short steps: Used Car Pre-Purchase or New Car PDI.">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="book" data-shell="flow" data-step="1" data-back="home.html" data-aura="green">
+<main id="main" class="wrap">
+  <div class="layout-aside">
+    <div class="flow-body">
+      <header class="flow-head stagger">
+        <span class="eyebrow eyebrow-green"><svg class="i i-sm" aria-hidden="true"><use href="#i-clock"/></svg>5 short steps · about 3 minutes</span>
+        <h1>What are we inspecting today?</h1>
+      </header>
+
+      <div class="guide">
+        <span class="meera" aria-hidden="true">M</span>
+        <div class="guide-bubble">
+          <div class="guide-name"><b>Meera</b> · your Suresh Drives guide · <span class="online">online</span></div>
+          <p>Hi Arjun, I'm Meera, your Suresh Drives guide. First, tell me: are you <b class="strong">buying a used car</b>, or <b class="strong">taking delivery of a new one</b>?</p>
+          <div class="chips">
+            <button class="chip chip-quick" type="button" data-guide="pdi" aria-pressed="false">I'm taking delivery of a new car</button>
+            <button class="chip chip-quick" type="button" data-guide="dealer" aria-pressed="false">I'm buying from a dealer</button>
+            <button class="chip chip-quick" type="button" data-guide="abroad" aria-pressed="false">I live abroad — buying for family</button>
+          </div>
+          <p class="small mt-2" data-guide-reply hidden aria-live="polite" style="padding:10px 12px; border-radius:14px; background:var(--green-bg); color:var(--ink-2)"></p>
+        </div>
+      </div>
+
+      <fieldset style="border:0; padding:0; margin:0" class="stack">
+        <legend class="sr-only">Choose an inspection</legend>
+        <div class="grid g-2">
+          <label class="choice svc-choice">
+            <input type="radio" name="service" value="used" checked data-bk-set="service">
+            <span class="choice-card">
+              <span class="row" style="--gap:12px"><span class="icon-tile green"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><span class="badge badge-green">Most booked</span></span>
+              <span>
+                <span class="h3" style="display:block">Used Car Pre-Purchase</span>
+                <span class="small muted" style="display:block; margin-top:6px">Buy a used car with confidence. We go to the seller's home, a dealer yard or a showroom.</span>
+              </span>
+              <span class="row row-wrap small" style="--gap:14px"><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-check-circle"/></svg>300+ points</span><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-clock"/></svg>About 3–4 hours</span><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-steering"/></svg>Road test</span></span>
+              <span class="row between" style="width:100%; border-top:1px dashed var(--line); padding-top:14px"><span class="small muted">By segment</span><b class="strong num">₹3,999 – ₹5,999 <span class="tiny muted" style="font-weight:600">+ GST</span></b></span>
+              <span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
+            </span>
+          </label>
+          <label class="choice svc-choice">
+            <input type="radio" name="service" value="pdi" data-bk-set="service">
+            <span class="choice-card">
+              <span class="row" style="--gap:12px"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sparkle"/></svg></span><span class="badge">Before you sign</span></span>
+              <span>
+                <span class="h3" style="display:block">New Car PDI</span>
+                <span class="small muted" style="display:block; margin-top:6px">Avoid factory defects and dealership manipulations — checked at the showroom before delivery.</span>
+              </span>
+              <span class="row row-wrap small" style="--gap:14px"><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-check-circle"/></svg>125+ points</span><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-clock"/></svg>About 2 hours</span><span class="row" style="--gap:6px"><svg class="i i-sm" aria-hidden="true"><use href="#i-building"/></svg>At the showroom</span></span>
+              <span class="row between" style="width:100%; border-top:1px dashed var(--line); padding-top:14px"><span class="small muted">All cars · flat</span><b class="strong num">₹3,999 <span class="tiny muted" style="font-weight:600">+ GST = ₹4,720</span></b></span>
+              <span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
+            </span>
+          </label>
+        </div>
+        <p class="hint"><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg><span>Price example: 2019 Hyundai Creta → Standard · ₹3,999 + GST = <b class="strong">₹4,719</b>. You'll always see your exact price before you pay.</span></p>
+      </fieldset>
+
+      <section class="card card-pad" aria-labelledby="inc-h">
+        <h2 id="inc-h" class="h3">What's included</h2>
+        <p class="small muted mt-1">Found a flaw, or couldn't test something? You'll see it in the report — not hear about it later.</p>
+        <div class="mt-2">
+          <details class="acc" open name="inc">
+            <summary><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span>Used Car Pre-Purchase · 300+ points<svg class="i chev" aria-hidden="true"><use href="#i-chev-d"/></svg></summary>
+            <div class="acc-body">
+              <ul class="inc">
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Advanced car scanning — OBD codes across every module</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Hidden accident repair detection with an Elcometer paint gauge</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Digital videoscope inside the engine and hidden cavities</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Battery health and charging system</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Fluids, leaks, belts, mountings, turbo and rat bites</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Under the car — driveline, differential, underbody, exhaust</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Tyres, brakes, suspension and glass</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Road test — idle, shifts, steering, CV joints, brakes</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>VIN and odometer checks against the RC and service history</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>AI-powered report with photos, on WhatsApp and email</li>
+              </ul>
+            </div>
+          </details>
+          <details class="acc" name="inc">
+            <summary><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-sparkle"/></svg></span>New Car PDI · 125+ points<svg class="i chev" aria-hidden="true"><use href="#i-chev-d"/></svg></summary>
+            <div class="acc-body">
+              <ul class="inc">
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Paint depth on every panel — spot transit repaints</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Panel gaps, swirl marks and scratches</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>OBD scan and pending software updates</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Tyre DOT dates and pressures</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>VIN build date, documents and odometer at delivery</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Accessories and features you paid for</li>
+              </ul>
+            </div>
+          </details>
+          <details class="acc" name="inc">
+            <summary><span class="icon-tile amber sm"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg></span>If something goes wrong at the showroom<svg class="i chev" aria-hidden="true"><use href="#i-chev-d"/></svg></summary>
+            <div class="acc-body stack" style="--gap:12px">
+              <p><b class="strong">The dealer refuses access.</b> We call the dealer and escalate on your behalf. You get a free reschedule or a 100% refund, plus a short note — "Your right to a pre-delivery inspection" — you can show the dealer.</p>
+              <p><b class="strong">The car fails.</b> You get a "Don't sign yet" WhatsApp summary before handover, a defect list you can share with the dealer, and a free re-check after the fix.</p>
+            </div>
+          </details>
+          <details class="acc" name="inc">
+            <summary><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg></span>How the price is decided<svg class="i chev" aria-hidden="true"><use href="#i-chev-d"/></svg></summary>
+            <div class="acc-body">
+              <p>Used car inspections are priced by the car's segment. Once you choose the model, we pick the right one automatically. New Car PDI is one flat price for every car.</p>
+              <div class="tier-meter mt-2">
+                <div><span>Standard</span><b>₹3,999</b><span>Hatchbacks, sedans, compact SUVs</span></div>
+                <div><span>Premium</span><b>₹4,999</b><span>Premium SUVs and sedans</span></div>
+                <div><span>Luxury</span><b>₹5,999</b><span>Luxury brands</span></div>
+              </div>
+              <p class="tiny muted mt-2">All prices + 18% GST. Travel charges may apply outside our service areas — we'll tell you before you pay.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <a class="card card-pad card-hover row" style="--gap:14px" href="sell.html">
+        <span class="icon-tile red"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg></span>
+        <span class="grow"><b class="strong">Selling instead?</b><span class="small muted" style="display:block">Get a Quality Certification for ₹9,999 and list on SDCertified with 0% brokerage.</span></span>
+        <svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg>
+      </a>
+
+      <div class="cta-bar">
+        <div class="cta-sum"><strong><span data-bk-show="used">₹3,999 – ₹5,999</span><span data-bk-show="pdi" hidden>₹3,999</span> + GST</strong><span data-bk="service-short">Used Car Pre-Purchase</span></div>
+        <a class="btn btn-primary btn-lg" href="book-car.html">Continue<svg class="i" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+
+    <aside class="stack sticky-aside" data-summary style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Your booking">
+      <section class="card card-pad" aria-labelledby="sum-h">
+        <div class="card-title" style="margin-bottom:4px"><h2 id="sum-h" class="h4">Your booking</h2><span class="badge">Step 1 of 5</span></div>
+        <ul>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><div><span class="tiny muted">Service</span><b data-bk="service">Used Car Pre-Purchase Inspection</b></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-car"/></svg></span><div><span class="tiny muted">Car</span><b class="muted">Next — takes 30 seconds</b></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="tiny muted">Where</span><b class="muted">Step 3</b></div><span></span></li>
+          <li class="sum-row todo"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">Date &amp; session</span><b class="muted">Step 4</b></div><span></span></li>
+        </ul>
+        <div class="card-sunk mt-2" style="padding:14px"><div class="row between"><span class="small muted">Price</span><b class="strong num"><span data-bk-show="used">₹3,999 – ₹5,999</span><span data-bk-show="pdi" hidden>₹3,999 flat</span> + GST</b></div></div>
+      </section>
+
+      <section class="card next" aria-labelledby="next-h">
+        <div class="next-head"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><h2 id="next-h">What happens next</h2></div>
+        <ol>
+          <li><div><b>Tell us about the car</b><span>Registration number is enough — or "not registered yet" for a new car.</span></div></li>
+          <li><div><b>Where and when</b><span>The seller's place, a dealer or the showroom; morning or afternoon.</span></div></li>
+          <li><div><b>Pay securely</b><span>We hold your slot for 10 minutes.</span></div></li>
+          <li><div><b>WhatsApp at every milestone</b><span>Booked, assigned, arriving, started, report ready.</span></div></li>
+        </ol>
+      </section>
+
+      <section class="card-sunk" style="padding:16px" aria-label="Help">
+        <p class="small strong">Prefer to talk it through?</p>
+        <div class="row row-wrap mt-1" style="--gap:8px">
+          <a class="btn btn-sm" href="tel:+918330881213"><svg class="i i-sm" aria-hidden="true"><use href="#i-phone"/></svg>Call us · +91 8330 881 213</a>
+          <a class="btn btn-sm btn-wa" href="https://wa.me/919895441213"><svg class="i i-sm" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suresh Drives × SDCertified — Redesign Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wdth,wght@100..125,600..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#E61E2A; --red-d:#B01E23; --green:#8CC63F; --green-ink:#3E6B1F;
+  --ink:#121417; --ink-2:#4A5059; --line:#E3E5E8; --bg:#F4F5F6; --card:#fff;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+header.top{background:#0B0C0E;color:#fff}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.lock{display:flex;align-items:center;gap:14px}
+.lock img{display:block}
+.lock .x{opacity:.5;font-weight:300;font-size:22px}
+.lock .sdw{font-family:Archivo,Inter,sans-serif;font-stretch:115%;font-weight:800;font-size:20px;letter-spacing:-.01em}
+.top .meta{margin-left:auto;font-size:13px;color:#A9AFB6}
+.hero{background:#0B0C0E;color:#fff;padding:40px 0 64px;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;inset:auto -10% -60% 40%;height:120%;background:radial-gradient(closest-side,rgba(140,198,63,.22),transparent 70%)}
+.hero:after{content:"";position:absolute;inset:-40% 50% auto -15%;height:110%;background:radial-gradient(closest-side,rgba(230,30,42,.22),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#A9AFB6;font-weight:600}
+h1{font-family:Archivo,Inter,sans-serif;font-stretch:118%;font-weight:800;font-size:clamp(2.1rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;margin:.3em 0 .35em;max-width:16ch}
+h1 .g{color:var(--green)} h1 .r{color:#FF4650}
+.hero p{max-width:66ch;color:#C9CED4;font-size:1.06rem}
+.arch{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.arch div{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 18px;background:rgba(255,255,255,.03)}
+.arch b{display:block;font-size:14px;margin-bottom:4px}
+.arch span{font-size:13px;color:#A9AFB6}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
+section{padding:56px 0}
+h2{font-family:Archivo,Inter,sans-serif;font-stretch:110%;font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.015em;margin:0 0 6px}
+.lede{color:var(--ink-2);margin:0 0 28px;max-width:70ch}
+.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+@media (hover:hover){.dcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(0,0,0,.25)}}
+.dcard .swatch{height:150px;position:relative;display:flex;align-items:flex-end;padding:18px}
+.dcard .swatch .nm{font-family:Archivo,Inter,sans-serif;font-stretch:115%;font-weight:800;font-size:26px;line-height:1}
+.dcard .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.dcard .tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.dcard p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--ink-2)}
+.pal{display:flex;gap:6px}
+.pal i{width:22px;height:22px;border-radius:7px;border:1px solid rgba(0,0,0,.08)}
+.dcard .acts{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.btn{appearance:none;border:0;cursor:pointer;font:600 14px Inter,sans-serif;border-radius:12px;padding:11px 16px;min-height:44px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:transform .12s var(--ease),background-color .2s}
+.btn:active{transform:scale(.97)}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red-d)}
+.btn.ghost{background:#F0F1F3;color:var(--ink)}.btn.ghost:hover{background:#E6E8EB}
+:focus-visible{outline:3px solid #1F6FEB;outline-offset:2px;border-radius:8px}
+
+/* viewer */
+.viewer{background:#E9EBEE;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.seg{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;font:600 13.5px Inter,sans-serif;padding:9px 14px;border-radius:10px;cursor:pointer;color:var(--ink-2);min-height:40px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+select{font:500 14px Inter,sans-serif;padding:10px 12px;border-radius:12px;border:1px solid var(--line);min-height:44px;background:#fff;max-width:100%}
+label.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.stage{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.phone{width:360px;height:760px;border-radius:52px;background:#0B0C0E;padding:12px;box-shadow:0 30px 60px -25px rgba(0,0,0,.45),inset 0 0 0 2px #2A2D31;position:relative}
+.phone:before{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:96px;height:26px;border-radius:20px;background:#000;z-index:2}
+.phone .screen{width:100%;height:100%;border-radius:40px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.phone .sbar{height:40px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:6px 26px 0;font:600 13px Inter,sans-serif;color:#111;background:#fff}
+.phone .sbar svg{display:block}
+.phone .scr{flex:1;overflow:hidden}
+.phone iframe{width:390px;height:805px;border:0;transform:scale(.865);transform-origin:0 0;display:block}
+.desk{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.35);border:1px solid #D5D8DC}
+.desk .chrome{height:36px;background:#F1F2F4;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid #E1E3E6}
+.desk .chrome i{width:11px;height:11px;border-radius:50%;background:#D7D9DD}
+.desk .chrome .url{margin-left:12px;font-size:12px;color:#6B7178;background:#fff;border-radius:8px;padding:4px 12px;flex:1;max-width:520px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.desk .vp{position:relative;width:100%;overflow:hidden}
+.desk iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+.open-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.pages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcol{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.pcol h3{margin:0 0 10px;font-size:15px}
+.pcol ol{margin:0;padding-left:20px;font-size:14px;columns:2;column-gap:20px}
+.pcol li{margin:2px 0;break-inside:avoid}
+.pcol a{text-decoration:none;color:var(--ink-2)}.pcol a:hover{color:var(--red);text-decoration:underline}
+.grp{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8A9098;font-weight:700;margin:12px 0 4px}
+.grp:first-of-type{margin-top:0}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.note{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.note h3{margin:0 0 8px;font-size:16px}
+.note ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:14.5px}
+footer{padding:36px 0 48px;color:var(--ink-2);font-size:13.5px}
+.vtable{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:18px}
+.vtable table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+.vtable th,.vtable td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.vtable thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:#FAFAFB}
+.vtable tbody tr:last-child th,.vtable tbody tr:last-child td{border-bottom:0}
+.vtable td:nth-child(n+3){font-variant-numeric:tabular-nums;font-weight:600}
+code{font-size:.9em;background:#ECEEF0;padding:1px 6px;border-radius:6px}
+@media (max-width:1100px){.stage{grid-template-columns:1fr}.phone{margin:0 auto}}
+@media (max-width:900px){.designs,.pages,.notes,.arch{grid-template-columns:1fr}}
+@media (max-width:420px){.phone{width:300px;height:640px;border-radius:44px}.phone iframe{transform:scale(.72);height:810px}.phone .screen{border-radius:34px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="lock">
+      <img src="assets/logo-sureshdrives-light.png" width="74" height="48" alt="Suresh Drives">
+      <span class="x" aria-hidden="true">×</span>
+      <img src="assets/logo-sdcertified-mark.png" width="30" height="35" alt="">
+      <span class="sdw">SDCertified</span>
+    </div>
+    <div class="meta">Unified ecosystem redesign · 3 concepts · 21 screens each · Nov 2026</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Design review</div>
+    <h1>Inspected by <span class="g">Suresh&nbsp;Drives</span>. Sold on <span class="r">SDCertified</span>.</h1>
+    <p>Three complete UI/UX directions that bring sureshdrives.com, the Suresh Drives inspection product and the SDCertified marketplace into one premium ecosystem. Booking, paying for and tracking an inspection now happens inside the SDCertified app — powered and guaranteed by Suresh Drives. Every concept covers the full journey with mock data, on mobile and desktop.</p>
+    <div class="arch">
+      <div><b><span class="dot" style="background:var(--green)"></span>Suresh Drives — the trust</b><span>India's first on-site inspection company. Green marks anything verified or inspected.</span></div>
+      <div><b><span class="dot" style="background:var(--red)"></span>SDCertified — the action</b><span>The app & storefront. Red drives buy, book, pay and sell. Booking happens only here.</span></div>
+      <div><b><span class="dot" style="background:#fff"></span>One journey</b><span>Book → pay → milestone tracking on WhatsApp + push → report → list or buy with confidence.</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section aria-labelledby="concepts">
+  <div class="wrap">
+    <h2 id="concepts">Three directions</h2>
+    <p class="lede">Same information architecture, same mock data, same brand logic — three different personalities. Pick one, or mix: the token sets are documented in each concept's README for the Blazor and Flutter teams.</p>
+    <div class="designs">
+      <article class="dcard">
+        <div class="swatch" style="background:linear-gradient(135deg,#FAF8F4 0%,#EFE9DE 100%);color:#141414"><span class="nm">A · Heritage<br>Ivory</span></div>
+        <div class="body">
+          <div class="tag">The Assurance Ledger</div>
+          <p>Quiet luxury and editorial calm. Ivory paper, ink, hairlines and a serif voice. Every booking and report reads like a certificate, sealed by Suresh Drives.</p>
+          <div class="pal"><i style="background:#FAF8F4"></i><i style="background:#141414"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#3E6B1F"></i></div>
+          <div class="chips"><span>Newsreader + Manrope</span><span>Light</span><span>Certificate seals</span><span>Booking ledger</span></div>
+          <div class="acts"><a class="btn red" href="design-a-heritage/index.html">Open concept</a><button class="btn ghost" data-pick="a">Preview</button></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="swatch" style="background:radial-gradient(120% 120% at 80% 100%,rgba(140,198,63,.35),transparent 50%),#0A0C0E;color:#fff"><span class="nm">B · Night<br>Drive</span></div>
+        <div class="body">
+          <div class="tag">Mission Control</div>
+          <p>A performance car's instrument cluster at night. Gauges, diagnostic readouts and a wireframe car that maps every section checked — technical, AI-powered, cinematic.</p>
+          <div class="pal"><i style="background:#0A0C0E"></i><i style="background:#1A1F24"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#F2F4F5"></i></div>
+          <div class="chips"><span>Archivo Expanded + JetBrains Mono</span><span>Dark</span><span>Gauges</span><span>Diagnostic report</span></div>
+          <div class="acts"><a class="btn red" href="design-b-night-drive/index.html">Open concept</a><button class="btn ghost" data-pick="b">Preview</button></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="swatch" style="background:radial-gradient(90% 120% at 0% 0%,rgba(230,30,42,.16),transparent 55%),radial-gradient(90% 120% at 100% 100%,rgba(140,198,63,.22),transparent 55%),#F6F7F9;color:#121417"><span class="nm">C · Concierge</span></div>
+        <div class="body">
+          <div class="tag">Guided by Suresh Drives</div>
+          <p>Warm, airy and hand-holding. Meera, a named Suresh Drives guide, walks users through every step; lock-screen status updates, wallet-style cards and conversational booking.</p>
+          <div class="pal"><i style="background:#F6F7F9"></i><i style="background:#FFFFFF"></i><i style="background:#E61E2A"></i><i style="background:#8CC63F"></i><i style="background:#121417"></i></div>
+          <div class="chips"><span>Plus Jakarta Sans</span><span>Light</span><span>Human guide</span><span>Live Activity</span></div>
+          <div class="acts"><a class="btn red" href="design-c-concierge/index.html">Open concept</a><button class="btn ghost" data-pick="c">Preview</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="viewer" id="viewer" aria-labelledby="vh">
+  <div class="wrap">
+    <h2 id="vh">Side-by-side preview</h2>
+    <p class="lede">The same page, live, on a phone and on a desktop. Everything is clickable inside the frames.</p>
+    <div class="vbar">
+      <div class="seg" role="group" aria-label="Concept">
+        <button data-d="a" aria-pressed="true">A · Heritage Ivory</button>
+        <button data-d="b" aria-pressed="false">B · Night Drive</button>
+        <button data-d="c" aria-pressed="false">C · Concierge</button>
+      </div>
+      <label class="sr" for="pg">Page</label>
+      <select id="pg"></select>
+    </div>
+    <div class="stage">
+      <div class="phone"><div class="screen"><div class="sbar" id="sbar" aria-hidden="true"><span>9:41</span><svg width="58" height="12" viewBox="0 0 58 12" fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/><path d="M29 3.2a8 8 0 0 1 9 0l-1.2 1.4a6 6 0 0 0-6.6 0zM31 5.8a4.6 4.6 0 0 1 5 0L33.5 9z"/><rect x="42" y="2" width="13" height="8" rx="2.2" fill="none" stroke="currentColor"/><rect x="43.6" y="3.6" width="8.4" height="4.8" rx="1"/><rect x="56" y="4.5" width="1.5" height="3" rx=".6"/></svg></div><div class="scr"><iframe id="fm" title="Mobile preview" loading="lazy"></iframe></div></div></div>
+      <div>
+        <div class="desk">
+          <div class="chrome"><i></i><i></i><i></i><span class="url" id="url">sdcertified.com</span></div>
+          <div class="vp" id="vp"><iframe id="fd" title="Desktop preview" loading="lazy"></iframe></div>
+        </div>
+        <div class="open-row"><a class="btn red" id="openFull" href="#" target="_blank" rel="noopener">Open this page full screen</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="ph">
+  <div class="wrap">
+    <h2 id="ph">Every screen</h2>
+    <p class="lede">21 screens per concept, grouped by journey.</p>
+    <div class="pages" id="pages"></div>
+  </div>
+</section>
+
+<section aria-labelledby="val" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="val">Validated with five kinds of users</h2>
+    <p class="lede">Each concept was walked end-to-end by five user personas, and every issue they raised was fixed in a second round. Each score is the persona's average across clarity, guidance, control, trust and premium feel, out of 10, before the fixes.</p>
+    <div class="vtable" role="region" aria-label="Persona validation scores" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Persona</th><th scope="col">Their journey</th><th scope="col">A · Heritage</th><th scope="col">B · Night Drive</th><th scope="col">C · Concierge</th><th scope="col">Picked</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Rahul, 34 · first-time buyer, Kozhikode</th><td>Inspect a private seller's car, track, read report</td><td>7.8</td><td>6.6</td><td>8.0</td><td><b>C</b></td></tr>
+          <tr><th scope="row">Jayaram, 52 · NRI in Dubai</th><td>Book remotely for parents, pay from abroad, family on site</td><td>7.8</td><td>6.8</td><td>7.4</td><td><b>A</b></td></tr>
+          <tr><th scope="row">Priya, 29 · new-car buyer, Kochi</th><td>New Car PDI at the dealer; judges visual craft</td><td>7.0</td><td>5.8</td><td>7.2</td><td><b>C</b></td></tr>
+          <tr><th scope="row">Thomas, 63 · selling his car, Kottayam</th><td>Certify &amp; sell, reach a human, readability at 130% zoom</td><td>7.4</td><td>5.4</td><td>6.6</td><td><b>A</b></td></tr>
+          <tr><th scope="row">Fahad, 41 · luxury dealer, prospective partner</th><td>Brand, partner programme, listings, report credibility</td><td>7.2</td><td>6.6</td><td>6.2</td><td><b>A</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lede" style="margin-top:16px">Round 2 added the fixes: <b>New Car PDI as a full branch</b> (dealer picker, "not registered yet", handover time), booking details that carry through every step, international phone numbers and cards, family sharing, IST labels, self-serve cancel with the exact refund, buyer-focused report endings with a "What we couldn't test" list, a readability floor (no text under 12px, AA contrast), a labelled call button on every mobile screen, and removal of all unverified claims.</p>
+  </div>
+</section>
+
+<section aria-labelledby="ux" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="ux">What changed, and why</h2>
+    <p class="lede">The UX principles every concept was built and validated against.</p>
+    <div class="notes">
+      <div class="note"><h3>Someone is guiding me</h3><ul><li>Every step says where you are, what happens next and who is helping.</li><li>A human guide and call/WhatsApp are one tap away on every screen.</li><li>Tracking follows clear milestones, each sent on WhatsApp and push: Booked → Assigned → Arriving today → In progress → Report ready. The findings are revealed when the inspection is complete, so no real-time syncing is needed.</li></ul></div>
+      <div class="note"><h3>I'm in control</h3><ul><li>Edit any detail before paying; reschedule, cancel, change contact or share tracking yourself.</li><li>The 10-minute slot hold is visible, so nobody loses a slot by surprise.</li><li>Choose how you hear from us: WhatsApp, push, SMS fallback or email, for each event.</li></ul></div>
+      <div class="note"><h3>I feel safe</h3><ul><li>Prices are shown up front with GST included. There are no hidden charges.</li><li>The Suresh Drives seal appears wherever you make a decision. Reports show honest flaws.</li><li>The refund policy is written in plain words, and remote areas get a clear promised date.</li></ul></div>
+      <div class="note"><h3>Brand-led growth</h3><ul><li>The Suresh Drives heritage funnels customers into the SDCertified app, the only place to book.</li><li>Each finished report offers next steps: list this car, add SD Assure, or buy certified.</li><li>A partner programme for dealers, banks, NBFCs and insurers supports the scale-up.</li></ul></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">SDCertified is an offering of Suresh Drives LLP — India's first on-site car inspection company · Kozhikode, Kerala. Concept prototypes with mock data, built in HTML/CSS for review.</div></footer>
+
+<script>
+(function(){
+  var DESIGNS={a:'design-a-heritage',b:'design-b-night-drive',c:'design-c-concierge'};
+  var GROUPS=[
+    ['Public & brand',[['index','Welcome / landing'],['suresh-drives','Suresh Drives (parent brand)'],['partners','Partner with us']]],
+    ['App',[['home','Home (signed in)'],['browse','Buy — browse cars'],['vehicle','Vehicle detail'],['sell','Sell / get certified']]],
+    ['Book an inspection',[['book','1 · Choose inspection'],['book-car','2 · Car details'],['book-location','3 · Location'],['book-slot','4 · Date & session'],['checkout','5 · Review & pay'],['booking-confirmed','Booking confirmed']]],
+    ['Track & reports',[['track','Track inspection (milestones)'],['report-gle','Report · the end reveal (GLE)'],['inspections','My inspections'],['report','Report · certified car (BMW X4 M)'],['report-pdi','Report · New Car PDI (BMW i7)']]],
+    ['Account & help',[['notifications','Notifications'],['support','Help & guide'],['profile','Profile']]]
+  ];
+  var d='a', p='index';
+  var sel=document.getElementById('pg'), fm=document.getElementById('fm'), fd=document.getElementById('fd'), vp=document.getElementById('vp'), url=document.getElementById('url'), openFull=document.getElementById('openFull');
+  GROUPS.forEach(function(g){var og=document.createElement('optgroup');og.label=g[0];g[1].forEach(function(it){var o=document.createElement('option');o.value=it[0];o.textContent=it[1];og.appendChild(o);});sel.appendChild(og);});
+  function scale(){var w=vp.clientWidth||900;var s=w/1440;fd.style.transform='scale('+s+')';vp.style.height=Math.round(900*s)+'px';}
+  function load(){var src=DESIGNS[d]+'/'+p+'.html';fm.src=src;fd.src=src;openFull.href=src;url.textContent='sdcertified.com/'+(p==='index'?'':p);
+    document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.d===d));});sel.value=p;
+    var sb=document.getElementById('sbar');if(sb){sb.style.background=d==='b'?'#0A0C0E':(d==='a'?'#FAF8F4':'#F6F7F9');sb.style.color=d==='b'?'#fff':'#111';}}
+  document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){d=b.dataset.d;load();});});
+  document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){d=b.dataset.pick;load();document.getElementById('viewer').scrollIntoView({behavior:'smooth'});});});
+  sel.addEventListener('change',function(){p=sel.value;load();});
+  window.addEventListener('resize',scale);
+  var pages=document.getElementById('pages');
+  Object.keys(DESIGNS).forEach(function(k){var col=document.createElement('div');col.className='pcol';var names={a:'A · Heritage Ivory',b:'B · Night Drive',c:'C · Concierge'};
+    var h='<h3>'+names[k]+'</h3>';GROUPS.forEach(function(g){h+='<div class="grp">'+g[0]+'</div><ol>';g[1].forEach(function(it){h+='<li><a href="'+DESIGNS[k]+'/'+it[0]+'.html">'+it[1]+'</a></li>';});h+='</ol>';});col.innerHTML=h;pages.appendChild(col);});
+  scale();load();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Car details · Book · SDCertified</title>
+<meta name="description" content="Step 2 of 5 — tell us about the car. The price updates to the matching segment automatically, with GST shown.">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="book-car" data-shell="flow" data-step="2" data-back="book.html">
+
+<main id="main">
+  <div class="container flow">
+    <div class="flow__main">
+
+      <header class="flow__head">
+        <p class="eyebrow eyebrow--line">Step 2 of 5 · Car details</p>
+        <h1 class="balance">Tell us about <em>the car.</em></h1>
+        <p class="lede">The model decides the segment, and the segment decides the price — so you'll see the exact amount the moment you choose. Nothing is charged yet.</p>
+      </header>
+
+      <!-- I. Brand -->
+      <section class="flow-block" aria-labelledby="brand-title">
+        <div class="flow-block__title"><span class="roman">I.</span><h2 id="brand-title" style="font-family:var(--sans);font-size:var(--fs-h3);font-weight:700">Brand</h2></div>
+        <div class="brand-tiles" role="radiogroup" aria-labelledby="brand-title">
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Mercedes-Benz" checked data-sets="segment:Luxury · ₹5,999 + GST|total:₹7,079|gstline:₹5,999 + GST ₹1,079.82|tier-name:Luxury|tier-price:₹5,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--wide">Mercedes&#8209;Benz</span><span class="xs muted">Luxury</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="BMW" data-sets="segment:Luxury · ₹5,999 + GST|total:₹7,079|gstline:₹5,999 + GST ₹1,079.82|tier-name:Luxury|tier-price:₹5,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--bold">BMW</span><span class="xs muted">Luxury</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Audi" data-sets="segment:Luxury · ₹5,999 + GST|total:₹7,079|gstline:₹5,999 + GST ₹1,079.82|tier-name:Luxury|tier-price:₹5,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--caps">Audi</span><span class="xs muted">Luxury</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Land Rover" data-sets="segment:Luxury · ₹5,999 + GST|total:₹7,079|gstline:₹5,999 + GST ₹1,079.82|tier-name:Luxury|tier-price:₹5,999">
+            <span class="choice__radio"></span><span class="brand-word">Land Rover</span><span class="xs muted">Luxury</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Toyota" data-sets="segment:Premium · ₹4,999 + GST|total:₹5,899|gstline:₹4,999 + GST ₹899.82|tier-name:Premium|tier-price:₹4,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--caps">Toyota</span><span class="xs muted">Premium or Standard</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Skoda" data-sets="segment:Premium · ₹4,999 + GST|total:₹5,899|gstline:₹4,999 + GST ₹899.82|tier-name:Premium|tier-price:₹4,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--italic">Škoda</span><span class="xs muted">Premium or Standard</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Hyundai" data-sets="segment:Standard · ₹3,999 + GST|total:₹4,719|gstline:₹3,999 + GST ₹719.82|tier-name:Standard|tier-price:₹3,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--italic">Hyundai</span><span class="xs muted">Standard</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Maruti Suzuki" data-sets="segment:Standard · ₹3,999 + GST|total:₹4,719|gstline:₹3,999 + GST ₹719.82|tier-name:Standard|tier-price:₹3,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--caps" style="font-size:.75rem">Maruti Suzuki</span><span class="xs muted">Standard</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Mahindra" data-sets="segment:Standard · ₹3,999 + GST|total:₹4,719|gstline:₹3,999 + GST ₹719.82|tier-name:Standard|tier-price:₹3,999">
+            <span class="choice__radio"></span><span class="brand-word brand-word--bold" style="font-size:1rem">Mahindra</span><span class="xs muted">Standard or Premium</span>
+          </label>
+          <label class="choice choice--tile">
+            <input type="radio" name="brand" value="Other" data-sets="segment:Set after model|tier-name:—|tier-price:—">
+            <span class="choice__radio"></span><span class="brand-word">Other</span><span class="xs muted">40+ brands</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- II. Model & registration -->
+      <section class="flow-block" aria-labelledby="model-title">
+        <div class="flow-block__title"><span class="roman">II.</span><h2 id="model-title" style="font-family:var(--sans);font-size:var(--fs-h3);font-weight:700">Model &amp; registration</h2></div>
+        <div class="form-grid">
+          <div class="field span-2">
+            <label class="label" for="model">Model &amp; variant</label>
+            <select class="select" id="model" name="model" data-bind-input="car">
+              <option>Mercedes-Benz GLE 300d 4MATIC · 2021</option>
+              <option>Mercedes-Benz GLE 450 4MATIC · 2021</option>
+              <option>Mercedes-Benz GLS 450 4MATIC · 2021</option>
+              <option>Mercedes-Benz E 220d · 2021</option>
+              <option>Mercedes-Benz C 200 · 2021</option>
+            </select>
+          </div>
+          <div class="field span-2">
+            <label class="label" for="reg">Registration number</label>
+            <div class="plate"><span class="plate__ind" aria-hidden="true">IND</span><input id="reg" name="reg" value="KL 11 BH 7272" autocomplete="off" inputmode="text" maxlength="13" data-plate data-bind-input="reg" aria-describedby="reg-hint"></div>
+            <p class="hint hint--ok" id="reg-hint"><svg class="i" aria-hidden="true"><use href="#i-sparkle"></use></svg>We'll fetch the details from the RC — found: 2021 GLE 300d 4MATIC, diesel, registered in Kozhikode.</p>
+          </div>
+          <div class="field">
+            <label class="label" for="regdate">Date of registration</label>
+            <input class="input" type="date" id="regdate" name="regdate" value="2021-03-14">
+          </div>
+          <div class="field">
+            <label class="label" for="km">Odometer <span class="opt">(as told by the seller)</span></label>
+            <div class="input-icon"><svg class="i" aria-hidden="true"><use href="#i-gauge"></use></svg><input class="input num" id="km" name="km" value="38,600" inputmode="numeric"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- III. Price -->
+      <section class="flow-block" aria-labelledby="price-title">
+        <div class="flow-block__title"><span class="roman">III.</span><h2 id="price-title" style="font-family:var(--sans);font-size:var(--fs-h3);font-weight:700">Your price</h2></div>
+        <div class="card card--pad">
+          <div class="row between" style="align-items:flex-end">
+            <div>
+              <p class="eyebrow eyebrow--green">Matched automatically</p>
+              <p class="serif mt-1" style="font-size:1.6rem;color:var(--ink);line-height:1.15"><span data-bind="tier-name">Luxury</span> segment</p>
+            </div>
+            <p class="price price--xl"><span data-bind="tier-price">₹5,999</span> <small>+ GST</small></p>
+          </div>
+          <div class="tier-scale mt-3" aria-label="Price by segment">
+            <div><strong>Standard</strong><b class="num">₹3,999</b>Hatchbacks, sedans, compact SUVs</div>
+            <div><strong>Premium</strong><b class="num">₹4,999</b>Premium SUVs &amp; sedans</div>
+            <div class="is-active"><strong>Luxury</strong><b class="num">₹5,999</b>Luxury brands — this car</div>
+          </div>
+          <p class="small muted mt-3"><b class="strong">Why Luxury?</b> Mercedes-Benz models carry air suspension, more control modules and more electronics to scan — the inspection takes longer and needs our luxury-trained technicians. With 18% GST your total is <b class="strong num" data-bind="total">₹7,079</b>. No travel charges in Kozhikode.</p>
+        </div>
+      </section>
+
+      <!-- IV. Whose car -->
+      <section class="flow-block" aria-labelledby="whose-title">
+        <div class="flow-block__title"><span class="roman">IV.</span><h2 id="whose-title" style="font-family:var(--sans);font-size:var(--fs-h3);font-weight:700">Whose car is it?</h2></div>
+        <div class="grid grid-3" style="--gap:10px" role="radiogroup" aria-labelledby="whose-title">
+          <label class="choice"><input type="radio" name="whose" value="mine"><span class="choice__radio"></span><span class="choice__body"><span class="choice__title">Mine</span><span class="choice__sub">I own it or I'm about to</span></span></label>
+          <label class="choice"><input type="radio" name="whose" value="seller" checked><span class="choice__radio"></span><span class="choice__body"><span class="choice__title">A seller's</span><span class="choice__sub">Private owner</span></span></label>
+          <label class="choice"><input type="radio" name="whose" value="dealer"><span class="choice__radio"></span><span class="choice__body"><span class="choice__title">A dealer's</span><span class="choice__sub">Pre-owned showroom</span></span></label>
+        </div>
+
+        <div class="mt-3" data-seller-fields>
+          <div class="note mb-2"><svg class="i" aria-hidden="true"><use href="#i-info"></use></svg><p>We'll coordinate the visit with the seller directly and only share what's needed — your name and the slot. <b>The report is yours alone</b> unless you choose to share it.</p></div>
+          <div class="form-grid">
+            <div class="field">
+              <label class="label" for="seller">Seller's name</label>
+              <input class="input" id="seller" name="seller" value="Faisal" autocomplete="off">
+            </div>
+            <div class="field">
+              <label class="label" for="sellerphone">Seller's mobile</label>
+              <div class="input-icon"><svg class="i" aria-hidden="true"><use href="#i-phone"></use></svg><input class="input num" id="sellerphone" name="sellerphone" type="tel" value="+91 99460 55120"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cta-bar">
+        <button class="cta-bar__sum" type="button" data-sheet-open="ledger-sheet"><small>Your booking <svg class="i i--xs" aria-hidden="true"><use href="#i-chevron-up"></use></svg></small><b data-bind="total">₹7,079</b></button>
+        <a class="btn btn--ghost cta-bar__back" href="book.html">Back</a>
+        <span class="cta-bar__note"><svg class="i i--sm text-green" aria-hidden="true"><use href="#i-lock"></use></svg>Price locked once you continue.</span>
+        <a class="btn btn--primary btn--lg" href="book-location.html">Continue <svg class="i" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </div>
+    </div>
+
+    <aside class="flow__aside sheet sheet--inline-desktop" id="ledger-sheet" aria-label="Your booking summary">
+      <div class="sheet__grabber" aria-hidden="true"></div>
+      <div class="sheet__head only-mobile"><h2>Your booking</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close summary"><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg></button></div>
+
+      <div class="ledger">
+        <svg class="seal ledger__seal" viewBox="0 0 100 100" style="--size:180px" aria-hidden="true"><use href="#seal"></use></svg>
+        <div class="ledger__head">
+          <div><p class="eyebrow">Your booking</p><p class="ledger__title">Inspection ledger</p></div>
+          <span class="serial ledger__serial">Draft · not yet booked</span>
+        </div>
+        <ul class="ledger__lines">
+          <li class="ledger__line is-filled"><span class="ledger__k">Service</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="service">Used Car Pre-Purchase · 300+ points</span></li>
+          <li class="ledger__line is-filled is-new"><span class="ledger__k">Segment</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="segment">Luxury · ₹5,999 + GST</span></li>
+          <li class="ledger__line is-filled is-new"><span class="ledger__k">Car</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="car">Mercedes-Benz GLE 300d 4MATIC · 2021</span></li>
+          <li class="ledger__line is-filled is-new"><span class="ledger__k">Registration</span><span class="ledger__lead"></span><span class="ledger__v num" data-bind="reg">KL 11 BH 7272</span></li>
+          <li class="ledger__line is-pending"><span class="ledger__k">Location</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="location">next step</span></li>
+          <li class="ledger__line is-pending"><span class="ledger__k">Contact</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="contact">next step</span></li>
+          <li class="ledger__line is-pending"><span class="ledger__k">Slot</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="slot">step 4</span></li>
+          <li class="ledger__line is-pending"><span class="ledger__k">Payment</span><span class="ledger__lead"></span><span class="ledger__v" data-bind="payment">step 5</span></li>
+        </ul>
+        <div class="ledger__perf" aria-hidden="true"></div>
+        <div class="ledger__total">
+          <div><p class="eyebrow">Total</p><p class="xs muted num" data-bind="gstline">₹5,999 + GST ₹1,079.82</p></div>
+          <p class="price num" data-bind="total">₹7,079</p>
+        </div>
+        <p class="ledger__foot"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg>GST 18% included. No travel charges in Kozhikode. Nothing charged until step 5.</p>
+      </div>
+
+      <div class="next mt-3">
+        <p class="next__title">What happens next</p>
+        <ol>
+          <li><b>Where should we go?</b> Pin the seller's location — we'll confirm it's in our service area.</li>
+          <li><b>When?</b> Choose a morning or afternoon session.</li>
+          <li><b>Pay &amp; relax.</b> A technician is assigned within a day.</li>
+        </ol>
+      </div>
+
+      <div class="card card--flat mt-3" style="padding:16px 18px">
+        <div class="guide">
+          <span class="avatar avatar--paper avatar--online">AS</span>
+          <p class="guide__text"><b>Anjali, your booking guide</b>Can't find the model? I'll add it — replies in ~2 min</p>
+          <a class="icon-btn icon-btn--line" style="margin-left:auto" href="https://wa.me/919895441213" aria-label="WhatsApp Anjali"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"></use></svg></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

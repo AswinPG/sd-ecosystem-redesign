@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notifications · SDCertified</title>
+<meta name="description" content="Your SDCertified notifications — push and WhatsApp mirrored — and channel preferences per event.">
+<meta name="theme-color" content="#0A0C0E">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.SDReady)document.documentElement.classList.remove('js')},2500)</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="notifications" data-shell="app" data-title="Notifications" data-back="home.html">
+<main id="main" class="app-main">
+  <div class="wrap">
+    <header class="row between load" style="--gap:16px;align-items:flex-end">
+      <div><span class="eyebrow">3 unread · push + WhatsApp mirrored</span><h1 class="h1 mt-2">Notifications</h1></div>
+      <button class="btn btn-ghost btn-sm" type="button" data-toast="All notifications marked as read">Mark all read</button>
+    </header>
+
+    <div class="split mt-6">
+      <div style="min-width:0">
+        <div class="seg" role="group" aria-label="Filter notifications" data-filter-list="nlist" style="max-width:100%">
+          <button type="button" data-cat="all" aria-pressed="true">All</button>
+          <button type="button" data-cat="insp" aria-pressed="false">Inspections</button>
+          <button type="button" data-cat="pay" aria-pressed="false">Payments</button>
+          <button type="button" data-cat="cars" aria-pressed="false">Cars</button>
+          <button type="button" data-cat="offers" aria-pressed="false">Offers</button>
+        </div>
+
+        <div id="nlist" class="mt-6" aria-live="polite">
+          <section data-day aria-labelledby="d1">
+            <h2 id="d1" class="panel-label">Today · Sat 21 Nov</h2>
+            <div class="nl-item unread" data-cat="insp"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span><div><b>Inspection started</b><p>Nikhil started at 9:31 AM. A full inspection takes about 3–4 hours — we’ll message you the moment your report is ready.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></span><div class="mt-3"><a class="link small" href="track.html">Track inspection<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div></div><span class="when">9:31 AM</span></div>
+            <div class="nl-item unread" data-cat="insp"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-nav"/></svg></span><div><b>Arriving today</b><p>Nikhil will reach between 9:00 and 9:30 AM, near Hilite Mall. We’ve let Faisal (seller) know.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag a"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>Push failed · SMS fallback</span></span></div><span class="when">8:10 AM</span></div>
+            <div class="nl-item unread" data-cat="cars"><span class="nl-ic r"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span><div><b>New match for “Luxury SUVs under ₹1.5 Cr”</b><p>A Gold-certified 2022 Range Rover Velar in Kochi · ₹82 L · score 91.</p><span class="chan"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push</span></span><div class="mt-3"><a class="link small" href="browse.html">View car<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div></div><span class="when">7:02 AM</span></div>
+          </section>
+
+          <section data-day class="mt-8" aria-labelledby="d2">
+            <h2 id="d2" class="panel-label">Sun 15 Nov</h2>
+            <div class="nl-item" data-cat="insp"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg></span><div><b>Technician assigned · SDB-24817</b><p>Nikhil Raj (4.9★ · 1,240 inspections · Gulf-experienced) will inspect your GLE 300d on Sat 21 Nov.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></span></div><span class="when">6:05 PM</span></div>
+          </section>
+
+          <section data-day class="mt-8" aria-labelledby="d3">
+            <h2 id="d3" class="panel-label">Sat 14 Nov</h2>
+            <div class="nl-item" data-cat="insp"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg></span><div><b>Booking confirmed · SDB-24817</b><p>Sat 21 Nov, 9 AM – 1 PM · near Hilite Mall, Thondayad Bypass.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push · Delivered</span></span></div><span class="when">10:42 AM</span></div>
+            <div class="nl-item" data-cat="pay"><span class="nl-ic"><svg class="i" aria-hidden="true"><use href="#i-receipt"/></svg></span><div><b>Payment received · ₹7,079</b><p>UPI (Google Pay) · invoice INV-2026-11-0417 sent by email.</p><span class="chan"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email · Sent</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push</span></span><div class="mt-3"><a class="link small" href="profile.html#payments">View invoice<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div></div><span class="when">10:42 AM</span></div>
+            <div class="nl-item" data-cat="pay"><span class="nl-ic"><svg class="i" aria-hidden="true"><use href="#i-timer"/></svg></span><div><b>Slot held for 10 minutes</b><p>We held Sat 21 Nov, Morning while you paid. Hold released into your booking.</p><span class="chan"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-smartphone"/></svg>Push</span></span></div><span class="when">10:33 AM</span></div>
+          </section>
+
+          <section data-day class="mt-8" aria-labelledby="d4">
+            <h2 id="d4" class="panel-label">Earlier</h2>
+            <div class="nl-item" data-cat="offers"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg></span><div><b>SD Assure for your BMW X4 M</b><p>Your Gold-certified X4 is eligible — 12 mo / 15,000 km plans available.</p><span class="chan"><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email</span></span></div><span class="when">12 Oct</span></div>
+            <div class="nl-item" data-cat="insp"><span class="nl-ic g"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><div><b>Report ready · SDR-18842</b><p>2022 BMW X4 M Competition · 92/100 · Gold recommended.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span><span class="tag"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email · Sent</span></span><div class="mt-3"><a class="link small" href="report.html">Open report<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div></div><span class="when">3 Oct</span></div>
+            <div class="nl-item" data-cat="insp"><span class="nl-ic a"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg></span><div><b>Couldn’t complete · SDB-23312</b><p>The seller was unavailable at Calicut Beach Rd. Rebooking is free.</p><span class="chan"><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp · Delivered</span></span><div class="mt-3"><a class="link small" href="inspections.html">Rebook free<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div></div><span class="when">9 Sep</span></div>
+          </section>
+        </div>
+      </div>
+
+      <aside class="stack sticky" style="--gap:16px" aria-label="Previews">
+        <section class="card card-pad" aria-labelledby="pv-h">
+          <h2 id="pv-h" class="h4 mb-4">How it looks on your phone</h2>
+          <div class="push"><span class="app-ic"><img src="../assets/logo-sdcertified-mark.png" alt=""></span><div class="ph"><div class="top"><span>SDCertified</span><span>9:31 AM</span></div><b>Inspection started</b>Nikhil started at 9:31 AM. We’ll message you when your report is ready.</div></div>
+          <div class="wa mt-4">
+            <div class="wa-h"><span class="avatar"><img src="../assets/logo-sureshdrives-light.png" alt=""></span><div><b>Suresh Drives <span class="vf"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></b><small>Business account</small></div></div>
+            <div class="wa-body"><span class="wa-day">Today</span><div class="bubble">Good morning Arjun — Nikhil will reach between <b>9:00 and 9:30 AM</b> for your GLE 300d inspection (SDB-24817).<span class="meta">8:10 AM</span><span class="cta"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Track inspection</span></div></div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- Channel preferences -->
+    <section class="card card-pad mt-8" id="prefs" aria-labelledby="pf-h">
+      <div class="card-h"><div><span class="eyebrow">Channel preferences</span><h2 id="pf-h" class="h3 mt-2">Choose how we reach you</h2></div><span class="tag g"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp is primary</span></div>
+      <p class="small tx2 mt-0">If WhatsApp or push fails, we send an SMS so you never miss a milestone.</p>
+      <div class="table-scroll">
+        <table class="pref" style="min-width:620px">
+          <thead><tr><th scope="col">Event</th><th scope="col">WhatsApp</th><th scope="col">Push</th><th scope="col">SMS fallback</th><th scope="col">Email</th></tr></thead>
+          <tbody>
+            <tr><td><b>Booked</b><span>Confirmation &amp; invoice</span></td><td><label class="switch"><input type="checkbox" checked data-label="Booked · WhatsApp" aria-label="Booked via WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Booked · Push" aria-label="Booked via push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Booked · SMS fallback" aria-label="Booked via SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Booked · Email" aria-label="Booked via email"><span></span></label></td></tr>
+            <tr><td><b>Assigned</b><span>Your technician</span></td><td><label class="switch"><input type="checkbox" checked data-label="Assigned · WhatsApp" aria-label="Assigned via WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Assigned · Push" aria-label="Assigned via push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Assigned · SMS fallback" aria-label="Assigned via SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" data-label="Assigned · Email" aria-label="Assigned via email"><span></span></label></td></tr>
+            <tr><td><b>Arriving today</b><span>Arrival window</span></td><td><label class="switch"><input type="checkbox" checked data-label="Arriving today · WhatsApp" aria-label="Arriving today via WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Arriving today · Push" aria-label="Arriving today via push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Arriving today · SMS fallback" aria-label="Arriving today via SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" data-label="Arriving today · Email" aria-label="Arriving today via email"><span></span></label></td></tr>
+            <tr><td><b>Completed</b><span>Report ready</span></td><td><label class="switch"><input type="checkbox" checked data-label="Completed · WhatsApp" aria-label="Completed via WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Completed · Push" aria-label="Completed via push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Completed · SMS fallback" aria-label="Completed via SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Completed · Email" aria-label="Completed via email"><span></span></label></td></tr>
+            <tr><td><b>Reassigned</b><span>Technician or slot changed</span></td><td><label class="switch"><input type="checkbox" checked data-label="Reassigned · WhatsApp" aria-label="Reassigned via WhatsApp"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Reassigned · Push" aria-label="Reassigned via push"><span></span></label></td><td><label class="switch"><input type="checkbox" checked data-label="Reassigned · SMS fallback" aria-label="Reassigned via SMS fallback"><span></span></label></td><td><label class="switch"><input type="checkbox" data-label="Reassigned · Email" aria-label="Reassigned via email"><span></span></label></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div class="row between" style="--gap:12px">
+        <span class="row row-nw" style="--gap:12px"><span class="nl-ic"><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg></span><span><b>Offers &amp; car alerts</b><br><span class="tiny muted">Saved-search matches, SD Assure offers · push only</span></span></span>
+        <label class="switch"><input type="checkbox" checked data-label="Offers &amp; car alerts" aria-label="Offers and car alerts"><span></span></label>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

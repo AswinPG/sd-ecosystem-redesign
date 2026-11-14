@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book an inspection · Step 4 · Date &amp; session · SDCertified</title>
+<meta name="description" content="Pick a date and a morning or afternoon session. We hold your slot for 10 minutes while you pay.">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="book-slot" data-shell="flow" data-step="4" data-back="book-location.html" data-aura="green">
+<main id="main" class="wrap">
+  <div class="layout-aside" data-slot-picker>
+    <div class="flow-body">
+      <header class="flow-head stagger">
+        <span class="eyebrow">Near Hilite Mall, Thondayad Bypass</span>
+        <h1>When can we see the car?</h1>
+      </header>
+
+      <div class="guide">
+        <span class="meera" aria-hidden="true">M</span>
+        <div class="guide-bubble">
+          <div class="guide-name"><b>Meera</b> · your Suresh Drives guide · <span class="online">online</span></div>
+          <p>Pick a time when the seller can hand over the keys for ~3–4 hours. I'll send them a reminder too.</p>
+          <p class="small muted">Tip: mornings give the best daylight for paint and panel checks.</p>
+        </div>
+      </div>
+
+      <!-- Suggestion -->
+      <div class="card card-pad row start" style="--gap:14px; border:1px dashed var(--green)">
+        <span class="icon-tile green"><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg></span>
+        <div class="grow">
+          <b class="strong">Suggested: Sat 21 Nov, Morning</b>
+          <p class="small muted">3 slots left, and weekend mornings usually suit sellers best. Faisal's number is already on the booking.</p>
+        </div>
+      </div>
+
+      <!-- Calendar -->
+      <section class="card card-pad" aria-labelledby="cal-h">
+        <div class="row between row-wrap" style="--gap:10px">
+          <h2 id="cal-h" class="h3">Pick a date</h2>
+          <div class="legend" aria-hidden="true">
+            <span><i style="background:var(--green-bg); border:1.5px solid var(--green)"></i>Open</span>
+            <span><i style="background:var(--amber-bg); border:1.5px solid var(--amber-fill)"></i>Few left</span>
+            <span><i style="border:1.5px dashed #B7BDC6"></i>Full</span>
+          </div>
+        </div>
+        <p class="small muted mt-1">Next 30 days · 15 Nov – 14 Dec 2026</p>
+        <div class="cal mt-2" role="group" aria-label="Available dates">
+          <span class="cal-dow" aria-hidden="true">Sun</span><span class="cal-dow" aria-hidden="true">Mon</span><span class="cal-dow" aria-hidden="true">Tue</span><span class="cal-dow" aria-hidden="true">Wed</span><span class="cal-dow" aria-hidden="true">Thu</span><span class="cal-dow" aria-hidden="true">Fri</span><span class="cal-dow" aria-hidden="true">Sat</span>
+          <button class="day" type="button" disabled aria-label="Sunday 15 November, full">15<small>Full</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Mon 16 Nov" aria-label="Monday 16 November, open">16<small>Open</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Tue 17 Nov" aria-label="Tuesday 17 November, few left">17<small>Few left</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Wed 18 Nov" aria-label="Wednesday 18 November, open">18<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Thu 19 Nov" aria-label="Thursday 19 November, open">19<small>Open</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Fri 20 Nov" aria-label="Friday 20 November, few left">20<small>Few left</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Sat 21 Nov" aria-label="Saturday 21 November, 3 left">21<small>3 left</small></button>
+          <button class="day" type="button" disabled aria-label="Sunday 22 November, full">22<small>Full</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Mon 23 Nov" aria-label="Monday 23 November, open">23<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Tue 24 Nov" aria-label="Tuesday 24 November, open">24<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Wed 25 Nov" aria-label="Wednesday 25 November, open">25<small>Open</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Thu 26 Nov" aria-label="Thursday 26 November, few left">26<small>Few left</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Fri 27 Nov" aria-label="Friday 27 November, open">27<small>Open</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Sat 28 Nov" aria-label="Saturday 28 November, few left">28<small>Few left</small></button>
+          <button class="day" type="button" disabled aria-label="Sunday 29 November, full">29<small>Full</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Mon 30 Nov" aria-label="Monday 30 November, open">30<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Tue 1 Dec" aria-label="Tuesday 1 December, open"><span class="mo">DEC</span>1<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Wed 2 Dec" aria-label="Wednesday 2 December, open">2<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Thu 3 Dec" aria-label="Thursday 3 December, open">3<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Fri 4 Dec" aria-label="Friday 4 December, open">4<small>Open</small></button>
+          <button class="day few" type="button" aria-pressed="false" data-label="Sat 5 Dec" aria-label="Saturday 5 December, few left">5<small>Few left</small></button>
+          <button class="day" type="button" disabled aria-label="Sunday 6 December, full">6<small>Full</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Mon 7 Dec" aria-label="Monday 7 December, open">7<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Tue 8 Dec" aria-label="Tuesday 8 December, open">8<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Wed 9 Dec" aria-label="Wednesday 9 December, open">9<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Thu 10 Dec" aria-label="Thursday 10 December, open">10<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Fri 11 Dec" aria-label="Friday 11 December, open">11<small>Open</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Sat 12 Dec" aria-label="Saturday 12 December, open">12<small>Open</small></button>
+          <button class="day" type="button" disabled aria-label="Sunday 13 December, full">13<small>Full</small></button>
+          <button class="day" type="button" aria-pressed="false" data-label="Mon 14 Dec" aria-label="Monday 14 December, open">14<small>Open</small></button>
+        </div>
+      </section>
+
+      <!-- Sessions -->
+      <section class="card card-pad stack" aria-labelledby="ses-h">
+        <div class="row between"><h2 id="ses-h" class="h3">Morning or afternoon?</h2><span class="small muted">for <b class="strong" data-sessions-for>your date</b></span></div>
+        <div class="grid g-2" style="--gap:12px">
+          <label class="choice session-card"><input type="radio" name="session" value="morning" data-label="Morning"><span class="choice-card"><span class="icon-tile amber"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg></span><span class="grow"><b class="strong" style="display:block; font-size:1.05rem">Morning</b><span class="small muted num">9:00 AM – 1:00 PM</span><span class="tiny txt-green" style="display:block; font-weight:700; margin-top:4px">Best daylight · 3 left</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+          <label class="choice session-card"><input type="radio" name="session" value="afternoon" data-label="Afternoon"><span class="choice-card"><span class="icon-tile"><svg class="i" aria-hidden="true"><use href="#i-sunset"/></svg></span><span class="grow"><b class="strong" style="display:block; font-size:1.05rem">Afternoon</b><span class="small muted num">2:00 PM – 6:00 PM</span><span class="tiny txt-amber" style="display:block; font-weight:700; margin-top:4px">2 left</span></span><span class="choice-check"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span></span></label>
+        </div>
+        <p class="hint"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>The technician arrives within the session window. You'll get their name the day before, and a 30-minute arrival window on the morning.</p>
+      </section>
+
+      <!-- Hold -->
+      <div class="hold" data-hold hidden aria-live="polite">
+        <div class="ring" aria-hidden="true"><svg viewBox="0 0 120 120"><circle class="ring-track" cx="60" cy="60" r="46"/><circle class="ring-fill" cx="60" cy="60" r="46" pathLength="100" style="--p:100"/></svg></div>
+        <p class="hold-text" data-hold-msg>We're holding <b data-hold-label>Sat 21 Nov, Morning</b> for you. No one else can book it while you pay.</p>
+        <span class="hold-time" data-hold-time>10:00</span>
+      </div>
+
+      <!-- Preferences & reassurance -->
+      <section class="card card-pad stack" aria-label="Reminders and policy" style="--gap:14px">
+        <label class="row between" style="cursor:pointer; --gap:14px">
+          <span class="row" style="--gap:12px"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span><b class="strong">Notify me on WhatsApp</b><span class="small muted" style="display:block">Booking, technician, arriving today and report ready</span></span></span>
+          <span class="switch"><input type="checkbox" checked aria-label="Notify me on WhatsApp"><span></span></span>
+        </label>
+        <hr style="margin:0">
+        <ul class="stack small" style="--gap:10px">
+          <li class="row" style="--gap:10px"><svg class="i i-sm txt-green" aria-hidden="true"><use href="#i-refresh"/></svg><span><b class="strong">Free reschedule</b> up to 12 hours before your session</span></li>
+          <li class="row" style="--gap:10px"><svg class="i i-sm txt-green" aria-hidden="true"><use href="#i-shield"/></svg><span><b class="strong">Full refund</b> if you cancel 24 hours or more before</span></li>
+          <li class="row" style="--gap:10px"><svg class="i i-sm txt-green" aria-hidden="true"><use href="#i-key"/></svg><span>Seller not there on the day? <b class="strong">Free rebooking</b>.</span></li>
+        </ul>
+      </section>
+
+      <div class="cta-bar">
+        <div class="cta-sum"><strong>₹5,999 + GST</strong><span>Held for <span data-hold-inline>10:00</span> once you pick</span></div>
+        <a class="btn btn-ghost m-hide" href="book-location.html"><svg class="i" aria-hidden="true"><use href="#i-arrow-l"/></svg>Back</a>
+        <a class="btn btn-primary btn-lg" href="checkout.html" data-continue aria-disabled="true">Continue<svg class="i" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+
+    <aside class="stack sticky-aside" style="--gap:16px; padding-top:clamp(20px,4vw,44px)" aria-label="Your booking">
+      <section class="card card-pad" aria-labelledby="sum-h">
+        <div class="card-title" style="margin-bottom:4px"><h2 id="sum-h" class="h4">Your booking</h2><span class="badge">Step 4 of 5</span></div>
+        <ul>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Service</span><b>Used Car Pre-Purchase</b></div><a href="book.html">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Car</span><b>2021 Mercedes-Benz GLE 300d · KL 11 BH 7272</b></div><a href="book-car.html">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><span class="tiny muted">Location</span><b>Near Hilite Mall, Thondayad Bypass</b></div><a href="book-location.html">Edit</a></li>
+          <li class="sum-row"><span class="icon-tile red sm"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><span class="tiny muted">Date &amp; session</span><b data-sum="date" class="muted">Pick a date</b></div><span></span></li>
+        </ul>
+        <div class="card-sunk mt-2" style="padding:14px"><div class="row between"><span class="small muted">Luxury tier</span><b class="strong num">₹5,999 + GST</b></div></div>
+      </section>
+      <section class="card next" aria-labelledby="next-h">
+        <div class="next-head"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span><h2 id="next-h">What happens next</h2></div>
+        <ol>
+          <li><div><b>Review and pay</b><span>UPI, card, netbanking — or a link for family to pay.</span></div></li>
+          <li><div><b>Technician assigned</b><span>Usually by 6 PM the next day.</span></div></li>
+          <li><div><b>Arriving today</b><span>A 30-minute arrival window that morning.</span></div></li>
+        </ol>
+      </section>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My inspections · SDCertified</title>
+<meta name="description" content="All your Suresh Drives inspections — in progress, upcoming, completed and anything that needs your attention.">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="inspections" data-shell="app" data-title="My inspections" data-aura="green">
+<main id="main" class="wrap">
+  <section class="page-head">
+    <div class="row between row-wrap" style="--gap:16px">
+      <div>
+        <h1>My inspections</h1>
+        <p class="lead">Every car we've checked for you, in one wallet. Reports stay here for good — share them with a buyer, bank or insurer anytime.</p>
+      </div>
+      <a class="btn btn-primary" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Book an inspection</a>
+    </div>
+  </section>
+
+  <div class="layout-aside">
+    <div>
+      <div class="row between row-wrap" style="--gap:12px">
+        <div class="seg" role="tablist" aria-label="Filter inspections" data-tabs>
+          <button role="tab" id="t-live" aria-controls="p-live" aria-selected="true">Upcoming &amp; in progress <span class="count">2</span></button>
+          <button role="tab" id="t-done" aria-controls="p-done" aria-selected="false" tabindex="-1">Completed <span class="count">2</span></button>
+          <button role="tab" id="t-attn" aria-controls="p-attn" aria-selected="false" tabindex="-1">Needs attention <span class="count">1</span></button>
+        </div>
+      </div>
+
+      <!-- UPCOMING & IN PROGRESS -->
+      <section id="p-live" role="tabpanel" aria-labelledby="t-live" class="mt-3">
+        <div class="row between mb-2"><p class="small muted">Tap a card to bring it forward</p><button class="btn btn-sm btn-ghost" type="button" data-wallet-toggle="#w-live" aria-pressed="false"><svg class="i i-sm" aria-hidden="true"><use href="#i-layers"/></svg><span data-label>Spread cards</span></button></div>
+        <div class="wallet" id="w-live">
+          <article class="pass pass-amber">
+            <div class="pass-bg"><img src="../assets/jeep-rubicon.jpg" alt=""></div>
+            <div class="pass-top"><span class="eyebrow">Visiting team · Wayanad</span><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-hourglass"/></svg>Remote pending</span></div>
+            <h3>2018 Jeep Wrangler Rubicon</h3>
+            <p class="pass-meta">Kalpetta, Wayanad · requested 12 Nov</p>
+            <div class="row mt-2" style="--gap:6px; max-width:260px" aria-hidden="true"><span class="bar grow" style="background:rgba(255,255,255,.18)"><span style="--v:100%; background:#F5A524"></span></span><span class="bar grow" style="background:rgba(255,255,255,.18)"><span style="--v:100%; background:#F5A524"></span></span><span class="bar grow" style="background:rgba(255,255,255,.18)"><span style="--v:0%"></span></span></div>
+            <div class="pass-row">
+              <div class="pass-field"><span>Status</span><b>2 of 3 requests gathered</b><p class="tiny" style="color:rgba(255,255,255,.75)">Date confirmed by Thu 19 Nov at the latest</p></div>
+              <button class="btn btn-sm" type="button" data-sheet="batch-sheet">See batch status</button>
+            </div>
+          </article>
+          <article class="pass pass-live">
+            <div class="pass-bg"><img src="../assets/mercedes-gle-showroom.jpg" alt=""></div>
+            <div class="pass-top"><span class="eyebrow">SDB-24817 · Used car · Luxury</span><span class="badge live"><span class="live-dot"></span>In progress</span></div>
+            <h3>2021 Mercedes-Benz GLE 300d 4MATIC</h3>
+            <p class="pass-meta">KL 11 BH 7272 · Sat 21 Nov, Morning · near Hilite Mall</p>
+            <p class="tiny mt-2" style="color:rgba(255,255,255,.82); max-width:380px">Nikhil started at 9:31 AM. A full inspection takes about 3–4 hours — we'll WhatsApp you the moment the report is ready.</p>
+            <div class="pass-row">
+              <div class="row" style="--gap:22px">
+                <div class="pass-field"><span>Technician</span><b>Nikhil Raj · 4.9★</b></div>
+                <div class="pass-field m-hide"><span>Report expected</span><b>~1:30 PM</b></div>
+              </div>
+              <a class="btn btn-sm" href="track.html">Track inspection</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- COMPLETED -->
+      <section id="p-done" role="tabpanel" aria-labelledby="t-done" class="mt-3" hidden>
+        <div class="row between mb-2"><p class="small muted">2 reports ready</p><button class="btn btn-sm btn-ghost" type="button" data-wallet-toggle="#w-done" aria-pressed="false"><svg class="i i-sm" aria-hidden="true"><use href="#i-layers"/></svg><span data-label>Spread cards</span></button></div>
+        <div class="wallet" id="w-done">
+          <article class="pass pass-pdi">
+            <div class="pass-bg"><img src="../assets/bmw-i7-white.jpg" alt=""></div>
+            <div class="pass-top"><span class="eyebrow">New Car PDI · 28 Aug 2026</span><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Completed</span></div>
+            <h3>2026 BMW i7 xDrive60</h3>
+            <p class="pass-meta">At BMW EVM Autokraft, Kochi · 129 of 132 checks passed</p>
+            <ul class="tiny mt-2 stack" style="--gap:4px; color:rgba(255,255,255,.85)">
+              <li class="row" style="--gap:6px"><svg class="i i-sm" style="color:#F5C26B" aria-hidden="true"><use href="#i-alert-c"/></svg>Minor swirl marks, rear bumper</li>
+              <li class="row" style="--gap:6px"><svg class="i i-sm" style="color:#F5C26B" aria-hidden="true"><use href="#i-alert-c"/></svg>Front-right tyre pressure low</li>
+              <li class="row" style="--gap:6px"><svg class="i i-sm" style="color:#F5C26B" aria-hidden="true"><use href="#i-alert-c"/></svg>Infotainment software update pending</li>
+            </ul>
+            <div class="pass-row">
+              <div class="pass-field"><span>Advisories</span><b>3 minor · shared with the dealer</b></div>
+              <a class="btn btn-sm" href="report.html">View PDI report</a>
+            </div>
+          </article>
+          <article class="pass pass-gold">
+            <div class="pass-bg"><img src="../assets/bmw-x4m-green.jpg" alt=""></div>
+            <div class="pass-top"><span class="eyebrow">Report SDR-18842 · 3 Oct 2026</span><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-gem"/></svg>Gold</span></div>
+            <h3>2022 BMW X4 M Competition</h3>
+            <p class="pass-meta">KL 07 CU 9090 · inspected by Nikhil Raj</p>
+            <div class="pass-row">
+              <div class="row" style="--gap:22px">
+                <div class="pass-field"><span>Score</span><b style="font-size:1.6rem; letter-spacing:-.03em">92<span style="font-size:.8rem; opacity:.7">/100</span></b></div>
+                <div class="pass-field"><span>Fair price</span><b>₹1.05–1.14 Cr</b></div>
+              </div>
+              <a class="btn btn-sm" href="report.html">View report</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- NEEDS ATTENTION -->
+      <section id="p-attn" role="tabpanel" aria-labelledby="t-attn" class="mt-3" hidden>
+        <article class="pass pass-red">
+          <div class="pass-bg"><img src="../assets/audi-q7-black.jpg" alt=""></div>
+          <div class="pass-top"><span class="eyebrow">9 Sep 2026 · Calicut Beach Rd</span><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>Couldn't complete</span></div>
+          <h3>2017 Audi Q7 45 TDI</h3>
+          <p class="pass-meta">Reason: Seller was unavailable at the location</p>
+          <div class="pass-row">
+            <div class="pass-field"><span>Your options</span><b>Free rebooking — no charge</b></div>
+            <a class="btn btn-sm" href="book-slot.html">Rebook free</a>
+          </div>
+        </article>
+        <div class="guide mt-3">
+          <span class="meera meera-sm" aria-hidden="true">M</span>
+          <div class="guide-bubble"><p class="small">Sorry this one didn't happen, Arjun — it wasn't your fault. Your payment carries over: pick a new date and I'll confirm with the seller before the technician leaves. Prefer a refund instead? <a class="link-red" style="font-weight:700" href="support.html">Ask me</a>.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="stack sticky-aside" style="--gap:16px" aria-label="Summary">
+      <section class="card card-pad">
+        <h2 class="h4">At a glance</h2>
+        <div class="grid g-2 mt-2" style="--gap:10px">
+          <div class="card-sunk" style="padding:14px"><b class="strong" style="font-size:1.5rem">5</b><p class="tiny muted">Inspections booked</p></div>
+          <div class="card-sunk" style="padding:14px"><b class="strong" style="font-size:1.5rem">2</b><p class="tiny muted">Reports ready</p></div>
+          <div class="card-sunk" style="padding:14px"><b class="strong txt-green" style="font-size:1.5rem">1</b><p class="tiny muted">In progress</p></div>
+          <div class="card-sunk" style="padding:14px"><b class="strong txt-amber" style="font-size:1.5rem">1</b><p class="tiny muted">Free rebooking</p></div>
+        </div>
+      </section>
+      <section class="card card-pad">
+        <div class="guide"><span class="meera meera-sm" aria-hidden="true">M</span><div><p class="small"><b class="strong">Meera</b> · your guide</p><p class="small muted mt-1">Your X4 M scored 92 — good enough for Gold. If you're thinking of selling, I can list it with its report attached.</p><a class="link link-red small" href="sell.html">List it on SDCertified <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></div></div>
+      </section>
+      <a class="card card-pad card-hover row" style="--gap:14px" href="suresh-drives.html">
+        <img src="../assets/logo-sureshdrives-dark.png" alt="Suresh Drives" width="58" height="38" style="width:58px">
+        <span class="small muted grow">Every inspection is carried out by Suresh Drives LLP technicians.</span>
+        <svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg>
+      </a>
+    </aside>
+  </div>
+
+  <!-- Batch sheet -->
+  <div class="sheet" id="batch-sheet" role="dialog" aria-modal="true" aria-labelledby="bs-h">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head"><h2 id="bs-h" class="h3">Wayanad visiting team</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+    <p class="muted">Your area is served by a visiting team, so we gather requests and travel together — it keeps the price the same as in town.</p>
+    <div class="card-sunk mt-2" style="padding:16px">
+      <div class="row between"><b class="strong">2 of 3 requests gathered</b><span class="badge badge-amber"><svg class="i" aria-hidden="true"><use href="#i-hourglass"/></svg>Gathering</span></div>
+      <div class="row mt-2" style="--gap:6px" aria-hidden="true"><span class="bar grow amber"><span style="--v:100%"></span></span><span class="bar grow amber"><span style="--v:100%"></span></span><span class="bar grow"><span style="--v:0%"></span></span></div>
+      <ol class="timeline mt-3">
+        <li class="tl done"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><p class="tl-title">Your request</p><p class="tl-meta">12 Nov · Jeep Wrangler Rubicon, Kalpetta</p></div></li>
+        <li class="tl done"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><div><p class="tl-title">Second request in Wayanad</p><p class="tl-meta">13 Nov · Sulthan Bathery</p></div></li>
+        <li class="tl warn"><span class="tl-dot"><svg class="i" aria-hidden="true"><use href="#i-hourglass"/></svg></span><div><p class="tl-title">Date confirmed</p><p class="tl-meta">When a third request comes in — or by Thu 19 Nov at the latest</p></div></li>
+      </ol>
+    </div>
+    <p class="hint mt-2"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Nothing has been charged. You'll pay only once your date is confirmed, and you can cancel the request anytime.</p>
+    <div class="btn-row mt-2"><a class="btn btn-primary grow" href="support.html">Ask Meera</a><button class="btn grow" type="button" data-close-sheet data-toast="We'll ping you|As soon as your Wayanad date is set|bell">Notify me</button></div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My inspections — SDCertified</title>
+<meta name="description" content="Your Suresh Drives inspections: in progress, upcoming, completed reports and anything that needs your attention.">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="inspections" data-shell="app" data-title="My inspections">
+
+<main id="main" class="page">
+  <div class="container">
+
+    <header class="page-head">
+      <div>
+        <p class="eyebrow">The ledger · Arjun Menon</p>
+        <h1 class="large-title mt-1">My inspections</h1>
+        <p class="lede">Every inspection you've booked with Suresh Drives — one in progress right now, two reports ready, and two that need a quick decision from you.</p>
+      </div>
+      <a class="btn btn--primary hide-mobile" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg> Book another inspection</a>
+    </header>
+
+    <div class="ledger-summary mb-4" aria-label="Summary">
+      <div><b class="num">5</b><span>Bookings</span></div>
+      <div><b class="num text-green">1</b><span>In progress</span></div>
+      <div><b class="num">2</b><span>Reports ready</span></div>
+      <div><b class="num text-amber">2</b><span>Need attention</span></div>
+    </div>
+
+    <div class="app-cols">
+      <div>
+        <div class="segmented" role="tablist" aria-label="Filter inspections" data-tabs>
+          <button type="button" role="tab" id="tab-live" aria-controls="panel-live" aria-selected="true">Upcoming &amp; in progress <span class="count">2</span></button>
+          <button type="button" role="tab" id="tab-done" aria-controls="panel-done" aria-selected="false" tabindex="-1">Completed <span class="count">2</span></button>
+          <button type="button" role="tab" id="tab-attn" aria-controls="panel-attn" aria-selected="false" tabindex="-1">Needs attention <span class="count">2</span></button>
+        </div>
+
+        <!-- UPCOMING & IN PROGRESS -->
+        <section class="stack mt-4" style="--gap:18px" role="tabpanel" id="panel-live" aria-labelledby="tab-live" tabindex="0">
+
+          <article class="card insp-live">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/mercedes-gle-showroom.jpg" alt="Black Mercedes-Benz SUV parked outside a hotel entrance" style="object-position:62% 60%"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--live"><span class="dot dot--live" aria-hidden="true"></span>In progress</span>
+                  <span class="serial">SDB-24817</span>
+                </div>
+                <h2 class="booking__title">2021 Mercedes-Benz GLE 300d 4MATIC</h2>
+                <p class="booking__meta">Used Car Pre-Purchase · Luxury · KL 11 BH 7272 · Sat 21 Nov, Morning</p>
+                <p class="booking__status"><b class="strong">In progress since 9:31 AM IST · report in ~3–4 h</b> · Nikhil Raj is inspecting the car at the seller's location. We'll message you on WhatsApp the moment your report is ready.</p>
+              </div>
+              <div class="booking__actions">
+                <a class="btn btn--primary" href="track.html"><svg class="i" aria-hidden="true"><use href="#i-clipboard"></use></svg> Track inspection</a>
+                <a class="btn btn--ghost btn--sm" href="report-gle.html"><svg class="i" aria-hidden="true"><use href="#i-file"></use></svg> Report preview (SDR-24817)</a>
+                <a class="btn btn--ghost btn--sm" href="booking-confirmed.html"><svg class="i" aria-hidden="true"><use href="#i-calendar"></use></svg> Reschedule or cancel</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+918330881213"><svg class="i" aria-hidden="true"><use href="#i-phone"></use></svg> Call Suresh Drives (connects you to Nikhil)</a>
+              </div>
+            </div>
+            <div class="insp-live__journey">
+              <div class="journey journey--compact">
+                <span class="journey__rail" aria-hidden="true"><span class="journey__fill" style="--fill:.75"></span></span>
+                <ol class="journey__list" aria-label="Status of SDB-24817">
+                  <li class="journey__item is-done"><span class="journey__time"><b>14 Nov</b>10:42 AM IST</span><span class="journey__node"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg></span><div><p class="journey__title">Booked &amp; paid</p><p class="journey__note">₹7,079 via UPI (GPay)</p></div></li>
+                  <li class="journey__item is-done"><span class="journey__time"><b>15 Nov</b>6:05 PM IST</span><span class="journey__node"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg></span><div><p class="journey__title">Technician assigned</p><p class="journey__note">Nikhil Raj · 4.9 rating</p></div></li>
+                  <li class="journey__item is-done"><span class="journey__time"><b>21 Nov</b>8:10 AM IST</span><span class="journey__node"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg></span><div><p class="journey__title">Arriving today</p><p class="journey__note">Nikhil will reach between 9:00 and 9:30 AM IST</p></div></li>
+                  <li class="journey__item is-current"><span class="journey__time"><b>21 Nov</b>9:31 AM IST</span><span class="journey__node"><svg class="i" aria-hidden="true"><use href="#i-scan"></use></svg></span><div><p class="journey__title">Inspection in progress</p><p class="journey__note">A full inspection takes about 3–4 hours</p></div></li>
+                  <li class="journey__item is-upcoming"><span class="journey__time"><b>In ~3–4 h</b>WhatsApp</span><span class="journey__node"><svg class="i" aria-hidden="true"><use href="#i-file"></use></svg></span><div><p class="journey__title">Report ready</p><p class="journey__note">WhatsApp, email &amp; here</p></div></li>
+                </ol>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/jeep-rubicon.jpg" alt="Jeep Wrangler Rubicon" loading="lazy"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--paper"><svg class="i" aria-hidden="true"><use href="#i-route"></use></svg>Visiting team · Wayanad</span>
+                  <span class="serial">SDB-24790</span>
+                </div>
+                <h2 class="booking__title">2018 Jeep Wrangler Rubicon</h2>
+                <p class="booking__meta">Used Car Pre-Purchase · Premium · Kalpetta, Wayanad · requested 12 Nov</p>
+                <p class="booking__status">Your area is served by a visiting team. <b class="strong">2 of 3 requests gathered in Wayanad</b> — we'll confirm your date by <b class="strong">Thu 19 Nov at the latest</b>.</p>
+                <div class="batch mt-2" aria-label="2 of 3 requests gathered">
+                  <span class="batch__pip is-on"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg></span>
+                  <span class="batch__pip is-on"><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg></span>
+                  <span class="batch__pip"></span>
+                  <span class="xs muted">or Thu 19 Nov, whichever comes first</span>
+                </div>
+              </div>
+              <div class="booking__actions">
+                <button class="btn btn--ink" type="button" data-toast="Wayanad batch · 2 of 3 gathered" data-toast-sub="Date confirmed by Thu 19 Nov at the latest. Nothing is charged until then." data-toast-icon="route">See batch status</button>
+                <a class="btn btn--ghost btn--sm" href="support.html">Ask Anjali, your guide</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="card add-card">
+            <span class="quick__icon" style="background:var(--red);border-color:var(--red);color:#fff"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+            <span class="grow"><b class="strong">Book another inspection</b><br><span class="small muted">Used car from ₹3,999 + GST · New Car PDI ₹3,999 + GST</span></span>
+            <span class="row" style="--gap:8px">
+              <a class="btn btn--primary btn--sm" href="book.html">Used car</a>
+              <a class="btn btn--ghost btn--sm" href="book.html?service=pdi">Book a PDI</a>
+            </span>
+          </div>
+        </section>
+
+        <!-- COMPLETED -->
+        <section class="stack mt-4" style="--gap:18px" role="tabpanel" id="panel-done" aria-labelledby="tab-done" tabindex="0" hidden>
+          <article class="card">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/bmw-x4m-green.jpg" alt="Green BMW X4 M Competition" loading="lazy"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--verified"><svg class="i" aria-hidden="true"><use href="#i-check-circle"></use></svg>Report ready</span>
+                  <span class="tier tier--gold">Gold</span>
+                  <span class="serial">SDR-18842</span>
+                </div>
+                <h2 class="booking__title">2022 BMW X4 M Competition</h2>
+                <p class="booking__meta">Used Car Pre-Purchase · KL 07 CU 9090 · inspected 3 Oct 2026 by Nikhil Raj</p>
+                <div class="row mt-2" style="--gap:14px">
+                  <span class="seal-score"><svg class="seal seal--sm" viewBox="0 0 100 100" aria-hidden="true"><use href="#seal-mini"></use></svg><span><span class="seal-score__n">92<small>/100</small></span><span class="seal-score__l">SD Verified</span></span></span>
+                  <p class="small muted" style="max-width:40ch">Mechanically excellent. Two panels repainted — cosmetic, no structural damage.</p>
+                </div>
+              </div>
+              <div class="booking__actions">
+                <a class="btn btn--ink" href="report.html"><svg class="i" aria-hidden="true"><use href="#i-file"></use></svg> View report</a>
+                <button class="btn btn--ghost btn--sm" type="button" data-print="SDR-18842"><svg class="i" aria-hidden="true"><use href="#i-download"></use></svg> Download PDF</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/bmw-i7-white.jpg" alt="White BMW i7 xDrive60" loading="lazy"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--verified"><svg class="i" aria-hidden="true"><use href="#i-check-circle"></use></svg>PDI complete</span>
+                  <span class="serial">SDR-18511</span>
+                </div>
+                <h2 class="booking__title">2026 BMW i7 xDrive60</h2>
+                <p class="booking__meta">New Car PDI · BMW EVM Autokraft, Kochi · 28 Aug 2026</p>
+                <p class="booking__status"><b class="strong">129 of 132 passed · 0 fails · 3 advisories</b> — all resolved or scheduled before handover. Safe to sign.</p>
+                <ul class="advisories">
+                  <li><svg class="i i--sm text-green" aria-hidden="true"><use href="#i-check-circle"></use></svg>Swirl marks on rear bumper — dealer polished · Resolved</li>
+                  <li><svg class="i i--sm text-green" aria-hidden="true"><use href="#i-check-circle"></use></svg>Front-right tyre 2.1 bar vs 2.5 spec — corrected on site · Resolved</li>
+                  <li><svg class="i i--sm text-amber" aria-hidden="true"><use href="#i-clock"></use></svg>iDrive software update — at first service · Scheduled</li>
+                </ul>
+              </div>
+              <div class="booking__actions">
+                <a class="btn btn--ink" href="report-pdi.html"><svg class="i" aria-hidden="true"><use href="#i-file"></use></svg> View PDI report</a>
+                <a class="btn btn--ghost btn--sm" href="profile.html">In my garage</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="note note--green">
+            <svg class="i" aria-hidden="true"><use href="#i-sparkle"></use></svg>
+            <p><b>Thinking of selling the X4 M?</b> Its report qualifies it for a Gold listing on SDCertified — no fresh inspection needed. <a class="link" href="sell.html">List this car</a></p>
+          </div>
+        </section>
+
+        <!-- NEEDS ATTENTION -->
+        <section class="stack mt-4" style="--gap:18px" role="tabpanel" id="panel-attn" aria-labelledby="tab-attn" tabindex="0" hidden>
+          <article class="card">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/audi-q7-black.jpg" alt="Black Audi Q7" loading="lazy"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--warn"><svg class="i" aria-hidden="true"><use href="#i-alert"></use></svg>Couldn't complete</span>
+                  <span class="serial">SDB-24312</span>
+                </div>
+                <h2 class="booking__title">2017 Audi Q7 45 TDI</h2>
+                <p class="booking__meta">Used Car Pre-Purchase · Calicut Beach Rd · 9 Sep 2026</p>
+                <p class="booking__status"><b class="strong">Reason:</b> Seller was unavailable at the location. This wasn't your fault — your next booking for this car is <b class="strong">free</b>, or we can refund ₹7,079 in full.</p>
+              </div>
+              <div class="booking__actions">
+                <a class="btn btn--primary" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-refresh"></use></svg> Rebook free</a>
+                <button class="btn btn--ghost btn--sm" type="button" data-toast="Refund requested" data-toast-sub="₹7,079 back to your UPI in 3–5 working days" data-toast-icon="wallet">Refund instead</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="booking">
+              <div class="booking__media"><img src="../assets/jeep-rubicon.jpg" alt="Jeep Wrangler Rubicon" loading="lazy"></div>
+              <div class="booking__body">
+                <div class="row" style="--gap:8px">
+                  <span class="badge badge--paper"><svg class="i" aria-hidden="true"><use href="#i-clock"></use></svg>Awaiting date</span>
+                  <span class="serial">SDB-24790</span>
+                </div>
+                <h2 class="booking__title">2018 Jeep Wrangler Rubicon</h2>
+                <p class="booking__meta">Kalpetta, Wayanad · visiting team</p>
+                <p class="booking__status">Nothing to do yet — just make sure the seller can host us on a weekday next week. We'll confirm by Thu 19 Nov at the latest.</p>
+              </div>
+              <div class="booking__actions">
+                <button class="btn btn--ghost" type="button" data-toast="Seller contact noted" data-toast-sub="We'll coordinate the date with them directly" data-toast-icon="phone">Add seller contact</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <!-- SIDE -->
+      <aside class="stack" style="--gap:16px" aria-label="Help">
+        <div class="next">
+          <p class="next__title">What each status means</p>
+          <ol>
+            <li><b>Booked</b> — paid, slot confirmed. A technician is assigned the evening before.</li>
+            <li><b>Assigned &amp; arriving</b> — you'll get their name and a 30-minute arrival window (IST) on WhatsApp; the plate and odometer are photographed on arrival.</li>
+            <li><b>In progress</b> — the 300+ checks take about 3–4 hours; findings are shared together in the report.</li>
+            <li><b>Report ready</b> — read it here, on WhatsApp or as a PDF.</li>
+          </ol>
+        </div>
+        <div class="card card--pad">
+          <div class="guide"><span class="avatar avatar--paper avatar--online">AS</span><p class="guide__text"><b>Anjali, your Suresh Drives booking guide</b>Questions about a booking or a report? Replies in about 2 minutes.</p></div>
+          <div class="grid grid-2 mt-3" style="--gap:8px">
+            <a class="btn btn--ghost btn--sm" href="https://wa.me/919895441213"><svg class="i" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp us</a>
+            <a class="btn btn--ghost btn--sm" href="support.html"><svg class="i" aria-hidden="true"><use href="#i-chat"></use></svg> Chat</a>
+          </div>
+        </div>
+        <div class="note">
+          <svg class="i" aria-hidden="true"><use href="#i-shield"></use></svg>
+          <p>If we can't complete an inspection for reasons on our side or the seller's, <b>you never pay twice</b> — rebook free or get a full refund.</p>
+        </div>
+        <div class="only-mobile"><a class="btn btn--primary btn--block" href="book.html"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg> Book another inspection</a></div>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>

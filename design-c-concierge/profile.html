@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profile · Arjun Menon · SDCertified</title>
+<meta name="description" content="Your SDCertified account: garage, payments and invoices, saved cars, addresses and preferences.">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="profile" data-shell="app" data-title="Profile" data-aura="dual">
+<main id="main" class="wrap">
+  <section class="page-head">
+    <div class="card card-pad profile-card row-wrap" style="background:linear-gradient(150deg,#fff,#FBF7F5)">
+      <span class="avatar avatar-xl">AM</span>
+      <div class="grow" style="min-width:220px">
+        <h1 style="font-size:clamp(1.7rem,1.3rem + 1.6vw,2.4rem)">Arjun Menon</h1>
+        <p class="muted">+91 98470 12345 · arjun.menon@example.in</p>
+        <p class="small muted">Kozhikode, Kerala · member since 2024</p>
+      </div>
+      <div class="row row-wrap" style="--gap:8px">
+        <span class="seal"><span class="seal-ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>Verified account</span>
+        <button class="btn btn-sm" type="button" data-sheet="edit-sheet"><svg class="i i-sm" aria-hidden="true"><use href="#i-edit"/></svg>Edit</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout-aside" style="--aside:380px">
+    <div class="stack" style="--gap:24px">
+      <!-- Garage -->
+      <section aria-labelledby="g-h">
+        <div class="section-head" style="margin-bottom:14px"><h2 id="g-h" class="h3">My garage</h2><a class="link small" href="inspections.html">All inspections <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></div>
+        <div class="grid g-3">
+          <a class="car" href="report.html"><div class="car-media"><img src="../assets/bmw-x4m-green.jpg" alt="BMW X4 M Competition" loading="lazy"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-gem"/></svg>Gold</span></div><div class="car-body"><h3 class="car-title">BMW X4 M Competition</h3><p class="car-meta">Report SDR-18842 · 3 Oct 2026</p><div class="car-foot"><span class="seal"><span class="seal-ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>Score<span class="seal-score">92</span></span><span class="tiny txt-red" style="font-weight:700">View report</span></div></div></a>
+          <a class="car" href="report.html"><div class="car-media"><img src="../assets/bmw-i7-white.jpg" alt="BMW i7 xDrive60" loading="lazy"></div><div class="car-body"><h3 class="car-title">BMW i7 xDrive60</h3><p class="car-meta">New Car PDI · 28 Aug 2026</p><div class="car-foot"><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>129 / 132 passed</span><span class="tiny txt-red" style="font-weight:700">View PDI</span></div></div></a>
+          <a class="car" href="track.html"><div class="car-media"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE 300d" loading="lazy"></div><div class="car-body"><h3 class="car-title">Mercedes-Benz GLE 300d</h3><p class="car-meta">SDB-24817 · Sat 21 Nov</p><div class="car-foot"><span class="badge badge-green"><span class="live-dot"></span>In progress</span><span class="tiny txt-red" style="font-weight:700">Track inspection</span></div></div></a>
+        </div>
+      </section>
+
+      <!-- Payments -->
+      <section class="card card-pad" aria-labelledby="pay-h" id="payments">
+        <div class="card-title"><h2 id="pay-h" class="h3">Payments &amp; invoices</h2><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>256-bit secure</span></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th scope="col">Invoice</th><th scope="col">For</th><th scope="col">Date</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Download</span></th></tr></thead>
+            <tbody>
+              <tr><td><b class="strong">INV-2026-11-0417</b></td><td>SDB-24817 · Mercedes-Benz GLE · Luxury</td><td class="num">14 Nov 2026</td><td class="num">₹7,079</td><td><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Paid · UPI</span></td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-11-0417" data-toast="Invoice downloaded|INV-2026-11-0417.pdf|download"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+              <tr><td><b class="strong">INV-2026-09-0312</b></td><td>BMW X4 M Competition · Luxury</td><td class="num">1 Oct 2026</td><td class="num">₹7,079</td><td><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Paid · Card</span></td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-09-0312" data-toast="Invoice downloaded|INV-2026-09-0312.pdf|download"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+              <tr><td><b class="strong">INV-2026-09-0104</b></td><td>Audi Q7 45 TDI · couldn't complete</td><td class="num">7 Sep 2026</td><td class="num">₹7,079</td><td><span class="badge badge-amber"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Credit · free rebooking</span></td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-09-0104" data-toast="Invoice downloaded|INV-2026-09-0104.pdf|download"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+              <tr><td><b class="strong">INV-2026-08-0291</b></td><td>BMW i7 xDrive60 · New Car PDI</td><td class="num">26 Aug 2026</td><td class="num">₹4,719</td><td><span class="badge badge-green"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Paid · UPI</span></td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-08-0291" data-toast="Invoice downloaded|INV-2026-08-0291.pdf|download"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tiny muted mt-2">All amounts include 18% GST. Saved UPI: Google Pay (arjun@okhdfc).</p>
+      </section>
+
+      <!-- Saved cars -->
+      <section aria-labelledby="sv-h">
+        <div class="section-head" style="margin-bottom:14px"><h2 id="sv-h" class="h3">Saved cars</h2><a class="link small" href="browse.html">Browse <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></div>
+        <div class="stack" style="--gap:10px">
+          <a class="card card-hover row" style="--gap:14px; padding:10px" href="vehicle.html"><span class="thumb" style="width:96px; height:72px"><img src="../assets/lexus-rx-gold.jpg" alt=""></span><span class="grow"><b class="strong">Lexus RX 500h · 2023</b><span class="small muted" style="display:block">Kochi · 12,800 km · Platinum 95</span></span><b class="strong num">₹98 L</b></a>
+          <a class="card card-hover row" style="--gap:14px; padding:10px" href="vehicle.html"><span class="thumb" style="width:96px; height:72px"><img src="../assets/bmw-x5-showroom.jpg" alt=""></span><span class="grow"><b class="strong">BMW X5 xDrive30d · 2021</b><span class="small muted" style="display:block">Thrissur · 29,700 km · Gold 91</span></span><b class="strong num">₹74 L</b></a>
+        </div>
+      </section>
+    </div>
+
+    <aside class="stack" style="--gap:16px" aria-label="Settings">
+      <section class="card card-pad">
+        <h2 class="h4">Saved addresses</h2>
+        <ul class="menu-list mt-1">
+          <li><a href="book-location.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span>Home<span class="mi-sub">Nadakkavu, Kozhikode</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><a href="book-location.html"><span class="icon-tile green sm"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><span>Faisal (seller)<span class="mi-sub">Near Hilite Mall, Thondayad Bypass</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+        </ul>
+      </section>
+      <section class="card card-pad">
+        <h2 class="h4">Preferences</h2>
+        <ul class="menu-list mt-1">
+          <li><a href="notifications.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span><span>Notifications<span class="mi-sub">WhatsApp primary · push · SMS fallback</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><div class="mi" style="flex-wrap:wrap"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="grow">Language</span>
+            <div class="seg" role="radiogroup" aria-label="Language"><label><input type="radio" name="lang" checked>English</label><label lang="ml"><input type="radio" name="lang">മലയാളം</label><label lang="hi"><input type="radio" name="lang">हिन्दी</label></div></div></li>
+          <li><a href="support.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><span>Privacy &amp; security<span class="mi-sub">OTP sign-in · download or delete your data</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><a href="support.html"><span class="icon-tile sm"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg></span><span>Help &amp; guide<span class="mi-sub">Meera · ~2 min</span></span><svg class="i chev" aria-hidden="true"><use href="#i-chev-r"/></svg></a></li>
+          <li><a href="index.html" style="color:var(--error)"><span class="icon-tile sm" style="background:var(--error-bg); color:var(--error)"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg></span><span>Log out</span></a></li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div class="sheet" id="edit-sheet" role="dialog" aria-modal="true" aria-labelledby="ed-h">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head"><h2 id="ed-h" class="h3">Edit profile</h2><button class="icon-btn" type="button" data-close-sheet aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+    <form class="stack" data-demo="Profile saved|Your details are up to date.|user">
+      <div class="field"><label class="label" for="pn">Name</label><input class="input" id="pn" value="Arjun Menon" autocomplete="name"></div>
+      <div class="field"><label class="label" for="pp">Mobile (also WhatsApp)</label><input class="input" id="pp" value="+91 98470 12345" inputmode="tel" autocomplete="tel"></div>
+      <div class="field"><label class="label" for="pe">Email</label><input class="input" id="pe" value="arjun.menon@example.in" type="email" autocomplete="email"></div>
+      <button class="btn btn-primary btn-block" type="submit" data-close-sheet>Save</button>
+    </form>
+  </div>
+</main>
+</body>
+</html>

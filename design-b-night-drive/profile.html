@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Account · Arjun Menon · SDCertified</title>
+<meta name="description" content="Your SDCertified account — garage, invoices, saved cars, addresses, language and privacy.">
+<meta name="theme-color" content="#0A0C0E">
+<link rel="icon" href="../assets/logo-sdcertified-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.SDReady)document.documentElement.classList.remove('js')},2500)</script>
+<script src="app.js" defer></script>
+</head>
+<body data-page="profile" data-shell="app" data-title="Account">
+<main id="main" class="app-main">
+  <div class="wrap">
+    <!-- Profile header -->
+    <section class="card card-pad mc load" aria-labelledby="pf-h">
+      <div class="mc-grid" aria-hidden="true"></div>
+      <div class="row between" style="--gap:20px;position:relative">
+        <div class="prof-head">
+          <span class="avatar xl">AM</span>
+          <div>
+            <h1 id="pf-h" class="h2">Arjun Menon</h1>
+            <p class="small tx2 mb-0 mt-1">+91 98470 12345 · arjun.menon@example.in</p>
+            <p class="tiny muted mb-0 mt-1 mono">KOZHIKODE, KERALA · MEMBER SINCE 2024</p>
+          </div>
+        </div>
+        <button class="btn btn-line btn-sm" type="button" data-toast="Profile details are editable — changes save instantly"><svg class="i" aria-hidden="true"><use href="#i-edit"/></svg>Edit profile</button>
+      </div>
+      <div class="spec c4 mt-6" style="position:relative">
+        <div><div class="k">Inspections</div><div class="v mono">5</div></div>
+        <div><div class="k">Reports</div><div class="v mono">2</div></div>
+        <div><div class="k">Saved cars</div><div class="v mono">3</div></div>
+        <div><div class="k">Invoices</div><div class="v mono">3</div></div>
+      </div>
+    </section>
+
+    <div class="split mt-8">
+      <div class="stack" style="--gap:32px;min-width:0">
+        <!-- Garage -->
+        <section aria-labelledby="gr-h">
+          <div class="sec-head" style="margin-bottom:16px"><div><span class="eyebrow g">My garage</span><h2 id="gr-h" class="h3 mt-2">Cars with Suresh Drives reports</h2></div><a class="link small" href="inspections.html">All inspections<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          <div class="g-2">
+            <a class="card card-link reveal" href="report.html" style="overflow:hidden">
+              <div class="media" style="aspect-ratio:16/9;border-radius:0"><img src="../assets/bmw-x4m-green.jpg" alt="BMW X4 M Competition" style="object-position:45% 55%"></div>
+              <div class="card-pad row between" style="--gap:12px">
+                <div><b>2022 BMW X4 M Competition</b><br><span class="tiny muted mono">KL 07 CU 9090 · SDR-18842</span></div>
+                <span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>Score<b>92</b></span>
+              </div>
+            </a>
+            <a class="card card-link reveal" href="track.html" style="overflow:hidden;--d:60ms">
+              <div class="media" style="aspect-ratio:16/9;border-radius:0"><img src="../assets/mercedes-gle-showroom.jpg" alt="Mercedes-Benz GLE"></div>
+              <div class="card-pad row between" style="--gap:12px">
+                <div><b>2021 Mercedes-Benz GLE 300d</b><br><span class="tiny muted mono">KL 11 BH 7272 · SDB-24817</span></div>
+                <span class="status done"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>In progress</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Payments & invoices -->
+        <section class="card card-pad reveal" id="payments" aria-labelledby="pay-h">
+          <div class="card-h"><h2 id="pay-h" class="h4">Payments &amp; invoices</h2><span class="tag">GST invoices</span></div>
+          <div class="table-scroll">
+            <table class="pref" style="min-width:520px">
+              <thead><tr><th scope="col">Invoice</th><th scope="col" style="text-align:left">For</th><th scope="col" style="text-align:left">Method</th><th scope="col" style="text-align:right">Amount</th><th scope="col"><span class="sr-only">Download</span></th></tr></thead>
+              <tbody>
+                <tr><td><b class="mono">INV-2026-11-0417</b><span>14 Nov 2026 · Paid</span></td><td style="text-align:left">SDB-24817 · GLE 300d · Luxury</td><td style="text-align:left">UPI · GPay</td><td style="text-align:right" class="mono">₹7,079</td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-11-0417" data-toast="INV-2026-11-0417.pdf is downloading"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+                <tr><td><b class="mono">INV-2026-09-0233</b><span>2 Sep 2026 · Paid</span></td><td style="text-align:left">SDB-23312 · Audi Q7 · free rebook credit</td><td style="text-align:left">Card · RuPay</td><td style="text-align:right" class="mono">₹7,079</td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-09-0233" data-toast="INV-2026-09-0233.pdf is downloading"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+                <tr><td><b class="mono">INV-2026-09-0198</b><span>30 Sep 2026 · Paid</span></td><td style="text-align:left">SDB-23590 · BMW X4 M · Luxury</td><td style="text-align:left">UPI · PhonePe</td><td style="text-align:right" class="mono">₹7,079</td><td><button class="icon-btn" type="button" aria-label="Download INV-2026-09-0198" data-toast="INV-2026-09-0198.pdf is downloading"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Saved cars -->
+        <section aria-labelledby="sv-h">
+          <h2 id="sv-h" class="h3 mb-4">Saved cars</h2>
+          <div class="hscroll">
+            <article class="car-card"><a href="vehicle.html" class="ph"><img src="../assets/bmw-x5-showroom.jpg" alt="BMW X5 xDrive30d" loading="lazy" style="object-position:50% 60%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>91</b></span></a><button class="heart" type="button" aria-pressed="true" aria-label="Unsave BMW X5" data-car="SD-2479"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button><div class="body"><a href="vehicle.html" class="name">BMW X5 xDrive30d<small>SD-2479 · Thrissur</small></a><div class="price"><b>₹74 L</b><span>EMI from<br>₹1,23,200/mo</span></div></div></article>
+            <article class="car-card"><a href="vehicle.html" class="ph"><img src="../assets/lexus-rx-gold.jpg" alt="Lexus RX 500h" loading="lazy"><span class="tier tier-platinum"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Platinum</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>95</b></span></a><button class="heart" type="button" aria-pressed="true" aria-label="Unsave Lexus RX 500h" data-car="SD-2457"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button><div class="body"><a href="vehicle.html" class="name">Lexus RX 500h<small>SD-2457 · Kochi</small></a><div class="price"><b>₹98 L</b><span>EMI from<br>₹1,63,100/mo</span></div></div></article>
+            <article class="car-card"><a href="vehicle.html" class="ph"><img src="../assets/range-rover-velar.jpg" alt="Range Rover Velar" loading="lazy" style="object-position:50% 62%"><span class="tier tier-gold"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Gold</span><span class="seal"><svg class="i" aria-hidden="true"><use href="#i-shield-check"/></svg>SD Verified<b>91</b></span></a><button class="heart" type="button" aria-pressed="true" aria-label="Unsave Range Rover Velar" data-car="SD-2452"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></button><div class="body"><a href="vehicle.html" class="name">Range Rover Velar R-Dynamic<small>SD-2452 · Kochi</small></a><div class="price"><b>₹82 L</b><span>EMI from<br>₹1,36,500/mo</span></div></div></article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="stack" style="--gap:16px" aria-label="Settings">
+        <section class="card card-pad" aria-labelledby="ad-h">
+          <h2 id="ad-h" class="h4 mb-2">Addresses</h2>
+          <div class="divide">
+            <div class="lrow"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span><b>Home</b><span class="sub">Eranhipalam, Kozhikode 673006</span></span><button class="end icon-btn" type="button" aria-label="Edit home address" data-toast="Editing address — saved addresses appear at booking"><svg class="i" aria-hidden="true"><use href="#i-edit"/></svg></button></div>
+            <div class="lrow"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg></span><span><b>Office</b><span class="sub">Mavoor Road, Kozhikode 673004</span></span><button class="end icon-btn" type="button" aria-label="Edit office address" data-toast="Editing address — saved addresses appear at booking"><svg class="i" aria-hidden="true"><use href="#i-edit"/></svg></button></div>
+          </div>
+        </section>
+
+        <section class="card card-pad" aria-labelledby="lg-h">
+          <h2 id="lg-h" class="h4 mb-3">Language</h2>
+          <div class="seg seg-block" role="group" aria-label="Language">
+            <button type="button" data-toggle-press data-group="lang" aria-pressed="true" data-toast="Language: English">English</button>
+            <button type="button" data-toggle-press data-group="lang" aria-pressed="false" data-toast="ഭാഷ: മലയാളം" lang="ml">മലയാളം</button>
+            <button type="button" data-toggle-press data-group="lang" aria-pressed="false" data-toast="भाषा: हिन्दी" lang="hi">हिन्दी</button>
+          </div>
+        </section>
+
+        <section class="card card-pad" aria-labelledby="st-h">
+          <h2 id="st-h" class="h4 mb-2">Settings</h2>
+          <div class="divide menu-list">
+            <a class="lrow" href="notifications.html#prefs"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span><span><b>Notification preferences</b><span class="sub">WhatsApp primary · push · SMS fallback</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a>
+            <a class="lrow" href="support.html"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><span><b>Privacy &amp; security</b><span class="sub">Number hidden from sellers · 2-step OTP on</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a>
+            <a class="lrow" href="support.html"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-headset"/></svg></span><span><b>Help &amp; guide</b><span class="sub">Anjana S. · replies ~2 min</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a>
+            <a class="lrow" href="index.html"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg></span><span><b>Log out</b><span class="sub">You’ll stay subscribed to WhatsApp updates</span></span><span class="end"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>
